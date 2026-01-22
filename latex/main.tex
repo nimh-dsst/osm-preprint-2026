@@ -1,0 +1,23 @@
+% main.tex - Main document entry point
+
+\documentclass[11pt,letterpaper]{article}
+\input{preamble.tex}
+\input{metadata.tex}
+
+\begin{document}
+
+\maketitle
+
+% Main article content (abstract, introduction, methods, results, discussion)
+\input{article.tex}
+
+\printbibliography
+
+\appendix
+\section{Supplementary Tables}
+\input{tables/table_funders.tex}
+\input{tables/table_journals.tex}
+\input{tables/table_institutions.tex}
+\input{tables/table_repositories.tex}
+
+\end{document}

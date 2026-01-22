@@ -1,0 +1,138 @@
+% article.tex - Main article content
+
+\begin{abstract}
+[Abstract text: 150-250 words summarizing key findings. To be written: Describe the study analyzing ~326,000 open access biomedical articles from PubMed (2024-2025), using PDF-based detection methods to identify open data sharing statements. Highlight the 13.5\% baseline open data rate and the dramatically higher rates (up to 82\%) observed among specific funders, journals, and institutions. Mention the analysis of repository adoption patterns and the availability of an interactive web dashboard for exploring results.]
+\end{abstract}
+
+\section{Introduction}
+
+[Introduction content: 2-3 pages]
+
+\textbf{Context:} Funders, journals, and institutions worldwide have implemented policies to increase data sharing and research transparency...
+
+\textbf{Gap:} While previous studies have examined overall trends in data sharing, comprehensive comparisons across major funders, journals, and institutions using modern PDF-based detection methods remain limited...
+
+\textbf{Approach:} In this study, we analyze ~326,000 open access biomedical research articles from PubMed published between January 2024 and December 2025...
+
+\textbf{Findings Preview:} We demonstrate that data sharing rates vary substantially by funder, journal, and institution, with leading organizations achieving rates as high as 82\% compared to the 13.5\% baseline...
+
+
+\section{Methods}
+
+[Methods content: 2-3 pages describing the complete pipeline]
+
+\subsection{Data Collection}
+
+\textbf{Article Selection:} We retrieved metadata for all open access research articles indexed in PubMed Central (PMC) published between January 2024 and December 2025...
+
+\textbf{PDF Acquisition:} Full-text PDFs were downloaded from PMC for ~618,000 articles. Of these, ~326,000 were successfully processed for analysis...
+
+\subsection{PDF Processing}
+
+\textbf{Text Extraction:} PDFs were processed using MinerU, a machine learning-based PDF extraction tool optimized for scientific articles...
+
+\textbf{Data Sharing Detection:} Extracted text was analyzed using OddPub v7.2.3, an algorithm that detects open data and open code statements in scientific publications...
+
+\subsection{Metadata Enrichment}
+
+\textbf{OpenAlex Integration:} Article metadata (funders, institutions, journals) was retrieved from OpenAlex, an open bibliographic database...
+
+\textbf{Funder Normalization:} Funder names were normalized using a curated alias mapping to aggregate related entities (e.g., NIH institutes aggregated to NIH)...
+
+\subsection{Statistical Analysis}
+
+\textbf{Rate Calculations:} Open data rates were calculated as the percentage of articles with detected open data statements...
+
+\textbf{Repository Extraction:} Repository mentions were identified in data sharing statements using pattern matching for common repositories (GenBank, Zenodo, Dryad, etc.)...
+
+
+\section{Results}
+
+[Results content: 4-5 pages with narrative describing all four main findings]
+
+\subsection{Overall Open Data Rates}
+
+Across our corpus of ~326,000 open access biomedical research articles published in 2024-2025, we detected open data sharing statements in 13.5\% of publications, establishing a baseline rate for recent biomedical literature...
+
+\subsection{Variation by Funder}
+
+Analysis of major biomedical research funders revealed substantial variation in open data rates (Table~\ref{tab:funders}, Figure~\ref{fig:funders}). Leading public funders achieved rates ranging from 30-82\%, dramatically higher than the baseline...
+
+\textbf{Top Performers:} [Describe top funders, their rates, and notable patterns]
+
+\textbf{Regional Differences:} [Describe geographic patterns if observed]
+
+\subsection{Variation by Journal}
+
+Open data rates also varied substantially across journals (Table~\ref{tab:journals}, Figure~\ref{fig:journals}). Open access journals with explicit data sharing policies demonstrated the highest rates...
+
+\textbf{Publisher Policies:} [Describe the role of publisher mandates]
+
+\textbf{Impact Factor Correlation:} [Describe any relationship between journal prestige and data sharing]
+
+\subsection{Variation by Institution}
+
+Leading research institutions demonstrated higher data sharing rates compared to the baseline (Table~\ref{tab:institutions}, Figure~\ref{fig:institutions})...
+
+\textbf{Institutional Mandates:} [Describe institutional policy effects]
+
+\subsection{Repository Adoption Patterns}
+
+Analysis of repository mentions in data sharing statements revealed clear patterns in repository adoption (Table~\ref{tab:repositories}, Figure~\ref{fig:repositories})...
+
+\textbf{Domain-Specific Repositories:} GenBank, PDB, and other discipline-specific repositories dominated mentions in relevant fields...
+
+\textbf{General-Purpose Repositories:} Zenodo, Dryad, and Figshare showed broad adoption across research domains...
+
+\subsection{Interactive Data Exploration}
+
+\begin{quote}
+\textbf{Interactive Dashboard:} Readers can explore these results dynamically through our web dashboard at \url{https://www.opensciencemetrics.org}, which provides real-time filtering and visualization across multiple dimensions including time periods, countries, and research domains.
+\end{quote}
+
+
+\section{Discussion}
+
+[Discussion content: 2-3 pages interpreting findings and discussing limitations]
+
+\subsection{Key Findings}
+
+Our analysis of ~326,000 open access biomedical research articles demonstrates that data sharing is not uniformly distributed across the research ecosystem...
+
+\textbf{Funder Influence:} The substantial variation in open data rates by funder (13.5\% to 82\%) suggests that funder policies and mandates play a crucial role...
+
+\textbf{Journal Policies Matter:} Journals with explicit data sharing requirements achieved markedly higher rates...
+
+\textbf{Institutional Culture:} Leading research institutions demonstrated higher compliance, suggesting the importance of institutional culture and infrastructure...
+
+\subsection{Comparison to Previous Work}
+
+Our baseline open data rate of 13.5\% is notably lower than some previous estimates (~15-20\%). This difference likely reflects improvements in detection accuracy with OddPub v7.2.3 and the challenges posed by data availability statements...
+
+\textbf{PDF vs XML Detection:} Compared to our previous XML-based analysis (6.8\% open data rate), PDF-based detection identified +52\% more open data statements, demonstrating the importance of full-text analysis...
+
+\subsection{Implications for Policy}
+
+\textbf{For Funders:} Our results can help funders benchmark their data sharing rates and learn from high-performing peers...
+
+\textbf{For Journals:} Journals seeking to increase data sharing can study the policies of top-performing publications...
+
+\textbf{For Institutions:} Institutions can use these results to assess their performance and identify areas for improvement...
+
+\subsection{Limitations}
+
+\textbf{Detection Accuracy:} While OddPub v7.2.3 demonstrates high precision, it may miss some data sharing statements due to non-standard phrasing...
+
+\textbf{Article Coverage:} Our analysis is limited to open access articles available in PubMed Central; closed-access articles may show different patterns...
+
+\textbf{Time Period:} The 2024-2025 time frame captures recent trends but may not reflect longer-term patterns...
+
+\textbf{Repository Classification:} Manual classification of repositories by domain-specificity vs general-purpose may contain subjective elements...
+
+\subsection{Future Directions}
+
+Future work will expand the corpus to ~618,000 articles as PDF processing completes, extend the time range through 2026, and refine institution name normalization for more accurate institutional comparisons...
+
+\subsection{Conclusion}
+
+This study demonstrates substantial heterogeneity in open data sharing practices across the biomedical research ecosystem. Major funders, journals, and institutions achieve dramatically higher rates than the baseline, suggesting that targeted policies and cultural factors can meaningfully increase data sharing. Our interactive dashboard enables stakeholders to explore these patterns and benchmark their own performance against peers.

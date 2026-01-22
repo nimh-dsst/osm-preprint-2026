@@ -1,0 +1,60 @@
+% preamble.tex - Package imports, formatting, and styling
+
+% Fonts & Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[sfdefault]{roboto}  % Roboto font (reused from poster)
+\usepackage{anyfontsize}
+
+% Layout & Geometry
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}  % Spacing between paragraphs
+
+% Colors (reuse poster palette)
+\usepackage[table]{xcolor}
+\definecolor{COLprimary}{HTML}{38761d}   % Forest green
+\definecolor{COL5}{HTML}{4472C4}         % Blue for tables
+\rowcolors{2}{COL5!10}{white}            % Alternating table rows
+
+% Tables & Numbers
+\usepackage{booktabs}     % Professional table rules (toprule, midrule, bottomrule)
+\usepackage{longtable}    % Multi-page tables
+\usepackage{pdflscape}    % Landscape orientation if needed
+\usepackage{siunitx}      % Numeric alignment
+\sisetup{
+    group-separator={,},
+    group-minimum-digits=4
+}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Math (if needed)
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Bibliography (PaperPile integration)
+\usepackage[
+    backend=biber,
+    style=science,
+    maxcitenames=2,
+    maxbibnames=99,
+    sorting=none,
+    doi=true,
+    url=false
+]{biblatex}
+\addbibresource{references.bib}  % PaperPile dynamic export
+
+% Hyperlinks (load last)
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=COLprimary,
+    citecolor=COLprimary,
+    urlcolor=COLprimary,
+    pdfauthor={},
+    pdftitle={Open Data Sharing Trends in Biomedical Research}
+}

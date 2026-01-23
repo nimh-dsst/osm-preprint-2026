@@ -15,6 +15,52 @@ Create a complete LaTeX preprint skeleton with Git/GitHub/Overleaf integration f
 
 ---
 
+## Implementation Status (as of 2026-01-22)
+
+### ✅ Completed
+
+1. **Repository Structure** - All core files and directories created
+2. **Git/GitHub Setup** - Private repo at https://github.com/nimh-dsst/osm-preprint-2026
+   - `main` branch: Barebones (LICENSE + README only)
+   - `develop` branch: Full skeleton (default branch)
+3. **LaTeX Skeleton** - Complete and compiling successfully
+   - preamble.tex, metadata.tex, main.tex, article.tex
+   - Placeholder tables with valid syntax
+   - PaperPile bibliography integration
+   - Test PDF generated: `latex/osm_preprint_2026.pdf`
+4. **Python Infrastructure** - Utilities and dependencies ready
+   - latex_helpers.py with color gradients and formatting
+   - data_loader.py with DuckDB integration
+   - funder_aliases_v4.csv (134 entries)
+   - requirements.txt
+5. **Overleaf Integration** - Synced to develop branch, compilation successful
+6. **Meta-repo Documentation** - Updated README.md and CLAUDE.md
+7. **Build Automation** - Makefile with all targets
+
+### 🔧 Remaining Work
+
+1. **Table Generation Scripts** (Priority: Next sprint)
+   - scripts/table_funders.py - Query oddpub/OpenAlex data, generate LaTeX + figures
+   - scripts/table_journals.py - Journal analysis with publisher grouping
+   - scripts/table_institutions.py - Institution extraction from OpenAlex
+   - scripts/table_repositories.py - Repository mention extraction
+   - scripts/generate_all_tables.py - Master orchestration script
+
+2. **Content Writing** (Priority: One-week sprint)
+   - Expand abstract (currently placeholder)
+   - Write introduction (2-3 pages)
+   - Write methods section (2-3 pages)
+   - Write results narratives for 4 main findings (4-5 pages)
+   - Write discussion and interpretation (2-3 pages)
+   - Expand bibliography (currently 1 test citation)
+
+3. **Data Updates** (Priority: When HPC returns Jan 26)
+   - Process remaining PDFs (326k → 618k articles)
+   - Extend time range through June 2025
+   - Regenerate all tables with complete dataset
+
+---
+
 ## Directory Structure
 
 ```

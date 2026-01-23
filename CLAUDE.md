@@ -2,7 +2,26 @@
 
 ## Repository Overview
 
-LaTeX preprint manuscript analyzing open data sharing trends across ~326,000 biomedical research articles from PubMed (2024-2026). Demonstrates that major funders, journals, and institutions achieve dramatically higher open data rates (up to 82%) compared to baseline (13.5%).
+LaTeX preprint manuscript analyzing open data sharing trends across ~326,000 biomedical research articles from PubMed (2024-2025). Demonstrates that major funders, journals, and institutions achieve dramatically higher open data rates (up to 82%) compared to baseline (13.5%).
+
+## Current Status (2026-01-22)
+
+**✅ Skeleton Complete:**
+- LaTeX structure compiling successfully (test PDF: `latex/osm_preprint_2026.pdf`)
+- Git repository initialized with `main` (barebones) and `develop` (full skeleton) branches
+- GitHub repo: https://github.com/nimh-dsst/osm-preprint-2026 (private)
+- Overleaf integration: Synced to `develop` branch
+- Python infrastructure: Utilities ready, dependencies defined
+- Meta-repo documentation updated
+
+**🔧 Next Steps:**
+1. Create table generation scripts to query parquet data
+2. Write manuscript content (abstract, intro, methods, results, discussion)
+3. When HPC returns (Jan 26): Process remaining PDFs (326k → 618k articles)
+
+**📊 Current Branch Strategy:**
+- `main` - Barebones (LICENSE + README only)
+- `develop` - Active development (default branch for Overleaf)
 
 ## Path Variables
 

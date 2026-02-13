@@ -15,7 +15,10 @@ from .data_loader import (
     load_oddpub_results,
     load_openalex_metadata,
     join_oddpub_openalex,
-    aggregate_by_group
+    aggregate_by_group,
+    connect_duckdb_registry,
+    query_funder_open_data_stats,
+    query_funder_open_data_for_group
 )
 
 __all__ = [
@@ -28,5 +31,8 @@ __all__ = [
     'load_oddpub_results',
     'load_openalex_metadata',
     'join_oddpub_openalex',
-    'aggregate_by_group'
+    'aggregate_by_group',
+    'connect_duckdb_registry',
+    'query_funder_open_data_stats',
+    'query_funder_open_data_for_group'
 ]

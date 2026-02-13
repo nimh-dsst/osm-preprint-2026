@@ -1,19 +1,24 @@
 # Makefile for OSM Preprint 2026
 
-.PHONY: all clean tables compile help
+.PHONY: all clean tables funder-table compile preview-table help
+
+DUCKDB_PATH ?= /data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb
 
 # Default target
 all: tables compile
 
 # Regenerate all LaTeX tables and figures
-tables:
-	@echo "Regenerating all tables and figures..."
-	python scripts/generate_all_tables.py \
-		--data-dir /data/adamt/osm/datafiles/ \
+tables: funder-table
+
+# Funder table, figure, and CSV
+funder-table:
+	@echo "Generating funder table..."
+	python scripts/table_funders.py \
+		--duckdb-path $(DUCKDB_PATH) \
 		--output-dir latex/tables/ \
 		--figures-dir latex/figures/ \
 		--results-dir results/ \
-		--force
+		--verbose
 
 # Compile LaTeX to PDF
 compile:
@@ -23,6 +28,12 @@ compile:
 	cd latex && pdflatex main.tex
 	cd latex && pdflatex main.tex
 	@echo "PDF generated: latex/main.pdf"
+
+# Local preview using tectonic (auto-downloads LaTeX packages)
+preview-table: funder-table
+	@echo "Rendering table preview with tectonic..."
+	tectonic latex/main.tex
+	@echo "Preview: latex/main.pdf"
 
 # Clean LaTeX auxiliary files
 clean:
@@ -48,7 +59,9 @@ help:
 	@echo ""
 	@echo "Available targets:"
 	@echo "  make all          - Generate tables and compile PDF (default)"
-	@echo "  make tables       - Regenerate all LaTeX tables and figures"
+	@echo "  make tables       - Regenerate all tables (currently: funder-table)"
+	@echo "  make funder-table - Generate funder table, figure, CSV, and markdown"
+	@echo "  make preview-table- Generate tables and render PDF locally (tectonic)"
 	@echo "  make compile      - Compile LaTeX to PDF (requires tables)"
 	@echo "  make clean        - Remove LaTeX auxiliary files"
 	@echo "  make update-refs  - Download latest references from PaperPile"

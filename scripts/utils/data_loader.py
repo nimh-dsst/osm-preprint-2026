@@ -102,6 +102,107 @@ def join_oddpub_openalex(oddpub_df: pd.DataFrame,
     return duckdb_con.execute(query).fetchdf()
 
 
+def connect_duckdb_registry(db_path: str, read_only: bool = True) -> duckdb.DuckDBPyConnection:
+    """
+    Open a DuckDB registry database file.
+
+    Args:
+        db_path: Path to the .duckdb file
+        read_only: Open in read-only mode (default True)
+
+    Returns:
+        DuckDB connection
+    """
+    db_path = str(db_path)
+    return duckdb.connect(db_path, read_only=read_only)
+
+
+def query_funder_open_data_stats(
+    con: duckdb.DuckDBPyConnection,
+    min_articles: int = 0,
+) -> pd.DataFrame:
+    """
+    Bulk query: join article_funders + funders + pmids to get per-funder
+    open data/code stats. Only considers articles with has_oddpub_v7=true.
+
+    Args:
+        con: DuckDB connection to pmid_registry.duckdb
+        min_articles: Minimum total articles for a funder to be included
+
+    Returns:
+        DataFrame with columns: canonical_name, country_code, funder_id,
+        total_articles, open_data_articles, open_code_articles
+    """
+    query = f"""
+    SELECT
+        f.canonical_name,
+        f.country_code,
+        f.funder_id,
+        COUNT(DISTINCT af.pmid) AS total_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_data_v7 = true THEN af.pmid END) AS open_data_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_code_v7 = true THEN af.pmid END) AS open_code_articles
+    FROM article_funders af
+    JOIN funders f ON af.funder_id = f.funder_id
+    JOIN pmids p ON af.pmid = p.pmid
+    WHERE p.has_oddpub_v7 = true
+    GROUP BY f.canonical_name, f.country_code, f.funder_id
+    HAVING COUNT(DISTINCT af.pmid) >= {min_articles}
+    ORDER BY COUNT(DISTINCT af.pmid) DESC
+    """
+    return con.execute(query).fetchdf()
+
+
+def query_funder_open_data_for_group(
+    con: duckdb.DuckDBPyConnection,
+    canonical_names: List[str],
+) -> dict:
+    """
+    Per-group query for parent-child aggregation. Takes a list of canonical
+    names and returns DISTINCT counts across all of them, avoiding
+    double-counting articles funded by multiple child funders.
+
+    Args:
+        con: DuckDB connection to pmid_registry.duckdb
+        canonical_names: List of funder canonical_names to aggregate
+
+    Returns:
+        Dict with keys: total_articles, open_data_articles, open_code_articles,
+        funder_id (of the member with the most articles)
+    """
+    placeholders = ", ".join(["?"] * len(canonical_names))
+    query = f"""
+    SELECT
+        COUNT(DISTINCT af.pmid) AS total_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_data_v7 = true THEN af.pmid END) AS open_data_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_code_v7 = true THEN af.pmid END) AS open_code_articles
+    FROM article_funders af
+    JOIN funders f ON af.funder_id = f.funder_id
+    JOIN pmids p ON af.pmid = p.pmid
+    WHERE p.has_oddpub_v7 = true
+      AND f.canonical_name IN ({placeholders})
+    """
+    row = con.execute(query, canonical_names).fetchone()
+    # Get funder_id of the largest member in the group
+    fid_query = f"""
+    SELECT f.funder_id
+    FROM article_funders af
+    JOIN funders f ON af.funder_id = f.funder_id
+    JOIN pmids p ON af.pmid = p.pmid
+    WHERE p.has_oddpub_v7 = true
+      AND f.canonical_name IN ({placeholders})
+    GROUP BY f.funder_id
+    ORDER BY COUNT(DISTINCT af.pmid) DESC
+    LIMIT 1
+    """
+    fid_row = con.execute(fid_query, canonical_names).fetchone()
+    return {
+        "total_articles": row[0],
+        "open_data_articles": row[1],
+        "open_code_articles": row[2],
+        "funder_id": fid_row[0] if fid_row else None,
+    }
+
+
 def aggregate_by_group(df: pd.DataFrame,
                       group_col: str,
                       agg_dict: dict,

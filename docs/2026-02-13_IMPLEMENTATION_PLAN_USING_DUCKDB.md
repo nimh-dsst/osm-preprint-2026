@@ -200,6 +200,54 @@ curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
 
 Add `scipy` to `scripts/requirements.txt` for the Weibull fit.
 
+---
+
+## Next: Migrate from funder_aliases_v4.csv to v5
+
+> Status: **PLANNED** — implement after context reset
+
+### Why
+
+The repo currently uses `scripts/funder_aliases_v4.csv` (134 rows, 10 columns), copied from the older `osm-2025-12-poster-incf` repo. The pipeline repo has `funder_aliases_v5.csv` (279 rows, 15 columns) which was built for the DuckDB pipeline and includes:
+
+| Feature | v4 | v5 |
+|---|---|---|
+| Rows | 134 | 279 |
+| Columns | 10 | 15 |
+| `openalex_id` | No | Yes — DuckDB funder_id directly in CSV |
+| `openalex_name` | No | Yes — exact DuckDB canonical_name |
+| `openalex_country` | No | Yes — DuckDB country_code |
+| `validation_status` | No | Yes — explicit_alias, fuzzy, etc. |
+| Fuzzy matches | No | Yes — additional variants via fuzzy matching |
+
+### What this enables
+
+1. **Eliminate `ALIAS_TO_DB_NAME_OVERRIDES` dict** — v5 has `openalex_name` which IS the DuckDB canonical_name. No more accent/language mismatches.
+2. **Eliminate `ENGLISH_DISPLAY_NAMES` dict** — v5 `canonical_name` is English, `openalex_name` is the DuckDB name. Use `canonical_name` for display, `openalex_name` for queries.
+3. **Direct `openalex_id`** — No need to query DuckDB for funder_id; it's in the CSV.
+4. **Fix NRF South Africa** — v5 likely has the South African NRF as a separate entry (v4 incorrectly aliases it as Korean NRF variant).
+5. **More aliases** — 279 vs 134 rows means better coverage.
+
+### Implementation plan
+
+1. **Copy v5 to repo**: `cp ~/claude/osm/osm-pipeline/funder_analysis/funder_aliases_v5.csv scripts/funder_aliases_v5.csv`
+2. **Rewrite `FunderNormalizer`** to use v5 columns:
+   - Use `openalex_name` for DuckDB queries (replaces `_resolve_db_names` + overrides)
+   - Use `canonical_name` for display (English names)
+   - Use `openalex_id` for OpenAlex links (replaces funder_id queries)
+   - Use `openalex_country` as fallback country
+3. **Remove** `ALIAS_TO_DB_NAME_OVERRIDES` and `ENGLISH_DISPLAY_NAMES` dicts (or reduce to edge cases)
+4. **Update** `query_funder_open_data_for_group()` — may no longer need the funder_id subquery
+5. **Remove** `funder_aliases_v4.csv` from repo
+6. **Test** and verify counts match or improve
+
+### Known issues to verify in v5
+
+- Does v5 have South African NRF as separate entry? (v4 bug)
+- Does v5 include "Wellcome" as variant of "Wellcome Trust"? (v4 had it but DuckDB also has separate entry)
+- Are there new parent-child relationships in v5?
+- Verify `openalex_name` matches DuckDB `canonical_name` exactly for all rows
+
 ## Verification
 
 ```bash

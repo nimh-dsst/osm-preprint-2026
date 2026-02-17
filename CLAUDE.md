@@ -72,7 +72,7 @@ osm-preprint-2026/
 │   ├── utils/
 │   │   ├── latex_helpers.py        # LaTeX formatting utilities
 │   │   └── data_loader.py          # DuckDB parquet queries
-│   ├── funder_aliases_v4.csv       # Funder normalization
+│   ├── funder_aliases_v5.csv       # Funder normalization (from osm-pipeline)
 │   └── requirements.txt            # Python dependencies
 │
 └── results/                        # CSV summaries for reproducibility
@@ -152,9 +152,10 @@ git push overleaf main
   - `grants[].funder_display_name` (funder names)
 
 ### Funder Aliases
-- **Location:** `scripts/funder_aliases_v4.csv`
-- **Source:** Copied from osm-2025-12-poster-incf repo
+- **Location:** `scripts/funder_aliases_v5.csv`
+- **Source:** Copied from osm-pipeline/funder_analysis/
 - **Purpose:** Parent-child funder aggregation (e.g., NIH institutes → NIH)
+- **Key columns:** `openalex_name` (DuckDB canonical_name), `openalex_id` (funder_id), `canonical_name` (English display name)
 
 ## Python Dependencies
 

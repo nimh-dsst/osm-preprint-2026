@@ -3,7 +3,7 @@
 Generate funder open-data table, bar chart, CSV, and markdown summary.
 
 Queries pmid_registry.duckdb for per-funder open data rates, applies
-parent-child aggregation from funder_aliases_v4.csv, and produces:
+parent-child aggregation from funder_aliases_v5.csv, and produces:
   - latex/tables/table_funders.tex      (longtable, Weibull 1% threshold)
   - latex/figures/funders_open_data.png  (bar chart, Weibull 0.5% threshold)
   - results/funders_summary.csv         (all funders, min 100 articles)
@@ -41,10 +41,11 @@ from utils.latex_helpers import (
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
-# Alias canonical_name → DuckDB canonical_name overrides
-# (20 names in funder_aliases_v4.csv that don't match DuckDB exactly)
+# DuckDB canonical_name overrides for v5 entries without openalex_name
+# (v5 has openalex_name for 102/133 funders; these 15 need manual mapping)
 # ---------------------------------------------------------------------------
-ALIAS_TO_DB_NAME_OVERRIDES: dict[str, list[str]] = {
+_DB_NAME_OVERRIDES: dict[str, list[str]] = {
+    # --- Entries with no openalex match in v5 (openalex_name is NaN) ---
     "Bundesministerium fur Bildung und Forschung": [
         "Bundesministerium für Bildung und Forschung",
     ],
@@ -56,9 +57,6 @@ ALIAS_TO_DB_NAME_OVERRIDES: dict[str, list[str]] = {
     ],
     "Department of Biotechnology": [
         "Department of Biotechnology, Ministry of Science and Technology, India",
-    ],
-    "Department of Energy": [
-        "U.S. Department of Energy",
     ],
     "Fundacao de Amparo a Pesquisa do Estado de Sao Paulo": [
         "Fundação de Amparo à Pesquisa do Estado de São Paulo",
@@ -77,18 +75,6 @@ ALIAS_TO_DB_NAME_OVERRIDES: dict[str, list[str]] = {
     "Ministerio de Economia y Competitividad": [
         "Ministerio de Economía y Competitividad",
     ],
-    "National Heart Lung and Blood Institute": [
-        "National Heart, Lung, and Blood Institute",
-    ],
-    "National Institute for Health Research": [
-        "National Institute for Health and Care Research",
-    ],
-    "National Key Research and Development Program": [
-        "National Key Research and Development Program of China",
-    ],
-    "National Library of Medicine": [
-        "U.S. National Library of Medicine",
-    ],
     "National Science Centre": [
         "Narodowe Centrum Nauki",
     ],
@@ -104,10 +90,7 @@ ALIAS_TO_DB_NAME_OVERRIDES: dict[str, list[str]] = {
     "Swiss National Science Foundation": [
         "Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung",
     ],
-    "United States Department of Agriculture": [
-        "U.S. Department of Agriculture",
-    ],
-    # Wellcome rebranded; DuckDB has both as separate canonical_names
+    # --- Multi-name DuckDB aggregation (has openalex_name but needs extra) ---
     "Wellcome Trust": [
         "Wellcome Trust",
         "Wellcome",
@@ -199,11 +182,21 @@ ENGLISH_DISPLAY_NAMES: dict[str, str] = {
 # FunderNormalizer — reads aliases CSV, builds parent-child groups
 # ---------------------------------------------------------------------------
 class FunderNormalizer:
-    """Load funder_aliases_v4.csv and build aggregation groups."""
+    """Load funder_aliases_v5.csv and build aggregation groups.
+
+    v5 columns used:
+      - canonical_name: English display name
+      - openalex_name: exact DuckDB canonical_name (NaN for 16 entries)
+      - openalex_id: DuckDB funder_id for OpenAlex links
+      - openalex_country: DuckDB country_code
+      - parent_funder: parent group name (NIH, UKRI, European Commission)
+      - country: alias CSV country (fallback)
+      - funder_type: government, private, etc.
+    """
 
     def __init__(self, aliases_csv: Path):
         self.aliases_csv = Path(aliases_csv)
-        # canonical_name → {country, parent_funder, funder_type}
+        # canonical_name → {country, parent_funder, funder_type, openalex_id, openalex_name, openalex_country}
         self.funder_info: dict[str, dict] = {}
         # parent display_name → set of child canonical_names
         self.parent_children: dict[str, set[str]] = {}
@@ -215,25 +208,46 @@ class FunderNormalizer:
             for row in reader:
                 cname = row["canonical_name"]
                 if cname not in self.funder_info:
+                    oa_name = row.get("openalex_name", "")
+                    oa_id = row.get("openalex_id", "")
+                    oa_country = row.get("openalex_country", "")
                     self.funder_info[cname] = {
                         "country": row.get("country", ""),
                         "parent_funder": row.get("parent_funder", ""),
                         "funder_type": row.get("funder_type", ""),
+                        "openalex_id": oa_id if oa_id and oa_id != "nan" else "",
+                        "openalex_name": oa_name if oa_name and oa_name != "nan" else "",
+                        "openalex_country": oa_country if oa_country and oa_country != "nan" else "",
                     }
                 parent = row.get("parent_funder", "").strip()
                 if parent:
                     self.parent_children.setdefault(parent, set()).add(cname)
 
     def _resolve_db_names(self, alias_name: str) -> list[str]:
-        """Map an alias canonical_name to a list of DuckDB canonical_names."""
-        if alias_name in ALIAS_TO_DB_NAME_OVERRIDES:
-            return ALIAS_TO_DB_NAME_OVERRIDES[alias_name]
+        """Map an alias canonical_name to a list of DuckDB canonical_names.
+
+        Priority:
+          1. _DB_NAME_OVERRIDES (for multi-name aggregation and no-openalex entries)
+          2. openalex_name from v5 CSV (exact DuckDB canonical_name)
+          3. canonical_name itself (last resort)
+        """
+        if alias_name in _DB_NAME_OVERRIDES:
+            return _DB_NAME_OVERRIDES[alias_name]
+        info = self.funder_info.get(alias_name, {})
+        oa_name = info.get("openalex_name", "")
+        if oa_name:
+            return [oa_name]
         return [alias_name]
+
+    def get_openalex_id(self, canonical_name: str) -> str:
+        """Get openalex_id for a canonical_name from v5 CSV."""
+        info = self.funder_info.get(canonical_name, {})
+        return info.get("openalex_id", "")
 
     def get_aggregation_groups(self) -> list[dict]:
         """
         Return aggregation groups. Each group is:
-          {display_name, db_names: [str], country, funder_type, is_parent}
+          {display_name, db_names: [str], country, funder_type, is_parent, openalex_id}
 
         Parent funders (e.g. NIH, UKRI, European Commission) aggregate all
         children plus their own direct entry. Standalone funders become
@@ -251,7 +265,7 @@ class FunderNormalizer:
             if parent_display in self.funder_info:
                 db_names.extend(self._resolve_db_names(parent_display))
 
-            # Country: use parent's own info if available, else first child
+            # Country + openalex_id: use parent's own info if available
             info = self.funder_info.get(parent_display, {})
             if not info:
                 first_child = next(iter(children))
@@ -262,6 +276,7 @@ class FunderNormalizer:
                 "db_names": list(set(db_names)),
                 "country": info.get("country", ""),
                 "funder_type": info.get("funder_type", ""),
+                "openalex_id": info.get("openalex_id", ""),
                 "is_parent": True,
             })
             children_consumed.update(children)
@@ -277,6 +292,7 @@ class FunderNormalizer:
                 "db_names": self._resolve_db_names(cname),
                 "country": info.get("country", ""),
                 "funder_type": info.get("funder_type", ""),
+                "openalex_id": info.get("openalex_id", ""),
                 "is_parent": False,
             })
 
@@ -355,7 +371,9 @@ def build_funder_summary(
 
         od = stats["open_data_articles"]
         oc = stats["open_code_articles"]
-        funder_id = stats.get("funder_id", "")
+
+        # Prefer openalex_id from v5 CSV; fall back to DuckDB query result
+        funder_id = group.get("openalex_id", "") or stats.get("funder_id", "") or ""
 
         # Country: prefer DuckDB country_code from the largest child
         country = _country_from_bulk(bulk_stats, db_names) or group["country"]
@@ -369,7 +387,7 @@ def build_funder_summary(
             "open_data_pct": round(100.0 * od / total, 1) if total else 0.0,
             "open_code_pct": round(100.0 * oc / total, 1) if total else 0.0,
             "funder_type": group["funder_type"],
-            "funder_id": funder_id or "",
+            "funder_id": funder_id,
             "is_alias_group": True,
         })
 
@@ -676,8 +694,8 @@ def parse_args(argv=None):
     )
     p.add_argument(
         "--aliases-csv",
-        default=str(Path(__file__).resolve().parent / "funder_aliases_v4.csv"),
-        help="Path to funder_aliases_v4.csv",
+        default=str(Path(__file__).resolve().parent / "funder_aliases_v5.csv"),
+        help="Path to funder_aliases_v5.csv",
     )
     p.add_argument(
         "--output-dir",

@@ -123,7 +123,7 @@ def query_funder_open_data_stats(
 ) -> pd.DataFrame:
     """
     Bulk query: join article_funders + funders + pmids to get per-funder
-    open data/code stats. Only considers articles with has_oddpub_v7=true.
+    open data/code stats. Uses best-available oddpub scores (PDF v7 preferred over XML v7).
 
     Args:
         con: DuckDB connection to pmid_registry.duckdb
@@ -139,12 +139,12 @@ def query_funder_open_data_stats(
         f.country_code,
         f.funder_id,
         COUNT(DISTINCT af.pmid) AS total_articles,
-        COUNT(DISTINCT CASE WHEN p.is_open_data_v7 = true THEN af.pmid END) AS open_data_articles,
-        COUNT(DISTINCT CASE WHEN p.is_open_code_v7 = true THEN af.pmid END) AS open_code_articles
+        COUNT(DISTINCT CASE WHEN p.is_open_data_best = true THEN af.pmid END) AS open_data_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_code_best = true THEN af.pmid END) AS open_code_articles
     FROM article_funders af
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
-    WHERE p.has_oddpub_v7 = true
+    WHERE p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true
     GROUP BY f.canonical_name, f.country_code, f.funder_id
     HAVING COUNT(DISTINCT af.pmid) >= {min_articles}
     ORDER BY COUNT(DISTINCT af.pmid) DESC
@@ -173,12 +173,12 @@ def query_funder_open_data_for_group(
     query = f"""
     SELECT
         COUNT(DISTINCT af.pmid) AS total_articles,
-        COUNT(DISTINCT CASE WHEN p.is_open_data_v7 = true THEN af.pmid END) AS open_data_articles,
-        COUNT(DISTINCT CASE WHEN p.is_open_code_v7 = true THEN af.pmid END) AS open_code_articles
+        COUNT(DISTINCT CASE WHEN p.is_open_data_best = true THEN af.pmid END) AS open_data_articles,
+        COUNT(DISTINCT CASE WHEN p.is_open_code_best = true THEN af.pmid END) AS open_code_articles
     FROM article_funders af
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
-    WHERE p.has_oddpub_v7 = true
+    WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)
       AND f.canonical_name IN ({placeholders})
     """
     row = con.execute(query, canonical_names).fetchone()
@@ -188,7 +188,7 @@ def query_funder_open_data_for_group(
     FROM article_funders af
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
-    WHERE p.has_oddpub_v7 = true
+    WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)
       AND f.canonical_name IN ({placeholders})
     GROUP BY f.funder_id
     ORDER BY COUNT(DISTINCT af.pmid) DESC

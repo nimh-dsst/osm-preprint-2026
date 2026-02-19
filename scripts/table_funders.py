@@ -344,6 +344,8 @@ def build_funder_summary(
     normalizer: FunderNormalizer,
     bulk_stats: pd.DataFrame,
     min_articles: int = 100,
+    year_from: int | None = None,
+    year_to: int | None = None,
 ) -> pd.DataFrame:
     """
     Build the full funder summary DataFrame.
@@ -364,7 +366,10 @@ def build_funder_summary(
             continue
         alias_db_names_used.update(db_names)
 
-        stats = query_funder_open_data_for_group(con, db_names)
+        stats = query_funder_open_data_for_group(
+            con, db_names,
+            year_from=year_from, year_to=year_to,
+        )
         total = stats["total_articles"]
         if total < min_articles:
             continue
@@ -415,6 +420,12 @@ def build_funder_summary(
             "is_alias_group": False,
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "funder_name", "country", "total_articles", "open_data_articles",
+            "open_code_articles", "open_data_pct", "open_code_pct",
+            "funder_type", "funder_id", "is_alias_group",
+        ])
     df = pd.DataFrame(rows)
     df.sort_values("open_data_pct", ascending=False, inplace=True)
     df.reset_index(drop=True, inplace=True)
@@ -461,6 +472,8 @@ def generate_funder_latex_table(
     output_path: Path,
     threshold: int = 0,
     n_total_funders: int = 0,
+    survival_pct: float = 1.0,
+    label_suffix: str = "",
 ) -> None:
     """Write a longtable .tex file for funders above the threshold."""
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
@@ -487,9 +500,10 @@ def generate_funder_latex_table(
     )
 
     # Caption with methodology note
+    surv_str = f"{survival_pct:g}"
     caption = (
         r"Open data rates among major biomedical research funders. "
-        r"Funders exceeding the Weibull-derived 1\% survival threshold "
+        rf"Funders exceeding the Weibull-derived {surv_str}\% survival threshold "
         rf"for total funded articles ($\geq${threshold:,} articles with "
         r"oddpub v7 coverage), ranked by open data rate. "
         r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
@@ -500,7 +514,7 @@ def generate_funder_latex_table(
         r"in the supplementary materials on GitHub."
     )
     lines.append(rf"\caption{{{caption}}}")
-    lines.append(r"\label{tab:funders} \\")
+    lines.append(rf"\label{{tab:funders{label_suffix}}} \\")
 
     # Header
     header_row = (
@@ -721,6 +735,9 @@ def parse_args(argv=None):
         help="Weibull survival for table threshold (default: 0.01 = 1%%)",
     )
     p.add_argument("--min-articles", type=int, default=100, help="Minimum articles for CSV/markdown")
+    p.add_argument("--year-from", type=int, default=None, help="Include articles published in or after this year")
+    p.add_argument("--year-to", type=int, default=None, help="Include articles published in or before this year")
+    p.add_argument("--output-suffix", default="", help="Suffix for output filenames (e.g. '_2024' → table_funders_2024.tex)")
     p.add_argument("--verbose", action="store_true")
     return p.parse_args(argv)
 
@@ -743,8 +760,22 @@ def main(argv=None):
         len(normalizer.parent_children),
     )
 
+    # Year filters
+    year_from = args.year_from
+    year_to = args.year_to
+    if year_from or year_to:
+        parts = []
+        if year_from:
+            parts.append(f"from {year_from}")
+        if year_to:
+            parts.append(f"to {year_to}")
+        logger.info("Filters: pub_year %s", ", ".join(parts))
+
     logger.info("Running bulk funder stats query...")
-    bulk_stats = query_funder_open_data_stats(con, min_articles=0)
+    bulk_stats = query_funder_open_data_stats(
+        con, min_articles=0,
+        year_from=year_from, year_to=year_to,
+    )
     logger.info("  %d funders in bulk stats", len(bulk_stats))
 
     # Compute funded-article baseline
@@ -760,6 +791,7 @@ def main(argv=None):
     logger.info("Building funder summary (min_articles=%d)...", args.min_articles)
     summary = build_funder_summary(
         con, normalizer, bulk_stats, min_articles=args.min_articles,
+        year_from=year_from, year_to=year_to,
     )
     logger.info("  %d funders in summary", len(summary))
 
@@ -782,15 +814,18 @@ def main(argv=None):
     )
 
     # Outputs
-    table_path = Path(args.output_dir) / "table_funders.tex"
-    figure_path = Path(args.figures_dir) / "funders_open_data.png"
-    csv_path = Path(args.results_dir) / "funders_summary.csv"
-    md_path = Path(args.results_dir) / "funders_summary.md"
+    sfx = args.output_suffix
+    table_path = Path(args.output_dir) / f"table_funders{sfx}.tex"
+    figure_path = Path(args.figures_dir) / f"funders_open_data{sfx}.png"
+    csv_path = Path(args.results_dir) / f"funders_summary{sfx}.csv"
+    md_path = Path(args.results_dir) / f"funders_summary{sfx}.md"
 
     generate_funder_latex_table(
         summary, table_path,
         threshold=tbl_threshold,
         n_total_funders=len(summary),
+        survival_pct=args.table_survival * 100,
+        label_suffix=sfx,
     )
     generate_funder_bar_chart(
         summary, figure_path,

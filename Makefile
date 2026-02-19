@@ -1,6 +1,6 @@
 # Makefile for OSM Preprint 2026
 
-.PHONY: all clean tables funder-table compile preview-table help
+.PHONY: all clean tables funder-table funder-table-2024 compile preview-table help
 
 DUCKDB_PATH ?= /data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb
 
@@ -8,7 +8,7 @@ DUCKDB_PATH ?= /data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb
 all: tables compile
 
 # Regenerate all LaTeX tables and figures
-tables: funder-table
+tables: funder-table funder-table-2024
 
 # Funder table, figure, and CSV
 funder-table:
@@ -18,6 +18,19 @@ funder-table:
 		--output-dir latex/tables/ \
 		--figures-dir latex/figures/ \
 		--results-dir results/ \
+		--verbose
+
+# Funder table filtered to 2024-2025 research articles
+funder-table-2024:
+	@echo "Generating funder table (2024-2025)..."
+	python scripts/table_funders.py \
+		--duckdb-path $(DUCKDB_PATH) \
+		--output-dir latex/tables/ \
+		--figures-dir latex/figures/ \
+		--results-dir results/ \
+		--year-from 2024 --year-to 2025 \
+		--table-survival 0.05 --figure-survival 0.03 \
+		--output-suffix _2024_2025 \
 		--verbose
 
 # Compile LaTeX to PDF
@@ -60,7 +73,8 @@ help:
 	@echo "Available targets:"
 	@echo "  make all          - Generate tables and compile PDF (default)"
 	@echo "  make tables       - Regenerate all tables (currently: funder-table)"
-	@echo "  make funder-table - Generate funder table, figure, CSV, and markdown"
+	@echo "  make funder-table - Generate funder table, figure, CSV, and markdown (all years)"
+	@echo "  make funder-table-2024 - Same but filtered to 2024-2025 publications"
 	@echo "  make preview-table- Generate tables and render PDF locally (tectonic)"
 	@echo "  make compile      - Compile LaTeX to PDF (requires tables)"
 	@echo "  make clean        - Remove LaTeX auxiliary files"

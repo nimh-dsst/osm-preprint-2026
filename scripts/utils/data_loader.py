@@ -120,6 +120,8 @@ def connect_duckdb_registry(db_path: str, read_only: bool = True) -> duckdb.Duck
 def query_funder_open_data_stats(
     con: duckdb.DuckDBPyConnection,
     min_articles: int = 0,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
 ) -> pd.DataFrame:
     """
     Bulk query: join article_funders + funders + pmids to get per-funder
@@ -128,11 +130,23 @@ def query_funder_open_data_stats(
     Args:
         con: DuckDB connection to pmid_registry.duckdb
         min_articles: Minimum total articles for a funder to be included
+        year_from: Include articles published in or after this year
+        year_to: Include articles published in or before this year
 
     Returns:
         DataFrame with columns: canonical_name, country_code, funder_id,
         total_articles, open_data_articles, open_code_articles
     """
+    filters = ["(p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)"]
+    params = []
+    if year_from is not None:
+        filters.append("p.pub_year >= ?")
+        params.append(year_from)
+    if year_to is not None:
+        filters.append("p.pub_year <= ?")
+        params.append(year_to)
+    where_clause = " AND ".join(filters)
+
     query = f"""
     SELECT
         f.canonical_name,
@@ -144,17 +158,19 @@ def query_funder_open_data_stats(
     FROM article_funders af
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
-    WHERE p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true
+    WHERE {where_clause}
     GROUP BY f.canonical_name, f.country_code, f.funder_id
     HAVING COUNT(DISTINCT af.pmid) >= {min_articles}
     ORDER BY COUNT(DISTINCT af.pmid) DESC
     """
-    return con.execute(query).fetchdf()
+    return con.execute(query, params).fetchdf()
 
 
 def query_funder_open_data_for_group(
     con: duckdb.DuckDBPyConnection,
     canonical_names: List[str],
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
 ) -> dict:
     """
     Per-group query for parent-child aggregation. Takes a list of canonical
@@ -164,12 +180,23 @@ def query_funder_open_data_for_group(
     Args:
         con: DuckDB connection to pmid_registry.duckdb
         canonical_names: List of funder canonical_names to aggregate
+        year_from: Include articles published in or after this year
+        year_to: Include articles published in or before this year
 
     Returns:
         Dict with keys: total_articles, open_data_articles, open_code_articles,
         funder_id (of the member with the most articles)
     """
     placeholders = ", ".join(["?"] * len(canonical_names))
+    extra_filters = ""
+    extra_params = []
+    if year_from is not None:
+        extra_filters += " AND p.pub_year >= ?"
+        extra_params.append(year_from)
+    if year_to is not None:
+        extra_filters += " AND p.pub_year <= ?"
+        extra_params.append(year_to)
+
     query = f"""
     SELECT
         COUNT(DISTINCT af.pmid) AS total_articles,
@@ -179,9 +206,10 @@ def query_funder_open_data_for_group(
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
     WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)
-      AND f.canonical_name IN ({placeholders})
+      AND f.canonical_name IN ({placeholders}){extra_filters}
     """
-    row = con.execute(query, canonical_names).fetchone()
+    params = canonical_names + extra_params
+    row = con.execute(query, params).fetchone()
     # Get funder_id of the largest member in the group
     fid_query = f"""
     SELECT f.funder_id
@@ -189,12 +217,12 @@ def query_funder_open_data_for_group(
     JOIN funders f ON af.funder_id = f.funder_id
     JOIN pmids p ON af.pmid = p.pmid
     WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)
-      AND f.canonical_name IN ({placeholders})
+      AND f.canonical_name IN ({placeholders}){extra_filters}
     GROUP BY f.funder_id
     ORDER BY COUNT(DISTINCT af.pmid) DESC
     LIMIT 1
     """
-    fid_row = con.execute(fid_query, canonical_names).fetchone()
+    fid_row = con.execute(fid_query, params).fetchone()
     return {
         "total_articles": row[0],
         "open_data_articles": row[1],

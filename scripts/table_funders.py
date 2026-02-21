@@ -344,8 +344,7 @@ def build_funder_summary(
     normalizer: FunderNormalizer,
     bulk_stats: pd.DataFrame,
     min_articles: int = 100,
-    year_from: int | None = None,
-    year_to: int | None = None,
+    **filter_kwargs,
 ) -> pd.DataFrame:
     """
     Build the full funder summary DataFrame.
@@ -353,6 +352,9 @@ def build_funder_summary(
     For alias groups (parent-child), queries DuckDB with DISTINCT counts.
     For unaliased funders, uses the bulk_stats DataFrame.
     Country codes come from DuckDB's funders.country_code via bulk_stats.
+
+    filter_kwargs are forwarded to query_funder_open_data_for_group
+    (year_from, year_to, date_from, date_to, research_only).
     """
     rows = []
 
@@ -367,8 +369,7 @@ def build_funder_summary(
         alias_db_names_used.update(db_names)
 
         stats = query_funder_open_data_for_group(
-            con, db_names,
-            year_from=year_from, year_to=year_to,
+            con, db_names, **filter_kwargs,
         )
         total = stats["total_articles"]
         if total < min_articles:
@@ -735,8 +736,11 @@ def parse_args(argv=None):
         help="Weibull survival for table threshold (default: 0.01 = 1%%)",
     )
     p.add_argument("--min-articles", type=int, default=100, help="Minimum articles for CSV/markdown")
-    p.add_argument("--year-from", type=int, default=None, help="Include articles published in or after this year")
-    p.add_argument("--year-to", type=int, default=None, help="Include articles published in or before this year")
+    p.add_argument("--year-from", type=int, default=None, help="Filter by pub_year >= (fallback if --date-from not set)")
+    p.add_argument("--year-to", type=int, default=None, help="Filter by pub_year <= (fallback if --date-to not set)")
+    p.add_argument("--date-from", default=None, help="Filter by pub_date >= (YYYY-MM-DD)")
+    p.add_argument("--date-to", default=None, help="Filter by pub_date <= (YYYY-MM-DD)")
+    p.add_argument("--research-only", action="store_true", help="Only include research articles (is_research=true)")
     p.add_argument("--output-suffix", default="", help="Suffix for output filenames (e.g. '_2024' → table_funders_2024.tex)")
     p.add_argument("--verbose", action="store_true")
     return p.parse_args(argv)
@@ -760,21 +764,30 @@ def main(argv=None):
         len(normalizer.parent_children),
     )
 
-    # Year filters
-    year_from = args.year_from
-    year_to = args.year_to
-    if year_from or year_to:
-        parts = []
-        if year_from:
-            parts.append(f"from {year_from}")
-        if year_to:
-            parts.append(f"to {year_to}")
-        logger.info("Filters: pub_year %s", ", ".join(parts))
+    # Date / year / research filters
+    filter_kwargs = {}
+    parts = []
+    if args.date_from:
+        filter_kwargs["date_from"] = args.date_from
+        parts.append(f"pub_date >= {args.date_from}")
+    elif args.year_from:
+        filter_kwargs["year_from"] = args.year_from
+        parts.append(f"pub_year >= {args.year_from}")
+    if args.date_to:
+        filter_kwargs["date_to"] = args.date_to
+        parts.append(f"pub_date <= {args.date_to}")
+    elif args.year_to:
+        filter_kwargs["year_to"] = args.year_to
+        parts.append(f"pub_year <= {args.year_to}")
+    if args.research_only:
+        filter_kwargs["research_only"] = True
+        parts.append("research only")
+    if parts:
+        logger.info("Filters: %s", ", ".join(parts))
 
     logger.info("Running bulk funder stats query...")
     bulk_stats = query_funder_open_data_stats(
-        con, min_articles=0,
-        year_from=year_from, year_to=year_to,
+        con, min_articles=0, **filter_kwargs,
     )
     logger.info("  %d funders in bulk stats", len(bulk_stats))
 
@@ -791,7 +804,7 @@ def main(argv=None):
     logger.info("Building funder summary (min_articles=%d)...", args.min_articles)
     summary = build_funder_summary(
         con, normalizer, bulk_stats, min_articles=args.min_articles,
-        year_from=year_from, year_to=year_to,
+        **filter_kwargs,
     )
     logger.info("  %d funders in summary", len(summary))
 

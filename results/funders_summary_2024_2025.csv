@@ -1,907 +1,817 @@
 funder_name,country,total_articles,open_data_articles,open_code_articles,open_data_pct,open_code_pct,funder_type,funder_id,is_alias_group
-Uppsala Multidisciplinary Center for Advanced Computational Science,Sweden,112,58,35,51.8,31.2,,F4320336376,False
-Broad Institute,USA,102,52,40,51.0,39.2,government,F4320314070,True
-Science for Life Laboratory,Sweden,228,108,48,47.4,21.1,,F4320325677,False
-European Molecular Biology Laboratory,Germany,136,58,46,42.6,33.8,,F4320314023,False
-Argonne National Laboratory,USA,165,70,23,42.4,13.9,,F4320338284,False
-Canadian Institute for Advanced Research,Canada,121,49,37,40.5,30.6,,F4320309949,False
-Genome Canada,Canada,188,74,32,39.4,17.0,,F4320310787,False
-Biological and Environmental Research,USA,286,111,62,38.8,21.7,,F4320337509,False
-National Centre for Earth Observation,UK,166,63,59,38.0,35.5,,F4320338155,False
-Deutsches Krebsforschungszentrum,Germany,129,49,26,38.0,20.2,,F4320310693,False
-European Synchrotron Radiation Facility,France,146,55,15,37.7,10.3,,F4320320887,False
-Francis Crick Institute,UK,200,75,42,37.5,21.0,government,F4320312060,True
-Lawrence Berkeley National Laboratory,USA,137,50,31,36.5,22.6,,F4320338292,False
-Diamond Light Source,UK,213,77,21,36.2,9.9,,F4320313096,False
-Common Fund,USA,143,50,38,35.0,26.6,,F4320338403,False
-European Molecular Biology Organization,Germany,301,105,72,34.9,23.9,,F4320307844,False
-"Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",France,236,81,30,34.3,12.7,,F4320331560,False
-Fondation ARC pour la Recherche sur le Cancer,France,164,56,19,34.1,11.6,,F4320322361,False
-National Geographic Society,USA,144,49,32,34.0,22.2,government,F4320309024,True
-Leibniz-Gemeinschaft,Germany,275,93,38,33.8,13.8,,F4320334763,False
-Directorate for Biological Sciences,USA,883,293,160,33.2,18.1,,F4320332167,False
-École Polytechnique Fédérale de Lausanne,Switzerland,167,55,34,32.9,20.4,,F4320320915,False
-Deutsches Elektronen-Synchrotron,Germany,134,44,14,32.8,10.4,,F4320334759,False
-Howard Hughes Medical Institute,USA,824,269,174,32.6,21.1,philanthropy,F4320306082,True
-"Division of Intramural Research, National Institute of Allergy and Infectious Diseases",USA,434,141,63,32.5,14.5,,F4320309123,False
-NIH Office of the Director,USA,297,95,63,32.0,21.2,,F4320337349,False
-Agriculture and Agri-Food Canada,Canada,104,33,6,31.7,5.8,,F4320334595,False
-Foundation for Medical Research (France),France,460,146,83,31.7,18.0,,F4320321589,False
-Breast Cancer Research Foundation,USA,158,50,27,31.6,17.1,government,F4320306260,True
-Österreichischen Akademie der Wissenschaften,Austria,124,39,27,31.5,21.8,,F4320321004,False
-Leukemia and Lymphoma Society,USA,106,33,13,31.1,12.3,,F4320308295,False
-Prostate Cancer Foundation,USA,113,35,16,31.0,14.2,government,F4320306163,True
-American Lebanese Syrian Associated Charities,USA,105,32,16,30.5,15.2,,F4320313598,False
-Office of Science,USA,796,240,119,30.2,14.9,,F4320332359,False
-Battelle,USA,100,30,10,30.0,10.0,,F4320306250,False
-Freie Universität Berlin,Germany,150,45,22,30.0,14.7,,F4320324521,False
-Eötvös Loránd Tudományegyetem,HU,100,30,20,30.0,20.0,,F4320326124,False
-Branco Weiss Fellowship – Society in Science,Switzerland,134,40,33,29.9,24.6,,F4320320923,False
-Burroughs Wellcome Fund,USA,234,70,39,29.9,16.7,government,F4320306133,True
-Sight Research UK,UK,648,193,147,29.8,22.7,,F4320320022,False
-Akademie Věd České Republiky,Czech Republic,210,62,17,29.5,8.1,,F4320322482,False
-Max Planck Society,Germany,1012,299,229,29.5,22.6,philanthropy,F4320322434,True
-Fondation Leducq,France,176,51,35,29.0,19.9,,F4320320890,False
-"University of California, San Diego",USA,287,83,50,28.9,17.4,,F4320332603,False
-China Agricultural University,China,205,59,18,28.8,8.8,,F4320321131,False
-Nanjing Agricultural University,China,108,31,7,28.7,6.5,,F4320325211,False
-Cancer Prevention and Research Institute of Texas,USA,369,106,32,28.7,8.7,,F4320308129,False
-John Templeton Foundation,USA,223,64,45,28.7,20.2,government,F4320306193,True
-Pew Charitable Trusts,USA,101,29,21,28.7,20.8,,F4320306148,False
-Universiteit Gent,Belgium,228,64,31,28.1,13.6,,F4320322603,False
-Human Frontier Science Program,France,320,90,86,28.1,26.9,,F4320320338,False
-"University of California, San Francisco",USA,372,103,55,27.7,14.8,,F4320332622,False
-Fondation de France,France,101,28,15,27.7,14.9,,F4320322646,False
-Uehara Memorial Foundation,Japan,177,49,14,27.7,7.9,government,F4320310760,True
-RIKEN,Japan,175,48,25,27.4,14.3,government,F4320335125,True
-Agriculture Research System of China,China,176,48,8,27.3,4.5,,F4320326266,False
-Institut National Du Cancer,France,257,70,35,27.2,13.6,,F4320323807,False
-"University of California, Davis",USA,218,59,28,27.1,12.8,,F4320332564,False
-Eidgenössische Technische Hochschule Zürich,Switzerland,439,119,82,27.1,18.7,,F4320321652,False
-Foundation for the National Institutes of Health,USA,569,154,111,27.1,19.5,,F4320306080,False
-Agricultural Research Service,USA,501,135,64,26.9,12.8,,F4320332605,False
-"Division of Microbiology and Infectious Diseases, National Institute of Allergy and Infectious Diseases",USA,175,47,15,26.9,8.6,,F4320338412,False
-Studienstiftung des Deutschen Volkes,Germany,138,37,17,26.8,12.3,,F4320322572,False
-National Science Foundation of Sri Lanka,LK,3453,919,772,26.6,22.4,,F4320335353,False
-University of Wisconsin-Madison,USA,106,28,14,26.4,13.2,,F4320309434,False
-Barncancerfonden,Sweden,125,33,16,26.4,12.8,,F4320323766,False
-Sveriges Lantbruksuniversitet,Sweden,190,50,19,26.3,10.0,,F4320322582,False
-Chan Zuckerberg Initiative,USA,226,59,70,26.1,31.0,,F4320315474,False
-Wilhelm Sander-Stiftung,Germany,100,26,9,26.0,9.0,,F4320310707,False
-Division of Environmental Biology,USA,154,40,30,26.0,19.5,,F4320337400,False
-Department of Energy,USA,1697,439,259,25.9,15.3,government,F4320306084,True
-Syöpäsäätiö,Finland,109,28,15,25.7,13.8,,F4320326591,False
-York University,Canada,109,28,16,25.7,14.7,,F4320319918,False
-Universiteit Utrecht,Netherlands,101,26,17,25.7,16.8,,F4320321010,False
-Centre National de la Recherche Scientifique,France,768,196,108,25.5,14.1,government,F4320322892,True
-Knut och Alice Wallenbergs Stiftelse,Sweden,854,218,139,25.5,16.3,,F4320322327,False
-"University of California, Irvine",USA,106,27,17,25.5,16.0,,F4320332688,False
-Chinese Academy of Agricultural Sciences,China,392,100,14,25.5,3.6,,F4320323155,False
-Harvard University,USA,138,35,22,25.4,15.9,,F4320309622,False
-NHLBI Division of Intramural Research,USA,264,67,30,25.4,11.4,,F4320338421,False
-Yale University,USA,252,64,42,25.4,16.7,,F4320308380,False
-Naito Foundation,Japan,138,35,12,25.4,8.7,,F4320309785,False
-Cancer Research UK,UK,1396,353,228,25.3,16.3,philanthropy,F4320319985,True
-Tsinghua University,China,198,50,16,25.3,8.1,,F4320322392,False
-Michael J. Fox Foundation for Parkinson's Research,USA,286,72,55,25.2,19.2,,F4320306136,False
-"Grantová Agentura, Univerzita Karlova",Czech Republic,124,31,13,25.0,10.5,,F4320309872,False
-University of Exeter,UK,144,36,22,25.0,15.3,,F4320320275,False
-Indian Council of Agricultural Research,India,184,46,10,25.0,5.4,,F4320320769,False
-Deutsches Zentrum für Infektionsforschung,Germany,184,46,15,25.0,8.2,,F4320311052,False
-Business Finland,Finland,108,27,14,25.0,13.0,,F4320328501,False
-Julius-Maximilians-Universität Würzburg,Germany,109,27,23,24.8,21.1,,F4320325356,False
-Medical Research Foundation,UK,202,50,36,24.8,17.8,government,F4320338126,True
-Swedish Cancer Foundation,Sweden,101,25,12,24.8,11.9,,F4320313607,False
-U.S. Fish and Wildlife Service,USA,118,29,17,24.6,14.4,,F4320332182,False
-Universität Wien,Austria,367,90,38,24.5,10.4,,F4320321691,False
-Stockholms Universitet,Sweden,164,40,17,24.4,10.4,,F4320325669,False
-Agence Nationale de la Recherche,France,2899,707,450,24.4,15.5,government,F4320320883,True
-American Cancer Society,USA,338,82,35,24.3,10.4,government,F4320306095,True
-"Consejo Nacional de Ciencia y Tecnología, Paraguay",PY,189,46,20,24.3,10.6,,F4320328088,False
-United States Department of Agriculture,USA,1386,337,141,24.3,10.2,government,F4320306114,True
-National Oceanic and Atmospheric Administration,USA,186,45,38,24.2,20.4,,F4320332181,False
-Nuclear Safety and Security Commission,Korea,162,39,31,24.1,19.1,,F4320322037,False
-Gordon and Betty Moore Foundation,USA,341,82,65,24.0,19.1,,F4320306202,False
-Carlsbergfondet,Denmark,138,33,23,23.9,16.7,,F4320321504,False
-Sigrid Juselius Foundation (Finland),Finland,340,81,40,23.8,11.8,,F4320323760,False
-Sorbonne Université,France,101,24,9,23.8,8.9,,F4320330232,False
-The Wellcome Trust DBT India Alliance,India,172,41,17,23.8,9.9,,F4320325580,False
-Massachusetts Institute of Technology,USA,130,31,15,23.8,11.5,,F4320309369,False
-Fonds De La Recherche Scientifique - FNRS,Belgium,376,89,47,23.7,12.5,,F4320321390,False
-Royal Society Te Apārangi,New Zealand,110,26,23,23.6,20.9,,F4320320774,False
-Horizon 2020 Framework Programme,,2592,613,454,23.6,17.5,,F4320332999,False
-CHIST-ERA,France,217,51,41,23.5,18.9,,F4320338463,False
-Volkswagen Foundation,Germany,265,62,47,23.4,17.7,government,F4320320882,True
-National Science Foundation,USA,8137,1905,1451,23.4,17.8,government,F4320306076,True
-Associazione Italiana per la Ricerca sul Cancro,Italy,560,131,53,23.4,9.5,philanthropy,F4320323054,True
-University of Michigan,USA,103,24,13,23.3,12.6,,F4320309652,False
-National Center for Research Resources,USA,151,35,16,23.2,10.6,,F4320337375,False
-Novo Nordisk Foundation,Denmark,1172,272,171,23.2,14.6,government,F4320325957,True
-Czech Science Foundation,Czech Republic,1028,238,97,23.2,9.4,government,F4320321006,True
-Vlaamse regering,Belgium,542,125,93,23.1,17.2,,F4320327336,False
-Consejo Superior de Investigaciones Científicas,Spain,342,79,27,23.1,7.9,,F4320334857,False
-Canada First Research Excellence Fund,Canada,134,31,23,23.1,17.2,government,F4320326644,True
-Lundbeckfonden,Denmark,325,75,48,23.1,14.8,,F4320321999,False
-Commonwealth Scientific and Industrial Research Organisation,Australia,134,31,18,23.1,13.4,,F4320320386,False
-University of Minnesota,USA,226,52,31,23.0,13.7,,F4320309636,False
-Agricultural Science and Technology Innovation Program,China,313,72,7,23.0,2.2,,F4320335848,False
-Alfred P. Sloan Foundation,USA,217,50,54,23.0,24.9,,F4320306151,False
-University of Oxford,UK,525,120,100,22.9,19.0,,F4320320290,False
-Office of Defense Programs,USA,358,82,48,22.9,13.4,,F4320337003,False
-Fundacja na rzecz Nauki Polskiej,Poland,170,39,19,22.9,11.2,,F4320321042,False
-Earmarked Fund for China Agriculture Research System,China,219,50,7,22.8,3.2,,F4320335447,False
-Moonshot Research and Development Program,Japan,171,39,25,22.8,14.6,,F4320338247,False
-State Government of Victoria,Australia,106,24,13,22.6,12.3,,F4320322858,False
-Villum Fonden,Denmark,187,42,24,22.5,12.8,,F4320310490,False
-Alzheimer's Society,UK,187,42,33,22.5,17.6,,F4320317015,False
-Division of Integrative Organismal Systems,USA,111,25,18,22.5,16.2,,F4320337399,False
-Universität Hamburg,Germany,111,25,26,22.5,23.4,,F4320323381,False
-Ligue Contre le Cancer,France,258,58,26,22.5,10.1,,F4320322363,False
-Deutsche Krebshilfe,Germany,364,82,39,22.5,10.7,,F4320323556,False
-Swiss National Science Foundation,Switzerland,3731,835,583,22.4,15.6,government,F4320320924,True
-Helmholtz Association,Germany,196,44,41,22.4,20.9,government,F4320325698,True
-Northwestern University,USA,251,56,36,22.3,14.3,,F4320309475,False
-Stiftelsen för Strategisk Forskning,Sweden,153,34,28,22.2,18.3,,F4320320940,False
-Svenska Sällskapet för Medicinsk Forskning,Sweden,162,36,11,22.2,6.8,,F4320322128,False
-Office of Secretary of Energy,USA,560,124,98,22.1,17.5,,F4320332366,False
-Rijksuniversiteit Groningen,Netherlands,145,32,17,22.1,11.7,,F4320320933,False
-Russian Academy of Sciences,Russia,104,23,6,22.1,5.8,,F4320334801,False
-Michigan State University,USA,141,31,22,22.0,15.6,,F4320310016,False
-Fujian Agriculture and Forestry University,China,100,22,2,22.0,2.0,,F4320325353,False
-Chinese Academy of Sciences,China,1207,266,88,22.0,7.3,,F4320321133,False
-Universität zu Köln,Germany,109,24,13,22.0,11.9,,F4320324811,False
-National Institute of Food and Agriculture,USA,1257,275,142,21.9,11.3,,F4320332299,False
-National Research Foundation Singapore,Singapore,269,59,30,21.9,11.2,,F4320320709,False
-Novo Nordisk,Denmark,765,167,107,21.8,14.0,,F4320322436,False
-Xiamen University,China,106,23,7,21.7,6.6,,F4320325434,False
-National Institute of Health and Medical Research (INSERM),France,655,142,75,21.7,11.5,,F4320320893,False
-University of Texas MD Anderson Cancer Center,USA,189,41,18,21.7,9.5,,F4320332521,False
-European Federation of Pharmaceutical Industries and Associations,Belgium,208,45,38,21.6,18.3,,F4320314178,False
-University of North Carolina at Chapel Hill,USA,134,29,22,21.6,16.4,,F4320332600,False
-Massachusetts General Hospital,USA,121,26,26,21.5,21.5,,F4320308349,False
-McGill University,Canada,205,44,27,21.5,13.2,,F4320310638,False
-Universiteit Leiden,Netherlands,107,23,19,21.5,17.8,,F4320320929,False
-Rosetrees Trust,UK,260,56,37,21.5,14.2,government,F4320320320,True
-KU Leuven,Belgium,318,68,41,21.4,12.9,,F4320322308,False
-Academy of Medical Sciences,UK,197,42,20,21.3,10.2,,F4320320241,False
-Wellcome Trust,UK,5720,1217,1087,21.3,19.0,philanthropy,F4320311904,True
-Austrian Science Fund,Austria,1650,351,193,21.3,11.7,government,F4320321181,True
-Brain and Behavior Research Foundation,USA,136,29,33,21.3,24.3,,F4320306147,False
-University of South Carolina,USA,113,24,9,21.2,8.0,,F4320310846,False
-University of Glasgow,UK,175,37,20,21.1,11.4,,F4320320337,False
-Radboud Universitair Medisch Centrum,Netherlands,109,23,12,21.1,11.0,,F4320323698,False
-University of Pennsylvania,USA,383,81,56,21.1,14.6,,F4320309370,False
-University of Warwick,UK,142,30,22,21.1,15.5,,F4320320279,False
-Academia Sinica,Taiwan,233,49,19,21.0,8.2,,F4320321041,False
-Precursory Research for Embryonic Science and Technology,Japan,181,38,23,21.0,12.7,,F4320338111,False
-Universitat de València,Spain,148,31,7,20.9,4.7,,F4320321974,False
-Israel Science Foundation,Israel,875,183,131,20.9,15.0,government,F4320322252,True
-Takeda Science Foundation,Japan,437,91,27,20.8,6.2,government,F4320309807,True
-Research Foundation Flanders,Belgium,1061,221,163,20.8,15.4,philanthropy,F4320321730,True
-Defense Advanced Research Projects Agency,USA,245,51,39,20.8,15.9,government,F4320332180,True
-Queen Mary University of London,UK,101,21,15,20.8,14.9,,F4320311061,False
-U.S. Department of Health and Human Services,USA,489,101,49,20.7,10.0,,F4320306085,False
-Simons Foundation,USA,408,84,85,20.6,20.8,government,F4320306164,True
-Division of Molecular and Cellular Biosciences,USA,102,21,21,20.6,20.6,,F4320337397,False
-Hungarian Scientific Research Fund,HU,155,32,10,20.6,6.5,government,F4320321994,True
-Eberhard Karls Universität Tübingen,Germany,219,45,28,20.5,12.8,,F4320321112,False
-Vanderbilt University,USA,200,41,23,20.5,11.5,,F4320309151,False
-Georg-August-Universität Göttingen,Germany,132,27,19,20.5,14.4,,F4320321870,False
-Fondazione Cariplo,Italy,132,27,9,20.5,6.8,,F4320321499,False
-Fudan University,China,322,66,18,20.5,5.6,,F4320321851,False
-University of Washington,USA,260,53,41,20.4,15.8,,F4320310094,False
-Deutsche Forschungsgemeinschaft,Germany,10053,2049,1315,20.4,13.1,government,F4320320879,True
-Leona M. and Harry B. Helmsley Charitable Trust,USA,147,30,25,20.4,17.0,,F4320309446,False
-U.S. Department of Defense,USA,1252,256,119,20.4,9.5,,F4320306078,False
-"Ministerio de Asuntos Económicos y Transformación Digital, Gobierno de España",Spain,103,21,10,20.4,9.7,,F4320326262,False
-Deutscher Akademischer Austauschdienst,Germany,436,89,51,20.4,11.7,,F4320320875,False
-University of Southampton,UK,123,25,12,20.3,9.8,,F4320320277,False
-Welch Foundation,USA,355,72,23,20.3,6.5,government,F4320306196,True
-Department of Biotechnology,India,498,101,33,20.3,6.6,government,F4320320717,True
-Universiteit Antwerpen,Belgium,119,24,23,20.2,19.3,,F4320324595,False
-Imperial College London,UK,453,91,77,20.1,17.0,,F4320320283,False
-Université de Lausanne,Switzerland,328,66,36,20.1,11.0,,F4320323831,False
-HORIZON EUROPE Framework Programme,,1118,224,183,20.0,16.4,,F4320334322,False
-Innovative Medicines Initiative,Belgium,190,38,32,20.0,16.8,,F4320326631,False
-Guangdong Science and Technology Department,China,180,36,6,20.0,3.3,,F4320324202,False
-BrightFocus Foundation,USA,155,31,24,20.0,15.5,,F4320308990,False
-Oak Ridge National Laboratory,USA,100,20,14,20.0,14.0,,F4320338287,False
-American Diabetes Association,USA,100,20,12,20.0,12.0,government,F4320306089,True
-“la Caixa” Foundation,Spain,225,45,20,20.0,8.9,,F4320312058,False
-"Central Public-interest Scientific Institution Basal Research Fund, Chinese Academy of Fishery Sciences",China,196,39,4,19.9,2.0,,F4320338141,False
-UK Dementia Research Institute,UK,176,35,29,19.9,16.5,,F4320329730,False
-Purdue University,USA,116,23,8,19.8,6.9,,F4320309036,False
-Genentech,USA,329,65,40,19.8,12.2,,F4320332193,False
-Sun Yat-sen University,China,309,61,17,19.7,5.5,,F4320321160,False
-University of Bristol,UK,296,58,58,19.6,19.6,,F4320320360,False
-Universität Regensburg,Germany,112,22,17,19.6,15.2,,F4320323328,False
-Danmarks Frie Forskningsfond,Denmark,153,30,18,19.6,11.8,,F4320327387,False
-Congressionally Directed Medical Research Programs,USA,255,50,20,19.6,7.8,,F4320338273,False
-Laboratory Directed Research and Development,USA,102,20,14,19.6,13.7,,F4320337547,False
-Yunnan Provincial Science and Technology Department,China,143,28,4,19.6,2.8,,F4320325440,False
-Università degli Studi di Padova,Italy,446,87,34,19.5,7.6,,F4320321966,False
-Fundación Bancaria Caixa d'Estalvis i Pensions de Barcelona,Spain,123,24,12,19.5,9.8,,F4320330256,False
-Government of Canada,Canada,159,31,16,19.5,10.1,,F4320319880,False
-Ministry of Environment,Korea,205,40,17,19.5,8.3,,F4320322007,False
-Horizon 2020,,600,117,92,19.5,15.3,,F4320335254,False
-"Ministry of Education, Youth and Sports (Czech Republic)",Czech Republic,721,140,44,19.4,6.1,,F4320321005,False
-H. Lundbeck A/S,Denmark,296,57,52,19.3,17.6,,F4320327918,False
-Fonds National de la Recherche Luxembourg,LU,260,50,31,19.2,11.9,,F4320321038,False
-Youth Innovation Promotion Association,China,167,32,16,19.2,9.6,government,F4320335892,True
-American Heart Association,USA,821,158,62,19.2,7.6,philanthropy,F4320306230,True
-American Association,USA,821,158,62,19.2,7.6,government,F4320306230,True
-National Institutes of Health,USA,32286,6155,3740,19.1,11.6,government,F4320332161,True
-U.S. Geological Survey,USA,152,29,25,19.1,16.4,,F4320332183,False
-Danmarks Grundforskningsfond,Denmark,226,43,43,19.0,19.0,,F4320320943,False
-Bayer,Germany,137,26,13,19.0,9.5,,F4320307771,False
-Leverhulme Trust,UK,781,148,112,19.0,14.3,government,F4320319993,True
-Cystic Fibrosis Foundation,USA,185,35,20,18.9,10.8,government,F4320306168,True
-Cancerfonden,Sweden,618,117,62,18.9,10.0,,F4320321491,False
-Friedrich-Schiller-Universität Jena,Germany,132,25,18,18.9,13.6,,F4320313941,False
-Key Technologies Research and Development Program,China,338,64,24,18.9,7.1,,F4320335774,False
-National Postdoctoral Program for Innovative Talents,China,112,21,7,18.8,6.2,,F4320335768,False
-Consortium of International Agricultural Research Centers,France,101,19,12,18.8,11.9,,F4320329182,False
-Yangzhou University,China,107,20,1,18.7,0.9,,F4320324130,False
-University of Illinois at Urbana-Champaign,USA,166,31,21,18.7,12.7,,F4320332222,False
-Danmarks Frie Forskningsfond,Denmark,194,36,26,18.6,13.4,,F4320322928,False
-Rheinische Friedrich-Wilhelms-Universität Bonn,Germany,253,47,25,18.6,9.9,,F4320324900,False
-National Aeronautics and Space Administration,USA,671,125,99,18.6,14.8,,F4320306101,False
-Universitetet i Bergen,Norway,188,35,22,18.6,11.7,,F4320323078,False
-Universität des Saarlandes,Germany,119,22,10,18.5,8.4,,F4320323322,False
-Netherlands Organisation for Scientific Research,Netherlands,2057,380,279,18.5,13.6,government,F4320321800,True
-Academy of Finland,Finland,1056,195,114,18.5,10.8,,F4320321108,False
-Japan Science and Technology Agency,Japan,1003,185,77,18.4,7.7,government,F4320334789,True
-Bundesministerium fur Bildung und Forschung,Germany,2877,528,417,18.4,14.5,government,F4320321114,True
-Univerzita Karlova v Praze,Czech Republic,347,64,34,18.4,9.8,,F4320309755,False
-Fundação Oswaldo Cruz,Brazil,179,33,12,18.4,6.7,,F4320323917,False
-Turun Yliopisto,Finland,131,24,13,18.3,9.9,,F4320323313,False
-Innovációs és Technológiai Minisztérium,HU,121,22,11,18.2,9.1,,F4320328991,False
-"Agency for Science, Technology and Research",Singapore,214,39,27,18.2,12.6,,F4320320696,False
-Centres de Recerca de Catalunya,Spain,231,42,27,18.2,11.7,,F4320315803,False
-Universiteit Stellenbosch,South Africa,105,19,12,18.1,11.4,,F4320322663,False
-Japan Agency for Medical Research and Development,Japan,1878,340,121,18.1,6.4,government,F4320311405,True
-Bijzonder Onderzoeksfonds UGent,Belgium,161,29,13,18.0,8.1,,F4320335227,False
-Office of Research and Development,USA,111,20,14,18.0,12.6,,F4320309037,False
-Eesti Teadusagentuur,EE,239,43,28,18.0,11.7,,F4320321090,False
-Australian Research Council,Australia,1331,239,146,18.0,11.0,government,F4320334704,True
-Pennsylvania State University,USA,111,20,15,18.0,13.5,,F4320310419,False
-Bundesministerium für Ernährung und Landwirtschaft,Germany,139,25,15,18.0,10.8,,F4320323499,False
-Natural Sciences and Engineering Research Council of Canada,Canada,2976,535,373,18.0,12.5,government,F4320334593,True
-Ohio State University,USA,178,32,13,18.0,7.3,,F4320309374,False
-Fonds de Recherche du Québec - Santé,Canada,417,75,53,18.0,12.7,,F4320334618,False
-Newcastle University,UK,194,35,15,18.0,7.7,,F4320320295,False
-Svenska Forskningsrådet Formas,Sweden,514,92,71,17.9,13.8,,F4320321033,False
-Suomen Kulttuurirahasto,Finland,290,52,33,17.9,11.4,,F4320321726,False
-Barts Charity,UK,117,21,11,17.9,9.4,,F4320315977,False
-Swedish Research Council,Sweden,3208,575,364,17.9,11.3,government,F4320322581,True
-Regeneron Pharmaceuticals,USA,135,24,15,17.8,11.1,,F4320311600,False
-University of Adelaide,Australia,129,23,14,17.8,10.9,,F4320320978,False
-Emory University,USA,242,43,28,17.8,11.6,,F4320309381,False
-Ministry of Science and Technology of the People's Republic of China,China,638,113,35,17.7,5.5,,F4320321540,False
-Merck KGaA,Germany,141,25,9,17.7,6.4,,F4320311647,False
-UK Research and Innovation,UK,16592,2944,2278,17.7,13.7,government,F4320314731,True
-Johns Hopkins University,USA,395,70,46,17.7,11.6,,F4320310145,False
-"Ministério da Ciência, Tecnologia e Inovação",Brazil,124,22,8,17.7,6.5,,F4320321992,False
-University Grants Commission,India,153,27,5,17.6,3.3,government,F4320320767,True
-University College London Hospitals NHS Foundation Trust,UK,102,18,18,17.6,17.6,,F4320325311,False
-National University of Singapore,Singapore,182,32,18,17.6,9.9,,F4320320698,False
-State Research Agency (Spain),Spain,2172,383,176,17.6,8.1,,F4320335598,False
-Georgia Clinical and Translational Science Alliance,USA,176,31,18,17.6,10.2,,F4320316438,False
-"Council of Scientific and Industrial Research, India",India,222,39,12,17.6,5.4,,F4320320721,False
-Oxford Biomedical Research Centre,UK,272,48,46,17.6,16.9,government,F4320336045,True
-Shanghai Municipal Education Commission,China,154,27,7,17.5,4.5,government,F4320321881,True
-Oak Ridge Institute for Science and Education,USA,120,21,11,17.5,9.2,,F4320332382,False
-Else Kröner-Fresenius-Stiftung,Germany,274,48,36,17.5,13.1,,F4320321672,False
-Jane ja Aatos Erkon Säätiö,Finland,251,44,27,17.5,10.8,,F4320322282,False
-Chulalongkorn University,Thailand,223,39,10,17.5,4.5,,F4320321557,False
-Shanghai Municipal Commission,China,154,27,7,17.5,4.5,government,F4320321881,True
-Government of the United Kingdom,UK,235,41,32,17.4,13.6,,F4320314707,False
-Emil Aaltosen Säätiö,Finland,109,19,11,17.4,10.1,,F4320322861,False
-Core Research for Evolutional Science and Technology,Japan,407,71,36,17.4,8.8,,F4320338075,False
-Korea Research Institute of Bioscience and Biotechnology,Korea,104,18,4,17.3,3.8,,F4320322110,False
-Robert Koch Institut,Germany,110,19,12,17.3,10.9,,F4320332132,False
-Division of Mathematical Sciences,USA,104,18,24,17.3,23.1,,F4320337380,False
-Canada Research Chairs,Canada,493,85,72,17.2,14.6,,F4320320994,False
-Macquarie University,Australia,116,20,14,17.2,12.1,,F4320320591,False
-University of Pittsburgh,USA,204,35,23,17.2,11.3,,F4320310174,False
-University of Science and Technology of China,China,111,19,8,17.1,7.2,,F4320325599,False
-Consiglio Nazionale delle Ricerche,Italy,111,19,8,17.1,7.2,,F4320322651,False
-European Commission,EU,10070,1719,1205,17.1,12.0,supranational,F4320320300,True
-"Ministry of Business, Innovation and Employment",New Zealand,129,22,17,17.1,13.2,,F4320321983,False
-Centers for Disease Control and Prevention,USA,1196,203,98,17.0,8.2,,F4320332162,False
-Amsterdam University Medical Centers,Netherlands,147,25,14,17.0,9.5,,F4320319101,False
-Alexander von Humboldt-Stiftung,Germany,684,116,75,17.0,11.0,,F4320308269,False
-U.S. Food and Drug Administration,USA,165,28,15,17.0,9.1,,F4320332163,False
-Ministry of Education - Singapore,Singapore,277,47,31,17.0,11.2,,F4320320751,False
-Fonds de recherche du Québec – Nature et technologies,Canada,171,29,31,17.0,18.1,,F4320334841,False
-University of Toronto,Canada,261,44,40,16.9,15.3,,F4320322015,False
-University of Queensland,Australia,242,41,23,16.9,9.5,,F4320320984,False
-Lanzhou University,China,118,20,6,16.9,5.1,,F4320313889,False
-Helsingin Yliopisto,Finland,486,82,50,16.9,10.3,,F4320310086,False
-Universität Zürich,Switzerland,596,101,76,16.9,12.8,,F4320323874,False
-Zhejiang University,China,331,56,21,16.9,6.3,,F4320322927,False
-"National Research, Development and Innovation Office",HU,390,66,30,16.9,7.7,,F4320336675,False
-Hebrew University of Jerusalem,Israel,149,25,15,16.8,10.1,,F4320321950,False
-Celgene,USA,137,23,17,16.8,12.4,,F4320309086,False
-Universität Heidelberg,Germany,131,22,16,16.8,12.2,,F4320320881,False
-Eunice Kennedy Shriver National Institute of Child Health and Human Development,USA,914,153,77,16.7,8.4,,F4320337611,False
-Kungliga Tekniska Högskolan,Sweden,114,19,17,16.7,14.9,,F4320322509,False
-Universität Bielefeld,Germany,150,25,24,16.7,16.0,,F4320323389,False
-King Abdullah University of Science and Technology,Saudi Arabia,233,39,28,16.7,12.0,,F4320322320,False
-Research England,UK,126,21,15,16.7,11.9,,F4320336061,False
-Defense Threat Reduction Agency,USA,138,23,13,16.7,9.4,government,F4320332186,True
-"Dirección General de Asuntos del Personal Académico, Universidad Nacional Autónoma de México",Mexico,332,55,20,16.6,6.0,,F4320335100,False
-Royal Society,UK,1077,179,130,16.6,12.1,philanthropy,F4320320006,True
-Narodowym Centrum Nauki,Poland,759,125,52,16.5,6.9,,F4320322650,False
-Taishan Scholar Foundation of Shandong Province,China,164,27,8,16.5,4.9,,F4320326185,False
-Tianjin Science and Technology Program,China,103,17,5,16.5,4.9,,F4320336756,False
-Masarykova Univerzita,Czech Republic,115,19,7,16.5,6.1,,F4320326548,False
-Chinese Academy of Medical Sciences,China,339,56,22,16.5,6.5,,F4320323137,False
-HORIZON EUROPE European Research Council,,2225,366,330,16.4,14.8,,F4320338453,False
-University of New South Wales,Australia,274,45,35,16.4,12.8,,F4320320965,False
-Cardiff University,UK,122,20,16,16.4,13.1,,F4320320350,False
-Association Nationale de la Recherche et de la Technologie,France,104,17,6,16.3,5.8,,F4320321663,False
-Institute for Basic Science,Korea,141,23,24,16.3,17.0,,F4320326441,False
-Ludwig-Maximilians-Universität München,Germany,202,33,30,16.3,14.9,,F4320323390,False
-Oulun Yliopisto,Finland,104,17,9,16.3,8.7,,F4320323692,False
-"School of Medicine, Shanghai Jiao Tong University",China,141,23,6,16.3,4.3,,F4320335305,False
-Bristol-Myers Squibb,USA,466,76,52,16.3,11.2,,F4320307115,False
-"National Agency for Research and Development (ANID, Chile)",CL,650,106,45,16.3,6.9,,F4320331146,False
-University of Edinburgh,UK,111,18,20,16.2,18.0,,F4320320332,False
-National Institute for Health Research Health Protection Research Unit,UK,199,32,41,16.1,20.6,,F4320318095,False
-"NIHR Biomedical Research Centre, Royal Marsden NHS Foundation Trust/Institute of Cancer Research",UK,112,18,6,16.1,5.4,,F4320315071,False
-Shanghai Jiao Tong University,China,355,57,25,16.1,7.0,,F4320322999,False
-Research Council of Norway,Norway,1331,213,174,16.0,13.1,,F4320323299,False
-"University of California, Los Angeles",USA,107,17,16,15.9,15.0,,F4320332502,False
-Helse Sør-Øst RHF,Norway,201,32,20,15.9,10.0,,F4320335102,False
-Taishan Scholar Project of Shandong Province,China,132,21,5,15.9,3.8,,F4320326189,False
-North-West University,South Africa,157,25,3,15.9,1.9,,F4320323194,False
-Bill and Melinda Gates Foundation,USA,2726,434,312,15.9,11.4,philanthropy,F4320306137,True
-"Division of Electrical, Communications and Cyber Systems",USA,151,24,8,15.9,5.3,,F4320337392,False
-U.S. Department of Veterans Affairs,USA,912,145,66,15.9,7.2,,F4320306127,False
-Berlin Institute of Health,Germany,113,18,17,15.9,15.0,,F4320329666,False
-Interreg,,165,26,10,15.8,6.1,,F4320337753,False
-Generalitat de Catalunya,Spain,721,114,70,15.8,9.7,,F4320321505,False
-King's College London,UK,355,56,47,15.8,13.2,,F4320320285,False
-Program of Shanghai Academic Research Leader,China,115,18,7,15.7,6.1,,F4320335796,False
-Australian Government,Australia,784,123,85,15.7,10.8,,F4320315885,False
-National Research Council of Thailand,Thailand,413,65,11,15.7,2.7,,F4320322817,False
-"Science, Technology and Innovation Commission of Shenzhen Municipality",China,364,57,20,15.7,5.5,,F4320326705,False
-California Institute of Technology,USA,108,17,22,15.7,20.4,,F4320309398,False
-China Scholarship Council,China,1776,278,142,15.7,8.0,government,F4320322725,True
-Hokkaido University,Japan,109,17,6,15.6,5.5,,F4320323533,False
-University College London,UK,372,58,59,15.6,15.9,,F4320320286,False
-University of Miami,USA,116,18,14,15.5,12.1,,F4320309249,False
-KWF Kankerbestrijding,Netherlands,258,40,19,15.5,7.4,,F4320322777,False
-HORIZON EUROPE Marie Sklodowska-Curie Actions,,562,87,57,15.5,10.1,,F4320338438,False
-Bundesministerium für Gesundheit,Germany,174,27,30,15.5,17.2,,F4320321721,False
-Jiangsu Agricultural Science and Technology Innovation Fund,China,116,18,4,15.5,3.4,,F4320309870,False
-Diabetes UK,UK,148,23,21,15.5,14.2,,F4320320065,False
-Mitacs,Canada,259,40,18,15.4,6.9,,F4320322675,False
-Xunta de Galicia,Spain,246,38,11,15.4,4.5,,F4320326655,False
-University of Hong Kong,Hong Kong,136,21,12,15.4,8.8,,F4320322170,False
-Deutsches Zentrum für Herz-Kreislaufforschung,Germany,144,22,15,15.3,10.4,,F4320312069,False
-Universitair Medisch Centrum Groningen,Netherlands,131,20,12,15.3,9.2,,F4320323105,False
-Guangxi Key Research and Development Program,China,157,24,8,15.3,5.1,,F4320336589,False
-Office of Naval Research,USA,441,67,56,15.2,12.7,,F4320337345,False
-Itä-Suomen Yliopisto,Finland,105,16,9,15.2,8.6,,F4320310055,False
-"Faculty of Medicine and Health, University of Sydney",Australia,145,22,14,15.2,9.7,,F4320337083,False
-University of Cambridge,UK,303,46,29,15.2,9.6,,F4320320273,False
-Ministerio de Economia y Competitividad,Spain,454,69,32,15.2,7.0,government,F4320321837,True
-Kunming Medical University,China,119,18,2,15.1,1.7,,F4320322268,False
-Natural Science Foundation for Young Scientists of Shanxi Province,China,159,24,10,15.1,6.3,,F4320331088,False
-Natural Science Foundation of Ningxia Province,China,146,22,4,15.1,2.7,,F4320322877,False
-Ministerstvo Zdravotnictví Ceské Republiky,Czech Republic,311,47,18,15.1,5.8,,F4320321798,False
-"Nemzeti Kutatási, Fejlesztési és Innovaciós Alap",HU,385,58,23,15.1,6.0,,F4320335908,False
-National Health and Medical Research Council,Australia,2727,413,231,15.1,8.5,government,F4320334705,True
-Army Research Office,USA,320,48,53,15.0,16.6,,F4320338281,False
-Fonds der Chemischen Industrie,Germany,100,15,1,15.0,1.0,,F4320318613,False
-Karl-Franzens-Universität Graz,Austria,140,21,12,15.0,8.6,,F4320325582,False
-Young Scientists Fund,China,120,18,16,15.0,13.3,,F4320335581,False
-Junta de Andalucía,Spain,313,47,13,15.0,4.2,,F4320326754,False
-Science and Technology Planning Project of Guangdong Province,China,309,46,10,14.9,3.2,,F4320335795,False
-"National Council of Science and Technology (CONACYT, Mexico)",Mexico,954,142,54,14.9,5.7,,F4320321739,False
-Carl Tryggers Stiftelse för Vetenskaplig Forskning,Sweden,121,18,15,14.9,12.4,,F4320321501,False
-NIH Clinical Center,USA,181,27,14,14.9,7.7,,F4320337376,False
-Comunidad de Madrid,Spain,382,57,32,14.9,8.4,,F4320313831,False
-Ministry of Science and Innovation (Spain),Spain,2817,419,203,14.9,7.2,,F4320322930,False
-European Regional Development Fund,EU,2955,440,193,14.9,6.5,supranational,F4320335322,True
-Universität Duisburg-Essen,Germany,121,18,8,14.9,6.6,,F4320325052,False
-University of Pretoria,South Africa,128,19,7,14.8,5.5,,F4320320692,False
-Key Research and Development Program of Jiangxi Province,China,108,16,3,14.8,2.8,,F4320327780,False
-Canada Foundation for Innovation,Canada,169,25,24,14.8,14.2,,F4320320995,False
-Zagazig University,EG,177,26,6,14.7,3.4,,F4320324156,False
-National Science Centre,Poland,1842,271,88,14.7,4.8,government,F4320322511,True
-"Ministero dell’Istruzione, dell’Università e della Ricerca",Italy,787,116,64,14.7,8.1,,F4320321873,False
-Priority Academic Program Development of Jiangsu Higher Education Institutions,China,504,74,10,14.7,2.0,,F4320327518,False
-Dipartimenti di Eccellenza,Italy,129,19,12,14.7,9.3,,F4320317295,False
-Japan Society for the Promotion of Science London,UK,225,33,17,14.7,7.6,,F4320320212,False
-Generalitat Valenciana,Spain,474,69,31,14.6,6.5,,F4320321864,False
-Canadian Institutes of Health Research,Canada,2911,425,270,14.6,9.3,government,F4320334506,True
-Natural Science Foundation of Shanghai,China,638,93,28,14.6,4.4,,F4320309612,False
-Albert-Ludwigs-Universität Freiburg,Germany,151,22,12,14.6,7.9,,F4320321421,False
-Science and Engineering Research Board,India,579,84,29,14.5,5.0,,F4320334771,False
-GlaxoSmithKline,UK,332,48,35,14.5,10.5,,F4320307773,False
-Japan Society for the Promotion of Science,Japan,7129,1032,395,14.5,5.5,government,F4320334764,True
-National Institute of Standards and Technology,USA,124,18,14,14.5,11.3,,F4320332178,False
-Henan University,China,111,16,2,14.4,1.8,,F4320322878,False
-Guangzhou Science and Technology Program key projects,China,111,16,2,14.4,1.8,,F4320334898,False
-Natural Science Foundation of Fujian Province,China,841,121,24,14.4,2.9,,F4320321878,False
-"Ministry of Science, Innovation and Universities (Spain)",Spain,1062,153,72,14.4,6.8,,F4320315062,False
-Helsingin ja Uudenmaan Sairaanhoitopiiri,Finland,118,17,9,14.4,7.6,,F4320310467,False
-Shanghai Rising-Star Program,China,195,28,12,14.4,6.2,,F4320327803,False
-European Cooperation in Science and Technology,Belgium,334,48,14,14.4,4.2,,F4320320366,False
-Rural Development Administration,Korea,278,40,6,14.4,2.2,,F4320322035,False
-Hungarian Academy of Sciences,HU,362,52,32,14.4,8.8,,F4320322192,False
-Science Foundation Ireland,Ireland,747,107,74,14.3,9.9,,F4320320847,False
-Institució Catalana de Recerca i Estudis Avançats,Spain,112,16,10,14.3,8.9,,F4320322121,False
-"National Research, Development and Innovation Office (Hungary)",HU,458,65,28,14.2,6.1,,F4320326762,False
-NIHR Maudsley Biomedical Research Centre,UK,120,17,16,14.2,13.3,,F4320334412,False
-European and Developing Countries Clinical Trials Partnership,Netherlands,302,43,24,14.2,7.9,,F4320338462,False
-Alzheimer’s Research UK,UK,141,20,19,14.2,13.5,,F4320321081,False
-Canada Foundation for Innovation,Canada,220,31,25,14.1,11.4,,F4320319952,False
-Aarhus Universitet,Denmark,220,31,26,14.1,11.8,,F4320309928,False
-Special Project for Research and Development in Key areas of Guangdong Province,China,142,20,8,14.1,5.6,,F4320336405,False
-U.S. Environmental Protection Agency,USA,171,24,27,14.0,15.8,,F4320306107,False
-"Ministry of Education, Culture, Sports, Science and Technology",Japan,1228,172,73,14.0,5.9,government,F4320320912,True
-"National Agency for Scientific and Technological Promotion (ANPCyT, Argentina)",AR,286,40,13,14.0,4.5,,F4320334832,False
-Fundamental Research Funds for Central Universities of the Central South University,China,143,20,10,14.0,7.0,,F4320335880,False
-University of Bern,Switzerland,364,51,35,14.0,9.6,,F4320310992,False
-Thailand Science Research and Innovation,Thailand,252,35,5,13.9,2.0,,F4320329659,False
-"Department of Science and Technology, Ministry of Science and Technology, India",India,453,63,20,13.9,4.4,,F4320320719,False
-Basic Energy Sciences,USA,777,108,57,13.9,7.3,,F4320337480,False
-Universität Basel,Switzerland,338,47,35,13.9,10.4,,F4320310466,False
-Michael Smith Health Research BC,Canada,165,23,22,13.9,13.3,,F4320319965,False
-National Medical Research Council,Singapore,359,50,35,13.9,9.7,government,F4320334737,True
-Health Canada,Canada,158,22,14,13.9,8.9,,F4320334392,False
-VINNOVA,Sweden,216,30,20,13.9,9.3,,F4320321030,False
-Università di Bologna,Italy,130,18,10,13.8,7.7,,F4320323553,False
-Youth Innovation Promotion Association of the Chinese Academy of Sciences,China,333,46,22,13.8,6.6,,F4320322847,False
-H2020 European Research Council,,2224,308,236,13.8,10.6,,F4320338335,False
-Higher Education Discipline Innovation Project,China,305,42,14,13.8,4.6,,F4320327912,False
-Shandong University,China,239,33,8,13.8,3.3,,F4320311026,False
-Versus Arthritis,UK,195,27,18,13.8,9.2,,F4320327444,False
-Chinese University of Hong Kong,Hong Kong,174,24,19,13.8,10.9,,F4320322942,False
-Wuhan University,China,210,29,8,13.8,3.8,,F4320324116,False
-Stockholms Läns Landsting,Sweden,109,15,9,13.8,8.3,,F4320322570,False
-McMaster University,Canada,123,17,16,13.8,13.0,,F4320311526,False
-"Ministry of Agriculture, Food and Rural Affairs",Korea,183,25,2,13.7,1.1,,F4320322033,False
-Science and Technology Facilities Council,UK,255,35,32,13.7,12.5,,F4320334632,False
-Universidade de São Paulo,Brazil,117,16,8,13.7,6.8,,F4320323339,False
-Universitetet i Oslo,Norway,329,45,29,13.7,8.8,,F4320323260,False
-H2020 Marie Skłodowska-Curie Actions,,1160,159,118,13.7,10.2,,F4320338337,False
-Fundació la Marató de TV3,Spain,102,14,10,13.7,9.8,,F4320310701,False
-Shanxi Provincial Key Research and Development Project,China,146,20,1,13.7,0.7,,F4320336035,False
-Natural Science Foundation of Nantong City,China,131,18,3,13.7,2.3,,F4320316882,False
-Shenzhen Fundamental Research Program,China,110,15,2,13.6,1.8,,F4320329791,False
-Erasmus+,,184,25,11,13.6,6.0,,F4320335551,False
-Social Sciences and Humanities Research Council of Canada,Canada,413,56,36,13.6,8.7,,F4320334617,False
-Université de Genève,Switzerland,294,40,19,13.6,6.5,,F4320323830,False
-Guangxi Natural Science Foundation,China,338,46,10,13.6,3.0,government,F4320322768,True
-Iran National Science Foundation,Iran,169,23,7,13.6,4.1,,F4320322243,False
-Astellas Pharma,Japan,176,24,13,13.6,7.4,,F4320323024,False
-Foundation for Innovative Research Groups of the National Natural Science Foundation of China,China,103,14,2,13.6,1.9,,F4320327720,False
-European Social Fund,EU,493,67,32,13.6,6.5,government,F4320338080,True
-Health Research Board,Ireland,103,14,1,13.6,1.0,,F4320320836,False
-University of Southern California,USA,286,39,25,13.6,8.7,,F4320308668,False
-Peking University,China,530,72,34,13.6,6.4,,F4320324787,False
-Ministry of Oceans and Fisheries,Korea,134,18,4,13.4,3.0,,F4320322011,False
-Umeå Universitet,Sweden,299,40,21,13.4,7.0,,F4320322971,False
-EU Joint Programme – Neurodegenerative Disease Research,Belgium,179,24,22,13.4,12.3,,F4320314158,False
-Shenzhen Science and Technology Innovation Program,China,173,23,4,13.3,2.3,,F4320336569,False
-Universitat de Barcelona,Spain,180,24,13,13.3,7.2,,F4320323428,False
-University of Tokyo,Japan,323,43,27,13.3,8.4,,F4320322832,False
-Science and Technology Commission of Shanghai Municipality,China,1143,152,61,13.3,5.3,,F4320321885,False
-National Science Council,Taiwan,106,14,5,13.2,4.7,government,F4320321040,True
-Innovate UK,UK,204,27,18,13.2,8.8,,F4320335087,False
-Sichuan University,China,479,63,16,13.2,3.3,,F4320322990,False
-Narodowa Agencja Wymiany Akademickiej,Poland,197,26,15,13.2,7.6,,F4320328499,False
-Servier,France,363,48,36,13.2,9.9,,F4320327235,False
-"Foreign, Commonwealth and Development Office",UK,265,35,23,13.2,8.7,,F4320330760,False
-Korea Environmental Industry and Technology Institute,Korea,106,14,3,13.2,2.8,,F4320334877,False
-"Staatssekretariat für Bildung, Forschung und Innovation",Switzerland,106,14,19,13.2,17.9,,F4320335238,False
-Philipps-Universität Marburg,Germany,214,28,18,13.1,8.4,,F4320310905,False
-Natural Science Foundation of Guangxi Zhuang Autonomous Region,China,183,24,5,13.1,2.7,,F4320313613,False
-Ain Shams University,EG,320,42,8,13.1,2.5,,F4320321119,False
-Research to Prevent Blindness,USA,293,38,18,13.0,6.1,,F4320306811,False
-Universität Ulm,Germany,162,21,9,13.0,5.6,,F4320325530,False
-Sapienza Università di Roma,Italy,215,28,11,13.0,5.1,,F4320322510,False
-Cambridge Biomedical Research Centre,UK,368,48,48,13.0,13.0,government,F4320336709,True
-Uppsala Universitet,Sweden,569,74,55,13.0,9.7,,F4320324119,False
-Junta de Castilla y León,Spain,131,17,4,13.0,3.1,,F4320328351,False
-Österreichische Forschungsförderungsgesellschaft,Austria,247,32,19,13.0,7.7,,F4320323031,False
-Irish Research Council,Ireland,241,31,12,12.9,5.0,government,F4320321056,True
-"National Scientific and Technical Research Council (CONICET, Argentina)",AR,371,48,27,12.9,7.3,,F4320321594,False
-Natural Science Foundation of Guangdong Province,China,1361,175,37,12.9,2.7,,F4320321921,False
-F. Hoffmann-La Roche,Switzerland,147,19,15,12.9,10.2,,F4320309432,False
-Københavns Universitet,Denmark,345,44,25,12.8,7.2,,F4320320945,False
-Universidad Nacional Autónoma de México,Mexico,218,28,13,12.8,6.0,,F4320323401,False
-Yonsei University,Korea,148,19,8,12.8,5.4,,F4320321314,False
-Agència de Gestió d'Ajuts Universitaris i de Recerca,Spain,374,48,31,12.8,8.3,,F4320334830,False
-Science and Technology Program of Zhejiang Province,China,179,23,5,12.8,2.8,,F4320338469,False
-Lietuvos Mokslo Taryba,LT,229,29,6,12.7,2.6,,F4320322689,False
-Westfälische Wilhelms-Universität Münster,Germany,157,20,21,12.7,13.4,,F4320322957,False
-Biogen,USA,268,34,43,12.7,16.0,,F4320308604,False
-Guangdong Medical Research Foundation,China,150,19,6,12.7,4.0,,F4320322161,False
-Guangzhou Municipal Science and Technology Project,China,434,55,16,12.7,3.7,,F4320335480,False
-"West China Hospital, Sichuan University",China,406,51,13,12.6,3.2,,F4320336042,False
-Crafoordska Stiftelsen,Sweden,112,14,11,12.5,9.8,,F4320321761,False
-United States Agency for International Development,USA,472,59,33,12.5,7.0,,F4320306115,False
-Universidad de Sevilla,Spain,104,13,5,12.5,4.8,,F4320310967,False
+Uppsala Multidisciplinary Center for Advanced Computational Science,Sweden,112,59,35,52.7,31.2,,F4320336376,False
+Science for Life Laboratory,Sweden,220,108,47,49.1,21.4,,F4320325677,False
+European Molecular Biology Laboratory,Germany,122,57,43,46.7,35.2,,F4320314023,False
+Argonne National Laboratory,USA,156,68,23,43.6,14.7,,F4320338284,False
+Canadian Institute for Advanced Research,Canada,105,45,34,42.9,32.4,,F4320309949,False
+Biological and Environmental Research,USA,266,108,61,40.6,22.9,,F4320337509,False
+Francis Crick Institute,UK,182,73,42,40.1,23.1,government,F4320312060,True
+National Centre for Earth Observation,UK,159,63,59,39.6,37.1,,F4320338155,False
+Deutsches Krebsforschungszentrum,Germany,124,48,26,38.7,21.0,,F4320310693,False
+Lawrence Berkeley National Laboratory,USA,129,49,32,38.0,24.8,,F4320338292,False
+Fondation ARC pour la Recherche sur le Cancer,France,145,55,19,37.9,13.1,,F4320322361,False
+European Synchrotron Radiation Facility,France,143,54,16,37.8,11.2,,F4320320887,False
+European Molecular Biology Organization,Germany,289,106,71,36.7,24.6,,F4320307844,False
+Diamond Light Source,UK,205,75,21,36.6,10.2,,F4320313096,False
+"Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement",France,227,81,30,35.7,13.2,,F4320331560,False
+Common Fund,USA,132,47,36,35.6,27.3,,F4320338403,False
+Genome Canada,Canada,157,55,31,35.0,19.7,,F4320310787,False
+Howard Hughes Medical Institute,USA,748,261,161,34.9,21.5,philanthropy,F4320306082,True
+Directorate for Biological Sciences,USA,828,288,154,34.8,18.6,,F4320332167,False
+"Division of Intramural Research, National Institute of Allergy and Infectious Diseases",USA,410,142,64,34.6,15.6,,F4320309123,False
+National Geographic Society,USA,146,50,35,34.2,24.0,government,F4320309024,True
+Leibniz-Gemeinschaft,Germany,272,92,39,33.8,14.3,,F4320334763,False
+Deutsches Elektronen-Synchrotron,Germany,128,43,14,33.6,10.9,,F4320334759,False
+Foundation for Medical Research (France),France,421,141,83,33.5,19.7,,F4320321589,False
+Breast Cancer Research Foundation,USA,147,49,28,33.3,19.0,government,F4320306260,True
+Österreichischen Akademie der Wissenschaften,Austria,121,40,27,33.1,22.3,,F4320321004,False
+École Polytechnique Fédérale de Lausanne,Switzerland,164,54,33,32.9,20.1,,F4320320915,False
+NIH Office of the Director,USA,275,90,62,32.7,22.5,,F4320337349,False
+Agriculture and Agri-Food Canada,Canada,101,33,6,32.7,5.9,,F4320334595,False
+Burroughs Wellcome Fund,USA,209,68,37,32.5,17.7,government,F4320306133,True
+Fondation Leducq,France,155,50,33,32.3,21.3,,F4320320890,False
+Prostate Cancer Foundation,USA,107,34,15,31.8,14.0,government,F4320306163,True
+Office of Science,USA,744,233,114,31.3,15.3,,F4320332359,False
+John Templeton Foundation,USA,199,62,42,31.2,21.1,government,F4320306193,True
+Cancer Prevention and Research Institute of Texas,USA,324,101,31,31.2,9.6,,F4320308129,False
+Sight Research UK,UK,610,190,146,31.1,23.9,,F4320320022,False
+Freie Universität Berlin,Germany,145,45,22,31.0,15.2,,F4320324521,False
+Branco Weiss Fellowship – Society in Science,Switzerland,123,38,31,30.9,25.2,,F4320320923,False
+Universiteit Gent,Belgium,206,63,30,30.6,14.6,,F4320322603,False
+Max Planck Society,Germany,958,293,222,30.6,23.2,philanthropy,F4320322434,True
+Akademie Věd České Republiky,Czech Republic,191,58,17,30.4,8.9,,F4320322482,False
+Institut National Du Cancer,France,228,69,35,30.3,15.4,,F4320323807,False
+China Agricultural University,China,195,59,18,30.3,9.2,,F4320321131,False
+Human Frontier Science Program,France,303,91,81,30.0,26.7,,F4320320338,False
+Nanjing Agricultural University,China,104,31,7,29.8,6.7,,F4320325211,False
+"University of California, San Diego",USA,274,81,51,29.6,18.6,,F4320332603,False
+Uehara Memorial Foundation,Japan,164,48,14,29.3,8.5,government,F4320310760,True
+"Division of Microbiology and Infectious Diseases, National Institute of Allergy and Infectious Diseases",USA,162,47,15,29.0,9.3,,F4320338412,False
+Barncancerfonden,Sweden,108,31,14,28.7,13.0,,F4320323766,False
+Foundation for the National Institutes of Health,USA,537,154,112,28.7,20.9,,F4320306080,False
+Associazione Italiana per la Ricerca sul Cancro,Italy,456,129,52,28.3,11.4,philanthropy,F4320323054,True
+Eidgenössische Technische Hochschule Zürich,Switzerland,420,119,81,28.3,19.3,,F4320321652,False
+Agriculture Research System of China,China,163,46,8,28.2,4.9,,F4320326266,False
+York University,Canada,103,29,17,28.2,16.5,,F4320319918,False
+Agricultural Research Service,USA,472,133,62,28.2,13.1,,F4320332605,False
+RIKEN,Japan,169,47,23,27.8,13.6,government,F4320335125,True
+American Cancer Society,USA,295,82,33,27.8,11.2,government,F4320306095,True
+"University of California, San Francisco",USA,339,94,51,27.7,15.0,,F4320332622,False
+National Science Foundation of Sri Lanka,LK,3213,890,747,27.7,23.2,,F4320335353,False
+Studienstiftung des Deutschen Volkes,Germany,132,36,17,27.3,12.9,,F4320322572,False
+Chinese Academy of Agricultural Sciences,China,368,100,14,27.2,3.8,,F4320323155,False
+Tsinghua University,China,173,47,15,27.2,8.7,,F4320322392,False
+"University of California, Irvine",USA,100,27,16,27.0,16.0,,F4320332688,False
+"Grantová Agentura, Univerzita Karlova",Czech Republic,115,31,13,27.0,11.3,,F4320309872,False
+Cancer Research UK,UK,1292,349,222,27.0,17.2,philanthropy,F4320319985,True
+Syöpäsäätiö,Finland,100,27,14,27.0,14.0,,F4320326591,False
+Naito Foundation,Japan,130,35,11,26.9,8.5,,F4320309785,False
+Deutsches Zentrum für Infektionsforschung,Germany,171,46,15,26.9,8.8,,F4320311052,False
+"University of California, Davis",USA,208,56,28,26.9,13.5,,F4320332564,False
+Knut och Alice Wallenbergs Stiftelse,Sweden,805,216,137,26.8,17.0,,F4320322327,False
+NHLBI Division of Intramural Research,USA,246,66,29,26.8,11.8,,F4320338421,False
+The Wellcome Trust DBT India Alliance,India,153,41,17,26.8,11.1,,F4320325580,False
+Department of Energy,USA,1586,425,248,26.8,15.6,government,F4320306084,True
+Centre National de la Recherche Scientifique,France,697,186,103,26.7,14.8,government,F4320322892,True
+Julius-Maximilians-Universität Würzburg,Germany,101,27,23,26.7,22.8,,F4320325356,False
+Sveriges Lantbruksuniversitet,Sweden,184,49,19,26.6,10.3,,F4320322582,False
+Medical Research Foundation,UK,189,50,35,26.5,18.5,government,F4320338126,True
+Yale University,USA,231,61,42,26.4,18.2,,F4320308380,False
+Division of Environmental Biology,USA,148,39,29,26.4,19.6,,F4320337400,False
+Massachusetts Institute of Technology,USA,122,32,16,26.2,13.1,,F4320309369,False
+Chan Zuckerberg Initiative,USA,203,53,62,26.1,30.5,,F4320315474,False
+Agence Nationale de la Recherche,France,2644,689,439,26.1,16.6,government,F4320320883,True
+Universität Wien,Austria,346,90,38,26.0,11.0,,F4320321691,False
+United States Department of Agriculture,USA,1277,331,139,25.9,10.9,government,F4320306114,True
+Indian Council of Agricultural Research,India,178,46,10,25.8,5.6,,F4320320769,False
+Fonds De La Recherche Scientifique - FNRS,Belgium,339,87,45,25.7,13.3,,F4320321390,False
+Nuclear Safety and Security Commission,Korea,152,39,31,25.7,20.4,,F4320322037,False
+University of Exeter,UK,134,34,21,25.4,15.7,,F4320320275,False
+Ligue Contre le Cancer,France,225,57,25,25.3,11.1,,F4320322363,False
+Carlsbergfondet,Denmark,131,33,22,25.2,16.8,,F4320321504,False
+Agricultural Science and Technology Innovation Program,China,286,72,7,25.2,2.4,,F4320335848,False
+University of Oxford,UK,468,118,94,25.2,20.1,,F4320320290,False
+National Oceanic and Atmospheric Administration,USA,175,44,38,25.1,21.7,,F4320332181,False
+University of Minnesota,USA,207,52,28,25.1,13.5,,F4320309636,False
+Horizon 2020 Framework Programme,,2408,605,441,25.1,18.3,,F4320332999,False
+Volkswagen Foundation,Germany,252,63,45,25.0,17.9,government,F4320320882,True
+Michael J. Fox Foundation for Parkinson's Research,USA,264,66,52,25.0,19.7,,F4320306136,False
+U.S. Fish and Wildlife Service,USA,112,28,17,25.0,15.2,,F4320332182,False
+Earmarked Fund for China Agriculture Research System,China,201,50,7,24.9,3.5,,F4320335447,False
+Academy of Medical Sciences,UK,169,42,20,24.9,11.8,,F4320320241,False
+Gordon and Betty Moore Foundation,USA,306,76,58,24.8,19.0,,F4320306202,False
+Business Finland,Finland,105,26,14,24.8,13.3,,F4320328501,False
+Deutsche Krebshilfe,Germany,326,81,36,24.8,11.0,,F4320323556,False
+Vlaamse regering,Belgium,492,122,91,24.8,18.5,,F4320327336,False
+Sigrid Juselius Foundation (Finland),Finland,327,81,40,24.8,12.2,,F4320323760,False
+Harvard University,USA,129,32,21,24.8,16.3,,F4320309622,False
+Alzheimer's Society,UK,170,42,33,24.7,19.4,,F4320317015,False
+National Science Foundation,USA,7611,1878,1402,24.7,18.4,government,F4320306076,True
+Czech Science Foundation,Czech Republic,949,233,94,24.6,9.9,government,F4320321006,True
+"Consejo Nacional de Ciencia y Tecnología, Paraguay",PY,183,45,20,24.6,10.9,,F4320328088,False
+Fundacja na rzecz Nauki Polskiej,Poland,155,38,18,24.5,11.6,,F4320321042,False
+Moonshot Research and Development Program,Japan,155,38,23,24.5,14.8,,F4320338247,False
+University of Texas MD Anderson Cancer Center,USA,164,40,17,24.4,10.4,,F4320332521,False
+Novo Nordisk Foundation,Denmark,1088,265,165,24.4,15.2,government,F4320325957,True
+Helmholtz Association,Germany,181,44,41,24.3,22.7,government,F4320325698,True
+National Center for Research Resources,USA,140,34,15,24.3,10.7,,F4320337375,False
+Consejo Superior de Investigaciones Científicas,Spain,325,79,27,24.3,8.3,,F4320334857,False
+Stockholms Universitet,Sweden,157,38,17,24.2,10.8,,F4320325669,False
+Canada First Research Excellence Fund,Canada,128,31,21,24.2,16.4,government,F4320326644,True
+Wellcome Trust,UK,4752,1146,803,24.1,16.9,philanthropy,F4320311904,True
+National Research Foundation Singapore,Singapore,245,59,29,24.1,11.8,,F4320320709,False
+Office of Defense Programs,USA,331,79,48,23.9,14.5,,F4320337003,False
+Universität Hamburg,Germany,109,26,26,23.9,23.9,,F4320323381,False
+Commonwealth Scientific and Industrial Research Organisation,Australia,126,30,18,23.8,14.3,,F4320320386,False
+Michigan State University,USA,131,31,21,23.7,16.0,,F4320310016,False
+Svenska Sällskapet för Medicinsk Forskning,Sweden,152,36,11,23.7,7.2,,F4320322128,False
+Rosetrees Trust,UK,237,56,36,23.6,15.2,government,F4320320320,True
+CHIST-ERA,France,196,46,36,23.5,18.4,,F4320338463,False
+National Institute of Food and Agriculture,USA,1157,271,142,23.4,12.3,,F4320332299,False
+Alfred P. Sloan Foundation,USA,201,47,51,23.4,25.4,,F4320306151,False
+Swiss National Science Foundation,Switzerland,3496,818,559,23.4,16.0,government,F4320320924,True
+National Institute of Health and Medical Research (INSERM),France,601,140,74,23.3,12.3,,F4320320893,False
+Northwestern University,USA,236,55,33,23.3,14.0,,F4320309475,False
+Chinese Academy of Sciences,China,1122,261,86,23.3,7.7,,F4320321133,False
+Villum Fonden,Denmark,181,42,24,23.2,13.3,,F4320310490,False
+Lundbeckfonden,Denmark,302,70,44,23.2,14.6,,F4320321999,False
+Department of Biotechnology,India,435,100,33,23.0,7.6,government,F4320320717,True
+KU Leuven,Belgium,283,65,40,23.0,14.1,,F4320322308,False
+Office of Secretary of Energy,USA,527,121,95,23.0,18.0,,F4320332366,False
+Stiftelsen för Strategisk Forskning,Sweden,144,33,28,22.9,19.4,,F4320320940,False
+Brain and Behavior Research Foundation,USA,118,27,32,22.9,27.1,,F4320306147,False
+Research Foundation Flanders,Belgium,947,217,156,22.9,16.5,philanthropy,F4320321730,True
+Division of Integrative Organismal Systems,USA,105,24,18,22.9,17.1,,F4320337399,False
+Novo Nordisk,Denmark,715,163,105,22.8,14.7,,F4320322436,False
+Universiteit Antwerpen,Belgium,101,23,22,22.8,21.8,,F4320324595,False
+Rijksuniversiteit Groningen,Netherlands,136,31,17,22.8,12.5,,F4320320933,False
+U.S. Department of Defense,USA,1092,249,117,22.8,10.7,,F4320306078,False
+Fondazione Cariplo,Italy,119,27,9,22.7,7.6,,F4320321499,False
+McGill University,Canada,194,44,25,22.7,12.9,,F4320310638,False
+University of Pennsylvania,USA,349,79,53,22.6,15.2,,F4320309370,False
+University of South Carolina,USA,111,25,9,22.5,8.1,,F4320310846,False
+University of Glasgow,UK,160,36,19,22.5,11.9,,F4320320337,False
+Fundación Bancaria Caixa d'Estalvis i Pensions de Barcelona,Spain,107,24,12,22.4,11.2,,F4320330256,False
+Takeda Science Foundation,Japan,402,90,25,22.4,6.2,government,F4320309807,True
+“la Caixa” Foundation,Spain,202,45,20,22.3,9.9,,F4320312058,False
+Austrian Science Fund,Austria,1545,343,185,22.2,12.0,government,F4320321181,True
+Innovative Medicines Initiative,Belgium,171,38,31,22.2,18.1,,F4320326631,False
+Massachusetts General Hospital,USA,113,25,25,22.1,22.1,,F4320308349,False
+University of Warwick,UK,131,29,21,22.1,16.0,,F4320320279,False
+University of Washington,USA,244,54,39,22.1,16.0,,F4320310094,False
+Simons Foundation,USA,372,82,81,22.0,21.8,government,F4320306164,True
+Universitat de València,Spain,141,31,7,22.0,5.0,,F4320321974,False
+Georg-August-Universität Göttingen,Germany,123,27,19,22.0,15.4,,F4320321870,False
+European Federation of Pharmaceutical Industries and Associations,Belgium,178,39,36,21.9,20.2,,F4320314178,False
+Hungarian Scientific Research Fund,HU,146,32,10,21.9,6.8,government,F4320321994,True
+University of North Carolina at Chapel Hill,USA,128,28,21,21.9,16.4,,F4320332600,False
+Universiteit Leiden,Netherlands,101,22,17,21.8,16.8,,F4320320929,False
+Universität zu Köln,Germany,110,24,12,21.8,10.9,,F4320324811,False
+Israel Science Foundation,Israel,821,179,126,21.8,15.3,government,F4320322252,True
+Vanderbilt University,USA,188,41,23,21.8,12.2,,F4320309151,False
+Congressionally Directed Medical Research Programs,USA,221,48,19,21.7,8.6,,F4320338273,False
+Leona M. and Harry B. Helmsley Charitable Trust,USA,129,28,25,21.7,19.4,,F4320309446,False
+Universität Regensburg,Germany,106,23,17,21.7,16.0,,F4320323328,False
+Fudan University,China,306,66,18,21.6,5.9,,F4320321851,False
+Deutscher Akademischer Austauschdienst,Germany,417,90,51,21.6,12.2,,F4320320875,False
+Università degli Studi di Padova,Italy,385,83,33,21.6,8.6,,F4320321966,False
+Deutsche Forschungsgemeinschaft,Germany,9344,2021,1284,21.6,13.7,government,F4320320879,True
+Radboud Universitair Medisch Centrum,Netherlands,107,23,12,21.5,11.2,,F4320323698,False
+Yunnan Provincial Science and Technology Department,China,130,28,4,21.5,3.1,,F4320325440,False
+Sun Yat-sen University,China,293,63,17,21.5,5.8,,F4320321160,False
+Precursory Research for Embryonic Science and Technology,Japan,173,37,22,21.4,12.7,,F4320338111,False
+Welch Foundation,USA,324,69,21,21.3,6.5,government,F4320306196,True
+U.S. Department of Health and Human Services,USA,465,99,47,21.3,10.1,,F4320306085,False
+UK Dementia Research Institute,UK,165,35,28,21.2,17.0,,F4320329730,False
+Academia Sinica,Taiwan,217,46,18,21.2,8.3,,F4320321041,False
+Eberhard Karls Universität Tübingen,Germany,213,45,27,21.1,12.7,,F4320321112,False
+Key Technologies Research and Development Program,China,303,64,24,21.1,7.9,,F4320335774,False
+HORIZON EUROPE Framework Programme,,1002,211,173,21.1,17.3,,F4320334322,False
+University of Adelaide,Australia,109,23,13,21.1,11.9,,F4320320978,False
+Imperial College London,UK,419,88,74,21.0,17.7,,F4320320283,False
+American Heart Association,USA,696,146,56,21.0,8.0,philanthropy,F4320306230,True
+Université de Lausanne,Switzerland,309,65,35,21.0,11.3,,F4320323831,False
+American Association,USA,696,146,56,21.0,8.0,government,F4320306230,True
+Guangdong Science and Technology Department,China,172,36,6,20.9,3.5,,F4320324202,False
+Defense Advanced Research Projects Agency,USA,225,47,37,20.9,16.4,government,F4320332180,True
+Friedrich-Schiller-Universität Jena,Germany,120,25,16,20.8,13.3,,F4320313941,False
+Newcastle University,UK,169,35,15,20.7,8.9,,F4320320295,False
+Fonds National de la Recherche Luxembourg,LU,241,50,30,20.7,12.4,,F4320321038,False
+Bijzonder Onderzoeksfonds UGent,Belgium,141,29,12,20.6,8.5,,F4320335227,False
+Ministry of Environment,Korea,194,40,17,20.6,8.8,,F4320322007,False
+Cystic Fibrosis Foundation,USA,166,34,20,20.5,12.0,government,F4320306168,True
+Horizon 2020,,542,111,85,20.5,15.7,,F4320335254,False
+"Ministry of Education, Youth and Sports (Czech Republic)",Czech Republic,692,142,43,20.5,6.2,,F4320321005,False
+National Institutes of Health,USA,28982,5940,3560,20.5,12.3,government,F4320332161,True
+Youth Innovation Promotion Association,China,158,32,16,20.3,10.1,government,F4320335892,True
+University Grants Commission,India,133,27,5,20.3,3.8,government,F4320320767,True
+Rheinische Friedrich-Wilhelms-Universität Bonn,Germany,237,48,25,20.3,10.5,,F4320324900,False
+Oxford Biomedical Research Centre,UK,233,47,42,20.2,18.0,government,F4320336045,True
+Danmarks Grundforskningsfond,Denmark,213,43,40,20.2,18.8,,F4320320943,False
+University of Bristol,UK,277,56,56,20.2,20.2,,F4320320360,False
+Univerzita Karlova v Praze,Czech Republic,329,66,33,20.1,10.0,,F4320309755,False
+BrightFocus Foundation,USA,139,28,23,20.1,16.5,,F4320308990,False
+U.S. Geological Survey,USA,145,29,25,20.0,17.2,,F4320332183,False
+Lanzhou University,China,100,20,6,20.0,6.0,,F4320313889,False
+"Central Public-interest Scientific Institution Basal Research Fund, Chinese Academy of Fishery Sciences",China,191,38,4,19.9,2.1,,F4320338141,False
+Leverhulme Trust,UK,738,147,110,19.9,14.9,government,F4320319993,True
+National Aeronautics and Space Administration,USA,612,122,96,19.9,15.7,,F4320306101,False
+Cancerfonden,Sweden,578,115,61,19.9,10.6,,F4320321491,False
+H. Lundbeck A/S,Denmark,263,52,48,19.8,18.3,,F4320327918,False
+Universität des Saarlandes,Germany,111,22,10,19.8,9.0,,F4320323322,False
+Regeneron Pharmaceuticals,USA,116,23,14,19.8,12.1,,F4320311600,False
+Else Kröner-Fresenius-Stiftung,Germany,253,50,36,19.8,14.2,,F4320321672,False
+Netherlands Organisation for Scientific Research,Netherlands,1935,381,275,19.7,14.2,government,F4320321800,True
+Eesti Teadusagentuur,EE,223,44,28,19.7,12.6,,F4320321090,False
+Barts Charity,UK,102,20,10,19.6,9.8,,F4320315977,False
+National University of Singapore,Singapore,153,30,17,19.6,11.1,,F4320320698,False
+Yangzhou University,China,102,20,1,19.6,1.0,,F4320324130,False
+National Postdoctoral Program for Innovative Talents,China,102,20,7,19.6,6.9,,F4320335768,False
+Fonds de Recherche du Québec - Santé,Canada,378,74,53,19.6,14.0,,F4320334618,False
+University of Southampton,UK,113,22,12,19.5,10.6,,F4320320277,False
+Centres de Recerca de Catalunya,Spain,210,41,26,19.5,12.4,,F4320315803,False
+Genentech,USA,289,56,37,19.4,12.8,,F4320332193,False
+UK Research and Innovation,UK,14781,2868,2015,19.4,13.6,government,F4320314731,True
+Japan Agency for Medical Research and Development,Japan,1733,337,119,19.4,6.9,government,F4320311405,True
+Bundesministerium fur Bildung und Forschung,Germany,2710,525,409,19.4,15.1,government,F4320321114,True
+Pennsylvania State University,USA,103,20,15,19.4,14.6,,F4320310419,False
+Fundação Oswaldo Cruz,Brazil,166,32,11,19.3,6.6,,F4320323917,False
+Natural Sciences and Engineering Research Council of Canada,Canada,2752,531,358,19.3,13.0,government,F4320334593,True
+Australian Research Council,Australia,1223,236,137,19.3,11.2,government,F4320334704,True
+Purdue University,USA,109,21,7,19.3,6.4,,F4320309036,False
+Celgene,USA,120,23,17,19.2,14.2,,F4320309086,False
+Universitetet i Bergen,Norway,182,35,22,19.2,12.1,,F4320323078,False
+Shanghai Municipal Commission,China,141,27,7,19.1,5.0,government,F4320321881,True
+Shanghai Municipal Education Commission,China,141,27,7,19.1,5.0,government,F4320321881,True
+Ministry of Science and Technology of the People's Republic of China,China,564,108,33,19.1,5.9,,F4320321540,False
+State Research Agency (Spain),Spain,1985,379,173,19.1,8.7,,F4320335598,False
+University of Illinois at Urbana-Champaign,USA,152,29,21,19.1,13.8,,F4320332222,False
+"Council of Scientific and Industrial Research, India",India,199,38,12,19.1,6.0,,F4320320721,False
+"Ministério da Ciência, Tecnologia e Inovação",Brazil,115,22,8,19.1,7.0,,F4320321992,False
+Chinese Academy of Medical Sciences,China,304,58,23,19.1,7.6,,F4320323137,False
+Taishan Scholar Foundation of Shandong Province,China,141,27,8,19.1,5.7,,F4320326185,False
+Danmarks Frie Forskningsfond,Denmark,142,27,15,19.0,10.6,,F4320327387,False
+Ministry of Education - Singapore,Singapore,242,46,30,19.0,12.4,,F4320320751,False
+University of Queensland,Australia,221,42,23,19.0,10.4,,F4320320984,False
+Japan Science and Technology Agency,Japan,945,180,74,19.0,7.8,government,F4320334789,True
+Turun Yliopisto,Finland,126,24,13,19.0,10.3,,F4320323313,False
+Chulalongkorn University,Thailand,212,40,11,18.9,5.2,,F4320321557,False
+University of New South Wales,Australia,259,49,37,18.9,14.3,,F4320320965,False
+Academy of Finland,Finland,1020,193,113,18.9,11.1,,F4320321108,False
+"Ministry of Business, Innovation and Employment",New Zealand,117,22,16,18.8,13.7,,F4320321983,False
+"Agency for Science, Technology and Research",Singapore,202,38,26,18.8,12.9,,F4320320696,False
+Danmarks Frie Forskningsfond,Denmark,186,35,26,18.8,14.0,,F4320322928,False
+Emory University,USA,218,41,27,18.8,12.4,,F4320309381,False
+Macquarie University,Australia,107,20,15,18.7,14.0,,F4320320591,False
+Ohio State University,USA,166,31,13,18.7,7.8,,F4320309374,False
+Defense Threat Reduction Agency,USA,123,23,13,18.7,10.6,government,F4320332186,True
+Johns Hopkins University,USA,348,65,41,18.7,11.8,,F4320310145,False
+Zhejiang University,China,296,55,20,18.6,6.8,,F4320322927,False
+Swedish Research Council,Sweden,3037,566,352,18.6,11.6,government,F4320322581,True
+Robert Koch Institut,Germany,102,19,12,18.6,11.8,,F4320332132,False
+Innovációs és Technológiai Minisztérium,HU,113,21,11,18.6,9.7,,F4320328991,False
+University of Pittsburgh,USA,189,35,22,18.5,11.6,,F4320310174,False
+Suomen Kulttuurirahasto,Finland,271,50,30,18.5,11.1,,F4320321726,False
+Svenska Forskningsrådet Formas,Sweden,492,91,71,18.5,14.4,,F4320321033,False
+Georgia Clinical and Translational Science Alliance,USA,162,30,18,18.5,11.1,,F4320316438,False
+Bundesministerium für Ernährung und Landwirtschaft,Germany,135,25,15,18.5,11.1,,F4320323499,False
+Canada Research Chairs,Canada,441,81,69,18.4,15.6,,F4320320994,False
+Universität Bielefeld,Germany,136,25,24,18.4,17.6,,F4320323389,False
+Fonds de recherche du Québec – Nature et technologies,Canada,158,29,30,18.4,19.0,,F4320334841,False
+Government of the United Kingdom,UK,213,39,32,18.3,15.0,,F4320314707,False
+European Commission,EU,9202,1683,1161,18.3,12.6,supranational,F4320320300,True
+Core Research for Evolutional Science and Technology,Japan,378,69,35,18.3,9.3,,F4320338075,False
+"National Agency for Research and Development (ANID, Chile)",CL,571,104,45,18.2,7.9,,F4320331146,False
+Hebrew University of Jerusalem,Israel,143,26,13,18.2,9.1,,F4320321950,False
+Institute for Basic Science,Korea,127,23,24,18.1,18.9,,F4320326441,False
+Universität Zürich,Switzerland,548,99,74,18.1,13.5,,F4320323874,False
+Universität Heidelberg,Germany,116,21,16,18.1,13.8,,F4320320881,False
+Royal Society,UK,998,180,123,18.0,12.3,philanthropy,F4320320006,True
+Jane ja Aatos Erkon Säätiö,Finland,244,44,27,18.0,11.1,,F4320322282,False
+Taishan Scholar Project of Shandong Province,China,111,20,5,18.0,4.5,,F4320326189,False
+"Dirección General de Asuntos del Personal Académico, Universidad Nacional Autónoma de México",Mexico,306,55,20,18.0,6.5,,F4320335100,False
+Alexander von Humboldt-Stiftung,Germany,637,114,73,17.9,11.5,,F4320308269,False
+Masarykova Univerzita,Czech Republic,106,19,6,17.9,5.7,,F4320326548,False
+Kungliga Tekniska Högskolan,Sweden,106,19,16,17.9,15.1,,F4320322509,False
+National Institute for Health Research Health Protection Research Unit,UK,184,33,41,17.9,22.3,,F4320318095,False
+Centers for Disease Control and Prevention,USA,1134,203,95,17.9,8.4,,F4320332162,False
+"National Research, Development and Innovation Office",HU,358,64,30,17.9,8.4,,F4320336675,False
+Consiglio Nazionale delle Ricerche,Italy,101,18,8,17.8,7.9,,F4320322651,False
+"Science, Technology and Innovation Commission of Shenzhen Municipality",China,326,58,19,17.8,5.8,,F4320326705,False
+Amsterdam University Medical Centers,Netherlands,141,25,14,17.7,9.9,,F4320319101,False
+Australian Government,Australia,699,122,83,17.5,11.9,,F4320315885,False
+Narodowym Centrum Nauki,Poland,681,119,50,17.5,7.3,,F4320322650,False
+North-West University,South Africa,143,25,3,17.5,2.1,,F4320323194,False
+Bayer,Germany,121,21,13,17.4,10.7,,F4320307771,False
+Oak Ridge Institute for Science and Education,USA,109,19,10,17.4,9.2,,F4320332382,False
+King Abdullah University of Science and Technology,Saudi Arabia,224,39,27,17.4,12.1,,F4320322320,False
+Eunice Kennedy Shriver National Institute of Child Health and Human Development,USA,855,149,78,17.4,9.1,,F4320337611,False
+U.S. Department of Veterans Affairs,USA,815,142,65,17.4,8.0,,F4320306127,False
+University of Toronto,Canada,235,41,36,17.4,15.3,,F4320322015,False
+Bill and Melinda Gates Foundation,USA,2486,431,305,17.3,12.3,philanthropy,F4320306137,True
+HORIZON EUROPE European Research Council,,2039,353,312,17.3,15.3,,F4320338453,False
+Generalitat de Catalunya,Spain,655,113,66,17.3,10.1,,F4320321505,False
+"School of Medicine, Shanghai Jiao Tong University",China,127,22,6,17.3,4.7,,F4320335305,False
+Young Scientists Fund,China,104,18,16,17.3,15.4,,F4320335581,False
+Cardiff University,UK,116,20,16,17.2,13.8,,F4320320350,False
+Helsingin Yliopisto,Finland,464,80,50,17.2,10.8,,F4320310086,False
+Emil Aaltosen Säätiö,Finland,105,18,10,17.1,9.5,,F4320322861,False
+Natural Science Foundation for Young Scientists of Shanxi Province,China,140,24,10,17.1,7.1,,F4320331088,False
+Diabetes UK,UK,135,23,20,17.0,14.8,,F4320320065,False
+U.S. Food and Drug Administration,USA,159,27,15,17.0,9.4,,F4320332163,False
+Program of Shanghai Academic Research Leader,China,106,18,7,17.0,6.6,,F4320335796,False
+Jiangsu Agricultural Science and Technology Innovation Fund,China,106,18,4,17.0,3.8,,F4320309870,False
+Junta de Andalucía,Spain,288,49,12,17.0,4.2,,F4320326754,False
+Shanghai Jiao Tong University,China,324,55,24,17.0,7.4,,F4320322999,False
+Research England,UK,118,20,15,16.9,12.7,,F4320336061,False
+Ludwig-Maximilians-Universität München,Germany,195,33,29,16.9,14.9,,F4320323390,False
+Kunming Medical University,China,107,18,2,16.8,1.9,,F4320322268,False
+Xunta de Galicia,Spain,226,38,11,16.8,4.9,,F4320326655,False
+Government of Canada,Canada,138,23,16,16.7,11.6,,F4320319880,False
+China Scholarship Council,China,1635,273,141,16.7,8.6,government,F4320322725,True
+Oulun Yliopisto,Finland,102,17,9,16.7,8.8,,F4320323692,False
+Ministerstvo Zdravotnictví Ceské Republiky,Czech Republic,283,47,18,16.6,6.4,,F4320321798,False
+Research Council of Norway,Norway,1274,211,167,16.6,13.1,,F4320323299,False
+National Health and Medical Research Council,Australia,2406,399,227,16.6,9.4,government,F4320334705,True
+China Academy of Chinese Medical Sciences,China,109,18,5,16.5,4.6,,F4320323485,False
+"Ministero dell’Istruzione, dell’Università e della Ricerca",Italy,698,115,61,16.5,8.7,,F4320321873,False
+Science and Technology Planning Project of Guangdong Province,China,278,46,9,16.5,3.2,,F4320335795,False
+National Research Council of Thailand,Thailand,393,65,11,16.5,2.8,,F4320322817,False
+KWF Kankerbestrijding,Netherlands,242,40,19,16.5,7.9,,F4320322777,False
+Bristol-Myers Squibb,USA,421,69,53,16.4,12.6,,F4320307115,False
+King's College London,UK,323,53,44,16.4,13.6,,F4320320285,False
+Science and Engineering Research Board,India,495,81,26,16.4,5.3,,F4320334771,False
+Dipartimenti di Eccellenza,Italy,116,19,12,16.4,10.3,,F4320317295,False
+HORIZON EUROPE Marie Sklodowska-Curie Actions,,525,86,54,16.4,10.3,,F4320338438,False
+Merck KGaA,Germany,123,20,9,16.3,7.3,,F4320311647,False
+University College London,UK,349,57,59,16.3,16.9,,F4320320286,False
+Deutsches Zentrum für Herz-Kreislaufforschung,Germany,129,21,15,16.3,11.6,,F4320312069,False
+"Division of Electrical, Communications and Cyber Systems",USA,147,24,8,16.3,5.4,,F4320337392,False
+"Nemzeti Kutatási, Fejlesztési és Innovaciós Alap",HU,356,58,24,16.3,6.7,,F4320335908,False
+Shanghai Rising-Star Program,China,173,28,12,16.2,6.9,,F4320327803,False
+Universitair Medisch Centrum Groningen,Netherlands,130,21,13,16.2,10.0,,F4320323105,False
+Hokkaido University,Japan,105,17,6,16.2,5.7,,F4320323533,False
+Ministerio de Economia y Competitividad,Spain,419,68,28,16.2,6.7,government,F4320321837,True
+Helse Sør-Øst RHF,Norway,198,32,20,16.2,10.1,,F4320335102,False
+Canada Foundation for Innovation,Canada,160,26,23,16.2,14.4,,F4320320995,False
+University of Miami,USA,105,17,13,16.2,12.4,,F4320309249,False
+Interreg,,160,26,10,16.2,6.2,,F4320337753,False
+Guangxi Key Research and Development Program,China,149,24,9,16.1,6.0,,F4320336589,False
+"National Council of Science and Technology (CONACYT, Mexico)",Mexico,866,139,53,16.1,6.1,,F4320321739,False
+Fundamental Research Funds for Central Universities of the Central South University,China,124,20,10,16.1,8.1,,F4320335880,False
+European Cooperation in Science and Technology,Belgium,286,46,13,16.1,4.5,,F4320320366,False
+Priority Academic Program Development of Jiangsu Higher Education Institutions,China,459,74,10,16.1,2.2,,F4320327518,False
+Guangzhou Science and Technology Program key projects,China,100,16,2,16.0,2.0,,F4320334898,False
+Ministry of Science and Innovation (Spain),Spain,2555,410,192,16.0,7.5,,F4320322930,False
+Michael Smith Health Research BC,Canada,144,23,22,16.0,15.3,,F4320319965,False
+Key Research and Development Program of Jiangxi Province,China,100,16,4,16.0,4.0,,F4320327780,False
+Army Research Office,USA,301,48,54,15.9,17.9,,F4320338281,False
+Albert-Ludwigs-Universität Freiburg,Germany,138,22,12,15.9,8.7,,F4320321421,False
+European Regional Development Fund,EU,2738,434,184,15.9,6.7,supranational,F4320335322,True
+Rural Development Administration,Korea,251,40,6,15.9,2.4,,F4320322035,False
+"NIHR Biomedical Research Centre, Royal Marsden NHS Foundation Trust/Institute of Cancer Research",UK,107,17,6,15.9,5.6,,F4320315071,False
+Bundesministerium für Gesundheit,Germany,165,26,26,15.8,15.8,,F4320321721,False
+University of Cambridge,UK,259,41,25,15.8,9.7,,F4320320273,False
+National Science Centre,Poland,1686,266,85,15.8,5.0,government,F4320322511,True
+Generalitat Valenciana,Spain,432,68,30,15.7,6.9,,F4320321864,False
+Alzheimer’s Research UK,UK,127,20,16,15.7,12.6,,F4320321081,False
+Wuhan University,China,185,29,8,15.7,4.3,,F4320324116,False
+Natural Science Foundation of Shanghai,China,586,92,28,15.7,4.8,,F4320309612,False
+Karl-Franzens-Universität Graz,Austria,127,20,10,15.7,7.9,,F4320325582,False
+Canadian Institutes of Health Research,Canada,2619,411,263,15.7,10.0,government,F4320334506,True
+Universität Duisburg-Essen,Germany,115,18,7,15.7,6.1,,F4320325052,False
+National Medical Research Council,Singapore,318,50,36,15.7,11.3,government,F4320334737,True
+Berlin Institute of Health,Germany,108,17,16,15.7,14.8,,F4320329666,False
+Special Project for Research and Development in Key areas of Guangdong Province,China,128,20,8,15.6,6.2,,F4320336405,False
+Office of Naval Research,USA,416,65,54,15.6,13.0,,F4320337345,False
+Comunidad de Madrid,Spain,355,55,30,15.5,8.5,,F4320313831,False
+Institució Catalana de Recerca i Estudis Avançats,Spain,103,16,10,15.5,9.7,,F4320322121,False
+University of Hong Kong,Hong Kong,129,20,12,15.5,9.3,,F4320322170,False
+Carl Tryggers Stiftelse för Vetenskaplig Forskning,Sweden,110,17,14,15.5,12.7,,F4320321501,False
+Astellas Pharma,Japan,155,24,13,15.5,8.4,,F4320323024,False
+Université de Genève,Switzerland,265,41,19,15.5,7.2,,F4320323830,False
+University of Bern,Switzerland,338,52,34,15.4,10.1,,F4320310992,False
+Natural Science Foundation of Ningxia Province,China,136,21,4,15.4,2.9,,F4320322877,False
+Japan Society for the Promotion of Science London,UK,208,32,16,15.4,7.7,,F4320320212,False
+Natural Science Foundation of Fujian Province,China,793,122,23,15.4,2.9,,F4320321878,False
+"National Agency for Scientific and Technological Promotion (ANPCyT, Argentina)",AR,262,40,12,15.3,4.6,,F4320334832,False
+"Department of Science and Technology, Ministry of Science and Technology, India",India,398,61,19,15.3,4.8,,F4320320719,False
+Science Foundation Ireland,Ireland,673,103,72,15.3,10.7,,F4320320847,False
+"National Research, Development and Innovation Office (Hungary)",HU,428,65,29,15.2,6.8,,F4320326762,False
+Hungarian Academy of Sciences,HU,343,52,31,15.2,9.0,,F4320322192,False
+Università di Bologna,Italy,112,17,10,15.2,8.9,,F4320323553,False
+Health Canada,Canada,152,23,15,15.1,9.9,,F4320334392,False
+Japan Society for the Promotion of Science,Japan,6680,1009,376,15.1,5.6,government,F4320334764,True
+NIH Clinical Center,USA,166,25,13,15.1,7.8,,F4320337376,False
+Zagazig University,EG,172,26,6,15.1,3.5,,F4320324156,False
+"Ministry of Science, Innovation and Universities (Spain)",Spain,1003,151,71,15.1,7.1,,F4320315062,False
+Shandong University,China,218,33,8,15.1,3.7,,F4320311026,False
+"Faculty of Medicine and Health, University of Sydney",Australia,140,21,13,15.0,9.3,,F4320337083,False
+McMaster University,Canada,113,17,16,15.0,14.2,,F4320311526,False
+Natural Science Foundation of Nantong City,China,120,18,3,15.0,2.5,,F4320316882,False
+Canada Foundation for Innovation,Canada,207,31,25,15.0,12.1,,F4320319952,False
+Servier,France,289,43,36,14.9,12.5,,F4320327235,False
+University of Edinburgh,UK,101,15,18,14.9,17.8,,F4320320332,False
+"Ministry of Education, Culture, Sports, Science and Technology",Japan,1133,168,71,14.8,6.3,government,F4320320912,True
+Higher Education Discipline Innovation Project,China,284,42,14,14.8,4.9,,F4320327912,False
+EU Joint Programme – Neurodegenerative Disease Research,Belgium,162,24,22,14.8,13.6,,F4320314158,False
+Universität Basel,Switzerland,304,45,33,14.8,10.9,,F4320310466,False
+University of Pretoria,South Africa,122,18,7,14.8,5.7,,F4320320692,False
+Italian Ministry,Italy,1999,295,98,14.8,4.9,government,F4320321781,True
+Guangxi Natural Science Foundation,China,300,44,9,14.7,3.0,government,F4320322768,True
+Sichuan University,China,416,61,15,14.7,3.6,,F4320322990,False
+U.S. Environmental Protection Agency,USA,156,23,26,14.7,16.7,,F4320306107,False
+Philipps-Universität Marburg,Germany,191,28,18,14.7,9.4,,F4320310905,False
+Universidade de São Paulo,Brazil,109,16,8,14.7,7.3,,F4320323339,False
+Universitetet i Oslo,Norway,309,45,30,14.6,9.7,,F4320323260,False
+Shenzhen Science and Technology Innovation Program,China,151,22,4,14.6,2.6,,F4320336569,False
+"Foreign, Commonwealth and Development Office",UK,240,35,23,14.6,9.6,,F4320330760,False
+Youth Innovation Promotion Association of the Chinese Academy of Sciences,China,309,45,21,14.6,6.8,,F4320322847,False
+GlaxoSmithKline,UK,309,45,32,14.6,10.4,,F4320307773,False
+Chinese University of Hong Kong,Hong Kong,157,23,17,14.6,10.8,,F4320322942,False
+Peking University,China,492,72,34,14.6,6.9,,F4320324787,False
+Shanxi Provincial Key Research and Development Project,China,137,20,1,14.6,0.7,,F4320336035,False
+Science and Technology Commission of Shanghai Municipality,China,1033,150,61,14.5,5.9,,F4320321885,False
+Helsingin ja Uudenmaan Sairaanhoitopiiri,Finland,117,17,9,14.5,7.7,,F4320310467,False
+Sapienza Università di Roma,Italy,186,27,10,14.5,5.4,,F4320322510,False
+European Social Fund,EU,454,66,31,14.5,6.8,government,F4320338080,True
+H2020 European Research Council,,2074,300,231,14.5,11.1,,F4320338335,False
+Natural Science Foundation of Jilin Province,China,382,55,16,14.4,4.2,,F4320310121,False
+Università degli Studi di Milano,Italy,308,44,20,14.3,6.5,,F4320313475,False
+H2020 Marie Skłodowska-Curie Actions,,1087,155,111,14.3,10.2,,F4320338337,False
+European and Developing Countries Clinical Trials Partnership,Netherlands,279,40,23,14.3,8.2,,F4320338462,False
+Science and Technology Facilities Council,UK,230,33,31,14.3,13.5,,F4320334632,False
+Basic Energy Sciences,USA,739,106,55,14.3,7.4,,F4320337480,False
+F. Hoffmann-La Roche,Switzerland,133,19,15,14.3,11.3,,F4320309432,False
+Thailand Science Research and Innovation,Thailand,245,35,5,14.3,2.0,,F4320329659,False
+Huazhong University of Science and Technology,China,120,17,4,14.2,3.3,,F4320321883,False
+National Heart Foundation of Australia,Australia,106,15,6,14.2,5.7,,F4320320442,False
+Stockholms Läns Landsting,Sweden,106,15,9,14.2,8.5,,F4320322570,False
+Narodowa Agencja Wymiany Akademickiej,Poland,176,25,15,14.2,8.5,,F4320328499,False
+University of Tokyo,Japan,304,43,26,14.1,8.6,,F4320322832,False
+University of Southern California,USA,256,36,24,14.1,9.4,,F4320308668,False
+Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul,Brazil,142,20,5,14.1,3.5,,F4320322502,False
+Indian Council of Medical Research,India,411,58,17,14.1,4.1,,F4320320720,False
+Social Sciences and Humanities Research Council of Canada,Canada,375,53,34,14.1,9.1,,F4320334617,False
+Junta de Castilla y León,Spain,121,17,5,14.0,4.1,,F4320328351,False
+Universidad Nacional Autónoma de México,Mexico,200,28,13,14.0,6.5,,F4320323401,False
+Universitat de Barcelona,Spain,164,23,11,14.0,6.7,,F4320323428,False
+Debreceni Egyetem,HU,114,16,8,14.0,7.0,,F4320325658,False
+Natural Science Foundation of Guangdong Province,China,1249,175,36,14.0,2.9,,F4320321921,False
+Natural Science Foundation of Guangxi Zhuang Autonomous Region,China,171,24,5,14.0,2.9,,F4320313613,False
+Guangzhou Municipal Science and Technology Project,China,394,55,16,14.0,4.1,,F4320335480,False
+Ministry of Oceans and Fisheries,Korea,129,18,4,14.0,3.1,,F4320322011,False
+Cambridge Biomedical Research Centre,UK,331,46,46,13.9,13.9,government,F4320336709,True
+"Ministry of Agriculture, Food and Rural Affairs",Korea,173,24,2,13.9,1.2,,F4320322033,False
+VINNOVA,Sweden,209,29,20,13.9,9.6,,F4320321030,False
+Erasmus+,,173,24,10,13.9,5.8,,F4320335551,False
+NIHR Maudsley Biomedical Research Centre,UK,108,15,14,13.9,13.0,,F4320334412,False
+Crafoordska Stiftelsen,Sweden,108,15,12,13.9,11.1,,F4320321761,False
+"National Scientific and Technical Research Council (CONICET, Argentina)",AR,345,48,26,13.9,7.5,,F4320321594,False
+China Postdoctoral Science Foundation,China,2930,405,112,13.8,3.8,government,F4320321543,True
+Science and Technology Program of Zhejiang Province,China,160,22,5,13.8,3.1,,F4320338469,False
+Iran National Science Foundation,Iran,152,21,7,13.8,4.6,,F4320322243,False
+Instituto de Salud Carlos III,Spain,1589,218,87,13.7,5.5,,F4320334923,False
+National Institute of Standards and Technology,USA,117,16,13,13.7,11.1,,F4320332178,False
+Agència de Gestió d'Ajuts Universitaris i de Recerca,Spain,344,47,30,13.7,8.7,,F4320334830,False
+Guangdong Medical Research Foundation,China,139,19,6,13.7,4.3,,F4320322161,False
+United States Agency for International Development,USA,424,58,31,13.7,7.3,,F4320306115,False
+Biogen,USA,241,33,42,13.7,17.4,,F4320308604,False
+Westfälische Wilhelms-Universität Münster,Germany,153,21,22,13.7,14.4,,F4320322957,False
+Aarhus Universitet,Denmark,220,30,25,13.6,11.4,,F4320309928,False
+Uppsala Universitet,Sweden,546,74,54,13.6,9.9,,F4320324119,False
+Qatar National Research Fund,QA,125,17,2,13.6,1.6,,F4320332753,False
+Peking Union Medical College,China,125,17,8,13.6,6.4,,F4320326853,False
+Irish Research Council,Ireland,213,29,9,13.6,4.2,government,F4320321056,True
+Versus Arthritis,UK,176,24,17,13.6,9.7,,F4320327444,False
+Centre Scientifique et Technique du Bâtiment,France,207,28,4,13.5,1.9,,F4320327639,False
+"West China Hospital, Sichuan University",China,347,47,13,13.5,3.7,,F4320336042,False
+National College Students Innovation and Entrepreneurship Training Program,China,104,14,4,13.5,3.8,,F4320336008,False
+Innovate UK,UK,193,26,18,13.5,9.3,,F4320335087,False
+Eusko Jaurlaritza,Spain,282,38,23,13.5,8.2,,F4320321705,False
+Key Technology Research and Development Program of Shandong,China,357,48,8,13.4,2.2,,F4320333596,False
+University of Melbourne,Australia,231,31,22,13.4,9.5,,F4320320974,False
+Research to Prevent Blindness,USA,268,36,18,13.4,6.7,,F4320306811,False
+Fundacao para a Ciencia e a Tecnologia,Portugal,1965,264,131,13.4,6.7,government,F4320334779,True
+Umeå Universitet,Sweden,294,39,21,13.3,7.1,,F4320322971,False
+Anhui Medical University,China,195,26,11,13.3,5.6,,F4320321603,False
+Yonsei University,Korea,143,19,8,13.3,5.6,,F4320321314,False
+Fundacao de Amparo a Pesquisa do Estado de Sao Paulo,Brazil,1743,232,91,13.3,5.2,government,F4320320997,True
+Universität Ulm,Germany,165,22,9,13.3,5.5,,F4320325530,False
+Universitat Autònoma de Barcelona,Spain,106,14,6,13.2,5.7,,F4320326826,False
+Ain Shams University,EG,302,40,8,13.2,2.6,,F4320321119,False
+Natural Science Foundation of Jiangxi Province,China,454,60,14,13.2,3.1,,F4320322665,False
+Universidad de Granada,Spain,144,19,8,13.2,5.6,,F4320323834,False
+Lietuvos Mokslo Taryba,LT,219,29,6,13.2,2.7,,F4320322689,False
+Vedecká Grantová Agentúra MŠVVaŠ SR a SAV,SK,235,31,12,13.2,5.1,,F4320323641,False
+Division of Graduate Education,USA,212,28,21,13.2,9.9,,F4320337368,False
+Tongji University,China,151,20,6,13.2,4.0,,F4320322449,False
+British Heart Foundation,UK,807,106,95,13.1,11.8,government,F4320319992,True
+Österreichische Forschungsförderungsgesellschaft,Austria,236,31,19,13.1,8.1,,F4320323031,False
+Russian Science Foundation,Russia,1587,208,47,13.1,3.0,government,F4320324099,True
+Natural Science Foundation of Gansu Province,China,260,34,6,13.1,2.3,,F4320322880,False
+Government of Jiangsu Province,China,1235,162,33,13.1,2.7,,F4320321605,False
+Science and Technology Program of Guizhou Province,China,169,22,7,13.0,4.1,,F4320336617,False
+Università degli Studi di Torino,Italy,138,18,5,13.0,3.6,,F4320324041,False
+National Research Foundation,South Africa,3161,411,173,13.0,5.5,,F4320320671,False
+State Administration of Traditional Chinese Medicine of the People's Republic of China,China,108,14,1,13.0,0.9,,F4320323484,False
+University of Alberta,Canada,132,17,13,12.9,9.8,,F4320319946,False
+Health~Holland,Netherlands,101,13,13,12.9,12.9,,F4320316279,False
+Department of Science and Technology of Jilin Province,China,225,29,6,12.9,2.7,,F4320327282,False
+"National Fund for Scientific and Technological Development (FONDECYT, Chile)",CL,225,29,10,12.9,4.4,,F4320338073,False
+National Key Research and Development Program,China,10383,1328,397,12.8,3.8,government,F4320335777,True
+"Chief Scientist Office, Scottish Government Health and Social Care Directorate",UK,156,20,26,12.8,16.7,,F4320333685,False
+Rio de Janeiro Research Foundation (FAPERJ),Brazil,534,68,25,12.7,4.7,,F4320322749,False
+Slovak Research and Development Agency (APVV),SK,330,42,18,12.7,5.5,,F4320323251,False
+Patient-Centered Outcomes Research Institute,USA,110,14,5,12.7,4.5,,F4320308927,False
+National Natural Science Foundation of China,China,47356,6018,1761,12.7,3.7,government,F4320321001,True
+Alzheimer's Association,USA,465,59,63,12.7,13.5,,F4320306219,False
+"Ministry of Education, India",India,495,63,25,12.7,5.1,,F4320322724,False
+Technische Universität Dresden,Germany,286,36,27,12.6,9.4,,F4320321613,False
+Fundamental Research Funds for the Central Universities,China,3155,396,166,12.6,5.3,,F4320335787,False
+Københavns Universitet,Denmark,342,43,27,12.6,7.9,,F4320320945,False
+National Science and Technology Major Project,China,224,28,10,12.5,4.5,,F4320329860,False
 Cambridge Trust,UK,104,13,16,12.5,15.4,,F4320321848,False
-Peking Union Medical College,China,137,17,8,12.4,5.8,,F4320326853,False
-University of Melbourne,Australia,275,34,24,12.4,8.7,,F4320320974,False
-Debreceni Egyetem,HU,129,16,9,12.4,7.0,,F4320325658,False
-National College Students Innovation and Entrepreneurship Training Program,China,121,15,4,12.4,3.3,,F4320336008,False
-Natural Science Foundation of Jilin Province,China,453,56,16,12.4,3.5,,F4320310121,False
-Universitat Autònoma de Barcelona,Spain,113,14,6,12.4,5.3,,F4320326826,False
-Eusko Jaurlaritza,Spain,307,38,23,12.4,7.5,,F4320321705,False
-Fundacao de Amparo a Pesquisa do Estado de Sao Paulo,Brazil,1925,237,95,12.3,4.9,government,F4320320997,True
-Cedars-Sinai Medical Center,USA,106,13,9,12.3,8.5,,F4320313996,False
-International Development Research Centre,Canada,162,20,11,12.3,6.8,,F4320319949,False
-Government of Jiangsu Province,China,1347,166,35,12.3,2.6,,F4320321605,False
-Italian Ministry,Italy,2418,298,102,12.3,4.2,government,F4320321781,True
-Anhui Medical University,China,204,25,12,12.3,5.9,,F4320321603,False
-China Postdoctoral Science Foundation,China,3320,408,114,12.3,3.4,government,F4320321543,True
-Instituto de Salud Carlos III,Spain,1810,220,92,12.2,5.1,,F4320334923,False
-Key Technology Research and Development Program of Shandong,China,393,48,10,12.2,2.5,,F4320333596,False
-Alzheimer's Association,USA,520,63,63,12.1,12.1,,F4320306219,False
-"Chief Scientist Office, Scottish Government Health and Social Care Directorate",UK,165,20,26,12.1,15.8,,F4320333685,False
-Universitetet i Tromsø,Norway,174,21,9,12.1,5.2,,F4320309820,False
-National Heart Foundation of Australia,Australia,124,15,6,12.1,4.8,,F4320320442,False
-Division of Graduate Education,USA,242,29,21,12.0,8.7,,F4320337368,False
-Bristol-Myers Squibb Canada,Canada,108,13,4,12.0,3.7,,F4320332611,False
-Yonsei University College of Medicine,Korea,117,14,7,12.0,6.0,,F4320335295,False
-Fundação de Amparo à Pesquisa do Estado do Rio Grande do Sul,Brazil,167,20,5,12.0,3.0,,F4320322502,False
-University of Nottingham,UK,109,13,12,11.9,11.0,,F4320320324,False
-Huazhong University of Science and Technology,China,143,17,4,11.9,2.8,,F4320321883,False
-Technische Universität Dresden,Germany,303,36,27,11.9,8.9,,F4320321613,False
-Hjärnfonden,Sweden,226,27,20,11.9,8.8,,F4320322168,False
-British Heart Foundation,UK,924,110,99,11.9,10.7,government,F4320319992,True
-Natural Science Foundation of Jiangxi Province,China,523,62,15,11.9,2.9,,F4320322665,False
-Copenhagen Graduate School for Nanoscience and Nanotechnology,Denmark,345,41,25,11.9,7.2,,F4320323939,False
-Indian Council of Medical Research,India,477,57,17,11.9,3.6,,F4320320720,False
-Fogarty International Center,USA,462,55,34,11.9,7.4,government,F4320337356,True
-National Research Foundation,South Africa,3520,416,179,11.8,5.1,,F4320320671,False
-Prince of Songkla University,Thailand,102,12,0,11.8,0.0,,F4320322692,False
-National Key Research and Development Program,China,11401,1341,404,11.8,3.5,government,F4320335777,True
-Science and Technology Program of Guizhou Province,China,187,22,7,11.8,3.7,,F4320336617,False
-Vedecká Grantová Agentúra MŠVVaŠ SR a SAV,SK,262,31,12,11.8,4.6,,F4320323641,False
-Russian Science Foundation,Russia,1808,213,49,11.8,2.7,government,F4320324099,True
-China Academy of Chinese Medical Sciences,China,154,18,5,11.7,3.2,,F4320323485,False
-Centre Scientifique et Technique du Bâtiment,France,240,28,4,11.7,1.7,,F4320327639,False
-Karolinska Institute,Sweden,1180,138,106,11.7,9.0,government,F4320322315,True
-Nanjing University,China,198,23,11,11.6,5.6,,F4320324852,False
-University of Otago,New Zealand,121,14,14,11.6,11.6,,F4320310371,False
-Natural Science Foundation of Gansu Province,China,303,35,6,11.6,2.0,,F4320322880,False
-Japan Science and Technology Corporation,Japan,129,15,15,11.6,11.6,,F4320320907,False
-Natural Science Basic Research Program of Shaanxi Province,China,259,30,12,11.6,4.6,,F4320336567,False
-"National Fund for Scientific and Technological Development (FONDECYT, Chile)",CL,258,30,11,11.6,4.3,,F4320338073,False
-Kræftens Bekæmpelse,Denmark,112,13,6,11.6,5.4,,F4320310455,False
-University of Alberta,Canada,147,17,14,11.6,9.5,,F4320319946,False
-Università degli Studi di Milano,Italy,371,43,21,11.6,5.7,,F4320313475,False
-National Science and Technology Major Project,China,260,30,10,11.5,3.8,,F4320329860,False
-National Natural Science Foundation of China,China,53129,6108,1801,11.5,3.4,government,F4320321001,True
-Qatar National Research Fund,QA,148,17,2,11.5,1.4,,F4320332753,False
-Fundacao para a Ciencia e a Tecnologia,Portugal,2317,267,139,11.5,6.0,government,F4320334779,True
-Hrvatska Zaklada za Znanost,HR,358,41,14,11.5,3.9,,F4320322674,False
-Medizinische Universität Graz,Austria,122,14,8,11.5,6.6,,F4320326239,False
-Basic and Applied Basic Research Foundation of Guangdong Province,China,1937,222,65,11.5,3.4,,F4320337111,False
-Natural Science Foundation of Inner Mongolia,China,245,28,7,11.4,2.9,,F4320322868,False
-Slovak Research and Development Agency (APVV),SK,368,42,18,11.4,4.9,,F4320323251,False
-Samsung,Korea,158,18,20,11.4,12.7,,F4320332195,False
-Guangzhou Municipal Science and Technology Bureau,China,105,12,3,11.4,2.9,,F4320330743,False
-Fundamental Research Funds for the Central Universities,China,3471,396,170,11.4,4.9,,F4320335787,False
-Universidad Complutense de Madrid,Spain,114,13,2,11.4,1.8,,F4320321585,False
-Innovation and Technology Commission,Hong Kong,140,16,19,11.4,13.6,,F4320321920,False
-National Taiwan University,Taiwan,239,27,15,11.3,6.3,,F4320323900,False
-National Outstanding Youth Science Fund Project of National Natural Science Foundation of China,China,423,48,22,11.3,5.2,,F4320333688,False
-Tongji University,China,177,20,6,11.3,3.4,,F4320322449,False
-Medizinische Universität Wien,Austria,292,33,11,11.3,3.8,,F4320323437,False
-Rio de Janeiro Research Foundation (FAPERJ),Brazil,617,70,25,11.3,4.1,,F4320322749,False
-Health~Holland,Netherlands,115,13,13,11.3,11.3,,F4320316279,False
-European Space Agency,France,124,14,15,11.3,12.1,,F4320318240,False
-Università di Pisa,Italy,115,13,7,11.3,6.1,,F4320324499,False
-AstraZeneca,UK,776,88,54,11.3,7.0,,F4320307770,False
-"Ministry of Education, India",India,550,62,25,11.3,4.5,,F4320322724,False
-Central South University,China,251,28,15,11.2,6.0,,F4320321514,False
-Jiangsu Provincial Key Research and Development Program,China,179,20,11,11.2,6.1,,F4320327777,False
-Zhejiang Provincial Natural Science Foundation,China,1682,189,57,11.2,3.4,government,F4320338464,True
-Natural Science Foundation of Henan Province,China,875,98,23,11.2,2.6,,F4320323845,False
-Pfizer,USA,1044,117,83,11.2,8.0,,F4320307765,False
-Health Research Board,Ireland,169,19,6,11.2,3.6,,F4320312041,False
-National Council for Scientific and Technological Development (CNPq),Brazil,3911,439,188,11.2,4.8,,F4320322025,False
-"Research Grants Council, University Grants Committee",Hong Kong,270,30,26,11.1,9.6,,F4320321592,False
-Department of Science and Technology of Jilin Province,China,262,29,6,11.1,2.3,,F4320327282,False
-Health and Medical Research Fund,Hong Kong,217,24,16,11.1,7.4,,F4320335055,False
-Department of Health and Social Care,UK,1225,136,125,11.1,10.2,,F4320319994,False
-Cure Alzheimer's Fund,USA,108,12,9,11.1,8.3,,F4320309944,False
-Eli Lilly and Company,USA,578,64,57,11.1,9.9,,F4320307758,False
-Natural Science Foundation of Anhui Province,China,413,46,15,11.1,3.6,,F4320334897,False
-National Science Fund for Distinguished Young Scholars,China,189,21,6,11.1,3.2,,F4320336125,False
-National Research Centre,EG,410,45,2,11.0,0.5,,F4320310077,False
-Lunds Universitet,Sweden,565,62,48,11.0,8.5,,F4320321806,False
-Korea Basic Science Institute,Korea,191,21,4,11.0,2.1,,F4320322111,False
-Innovationsfonden,Denmark,147,16,12,10.9,8.2,,F4320313796,False
-National Institute for Health Research,UK,4327,471,446,10.9,10.3,government,F4320319990,True
-Division of Materials Research,USA,588,64,47,10.9,8.0,,F4320337367,False
-Roche,Switzerland,119,13,7,10.9,5.9,,F4320307779,False
-National Health Research Institutes,Taiwan,267,29,11,10.9,4.1,,F4320322845,False
-Università degli Studi di Torino,Italy,167,18,5,10.8,3.0,,F4320324041,False
-People's Government of Jilin Province,China,499,54,12,10.8,2.4,,F4320322174,False
-"Division of Chemical, Bioengineering, Environmental, and Transport Systems",USA,269,29,21,10.8,7.8,,F4320337390,False
-Henan Provincial Science and Technology Research Project,China,314,34,9,10.8,2.9,,F4320336593,False
-Ministry of Science and Higher Education of the Russian Federation,Russia,790,85,24,10.8,3.0,,F4320327494,False
-Patient-Centered Outcomes Research Institute,USA,122,13,5,10.7,4.1,,F4320308927,False
-Linköpings Universitet,Sweden,280,30,14,10.7,5.0,,F4320322225,False
-Sanming Project of Medicine in Shenzhen,China,308,33,11,10.7,3.6,,F4320335767,False
-Natural Science Foundation of Heilongjiang Province,China,431,46,13,10.7,3.0,,F4320323085,False
-Natural Science Foundation of Ningbo,China,233,25,10,10.7,4.3,,F4320332587,False
-Göteborgs Universitet,Sweden,467,50,33,10.7,7.1,,F4320323421,False
-RWTH Aachen University,Germany,225,24,24,10.7,10.7,,F4320324232,False
-"Xiangya Hospital, Central South University",China,112,12,5,10.7,4.5,,F4320335740,False
-"Division of Civil, Mechanical and Manufacturing Innovation",USA,160,17,20,10.6,12.5,,F4320337391,False
-Strong,USA,198,21,14,10.6,7.1,,F4320314997,False
-Seoul National University,Korea,377,40,31,10.6,8.2,,F4320321292,False
-University of Leeds,UK,160,17,16,10.6,10.0,,F4320320298,False
-Jiangsu Commission of Health,China,191,20,3,10.5,1.6,,F4320317802,False
-State Administration of Traditional Chinese Medicine of the People's Republic of China,China,143,15,1,10.5,0.7,,F4320323484,False
-Natural Science Foundation of Jiangsu Province,China,1356,143,30,10.5,2.2,,F4320322769,False
-South African Medical Research Council,South Africa,353,37,22,10.5,6.2,government,F4320320672,True
-Gilead Sciences,USA,385,40,22,10.4,5.7,,F4320308573,False
-AstraZeneca Pharma Poland,Poland,182,19,13,10.4,7.1,,F4320328295,False
-Styrelsen för Internationellt Utvecklingssamarbete,Sweden,193,20,14,10.4,7.3,,F4320307875,False
-Hjärt-Lungfonden,Sweden,290,30,17,10.3,5.9,,F4320322169,False
-Science and Technology Program of Suzhou,China,408,42,22,10.3,5.4,,F4320336618,False
-ZonMw,Netherlands,1004,103,72,10.3,7.2,,F4320321007,False
-Università degli Studi di Firenze,Italy,136,14,7,10.3,5.1,,F4320322648,False
-"National Commission for Scientific and Technological Research (CONICYT, Chile)",CL,187,19,4,10.2,2.1,,F4320334812,False
-Natural Science Foundation of Shandong Province,China,2310,236,56,10.2,2.4,,F4320324174,False
-Public Health Agency,UK,166,17,20,10.2,12.0,government,F4320320853,True
-Soochow University,China,127,13,4,10.2,3.1,,F4320324720,False
-Universidad de Granada,Spain,167,17,8,10.2,4.8,,F4320323834,False
-Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior,Brazil,3394,347,116,10.2,3.4,government,F4320321091,True
-Beijing Nova Program,China,245,25,12,10.2,4.9,,F4320334978,False
-Monash University,Australia,335,34,18,10.1,5.4,,F4320320971,False
-Beijing Municipal Science and Technology Commission,China,169,17,10,10.1,5.9,,F4320325902,False
-Jilin University,China,168,17,4,10.1,2.4,,F4320322300,False
-Minas Gerais Research Foundation (FAPEMIG),Brazil,473,48,22,10.1,4.7,,F4320322980,False
-Chengdu University,China,109,11,5,10.1,4.6,,F4320328111,False
-U.S. President’s Emergency Plan for AIDS Relief,USA,100,10,4,10.0,4.0,,F4320310979,False
-Swedish Foundation for Strategic Research (SSF),Sweden,100,10,5,10.0,5.0,,F4320327257,False
-Assiut University,EG,140,14,0,10.0,0.0,,F4320325647,False
-Technische Universität München,Germany,430,43,44,10.0,10.2,,F4320323383,False
-Sichuan Province Science and Technology Support Program,China,390,39,7,10.0,1.8,,F4320333335,False
-Humanities Research Council,UK,140,14,9,10.0,6.4,government,F4320334609,True
-Department of Education of Guangdong Province,China,142,14,5,9.9,3.5,,F4320326279,False
-Key Research and Development Projects of Shaanxi Province,China,283,28,10,9.9,3.5,,F4320336350,False
-Department of Science and Technology of Sichuan Province,China,497,49,13,9.9,2.6,,F4320322922,False
-Natural Science Foundation of Sichuan Province,China,680,67,17,9.9,2.5,,F4320329861,False
-Natural Science Foundation of Hainan Province,China,388,38,7,9.8,1.8,,F4320322866,False
-Beijing Xisike Clinical Oncology Research Foundation,China,123,12,7,9.8,5.7,,F4320318548,False
-Zhengzhou University,China,153,15,3,9.8,2.0,,F4320322766,False
-Mahidol University,Thailand,490,48,12,9.8,2.4,,F4320322401,False
-Air Force Office of Scientific Research,USA,432,42,43,9.7,10.0,,F4320338279,False
-Universidade do Porto,Portugal,175,17,11,9.7,6.3,,F4320324086,False
-Innovative Research Group Project of the National Natural Science Foundation of China,China,360,35,11,9.7,3.1,,F4320315254,False
-Euskal Herriko Unibertsitatea,Spain,145,14,2,9.7,1.4,,F4320321919,False
-Anhui Provincial Key Research and Development Plan,China,115,11,2,9.6,1.7,,F4320336578,False
-Natural Science Foundation of Hubei Province,China,686,66,14,9.6,2.0,,F4320322186,False
-"Ministerio de Ciencia, Tecnología e Innovación Productiva",AR,136,13,5,9.6,3.7,,F4320321664,False
-Key Research and Development Program of Ningxia,China,135,13,7,9.6,5.2,,F4320334010,False
-Natural Science Foundation of Shanxi Province,China,167,16,3,9.6,1.8,,F4320322666,False
-Jilin Scientific and Technological Development Program,China,137,13,3,9.5,2.2,,F4320335953,False
-Hartstichting,Netherlands,137,13,7,9.5,5.1,,F4320321642,False
-Natural Science Foundation of Xinjiang,China,189,18,3,9.5,1.6,,F4320328898,False
-Royal Academy of Engineering,UK,234,22,27,9.4,11.5,,F4320320005,False
-Science and Technology Program of Hunan Province,China,234,22,4,9.4,1.7,,F4320330206,False
-Manchester Biomedical Research Centre,UK,213,20,19,9.4,8.9,,F4320333687,False
-Korea Institute of Science and Technology,Korea,138,13,8,9.4,5.8,,F4320322091,False
-Ministério da Saúde,Brazil,107,10,6,9.3,5.6,,F4320323916,False
-VIT University,India,193,18,5,9.3,2.6,,F4320322838,False
-Universidade de Macau,MO,129,12,11,9.3,8.5,,F4320322841,False
-Inyuvesi Yakwazulu-Natali,South Africa,118,11,8,9.3,6.8,,F4320322812,False
-Szegedi Tudományegyetem,HU,131,12,5,9.2,3.8,,F4320329149,False
-Suomen Lääketieteen Säätiö,Finland,119,11,5,9.2,4.2,,F4320310751,False
-Universität Leipzig,Germany,239,22,16,9.2,6.7,,F4320325298,False
-Javna Agencija za Raziskovalno Dejavnost RS,SI,673,62,31,9.2,4.6,,F4320322554,False
-Shahid Beheshti University of Medical Sciences,Iran,119,11,9,9.2,7.6,,F4320323457,False
-La Trobe University,Australia,109,10,7,9.2,6.4,,F4320320577,False
-Southern Medical University,China,132,12,7,9.1,5.3,,F4320326228,False
-World Health Organization,Switzerland,475,43,20,9.1,4.2,,F4320307856,False
-University of Cape Town,South Africa,122,11,14,9.0,11.5,,F4320324164,False
-Natural Science Foundation of Hunan Province,China,987,89,27,9.0,2.7,,F4320322843,False
-"Ministry of Higher Education, Malaysia",Malaysia,210,19,10,9.0,4.8,,F4320321709,False
-Daiichi Sankyo Europe,Germany,201,18,6,9.0,3.0,,F4320338262,False
-Eisai,Japan,201,18,18,9.0,9.0,,F4320322148,False
-HORIZON EUROPE European Innovation Council,,247,22,28,8.9,11.3,,F4320338448,False
-Kaohsiung Medical University,Taiwan,101,9,2,8.9,2.0,,F4320322811,False
-National Research Foundation of Korea,Korea,5453,486,206,8.9,3.8,government,F4320322120,True
-Ministry of Science and Technology,VN,101,9,5,8.9,5.0,government,F4320309618,True
-UCLH Biomedical Research Centre,UK,102,9,17,8.8,16.7,,F4320335827,False
-Ministry of Education,Taiwan,103,9,7,8.7,6.8,,F4320311687,False
-Energimyndigheten,Sweden,103,9,7,8.7,6.8,,F4320322711,False
-Fundação de Amparo à Pesquisa do Estado da Bahia,Brazil,104,9,3,8.7,2.9,,F4320323681,False
-Pécsi Tudományegyetem,HU,126,11,0,8.7,0.0,,F4320325904,False
-Qatar University,QA,161,14,1,8.7,0.6,,F4320322472,False
-National Office for Philosophy and Social Sciences,China,242,21,7,8.7,2.9,,F4320327557,False
-Peking Union Medical College Hospital,China,218,19,8,8.7,3.7,,F4320324962,False
-Hellenic Foundation for Research and Innovation,Greece,174,15,13,8.6,7.5,,F4320327859,False
-Chongqing Municipal Education Commission,China,140,12,2,8.6,1.4,,F4320324805,False
-University of Tabriz,Iran,116,10,4,8.6,3.4,,F4320324703,False
-"Ministry of Science, ICT and Future Planning",Korea,198,17,10,8.6,5.1,,F4320322030,False
-City University of Hong Kong,Hong Kong,139,12,5,8.6,3.6,,F4320309893,False
-Education Department of Jiangxi Province,China,117,10,2,8.5,1.7,,F4320325626,False
-Division of Chemistry,USA,597,51,16,8.5,2.7,,F4320337393,False
-Narodowe Centrum Badań i Rozwoju,Poland,331,28,5,8.5,1.5,,F4320335039,False
-Janssen Pharmaceuticals,USA,106,9,7,8.5,6.6,,F4320337601,False
-Health Research Council of New Zealand,New Zealand,199,17,11,8.5,5.5,,F4320334749,False
-Natural Science Foundation of Chongqing,China,531,45,8,8.5,1.5,,F4320323172,False
-Korea Health Industry Development Institute,Korea,691,59,31,8.5,4.5,government,F4320322107,True
-Natural Science Foundation of Hebei Province,China,529,45,9,8.5,1.7,,F4320322163,False
+People's Government of Jilin Province,China,433,54,12,12.5,2.8,,F4320322174,False
+University of Otago,New Zealand,104,13,14,12.5,13.5,,F4320310371,False
+Ministry of Science and Higher Education of the Russian Federation,Russia,665,83,23,12.5,3.5,,F4320327494,False
+Universidad Complutense de Madrid,Spain,104,13,2,12.5,1.9,,F4320321585,False
+University of Nottingham,UK,105,13,12,12.4,11.4,,F4320320324,False
+Yonsei University College of Medicine,Korea,113,14,7,12.4,6.2,,F4320335295,False
+Central South University,China,225,28,14,12.4,6.2,,F4320321514,False
+Hjärnfonden,Sweden,217,27,19,12.4,8.8,,F4320322168,False
+Karolinska Institute,Sweden,1109,137,104,12.4,9.4,government,F4320322315,True
+Medizinische Universität Wien,Austria,266,33,12,12.4,4.5,,F4320323437,False
+National Council for Scientific and Technological Development (CNPq),Brazil,3479,433,181,12.4,5.2,,F4320322025,False
+Nanjing University,China,186,23,11,12.4,5.9,,F4320324852,False
+Basic and Applied Basic Research Foundation of Guangdong Province,China,1736,215,63,12.4,3.6,,F4320337111,False
+Universitetet i Tromsø,Norway,169,21,9,12.4,5.3,,F4320309820,False
+Zhejiang Provincial Natural Science Foundation,China,1499,185,57,12.3,3.8,government,F4320338464,True
+Università di Pisa,Italy,106,13,7,12.3,6.6,,F4320324499,False
+Hrvatska Zaklada za Znanost,HR,325,40,11,12.3,3.4,,F4320322674,False
+Kræftens Bekæmpelse,Denmark,106,13,6,12.3,5.7,,F4320310455,False
+National Outstanding Youth Science Fund Project of National Natural Science Foundation of China,China,374,46,21,12.3,5.6,,F4320333688,False
+Natural Science Foundation of Inner Mongolia,China,220,27,6,12.3,2.7,,F4320322868,False
+Innovation and Technology Commission,Hong Kong,131,16,18,12.2,13.7,,F4320321920,False
+Natural Science Basic Research Program of Shaanxi Province,China,237,29,12,12.2,5.1,,F4320336567,False
+Fogarty International Center,USA,436,53,33,12.2,7.6,government,F4320337356,True
+National Science Fund for Distinguished Young Scholars,China,173,21,6,12.1,3.5,,F4320336125,False
+Department of Science and Technology of Sichuan Province,China,406,49,13,12.1,3.2,,F4320322922,False
+Natural Science Foundation of Heilongjiang Province,China,390,47,14,12.1,3.6,,F4320323085,False
+International Development Research Centre,Canada,149,18,11,12.1,7.4,,F4320319949,False
+Korea Basic Science Institute,Korea,173,21,3,12.1,1.7,,F4320322111,False
+National Taiwan University,Taiwan,233,28,15,12.0,6.4,,F4320323900,False
+Sichuan Province Science and Technology Support Program,China,325,39,7,12.0,2.2,,F4320333335,False
+Copenhagen Graduate School for Nanoscience and Nanotechnology,Denmark,334,40,25,12.0,7.5,,F4320323939,False
+Sanming Project of Medicine in Shenzhen,China,274,33,11,12.0,4.0,,F4320335767,False
+Japan Science and Technology Corporation,Japan,126,15,15,11.9,11.9,,F4320320907,False
+"Xiangya Hospital, Central South University",China,101,12,4,11.9,4.0,,F4320335740,False
+European Space Agency,France,109,13,15,11.9,13.8,,F4320318240,False
+Eli Lilly and Company,USA,512,61,55,11.9,10.7,,F4320307758,False
+Medizinische Universität Graz,Austria,109,13,7,11.9,6.4,,F4320326239,False
+"Research Grants Council, University Grants Committee",Hong Kong,253,30,25,11.9,9.9,,F4320321592,False
+Natural Science Foundation of Henan Province,China,794,94,23,11.8,2.9,,F4320323845,False
+Prince of Songkla University,Thailand,102,12,1,11.8,1.0,,F4320322692,False
+National Health Research Institutes,Taiwan,246,29,11,11.8,4.5,,F4320322845,False
+Natural Science Foundation of Anhui Province,China,376,44,15,11.7,4.0,,F4320334897,False
+Henan Provincial Science and Technology Research Project,China,291,34,9,11.7,3.1,,F4320336593,False
+Department of Health and Social Care,UK,1111,130,118,11.7,10.6,,F4320319994,False
+National Institute for Health Research,UK,3882,456,424,11.7,10.9,government,F4320319990,True
+Jiangsu Provincial Key Research and Development Program,China,162,19,10,11.7,6.2,,F4320327777,False
+AstraZeneca,UK,707,83,52,11.7,7.4,,F4320307770,False
+Pfizer,USA,944,110,82,11.7,8.7,,F4320307765,False
+Jilin University,China,146,17,4,11.6,2.7,,F4320322300,False
+University of Leeds,UK,147,17,16,11.6,10.9,,F4320320298,False
+Natural Science Foundation of Shandong Province,China,2031,235,54,11.6,2.7,,F4320324174,False
+Natural Science Foundation of Ningbo,China,215,25,10,11.6,4.7,,F4320332587,False
+Universidade do Porto,Portugal,146,17,11,11.6,7.5,,F4320324086,False
+"Division of Civil, Mechanical and Manufacturing Innovation",USA,146,17,19,11.6,13.0,,F4320337391,False
+Natural Science Foundation of Jiangsu Province,China,1219,141,30,11.6,2.5,,F4320322769,False
+Samsung,Korea,148,17,20,11.5,13.5,,F4320332195,False
+Strong,USA,182,21,13,11.5,7.1,,F4320314997,False
+RWTH Aachen University,Germany,209,24,23,11.5,11.0,,F4320324232,False
+Göteborgs Universitet,Sweden,452,52,34,11.5,7.5,,F4320323421,False
+Lunds Universitet,Sweden,543,62,48,11.4,8.8,,F4320321806,False
+Monash University,Australia,281,32,18,11.4,6.4,,F4320320971,False
+Beijing Nova Program,China,210,24,12,11.4,5.7,,F4320334978,False
+Natural Science Foundation of Sichuan Province,China,572,65,17,11.4,3.0,,F4320329861,False
+Jiangsu Commission of Health,China,175,20,3,11.4,1.7,,F4320317802,False
+Health and Medical Research Fund,Hong Kong,193,22,15,11.4,7.8,,F4320335055,False
+Gilead Sciences,USA,341,39,22,11.4,6.5,,F4320308573,False
+Innovationsfonden,Denmark,140,16,12,11.4,8.6,,F4320313796,False
+South African Medical Research Council,South Africa,309,35,18,11.3,5.8,government,F4320320672,True
+Soochow University,China,115,13,4,11.3,3.5,,F4320324720,False
+Jilin Scientific and Technological Development Program,China,115,13,3,11.3,2.6,,F4320335953,False
+Science and Technology Program of Suzhou,China,366,41,22,11.2,6.0,,F4320336618,False
+Technische Universität München,Germany,402,45,45,11.2,11.2,,F4320323383,False
+Southern Medical University,China,116,13,7,11.2,6.0,,F4320326228,False
+"Ministry of Higher Education, Malaysia",Malaysia,170,19,10,11.2,5.9,,F4320321709,False
+Division of Materials Research,USA,564,63,46,11.2,8.2,,F4320337367,False
+Zhengzhou University,China,134,15,3,11.2,2.2,,F4320322766,False
+"National Commission for Scientific and Technological Research (CONICYT, Chile)",CL,169,19,4,11.2,2.4,,F4320334812,False
+Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior,Brazil,3055,341,113,11.2,3.7,government,F4320321091,True
+Natural Science Foundation of Hubei Province,China,573,64,14,11.2,2.4,,F4320322186,False
+National Research Centre,EG,396,44,2,11.1,0.5,,F4320310077,False
+Department of Education of Guangdong Province,China,126,14,5,11.1,4.0,,F4320326279,False
+Beijing Xisike Clinical Oncology Research Foundation,China,108,12,7,11.1,6.5,,F4320318548,False
+Università degli Studi di Firenze,Italy,118,13,6,11.0,5.1,,F4320322648,False
+Beijing Municipal Science and Technology Commission,China,146,16,9,11.0,6.2,,F4320325902,False
+"Division of Chemical, Bioengineering, Environmental, and Transport Systems",USA,255,28,21,11.0,8.2,,F4320337390,False
+Euskal Herriko Unibertsitatea,Spain,137,15,2,10.9,1.5,,F4320321919,False
+Styrelsen för Internationellt Utvecklingssamarbete,Sweden,183,20,14,10.9,7.7,,F4320307875,False
+Science and Technology Program of Hunan Province,China,202,22,4,10.9,2.0,,F4320330206,False
+Minas Gerais Research Foundation (FAPEMIG),Brazil,423,46,19,10.9,4.5,,F4320322980,False
+Roche,Switzerland,110,12,7,10.9,6.4,,F4320307779,False
+Manchester Biomedical Research Centre,UK,184,20,17,10.9,9.2,,F4320333687,False
+Hjärt-Lungfonden,Sweden,279,30,16,10.8,5.7,,F4320322169,False
+Linköpings Universitet,Sweden,268,29,14,10.8,5.2,,F4320322225,False
+Anhui Provincial Key Research and Development Plan,China,103,11,2,10.7,1.9,,F4320336578,False
+Universidade de Macau,MO,112,12,10,10.7,8.9,,F4320322841,False
+Humanities Research Council,UK,131,14,8,10.7,6.1,government,F4320334609,True
+Natural Science Foundation of Hainan Province,China,356,38,7,10.7,2.0,,F4320322866,False
+AstraZeneca Pharma Poland,Poland,168,18,12,10.7,7.1,,F4320328295,False
+Key Research and Development Program of Ningxia,China,123,13,7,10.6,5.7,,F4320334010,False
+Qatar University,QA,132,14,1,10.6,0.8,,F4320322472,False
+VIT University,India,172,18,5,10.5,2.9,,F4320322838,False
+Inyuvesi Yakwazulu-Natali,South Africa,105,11,8,10.5,7.6,,F4320322812,False
+Assiut University,EG,133,14,0,10.5,0.0,,F4320325647,False
+World Health Organization,Switzerland,413,43,20,10.4,4.8,,F4320307856,False
+ZonMw,Netherlands,928,96,70,10.3,7.5,,F4320321007,False
+Public Health Agency,UK,155,16,19,10.3,12.3,government,F4320320853,True
+Mahidol University,Thailand,466,48,11,10.3,2.4,,F4320322401,False
+Natural Science Foundation of Shanxi Province,China,155,16,3,10.3,1.9,,F4320322666,False
+Mitacs,Canada,214,22,17,10.3,7.9,,F4320322675,False
+Natural Science Foundation of Hunan Province,China,876,89,27,10.2,3.1,,F4320322843,False
+Natural Science Foundation of Xinjiang,China,177,18,3,10.2,1.7,,F4320328898,False
+Seoul National University,Korea,366,37,32,10.1,8.7,,F4320321292,False
+Innovative Research Group Project of the National Natural Science Foundation of China,China,328,33,10,10.1,3.0,,F4320315254,False
+"Ministerio de Ciencia, Tecnología e Innovación Productiva",AR,130,13,5,10.0,3.8,,F4320321664,False
+Hartstichting,Netherlands,120,12,7,10.0,5.8,,F4320321642,False
+Chongqing Municipal Education Commission,China,120,12,2,10.0,1.7,,F4320324805,False
+Javna Agencija za Raziskovalno Dejavnost RS,SI,613,61,30,10.0,4.9,,F4320322554,False
+Peking Union Medical College Hospital,China,190,19,8,10.0,4.2,,F4320324962,False
+Key Research and Development Projects of Shaanxi Province,China,269,27,9,10.0,3.3,,F4320336350,False
+Air Force Office of Scientific Research,USA,403,40,42,9.9,10.4,,F4320338279,False
+Health Research Council of New Zealand,New Zealand,173,17,10,9.8,5.8,,F4320334749,False
+Natural Science Foundation of Chongqing,China,461,45,7,9.8,1.5,,F4320323172,False
+National Research Foundation of Korea,Korea,4854,475,197,9.8,4.1,government,F4320322120,True
+Daiichi Sankyo Europe,Germany,174,17,6,9.8,3.4,,F4320338262,False
+"Ministerul Cercetării, Inovării şi Digitalizării",RO,124,12,8,9.7,6.5,,F4320318622,False
+"Ministry of Science, ICT and Future Planning",Korea,176,17,9,9.7,5.1,,F4320322030,False
+University of Sydney,Australia,270,26,14,9.6,5.2,,F4320320966,False
+Suomen Lääketieteen Säätiö,Finland,115,11,5,9.6,4.3,,F4320310751,False
+National Office for Philosophy and Social Sciences,China,219,21,6,9.6,2.7,,F4320327557,False
+Hellenic Foundation for Research and Innovation,Greece,156,15,12,9.6,7.7,,F4320327859,False
+University of Cape Town,South Africa,114,11,14,9.6,12.3,,F4320324164,False
+Shahid Beheshti University of Medical Sciences,Iran,106,10,9,9.4,8.5,,F4320323457,False
+Korea Health Industry Development Institute,Korea,609,57,30,9.4,4.9,government,F4320322107,True
+Universität Leipzig,Germany,233,22,16,9.4,6.9,,F4320325298,False
+Natural Science Foundation of Hebei Province,China,485,45,9,9.3,1.9,,F4320322163,False
+Korea Institute of Science and Technology,Korea,129,12,8,9.3,6.2,,F4320322091,False
+Shanghai Municipal Health Commission,China,426,39,18,9.2,4.2,government,F4320317789,True
+Pécsi Tudományegyetem,HU,119,11,0,9.2,0.0,,F4320325904,False
+Szegedi Tudományegyetem,HU,119,11,5,9.2,4.2,,F4320329149,False
+Universiti Kebangsaan Malaysia,Malaysia,120,11,6,9.2,5.0,,F4320322699,False
+Nanjing Medical University,China,187,17,8,9.1,4.3,,F4320324291,False
+Royal Academy of Engineering,UK,219,20,25,9.1,11.4,,F4320320005,False
+Natural Science Foundation of Tianjin City,China,256,23,7,9.0,2.7,,F4320323993,False
+City University of Hong Kong,Hong Kong,134,12,5,9.0,3.7,,F4320309893,False
+Education Department of Jiangxi Province,China,100,9,2,9.0,2.0,,F4320325626,False
+Eisai,Japan,178,16,17,9.0,9.6,,F4320322148,False
+Fundação de Apoio à Pesquisa do Distrito Federal,Brazil,111,10,2,9.0,1.8,,F4320323350,False
+Korea University,Korea,146,13,8,8.9,5.5,,F4320321373,False
+Medical Science and Technology Project of Zhejiang Province,China,304,27,15,8.9,4.9,,F4320338199,False
+Universitätsklinikum Essen,Germany,157,14,13,8.9,8.3,,F4320317492,False
+Health Research Board,Ireland,123,11,4,8.9,3.3,,F4320312041,False
+Division of Chemistry,USA,570,51,17,8.9,3.0,,F4320337393,False
+Fujian Medical University,China,191,17,3,8.9,1.6,,F4320328113,False
+Skånes universitetssjukhus,Sweden,102,9,4,8.8,3.9,,F4320326807,False
+Health Resources and Services Administration,USA,137,12,3,8.8,2.2,,F4320332175,False
+HORIZON EUROPE European Innovation Council,,231,20,25,8.7,10.8,,F4320338448,False
+NIHR Imperial Biomedical Research Centre,UK,173,15,22,8.7,12.7,,F4320336039,False
+"Ministry of Science and Technology, Taiwan",Taiwan,692,60,19,8.7,2.7,,F4320322795,False
+Natural Science Foundation of Beijing Municipality,China,553,48,18,8.7,3.3,,F4320322919,False
+"Ministarstvo Prosvete, Nauke i Tehnološkog Razvoja",RS,161,14,6,8.7,3.7,,F4320322729,False
+University of Tabriz,Iran,103,9,4,8.7,3.9,,F4320324703,False
+Shanghai Hospital Development Center,China,103,9,8,8.7,7.8,,F4320325338,False
+Narodowe Centrum Badań i Rozwoju,Poland,313,27,5,8.6,1.6,,F4320335039,False
+"Ministry of Science and ICT, South Korea",Korea,1958,168,78,8.6,4.0,,F4320328359,False
+Sanofi,USA,531,45,47,8.5,8.9,,F4320307781,False
+Guizhou Science and Technology Department,China,130,11,3,8.5,2.3,,F4320322272,False
+Al-Azhar University,EG,153,13,3,8.5,2.0,,F4320330007,False
 National Cheng Kung University,Taiwan,107,9,7,8.4,6.5,,F4320324663,False
-"Department of Health and Aged Care, Australian Government",Australia,107,9,9,8.4,8.4,,F4320322220,False
-University of Sydney,Australia,320,27,16,8.4,5.0,,F4320320966,False
-Khon Kaen University,Thailand,119,10,4,8.4,3.4,,F4320322335,False
-Sydäntutkimussäätiö,Finland,119,10,7,8.4,5.9,,F4320323333,False
-Health Resources and Services Administration,USA,145,12,3,8.3,2.1,,F4320332175,False
-Skånes universitetssjukhus,Sweden,108,9,4,8.3,3.7,,F4320326807,False
-"Ministerul Cercetării, Inovării şi Digitalizării",RO,144,12,9,8.3,6.2,,F4320318622,False
-Sanofi,USA,591,49,49,8.3,8.3,,F4320307781,False
-Nanjing Medical University,China,204,17,8,8.3,3.9,,F4320324291,False
-Friedrich-Alexander-Universität Erlangen-Nürnberg,Germany,145,12,17,8.3,11.7,,F4320320873,False
-Fujian Medical University,China,204,17,3,8.3,1.5,,F4320328113,False
-"Ministry of Science and Technology, Taiwan",Taiwan,752,62,19,8.2,2.5,,F4320322795,False
-Shanghai Municipal Health Commission,China,477,39,18,8.2,3.8,government,F4320317789,True
-Medical Science and Technology Project of Zhejiang Province,China,344,28,14,8.1,4.1,,F4320338199,False
-Public Health Agency of Canada,Canada,161,13,11,8.1,6.8,,F4320312568,False
-Shanghai Hospital Development Center,China,111,9,8,8.1,7.2,,F4320325338,False
-Education Department of Jilin Province,China,112,9,1,8.0,0.9,,F4320326270,False
-Boehringer Ingelheim,USA,100,8,6,8.0,6.0,,F4320306257,False
-Robert Wood Johnson Foundation,USA,100,8,4,8.0,4.0,,F4320306139,False
-Liaoning Revitalization Talents Program,China,125,10,1,8.0,0.8,,F4320329895,False
-Natural Science Foundation of Tianjin City,China,287,23,7,8.0,2.4,,F4320323993,False
-Korea University,Korea,163,13,8,8.0,4.9,,F4320321373,False
-"Ministarstvo Prosvete, Nauke i Tehnološkog Razvoja",RS,175,14,6,8.0,3.4,,F4320322729,False
-Fundação de Apoio à Pesquisa do Distrito Federal,Brazil,127,10,2,7.9,1.6,,F4320323350,False
-"Ministry of Science and ICT, South Korea",Korea,2165,172,80,7.9,3.7,,F4320328359,False
-Universitätsklinikum Hamburg-Eppendorf,Germany,420,33,25,7.9,6.0,,F4320335947,False
-Science and Technology Development Fund,EG,1449,115,17,7.9,1.2,,F4320321655,False
-Al-Azhar University,EG,165,13,3,7.9,1.8,,F4320330007,False
-Beijing Municipal Natural Science Foundation,China,575,45,24,7.8,4.2,government,F4320334977,True
-"Ministério da Ciência, Tecnologia e Ensino Superior",Portugal,283,22,11,7.8,3.9,,F4320323642,False
-Novartis,Switzerland,103,8,5,7.8,4.9,,F4320307778,False
-Norges Teknisk-Naturvitenskapelige Universitet,Norway,192,15,19,7.8,9.9,,F4320311040,False
-Universitätsklinikum Essen,Germany,181,14,13,7.7,7.2,,F4320317492,False
-Guizhou Science and Technology Department,China,142,11,2,7.7,1.4,,F4320322272,False
-"Ministry of Health, Labour and Welfare",Japan,350,27,6,7.7,1.7,,F4320321945,False
-NIHR Imperial Biomedical Research Centre,UK,194,15,24,7.7,12.4,,F4320336039,False
-Natural Science Foundation of Beijing Municipality,China,635,49,18,7.7,2.8,,F4320322919,False
-Tehran University of Medical Sciences and Health Services,Iran,208,16,7,7.7,3.4,,F4320322670,False
-National Science and Technology Council,ZM,1777,137,74,7.7,4.2,,F4320331164,False
-Science and Technology Innovation Plan Of Shanghai Science and Technology Commission,China,104,8,10,7.7,9.6,,F4320336652,False
-Universitätsmedizin der Johannes Gutenberg-Universität Mainz,Germany,169,13,2,7.7,1.2,,F4320336167,False
-Gemeinsame Bundesausschuss,Germany,105,8,7,7.6,6.7,,F4320328691,False
-National Health Commission of the People's Republic of China,China,106,8,1,7.5,0.9,,F4320329926,False
-Fok Ying Tong Education Foundation,China,242,18,18,7.4,7.4,,F4320334945,False
-Griffith University,Australia,110,8,8,7.3,7.3,,F4320320981,False
-"Ministerie van Volksgezondheid, Welzijn en Sport",Netherlands,110,8,11,7.3,10.0,,F4320321645,False
-Universiti Kebangsaan Malaysia,Malaysia,152,11,6,7.2,3.9,,F4320322699,False
-Ministry of Education,Korea,388,28,10,7.2,2.6,,F4320321408,False
-Semmelweis Egyetem,HU,249,18,11,7.2,4.4,,F4320321102,False
-Chongqing Medical University,China,194,14,3,7.2,1.5,,F4320322595,False
-Wu Jieping Medical Foundation,China,166,12,4,7.2,2.4,,F4320332531,False
-Ministerstwo Edukacji i Nauki,Poland,279,20,7,7.2,2.5,,F4320322733,False
-Novartis Pharma,Germany,113,8,9,7.1,8.0,,F4320332736,False
-Anhui Provincial Department of Education,China,127,9,5,7.1,3.9,,F4320326664,False
-Novartis Pharmaceuticals Corporation,USA,154,11,14,7.1,9.1,,F4320310388,False
-Instituto Politécnico Nacional,Mexico,128,9,2,7.0,1.6,,F4320321694,False
-Amgen,USA,357,25,26,7.0,7.3,,F4320307105,False
-Shandong First Medical University,China,102,7,4,6.9,3.9,,F4320328999,False
-Merck,USA,102,7,5,6.9,4.9,,F4320307776,False
-Chiang Mai University,Thailand,262,18,2,6.9,0.8,,F4320321529,False
-National Institute for Health Research Applied Research Collaboration West,UK,145,10,7,6.9,4.8,,F4320337232,False
-Mansoura University,EG,393,27,7,6.9,1.8,,F4320325716,False
-Southwest Medical University,China,130,9,4,6.9,3.1,,F4320328652,False
-Ministry of Health and Welfare,Korea,221,15,9,6.8,4.1,,F4320322034,False
-University of Manchester,UK,118,8,10,6.8,8.5,,F4320320291,False
-Universitätsklinikum Tübingen,Germany,192,13,16,6.8,8.3,,F4320333403,False
-Scientific and Technological Research Council of Turkey (TUBITAK),Turkey,823,56,28,6.8,3.4,,F4320322626,False
-Soonchunhyang University,Korea,103,7,3,6.8,2.9,,F4320321301,False
-Science Fund of the Republic of Serbia,RS,162,11,1,6.8,0.6,,F4320329307,False
-Cairo University,EG,618,42,11,6.8,1.8,,F4320321148,False
-Charité – Universitätsmedizin Berlin,Germany,489,33,33,6.7,6.7,,F4320321526,False
-Norwegian Institute of Public Health,Norway,178,12,22,6.7,12.4,,F4320337091,False
-King Saud University,Saudi Arabia,1145,76,12,6.6,1.0,,F4320321145,False
-Ministry of Education of the People's Republic of China,China,241,16,5,6.6,2.1,,F4320321106,False
-Minia University,EG,155,10,4,6.5,2.6,,F4320327648,False
-Università degli Studi di Napoli Federico II,Italy,170,11,7,6.5,4.1,,F4320309590,False
-Tanta University,EG,199,13,3,6.5,1.5,,F4320324798,False
-Gobierno de Aragón,Spain,156,10,4,6.4,2.6,,F4320326208,False
-"Khalifa University of Science, Technology and Research",AE,125,8,14,6.4,11.2,,F4320322334,False
-Tel Aviv University,Israel,254,16,20,6.3,7.9,,F4320322596,False
-Osaka University,Japan,126,8,4,6.3,3.2,,F4320322451,False
-Capital Medical University,China,127,8,6,6.3,4.7,,F4320321496,False
-National Social Science Fund of China,China,610,38,18,6.2,3.0,,F4320335869,False
-UNICEF,USA,162,10,2,6.2,1.2,,F4320309209,False
-China Medical University,China,197,12,10,6.1,5.1,,F4320324301,False
-"Ministry of Science and Technology, Government of the People’s Republic of Bangladesh",BD,148,9,8,6.1,5.4,,F4320325390,False
-King Abdulaziz University,Saudi Arabia,165,10,7,6.1,4.2,,F4320322322,False
-Natural Science Foundation of Liaoning Province,China,327,20,8,6.1,2.4,,F4320323086,False
-"Unitatea Executiva pentru Finantarea Invatamantului Superior, a Cercetarii, Dezvoltarii si Inovarii",RO,216,13,7,6.0,3.2,,F4320323983,False
-Örebro Universitet,Sweden,100,6,4,6.0,4.0,,F4320321975,False
-Universitätsklinikum Heidelberg,Germany,217,13,14,6.0,6.5,,F4320330130,False
-Korea Medical Device Development Fund,Korea,134,8,4,6.0,3.0,,F4320318847,False
-Financiadora de Estudos e Projetos,Brazil,169,10,5,5.9,3.0,,F4320322904,False
-Università degli Studi di Palermo,Italy,118,7,3,5.9,2.5,,F4320322991,False
-"Ministerie van Onderwijs, Cultuur en Wetenschap",Netherlands,121,7,5,5.8,4.1,,F4320321799,False
-Alexandria University,EG,469,27,3,5.8,0.6,,F4320326056,False
-Ruhr-Universität Bochum,Germany,139,8,13,5.8,9.4,,F4320323715,False
-Syddansk Universitet,Denmark,225,13,9,5.8,4.0,,F4320323799,False
-Boehringer Ingelheim España,Spain,104,6,9,5.8,8.7,,F4320319208,False
-"Medizinischen Fakultät Heidelberg, Universität Heidelberg",Germany,106,6,3,5.7,2.8,,F4320335495,False
-Addis Ababa University,ET,146,8,3,5.5,2.1,,F4320324791,False
-Seoul National University Hospital,Korea,127,7,6,5.5,4.7,,F4320322557,False
-Agency for Healthcare Research and Quality,USA,237,13,10,5.5,4.2,,F4320332177,False
-Natural Science Foundation of Shaanxi Province,China,242,13,6,5.4,2.5,,F4320324173,False
-London School of Hygiene and Tropical Medicine,UK,148,8,10,5.4,6.8,,F4320311430,False
-United Arab Emirates University,AE,166,9,7,5.4,4.2,,F4320323593,False
-Università Cattolica del Sacro Cuore,Italy,167,9,7,5.4,4.2,,F4320323405,False
-Fundo para o Desenvolvimento das Ciências e da Tecnologia,MO,225,12,8,5.3,3.6,,F4320323893,False
-Ministry of Food and Drug Safety,Korea,227,12,9,5.3,4.0,,F4320322014,False
-Postdoctoral Research Foundation of China,China,131,7,2,5.3,1.5,,F4320335443,False
-Natural Science Foundation of Xinjiang Province,China,170,9,7,5.3,4.1,,F4320311028,False
-Universitätsklinikum Köln,Germany,173,9,3,5.2,1.7,,F4320327730,False
-Health Commission of Sichuan Province,China,118,6,1,5.1,0.8,,F4320330773,False
-Svenska Läkaresällskapet,Sweden,136,7,15,5.1,11.0,,F4320324618,False
-Shiraz University of Medical Sciences,Iran,161,8,5,5.0,3.1,,F4320322545,False
-University College Dublin,Ireland,120,6,6,5.0,5.0,,F4320320858,False
-Innosuisse - Schweizerische Agentur für Innovationsförderung,Switzerland,120,6,9,5.0,7.5,,F4320327931,False
-Taipei Medical University,Taiwan,121,6,5,5.0,4.1,,F4320322814,False
-Tabriz University of Medical Sciences,Iran,141,7,5,5.0,3.5,,F4320322587,False
-"Ministry of Trade, Industry and Energy",Korea,574,28,20,4.9,3.5,,F4320321681,False
-Humanities and Social Science Fund of Ministry of Education of China,China,142,7,3,4.9,2.1,,F4320335982,False
-National Taiwan University Hospital,Taiwan,144,7,5,4.9,3.5,,F4320323422,False
-Shiraz University,Iran,145,7,6,4.8,4.1,,F4320323101,False
-Programme Grants for Applied Research,UK,105,5,5,4.8,4.8,,F4320335255,False
-Universitas Padjadjaran,ID,168,8,3,4.8,1.8,,F4320329092,False
-Manipal University,India,322,15,6,4.7,1.9,,F4320322932,False
-Iran University of Medical Sciences,Iran,132,6,6,4.5,4.5,,F4320313199,False
-Royal College of Surgeons in Ireland,Ireland,113,5,3,4.4,2.7,,F4320313911,False
-Deakin University,Australia,136,6,8,4.4,5.9,,F4320320970,False
-Mashhad University of Medical Sciences,Iran,135,6,4,4.4,3.0,,F4320322855,False
-Alzheimer's Drug Discovery Foundation,USA,115,5,9,4.3,7.8,,F4320307132,False
-Prince Sattam bin Abdulaziz University,Saudi Arabia,210,9,3,4.3,1.4,,F4320311227,False
-King Faisal University,Saudi Arabia,122,5,2,4.1,1.6,,F4320331156,False
-National and Kapodistrian University of Athens,Greece,126,5,3,4.0,2.4,,F4320323149,False
-Universitätsklinikum Erlangen,Germany,175,7,8,4.0,4.6,,F4320330129,False
-Princess Nourah Bint Abdulrahman University,Saudi Arabia,352,14,1,4.0,0.3,,F4320322484,False
-Institute for Information and Communications Technology Promotion,Korea,206,8,15,3.9,7.3,,F4320335489,False
-Chang Gung Medical Foundation,Taiwan,255,10,4,3.9,1.6,,F4320322767,False
-Teva Pharmaceutical Industries,Israel,103,4,10,3.9,9.7,,F4320308970,False
-"Swedish Research Council for Health, Working Life and Welfare (Forte)",Sweden,389,15,20,3.9,5.1,,F4320324004,False
-Hong Kong Polytechnic University,Hong Kong,183,7,5,3.8,2.7,,F4320322598,False
-Bulgarian National Science Fund,BG,134,5,2,3.7,1.5,,F4320321843,False
-Wenzhou Municipal Science and Technology Bureau,China,109,4,5,3.7,4.6,,F4320324224,False
-Taif University,Saudi Arabia,162,6,3,3.7,1.9,,F4320323722,False
-King Khalid University,Saudi Arabia,296,10,4,3.4,1.4,,F4320324433,False
-"Deanship of Scientific Research, King Faisal University",Saudi Arabia,178,6,3,3.4,1.7,,F4320322804,False
-Health Technology Assessment Programme,UK,151,5,3,3.3,2.0,,F4320334661,False
-Hiroshima University,Japan,121,4,2,3.3,1.7,,F4320322166,False
-Boston Scientific Corporation,USA,127,4,4,3.1,3.1,,F4320310567,False
-Sanofi-Aventis Deutschland,Germany,100,3,5,3.0,5.0,,F4320334498,False
-Korea Institute for Advancement of Technology,Korea,173,5,9,2.9,5.2,,F4320322064,False
-Hacettepe Üniversitesi,Turkey,102,3,2,2.9,2.0,,F4320323272,False
-Department of Education of Liaoning Province,China,144,4,2,2.8,1.4,,F4320324560,False
-Ministerul Educaţiei Naţionale,RO,116,3,3,2.6,2.6,,F4320322145,False
-Uniwersytet Medyczny im. Piastów Slaskich we Wroclawiu,Poland,194,5,1,2.6,0.5,,F4320325938,False
-Università di Catania,Italy,116,3,8,2.6,6.9,,F4320322690,False
-Qatar National Library,QA,281,7,2,2.5,0.7,,F4320334468,False
-H2020 Future and Emerging Technologies,,128,3,7,2.3,5.5,,F4320338336,False
-Ministry of SMEs and Startups,Korea,100,2,3,2.0,3.0,,F4320327819,False
-Taichung Veterans General Hospital,China,101,2,2,2.0,2.0,,F4320326232,False
-Taipei Veterans General Hospital,Taiwan,114,2,1,1.8,0.9,,F4320327358,False
-Uniwersytet Medyczny w Lublinie,Poland,111,2,3,1.8,2.7,,F4320326535,False
-Hamad Medical Corporation,QA,124,2,2,1.6,1.6,,F4320310110,False
-Uniwersytet Medyczny w Lodzi,Poland,108,1,0,0.9,0.0,,F4320323482,False
+Universitätsmedizin der Johannes Gutenberg-Universität Mainz,Germany,155,13,3,8.4,1.9,,F4320336167,False
+Universitätsklinikum Hamburg-Eppendorf,Germany,379,32,24,8.4,6.3,,F4320335947,False
+Tehran University of Medical Sciences and Health Services,Iran,191,16,7,8.4,3.7,,F4320322670,False
+Beijing Municipal Natural Science Foundation,China,515,43,24,8.3,4.7,government,F4320334977,True
+"Ministério da Ciência, Tecnologia e Ensino Superior",Portugal,242,20,9,8.3,3.7,,F4320323642,False
+"Ministerie van Volksgezondheid, Welzijn en Sport",Netherlands,109,9,12,8.3,11.0,,F4320321645,False
+Friedrich-Alexander-Universität Erlangen-Nürnberg,Germany,144,12,16,8.3,11.1,,F4320320873,False
+Wu Jieping Medical Foundation,China,146,12,4,8.2,2.7,,F4320332531,False
+Science and Technology Development Fund,EG,1412,115,17,8.1,1.2,,F4320321655,False
+National Science and Technology Council,ZM,1670,134,72,8.0,4.3,,F4320331164,False
+Chongqing Medical University,China,174,14,3,8.0,1.7,,F4320322595,False
+Norges Teknisk-Naturvitenskapelige Universitet,Norway,187,15,19,8.0,10.2,,F4320311040,False
+Khon Kaen University,Thailand,113,9,3,8.0,2.7,,F4320322335,False
+Norwegian Institute of Public Health,Norway,177,14,22,7.9,12.4,,F4320337091,False
+Instituto Politécnico Nacional,Mexico,114,9,2,7.9,1.8,,F4320321694,False
+Sydäntutkimussäätiö,Finland,114,9,6,7.9,5.3,,F4320323333,False
+Public Health Agency of Canada,Canada,151,12,11,7.9,7.3,,F4320312568,False
+Fok Ying Tong Education Foundation,China,229,18,17,7.9,7.4,,F4320334945,False
+Ministerstwo Edukacji i Nauki,Poland,256,20,7,7.8,2.7,,F4320322733,False
+Liaoning Revitalization Talents Program,China,116,9,1,7.8,0.9,,F4320329895,False
+Anhui Provincial Department of Education,China,116,9,5,7.8,4.3,,F4320326664,False
+Ministry of Education,Korea,362,28,10,7.7,2.8,,F4320321408,False
+Semmelweis Egyetem,HU,220,17,11,7.7,5.0,,F4320321102,False
+National Institute for Health Research Applied Research Collaboration West,UK,130,10,6,7.7,4.6,,F4320337232,False
+Amgen,USA,310,24,25,7.7,8.1,,F4320307105,False
+Tanta University,EG,170,13,3,7.6,1.8,,F4320324798,False
+Università degli Studi di Napoli Federico II,Italy,145,11,7,7.6,4.8,,F4320309590,False
+Mansoura University,EG,373,28,7,7.5,1.9,,F4320325716,False
+Charité – Universitätsmedizin Berlin,Germany,442,33,30,7.5,6.8,,F4320321526,False
+Capital Medical University,China,108,8,6,7.4,5.6,,F4320321496,False
+"Ministry of Health, Labour and Welfare",Japan,324,24,5,7.4,1.5,,F4320321945,False
+Science Fund of the Republic of Serbia,RS,151,11,1,7.3,0.7,,F4320329307,False
+Chiang Mai University,Thailand,246,18,2,7.3,0.8,,F4320321529,False
+"Unitatea Executiva pentru Finantarea Invatamantului Superior, a Cercetarii, Dezvoltarii si Inovarii",RO,181,13,6,7.2,3.3,,F4320323983,False
+Ministry of Education of the People's Republic of China,China,222,16,5,7.2,2.3,,F4320321106,False
+Natural Science Foundation of Liaoning Province,China,276,20,7,7.2,2.5,,F4320323086,False
+Scientific and Technological Research Council of Turkey (TUBITAK),Turkey,794,56,26,7.1,3.3,,F4320322626,False
+Novartis Pharmaceuticals Corporation,USA,140,10,14,7.1,10.0,,F4320310388,False
+Università Cattolica del Sacro Cuore,Italy,127,9,6,7.1,4.7,,F4320323405,False
+Universitätsklinikum Tübingen,Germany,182,13,16,7.1,8.8,,F4320333403,False
+Ministry of Health and Welfare,Korea,201,14,9,7.0,4.5,,F4320322034,False
+"Khalifa University of Science, Technology and Research",AE,115,8,14,7.0,12.2,,F4320322334,False
+King Saud University,Saudi Arabia,1100,76,12,6.9,1.1,,F4320321145,False
+Cairo University,EG,595,41,11,6.9,1.8,,F4320321148,False
+Novartis Pharma,Germany,101,7,9,6.9,8.9,,F4320332736,False
+Osaka University,Japan,117,8,4,6.8,3.4,,F4320322451,False
+Gobierno de Aragón,Spain,148,10,4,6.8,2.7,,F4320326208,False
+Minia University,EG,150,10,4,6.7,2.7,,F4320327648,False
+University of Manchester,UK,105,7,9,6.7,8.6,,F4320320291,False
+Tel Aviv University,Israel,244,16,20,6.6,8.2,,F4320322596,False
+Financiadora de Estudos e Projetos,Brazil,154,10,5,6.5,3.2,,F4320322904,False
+China Medical University,China,171,11,10,6.4,5.8,,F4320324301,False
+National Social Science Fund of China,China,578,37,16,6.4,2.8,,F4320335869,False
+United Arab Emirates University,AE,140,9,7,6.4,5.0,,F4320323593,False
+"Ministry of Science and Technology, Government of the People’s Republic of Bangladesh",BD,140,9,8,6.4,5.7,,F4320325390,False
+King Abdulaziz University,Saudi Arabia,140,9,7,6.4,5.0,,F4320322322,False
+Korea Medical Device Development Fund,Korea,126,8,4,6.3,3.2,,F4320318847,False
+UNICEF,USA,146,9,2,6.2,1.4,,F4320309209,False
+Postdoctoral Research Foundation of China,China,115,7,2,6.1,1.7,,F4320335443,False
+"Ministerie van Onderwijs, Cultuur en Wetenschap",Netherlands,115,7,5,6.1,4.3,,F4320321799,False
+Ruhr-Universität Bochum,Germany,131,8,14,6.1,10.7,,F4320323715,False
+Fundo para o Desenvolvimento das Ciências e da Tecnologia,MO,199,12,7,6.0,3.5,,F4320323893,False
+Alexandria University,EG,450,27,3,6.0,0.7,,F4320326056,False
+Syddansk Universitet,Denmark,221,13,9,5.9,4.1,,F4320323799,False
+Agency for Healthcare Research and Quality,USA,222,13,10,5.9,4.5,,F4320332177,False
+Ministry of Food and Drug Safety,Korea,205,12,9,5.9,4.4,,F4320322014,False
+Universitätsklinikum Heidelberg,Germany,204,12,14,5.9,6.9,,F4320330130,False
+London School of Hygiene and Tropical Medicine,UK,137,8,9,5.8,6.6,,F4320311430,False
+Natural Science Foundation of Shaanxi Province,China,226,13,5,5.8,2.2,,F4320324173,False
+Seoul National University Hospital,Korea,122,7,6,5.7,4.9,,F4320322557,False
+Universitas Padjadjaran,ID,140,8,3,5.7,2.1,,F4320329092,False
+Svenska Läkaresällskapet,Sweden,126,7,15,5.6,11.9,,F4320324618,False
+Natural Science Foundation of Xinjiang Province,China,162,9,7,5.6,4.3,,F4320311028,False
+Iran University of Medical Sciences,Iran,108,6,6,5.6,5.6,,F4320313199,False
+Addis Ababa University,ET,143,8,3,5.6,2.1,,F4320324791,False
+Humanities and Social Science Fund of Ministry of Education of China,China,128,7,3,5.5,2.3,,F4320335982,False
+Taipei Medical University,Taiwan,109,6,5,5.5,4.6,,F4320322814,False
+Universitätsklinikum Köln,Germany,166,9,3,5.4,1.8,,F4320327730,False
+Innosuisse - Schweizerische Agentur für Innovationsförderung,Switzerland,113,6,9,5.3,8.0,,F4320327931,False
+National Taiwan University Hospital,Taiwan,131,7,5,5.3,3.8,,F4320323422,False
+"Ministry of Trade, Industry and Energy",Korea,535,28,20,5.2,3.7,,F4320321681,False
+Manipal University,India,273,14,4,5.1,1.5,,F4320322932,False
+Shiraz University of Medical Sciences,Iran,157,8,5,5.1,3.2,,F4320322545,False
+Tabriz University of Medical Sciences,Iran,120,6,5,5.0,4.2,,F4320322587,False
+Shiraz University,Iran,144,7,6,4.9,4.2,,F4320323101,False
+Deakin University,Australia,122,6,8,4.9,6.6,,F4320320970,False
+Mashhad University of Medical Sciences,Iran,124,6,4,4.8,3.2,,F4320322855,False
+National and Kapodistrian University of Athens,Greece,104,5,3,4.8,2.9,,F4320323149,False
+Prince Sattam bin Abdulaziz University,Saudi Arabia,192,9,3,4.7,1.6,,F4320311227,False
+King Faisal University,Saudi Arabia,112,5,2,4.5,1.8,,F4320331156,False
+Chang Gung Medical Foundation,Taiwan,230,10,4,4.3,1.7,,F4320322767,False
+Universitätsklinikum Erlangen,Germany,164,7,8,4.3,4.9,,F4320330129,False
+Hong Kong Polytechnic University,Hong Kong,163,7,5,4.3,3.1,,F4320322598,False
+Princess Nourah Bint Abdulrahman University,Saudi Arabia,340,14,2,4.1,0.6,,F4320322484,False
+Taif University,Saudi Arabia,149,6,3,4.0,2.0,,F4320323722,False
+Bulgarian National Science Fund,BG,128,5,2,3.9,1.6,,F4320321843,False
+Alzheimer's Drug Discovery Foundation,USA,105,4,9,3.8,8.6,,F4320307132,False
+Wenzhou Municipal Science and Technology Bureau,China,105,4,5,3.8,4.8,,F4320324224,False
+"Deanship of Scientific Research, King Faisal University",Saudi Arabia,163,6,3,3.7,1.8,,F4320322804,False
+"Swedish Research Council for Health, Working Life and Welfare (Forte)",Sweden,382,14,19,3.7,5.0,,F4320324004,False
+Institute for Information and Communications Technology Promotion,Korea,189,7,14,3.7,7.4,,F4320335489,False
+King Khalid University,Saudi Arabia,251,9,4,3.6,1.6,,F4320324433,False
+Boston Scientific Corporation,USA,111,4,4,3.6,3.6,,F4320310567,False
+Hiroshima University,Japan,117,4,2,3.4,1.7,,F4320322166,False
+Health Technology Assessment Programme,UK,148,5,3,3.4,2.0,,F4320334661,False
+Qatar National Library,QA,222,7,2,3.2,0.9,,F4320334468,False
+Uniwersytet Medyczny im. Piastów Slaskich we Wroclawiu,Poland,156,5,0,3.2,0.0,,F4320325938,False
+Department of Education of Liaoning Province,China,131,4,2,3.1,1.5,,F4320324560,False
+Korea Institute for Advancement of Technology,Korea,160,5,9,3.1,5.6,,F4320322064,False
+Hacettepe Üniversitesi,Turkey,100,3,2,3.0,2.0,,F4320323272,False
+Ministerul Educaţiei Naţionale,RO,115,3,3,2.6,2.6,,F4320322145,False
+H2020 Future and Emerging Technologies,,124,3,7,2.4,5.6,,F4320338336,False
+Taipei Veterans General Hospital,Taiwan,107,2,1,1.9,0.9,,F4320327358,False
+Hamad Medical Corporation,QA,103,2,2,1.9,1.9,,F4320310110,False
 University of Health Sciences Lahore,Pakistan,111,1,0,0.9,0.0,,F4320319221,False

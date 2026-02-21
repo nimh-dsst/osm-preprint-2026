@@ -22,13 +22,14 @@ funder-table:
 
 # Funder table filtered to 2024-2025 research articles
 funder-table-2024:
-	@echo "Generating funder table (2024-2025)..."
+	@echo "Generating funder table (2024-01 to 2025-06, research only)..."
 	python scripts/table_funders.py \
 		--duckdb-path $(DUCKDB_PATH) \
 		--output-dir latex/tables/ \
 		--figures-dir latex/figures/ \
 		--results-dir results/ \
-		--year-from 2024 --year-to 2025 \
+		--date-from 2024-01-01 --date-to 2025-06-30 \
+		--research-only \
 		--table-survival 0.05 --figure-survival 0.03 \
 		--output-suffix _2024_2025 \
 		--verbose

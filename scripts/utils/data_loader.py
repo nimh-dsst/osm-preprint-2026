@@ -122,6 +122,9 @@ def query_funder_open_data_stats(
     min_articles: int = 0,
     year_from: Optional[int] = None,
     year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
 ) -> pd.DataFrame:
     """
     Bulk query: join article_funders + funders + pmids to get per-funder
@@ -130,8 +133,11 @@ def query_funder_open_data_stats(
     Args:
         con: DuckDB connection to pmid_registry.duckdb
         min_articles: Minimum total articles for a funder to be included
-        year_from: Include articles published in or after this year
-        year_to: Include articles published in or before this year
+        year_from: Include articles published in or after this year (uses pub_year)
+        year_to: Include articles published in or before this year (uses pub_year)
+        date_from: Include articles published on or after this date (YYYY-MM-DD, uses pub_date)
+        date_to: Include articles published on or before this date (YYYY-MM-DD, uses pub_date)
+        research_only: If True, only include research articles (is_research=true)
 
     Returns:
         DataFrame with columns: canonical_name, country_code, funder_id,
@@ -139,12 +145,20 @@ def query_funder_open_data_stats(
     """
     filters = ["(p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true)"]
     params = []
-    if year_from is not None:
+    if date_from:
+        filters.append("p.pub_date >= ?")
+        params.append(date_from)
+    elif year_from is not None:
         filters.append("p.pub_year >= ?")
         params.append(year_from)
-    if year_to is not None:
+    if date_to:
+        filters.append("p.pub_date <= ?")
+        params.append(date_to)
+    elif year_to is not None:
         filters.append("p.pub_year <= ?")
         params.append(year_to)
+    if research_only:
+        filters.append("p.is_research = true")
     where_clause = " AND ".join(filters)
 
     query = f"""
@@ -171,6 +185,9 @@ def query_funder_open_data_for_group(
     canonical_names: List[str],
     year_from: Optional[int] = None,
     year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
 ) -> dict:
     """
     Per-group query for parent-child aggregation. Takes a list of canonical
@@ -180,8 +197,11 @@ def query_funder_open_data_for_group(
     Args:
         con: DuckDB connection to pmid_registry.duckdb
         canonical_names: List of funder canonical_names to aggregate
-        year_from: Include articles published in or after this year
-        year_to: Include articles published in or before this year
+        year_from: Include articles published in or after this year (uses pub_year)
+        year_to: Include articles published in or before this year (uses pub_year)
+        date_from: Include articles published on or after this date (YYYY-MM-DD, uses pub_date)
+        date_to: Include articles published on or before this date (YYYY-MM-DD, uses pub_date)
+        research_only: If True, only include research articles (is_research=true)
 
     Returns:
         Dict with keys: total_articles, open_data_articles, open_code_articles,
@@ -190,12 +210,20 @@ def query_funder_open_data_for_group(
     placeholders = ", ".join(["?"] * len(canonical_names))
     extra_filters = ""
     extra_params = []
-    if year_from is not None:
+    if date_from:
+        extra_filters += " AND p.pub_date >= ?"
+        extra_params.append(date_from)
+    elif year_from is not None:
         extra_filters += " AND p.pub_year >= ?"
         extra_params.append(year_from)
-    if year_to is not None:
+    if date_to:
+        extra_filters += " AND p.pub_date <= ?"
+        extra_params.append(date_to)
+    elif year_to is not None:
         extra_filters += " AND p.pub_year <= ?"
         extra_params.append(year_to)
+    if research_only:
+        extra_filters += " AND p.is_research = true"
 
     query = f"""
     SELECT

@@ -18,7 +18,15 @@ from .data_loader import (
     aggregate_by_group,
     connect_duckdb_registry,
     query_funder_open_data_stats,
-    query_funder_open_data_for_group
+    query_funder_open_data_for_group,
+    query_journal_correction_factors,
+    query_funder_journal_xml_only
+)
+
+from .correction import (
+    wilson_ci,
+    build_journal_correction_table,
+    apply_funder_correction
 )
 
 __all__ = [
@@ -34,5 +42,10 @@ __all__ = [
     'aggregate_by_group',
     'connect_duckdb_registry',
     'query_funder_open_data_stats',
-    'query_funder_open_data_for_group'
+    'query_funder_open_data_for_group',
+    'query_journal_correction_factors',
+    'query_funder_journal_xml_only',
+    'wilson_ci',
+    'build_journal_correction_table',
+    'apply_funder_correction',
 ]

@@ -3,62 +3,62 @@
 \arrayrulecolor{COL5}
 \rowcolors{2}{COL5!10}{white}
 \small
-\begin{longtable}{p{5.5cm} l S[table-format=6.0] S[table-format=5.0] S[table-format=2.1]}
-\caption{Open data rates among major biomedical research funders. Funders exceeding the Weibull-derived 1\% survival threshold for total funded articles ($\geq$15,702 articles with oddpub v7 coverage), ranked by open data rate. Parent funders (e.g., NIH, UKRI) aggregate all child institutes with deduplicated article counts. Cell shading: Total Pubs uses a blue-to-red gradient on log scale; \% Open Data uses a linear blue-to-red gradient. Full rankings for all 5,394 funders are available in the supplementary materials on GitHub.}
+\begin{longtable}{p{5.5cm} l S[table-format=6.0] S[table-format=5.0] S[table-format=2.1] S[table-format=2.1]}
+\caption{Open data rates among major biomedical research funders. Funders exceeding the Weibull-derived 1\% survival threshold for total funded articles ($\geq$0 articles with oddpub v7 coverage), ranked by observed open data rate. Parent funders (e.g., NIH, UKRI) aggregate all child institutes with deduplicated article counts. \% OD (obs.) shows the directly measured rate; \% OD (est.) applies journal-level correction factors from head-to-head PDF vs.\ XML comparison to estimate the true rate for articles with XML-only coverage. Cell shading: Total Pubs uses a blue-to-red gradient on log scale; \% OD columns use a linear blue-to-red gradient. Full rankings for all 5,394 funders are available in the supplementary materials on GitHub.}
 \label{tab:funders} \\
 \toprule
-\textbf{Funder} & \textbf{Country} & {\textbf{Total Pubs}} & {\textbf{Open Data}} & {\textbf{\% Open Data}} \\
+\textbf{Funder} & \textbf{Country} & {\textbf{Total Pubs}} & {\textbf{Open Data}} & {\textbf{\% OD (obs.)}} & {\textbf{\% OD (est.)}} \\
 \midrule
 \endfirsthead
 \toprule
-\textbf{Funder} & \textbf{Country} & {\textbf{Total Pubs}} & {\textbf{Open Data}} & {\textbf{\% Open Data}} \\
+\textbf{Funder} & \textbf{Country} & {\textbf{Total Pubs}} & {\textbf{Open Data}} & {\textbf{\% OD (obs.)}} & {\textbf{\% OD (est.)}} \\
 \midrule
 \endhead
 \midrule
-\multicolumn{5}{r}{\textit{Continued on next page\ldots}} \\
+\multicolumn{6}{r}{\textit{Continued on next page\ldots}} \\
 \endfoot
 \bottomrule
 \endlastfoot
-United States Department of Agriculture & USA & \cellcolor{rgb,255:red,186;green,186;blue,255} 18516 & \cellcolor{rgb,255:red,255;green,153;blue,102} 4110 & \cellcolor{rgb,255:red,255;green,153;blue,102} 22.2 \\
-National Science Foundation of Sri Lanka & LK & \cellcolor{rgb,255:red,190;green,190;blue,255} 20442 & \cellcolor{rgb,255:red,255;green,186;blue,152} 3992 & \cellcolor{rgb,255:red,255;green,186;blue,152} 19.5 \\
-Department of Energy & USA & \cellcolor{rgb,255:red,190;green,190;blue,255} 20073 & \cellcolor{rgb,255:red,255;green,196;blue,167} 3744 & \cellcolor{rgb,255:red,255;green,196;blue,167} 18.7 \\
-Chinese Academy of Sciences & China & \cellcolor{rgb,255:red,184;green,184;blue,255} 18034 & \cellcolor{rgb,255:red,255;green,218;blue,200} 3040 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 \\
-Agence Nationale de la Recherche & France & \cellcolor{rgb,255:red,206;green,206;blue,255} 28267 & \cellcolor{rgb,255:red,255;green,218;blue,200} 4788 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 \\
-National Science Foundation & USA & \cellcolor{rgb,255:red,255;green,238;blue,229} 101748 & \cellcolor{rgb,255:red,255;green,243;blue,238} 15120 & \cellcolor{rgb,255:red,255;green,243;blue,238} 14.9 \\
-Wellcome Trust & UK & \cellcolor{rgb,255:red,247;green,247;blue,255} 66492 & \cellcolor{rgb,255:red,255;green,250;blue,247} 9542 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 \\
-Cancer Research UK & UK & \cellcolor{rgb,255:red,178;green,178;blue,255} 15772 & \cellcolor{rgb,255:red,255;green,250;blue,247} 2268 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 \\
-Swiss National Science Foundation & Switzerland & \cellcolor{rgb,255:red,204;green,204;blue,255} 27423 & \cellcolor{rgb,255:red,255;green,252;blue,251} 3892 & \cellcolor{rgb,255:red,255;green,252;blue,251} 14.2 \\
-Horizon 2020 Framework Programme &  & \cellcolor{rgb,255:red,183;green,183;blue,255} 17513 & \cellcolor{rgb,255:red,255;green,255;blue,255} 2447 & \cellcolor{rgb,255:red,255;green,255;blue,255} 14.0 \\
-Natural Sciences and Engineering Research Council of Canada & Canada & \cellcolor{rgb,255:red,206;green,206;blue,255} 28205 & \cellcolor{rgb,255:red,248;green,248;blue,255} 3764 & \cellcolor{rgb,255:red,248;green,248;blue,255} 13.3 \\
-Deutsche Forschungsgemeinschaft & Germany & \cellcolor{rgb,255:red,255;green,250;blue,247} 84435 & \cellcolor{rgb,255:red,245;green,245;blue,255} 10991 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 \\
-Austrian Science Fund & Austria & \cellcolor{rgb,255:red,182;green,182;blue,255} 16990 & \cellcolor{rgb,255:red,245;green,245;blue,255} 2204 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 \\
-European Commission & EU & \cellcolor{rgb,255:red,255;green,248;blue,244} 87073 & \cellcolor{rgb,255:red,241;green,241;blue,255} 10916 & \cellcolor{rgb,255:red,241;green,241;blue,255} 12.5 \\
-Swedish Research Council & Sweden & \cellcolor{rgb,255:red,205;green,205;blue,255} 27656 & \cellcolor{rgb,255:red,240;green,240;blue,255} 3427 & \cellcolor{rgb,255:red,240;green,240;blue,255} 12.4 \\
-National Institutes of Health & USA & \cellcolor{rgb,255:red,255;green,158;blue,110} 353324 & \cellcolor{rgb,255:red,238;green,238;blue,255} 43029 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 \\
-Bundesministerium fur Bildung und Forschung & Germany & \cellcolor{rgb,255:red,203;green,203;blue,255} 26496 & \cellcolor{rgb,255:red,238;green,238;blue,255} 3230 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 \\
-Netherlands Organisation for Scientific Research & Netherlands & \cellcolor{rgb,255:red,187;green,187;blue,255} 19182 & \cellcolor{rgb,255:red,237;green,237;blue,255} 2317 & \cellcolor{rgb,255:red,237;green,237;blue,255} 12.1 \\
-Fundacao de Amparo a Pesquisa do Estado de Sao Paulo & Brazil & \cellcolor{rgb,255:red,188;green,188;blue,255} 19432 & \cellcolor{rgb,255:red,235;green,235;blue,255} 2314 & \cellcolor{rgb,255:red,235;green,235;blue,255} 11.9 \\
-Ministry of Science and Innovation (Spain) & Spain & \cellcolor{rgb,255:red,179;green,179;blue,255} 15980 & \cellcolor{rgb,255:red,234;green,234;blue,255} 1890 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 \\
-National Key Research and Development Program & China & \cellcolor{rgb,255:red,246;green,246;blue,255} 65965 & \cellcolor{rgb,255:red,234;green,234;blue,255} 7777 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 \\
-European Regional Development Fund & EU & \cellcolor{rgb,255:red,204;green,204;blue,255} 27313 & \cellcolor{rgb,255:red,232;green,232;blue,255} 3175 & \cellcolor{rgb,255:red,232;green,232;blue,255} 11.6 \\
-UK Research and Innovation & UK & \cellcolor{rgb,255:red,255;green,207;blue,183} 164086 & \cellcolor{rgb,255:red,231;green,231;blue,255} 18914 & \cellcolor{rgb,255:red,231;green,231;blue,255} 11.5 \\
-National Council for Scientific and Technological Development (CNPq) & Brazil & \cellcolor{rgb,255:red,217;green,217;blue,255} 35855 & \cellcolor{rgb,255:red,227;green,227;blue,255} 3931 & \cellcolor{rgb,255:red,227;green,227;blue,255} 11.0 \\
-Ministry of Education, Culture, Sports, Science and Technology & Japan & \cellcolor{rgb,255:red,197;green,197;blue,255} 23379 & \cellcolor{rgb,255:red,223;green,223;blue,255} 2480 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 \\
-Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior & Brazil & \cellcolor{rgb,255:red,205;green,205;blue,255} 27637 & \cellcolor{rgb,255:red,223;green,223;blue,255} 2922 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 \\
-Fundacao para a Ciencia e a Tecnologia & Portugal & \cellcolor{rgb,255:red,183;green,183;blue,255} 17614 & \cellcolor{rgb,255:red,218;green,218;blue,255} 1782 & \cellcolor{rgb,255:red,218;green,218;blue,255} 10.1 \\
-Japan Society for the Promotion of Science & Japan & \cellcolor{rgb,255:red,245;green,245;blue,255} 63497 & \cellcolor{rgb,255:red,217;green,217;blue,255} 6358 & \cellcolor{rgb,255:red,217;green,217;blue,255} 10.0 \\
-China Postdoctoral Science Foundation & China & \cellcolor{rgb,255:red,193;green,193;blue,255} 21710 & \cellcolor{rgb,255:red,215;green,215;blue,255} 2124 & \cellcolor{rgb,255:red,215;green,215;blue,255} 9.8 \\
-Bill and Melinda Gates Foundation & USA & \cellcolor{rgb,255:red,196;green,196;blue,255} 23190 & \cellcolor{rgb,255:red,213;green,213;blue,255} 2207 & \cellcolor{rgb,255:red,213;green,213;blue,255} 9.5 \\
-National Natural Science Foundation of China & China & \cellcolor{rgb,255:red,255;green,153;blue,102} 386470 & \cellcolor{rgb,255:red,212;green,212;blue,255} 36189 & \cellcolor{rgb,255:red,212;green,212;blue,255} 9.4 \\
-Instituto de Salud Carlos III & Spain & \cellcolor{rgb,255:red,186;green,186;blue,255} 18576 & \cellcolor{rgb,255:red,211;green,211;blue,255} 1728 & \cellcolor{rgb,255:red,211;green,211;blue,255} 9.3 \\
-National Health and Medical Research Council & Australia & \cellcolor{rgb,255:red,208;green,208;blue,255} 29353 & \cellcolor{rgb,255:red,208;green,208;blue,255} 2654 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 \\
-Centers for Disease Control and Prevention & USA & \cellcolor{rgb,255:red,181;green,181;blue,255} 16945 & \cellcolor{rgb,255:red,208;green,208;blue,255} 1529 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 \\
-Fundamental Research Funds for the Central Universities & China & \cellcolor{rgb,255:red,206;green,206;blue,255} 28476 & \cellcolor{rgb,255:red,207;green,207;blue,255} 2527 & \cellcolor{rgb,255:red,207;green,207;blue,255} 8.9 \\
-Government of Jiangsu Province & China & \cellcolor{rgb,255:red,179;green,179;blue,255} 16177 & \cellcolor{rgb,255:red,205;green,205;blue,255} 1405 & \cellcolor{rgb,255:red,205;green,205;blue,255} 8.7 \\
-Canadian Institutes of Health Research & Canada & \cellcolor{rgb,255:red,215;green,215;blue,255} 34147 & \cellcolor{rgb,255:red,201;green,201;blue,255} 2838 & \cellcolor{rgb,255:red,201;green,201;blue,255} 8.3 \\
-National Research Foundation & South Africa & \cellcolor{rgb,255:red,226;green,226;blue,255} 42823 & \cellcolor{rgb,255:red,199;green,199;blue,255} 3438 & \cellcolor{rgb,255:red,199;green,199;blue,255} 8.0 \\
-National Institute for Health Research & UK & \cellcolor{rgb,255:red,225;green,225;blue,255} 42076 & \cellcolor{rgb,255:red,184;green,184;blue,255} 2678 & \cellcolor{rgb,255:red,184;green,184;blue,255} 6.4 \\
-National Research Foundation of Korea & Korea & \cellcolor{rgb,255:red,233;green,233;blue,255} 50094 & \cellcolor{rgb,255:red,178;green,178;blue,255} 2894 & \cellcolor{rgb,255:red,178;green,178;blue,255} 5.8 \\
+United States Department of Agriculture & USA & \cellcolor{rgb,255:red,186;green,186;blue,255} 18516 & \cellcolor{rgb,255:red,255;green,153;blue,102} 4110 & \cellcolor{rgb,255:red,255;green,153;blue,102} 22.2 & \cellcolor{rgb,255:red,255;green,153;blue,102} 22.2 \\
+National Science Foundation of Sri Lanka & LK & \cellcolor{rgb,255:red,190;green,190;blue,255} 20442 & \cellcolor{rgb,255:red,255;green,186;blue,152} 3992 & \cellcolor{rgb,255:red,255;green,186;blue,152} 19.5 & \cellcolor{rgb,255:red,255;green,186;blue,152} 19.5 \\
+Department of Energy & USA & \cellcolor{rgb,255:red,190;green,190;blue,255} 20073 & \cellcolor{rgb,255:red,255;green,196;blue,167} 3744 & \cellcolor{rgb,255:red,255;green,196;blue,167} 18.7 & \cellcolor{rgb,255:red,255;green,196;blue,167} 18.7 \\
+Agence Nationale de la Recherche & France & \cellcolor{rgb,255:red,206;green,206;blue,255} 28267 & \cellcolor{rgb,255:red,255;green,218;blue,200} 4788 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 \\
+Chinese Academy of Sciences & China & \cellcolor{rgb,255:red,184;green,184;blue,255} 18034 & \cellcolor{rgb,255:red,255;green,218;blue,200} 3040 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 & \cellcolor{rgb,255:red,255;green,218;blue,200} 16.9 \\
+National Science Foundation & USA & \cellcolor{rgb,255:red,255;green,238;blue,229} 101748 & \cellcolor{rgb,255:red,255;green,243;blue,238} 15120 & \cellcolor{rgb,255:red,255;green,243;blue,238} 14.9 & \cellcolor{rgb,255:red,255;green,243;blue,238} 14.9 \\
+Wellcome Trust & UK & \cellcolor{rgb,255:red,247;green,247;blue,255} 66492 & \cellcolor{rgb,255:red,255;green,250;blue,247} 9542 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 \\
+Cancer Research UK & UK & \cellcolor{rgb,255:red,178;green,178;blue,255} 15772 & \cellcolor{rgb,255:red,255;green,250;blue,247} 2268 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 & \cellcolor{rgb,255:red,255;green,250;blue,247} 14.4 \\
+Swiss National Science Foundation & Switzerland & \cellcolor{rgb,255:red,204;green,204;blue,255} 27423 & \cellcolor{rgb,255:red,255;green,252;blue,251} 3892 & \cellcolor{rgb,255:red,255;green,252;blue,251} 14.2 & \cellcolor{rgb,255:red,255;green,252;blue,251} 14.2 \\
+Horizon 2020 Framework Programme &  & \cellcolor{rgb,255:red,183;green,183;blue,255} 17513 & \cellcolor{rgb,255:red,255;green,255;blue,255} 2447 & \cellcolor{rgb,255:red,255;green,255;blue,255} 14.0 & \cellcolor{rgb,255:red,255;green,255;blue,255} 14.0 \\
+Natural Sciences and Engineering Research Council of Canada & Canada & \cellcolor{rgb,255:red,206;green,206;blue,255} 28205 & \cellcolor{rgb,255:red,248;green,248;blue,255} 3764 & \cellcolor{rgb,255:red,248;green,248;blue,255} 13.3 & \cellcolor{rgb,255:red,248;green,248;blue,255} 13.3 \\
+Austrian Science Fund & Austria & \cellcolor{rgb,255:red,182;green,182;blue,255} 16990 & \cellcolor{rgb,255:red,245;green,245;blue,255} 2204 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 \\
+Deutsche Forschungsgemeinschaft & Germany & \cellcolor{rgb,255:red,255;green,250;blue,247} 84435 & \cellcolor{rgb,255:red,245;green,245;blue,255} 10991 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 & \cellcolor{rgb,255:red,245;green,245;blue,255} 13.0 \\
+European Commission & EU & \cellcolor{rgb,255:red,255;green,248;blue,244} 87073 & \cellcolor{rgb,255:red,241;green,241;blue,255} 10916 & \cellcolor{rgb,255:red,241;green,241;blue,255} 12.5 & \cellcolor{rgb,255:red,241;green,241;blue,255} 12.5 \\
+Swedish Research Council & Sweden & \cellcolor{rgb,255:red,205;green,205;blue,255} 27656 & \cellcolor{rgb,255:red,240;green,240;blue,255} 3427 & \cellcolor{rgb,255:red,240;green,240;blue,255} 12.4 & \cellcolor{rgb,255:red,240;green,240;blue,255} 12.4 \\
+National Institutes of Health & USA & \cellcolor{rgb,255:red,255;green,158;blue,110} 353324 & \cellcolor{rgb,255:red,238;green,238;blue,255} 43029 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 \\
+Bundesministerium fur Bildung und Forschung & Germany & \cellcolor{rgb,255:red,203;green,203;blue,255} 26496 & \cellcolor{rgb,255:red,238;green,238;blue,255} 3230 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 & \cellcolor{rgb,255:red,238;green,238;blue,255} 12.2 \\
+Netherlands Organisation for Scientific Research & Netherlands & \cellcolor{rgb,255:red,187;green,187;blue,255} 19182 & \cellcolor{rgb,255:red,237;green,237;blue,255} 2317 & \cellcolor{rgb,255:red,237;green,237;blue,255} 12.1 & \cellcolor{rgb,255:red,237;green,237;blue,255} 12.1 \\
+Fundacao de Amparo a Pesquisa do Estado de Sao Paulo & Brazil & \cellcolor{rgb,255:red,188;green,188;blue,255} 19432 & \cellcolor{rgb,255:red,235;green,235;blue,255} 2314 & \cellcolor{rgb,255:red,235;green,235;blue,255} 11.9 & \cellcolor{rgb,255:red,235;green,235;blue,255} 11.9 \\
+National Key Research and Development Program & China & \cellcolor{rgb,255:red,246;green,246;blue,255} 65965 & \cellcolor{rgb,255:red,234;green,234;blue,255} 7777 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 \\
+Ministry of Science and Innovation (Spain) & Spain & \cellcolor{rgb,255:red,179;green,179;blue,255} 15980 & \cellcolor{rgb,255:red,234;green,234;blue,255} 1890 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 & \cellcolor{rgb,255:red,234;green,234;blue,255} 11.8 \\
+European Regional Development Fund & EU & \cellcolor{rgb,255:red,204;green,204;blue,255} 27313 & \cellcolor{rgb,255:red,232;green,232;blue,255} 3175 & \cellcolor{rgb,255:red,232;green,232;blue,255} 11.6 & \cellcolor{rgb,255:red,232;green,232;blue,255} 11.6 \\
+UK Research and Innovation & UK & \cellcolor{rgb,255:red,255;green,207;blue,183} 164086 & \cellcolor{rgb,255:red,231;green,231;blue,255} 18914 & \cellcolor{rgb,255:red,231;green,231;blue,255} 11.5 & \cellcolor{rgb,255:red,231;green,231;blue,255} 11.5 \\
+National Council for Scientific and Technological Development (CNPq) & Brazil & \cellcolor{rgb,255:red,217;green,217;blue,255} 35855 & \cellcolor{rgb,255:red,227;green,227;blue,255} 3931 & \cellcolor{rgb,255:red,227;green,227;blue,255} 11.0 & \cellcolor{rgb,255:red,227;green,227;blue,255} 11.0 \\
+Ministry of Education, Culture, Sports, Science and Technology & Japan & \cellcolor{rgb,255:red,197;green,197;blue,255} 23379 & \cellcolor{rgb,255:red,223;green,223;blue,255} 2480 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 \\
+Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior & Brazil & \cellcolor{rgb,255:red,205;green,205;blue,255} 27637 & \cellcolor{rgb,255:red,223;green,223;blue,255} 2922 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 & \cellcolor{rgb,255:red,223;green,223;blue,255} 10.6 \\
+Fundacao para a Ciencia e a Tecnologia & Portugal & \cellcolor{rgb,255:red,183;green,183;blue,255} 17614 & \cellcolor{rgb,255:red,218;green,218;blue,255} 1782 & \cellcolor{rgb,255:red,218;green,218;blue,255} 10.1 & \cellcolor{rgb,255:red,218;green,218;blue,255} 10.1 \\
+Japan Society for the Promotion of Science & Japan & \cellcolor{rgb,255:red,245;green,245;blue,255} 63497 & \cellcolor{rgb,255:red,217;green,217;blue,255} 6358 & \cellcolor{rgb,255:red,217;green,217;blue,255} 10.0 & \cellcolor{rgb,255:red,217;green,217;blue,255} 10.0 \\
+China Postdoctoral Science Foundation & China & \cellcolor{rgb,255:red,193;green,193;blue,255} 21710 & \cellcolor{rgb,255:red,215;green,215;blue,255} 2124 & \cellcolor{rgb,255:red,215;green,215;blue,255} 9.8 & \cellcolor{rgb,255:red,215;green,215;blue,255} 9.8 \\
+Bill and Melinda Gates Foundation & USA & \cellcolor{rgb,255:red,196;green,196;blue,255} 23190 & \cellcolor{rgb,255:red,213;green,213;blue,255} 2207 & \cellcolor{rgb,255:red,213;green,213;blue,255} 9.5 & \cellcolor{rgb,255:red,213;green,213;blue,255} 9.5 \\
+National Natural Science Foundation of China & China & \cellcolor{rgb,255:red,255;green,153;blue,102} 386470 & \cellcolor{rgb,255:red,212;green,212;blue,255} 36189 & \cellcolor{rgb,255:red,212;green,212;blue,255} 9.4 & \cellcolor{rgb,255:red,212;green,212;blue,255} 9.4 \\
+Instituto de Salud Carlos III & Spain & \cellcolor{rgb,255:red,186;green,186;blue,255} 18576 & \cellcolor{rgb,255:red,211;green,211;blue,255} 1728 & \cellcolor{rgb,255:red,211;green,211;blue,255} 9.3 & \cellcolor{rgb,255:red,211;green,211;blue,255} 9.3 \\
+National Health and Medical Research Council & Australia & \cellcolor{rgb,255:red,208;green,208;blue,255} 29353 & \cellcolor{rgb,255:red,208;green,208;blue,255} 2654 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 \\
+Centers for Disease Control and Prevention & USA & \cellcolor{rgb,255:red,181;green,181;blue,255} 16945 & \cellcolor{rgb,255:red,208;green,208;blue,255} 1529 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 & \cellcolor{rgb,255:red,208;green,208;blue,255} 9.0 \\
+Fundamental Research Funds for the Central Universities & China & \cellcolor{rgb,255:red,206;green,206;blue,255} 28476 & \cellcolor{rgb,255:red,207;green,207;blue,255} 2527 & \cellcolor{rgb,255:red,207;green,207;blue,255} 8.9 & \cellcolor{rgb,255:red,207;green,207;blue,255} 8.9 \\
+Government of Jiangsu Province & China & \cellcolor{rgb,255:red,179;green,179;blue,255} 16177 & \cellcolor{rgb,255:red,205;green,205;blue,255} 1405 & \cellcolor{rgb,255:red,205;green,205;blue,255} 8.7 & \cellcolor{rgb,255:red,205;green,205;blue,255} 8.7 \\
+Canadian Institutes of Health Research & Canada & \cellcolor{rgb,255:red,215;green,215;blue,255} 34147 & \cellcolor{rgb,255:red,201;green,201;blue,255} 2838 & \cellcolor{rgb,255:red,201;green,201;blue,255} 8.3 & \cellcolor{rgb,255:red,201;green,201;blue,255} 8.3 \\
+National Research Foundation & South Africa & \cellcolor{rgb,255:red,226;green,226;blue,255} 42823 & \cellcolor{rgb,255:red,199;green,199;blue,255} 3438 & \cellcolor{rgb,255:red,199;green,199;blue,255} 8.0 & \cellcolor{rgb,255:red,199;green,199;blue,255} 8.0 \\
+National Institute for Health Research & UK & \cellcolor{rgb,255:red,225;green,225;blue,255} 42076 & \cellcolor{rgb,255:red,184;green,184;blue,255} 2678 & \cellcolor{rgb,255:red,184;green,184;blue,255} 6.4 & \cellcolor{rgb,255:red,184;green,184;blue,255} 6.4 \\
+National Research Foundation of Korea & Korea & \cellcolor{rgb,255:red,233;green,233;blue,255} 50094 & \cellcolor{rgb,255:red,178;green,178;blue,255} 2894 & \cellcolor{rgb,255:red,178;green,178;blue,255} 5.8 & \cellcolor{rgb,255:red,178;green,178;blue,255} 5.8 \\
 \end{longtable}
 \arrayrulecolor{black}
 \endgroup

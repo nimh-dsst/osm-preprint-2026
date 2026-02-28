@@ -421,6 +421,77 @@ def query_funder_works_count_by_name(
     return int(row[0]) if row else 0
 
 
+def query_journal_open_data_stats(
+    con: duckdb.DuckDBPyConnection,
+    min_articles: int = 0,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
+) -> pd.DataFrame:
+    """
+    Per-journal open data/code stats from the pmids table.
+
+    Returns DataFrame with columns: journal, total_articles,
+    open_data_articles, open_code_articles, pdf_covered, xml_only
+    """
+    extra_sql, params = _build_filter_clause(
+        date_from, date_to, year_from, year_to, research_only,
+        table_alias="p",
+    )
+
+    query = f"""
+    SELECT
+        p.journal,
+        COUNT(*) AS total_articles,
+        SUM(CASE WHEN p.is_open_data_best = true THEN 1 ELSE 0 END) AS open_data_articles,
+        SUM(CASE WHEN p.is_open_code_best = true THEN 1 ELSE 0 END) AS open_code_articles,
+        SUM(CASE WHEN p.has_oddpub_pdf_v7 = true THEN 1 ELSE 0 END) AS pdf_covered,
+        SUM(CASE WHEN p.has_oddpub_xml_v7 = true
+             AND NOT COALESCE(p.has_oddpub_pdf_v7, false) THEN 1 ELSE 0 END) AS xml_only
+    FROM pmids p
+    WHERE p.journal IS NOT NULL
+      AND (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){extra_sql}
+    GROUP BY p.journal
+    HAVING COUNT(*) >= {min_articles}
+    ORDER BY COUNT(*) DESC
+    """
+    return con.execute(query, params).fetchdf()
+
+
+def query_baseline_od_rate(
+    con: duckdb.DuckDBPyConnection,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
+) -> dict:
+    """
+    Compute overall open data rate across all articles matching filters.
+
+    Returns dict with keys: total_articles, open_data_articles, baseline_pct
+    """
+    extra_sql, params = _build_filter_clause(
+        date_from, date_to, year_from, year_to, research_only,
+        table_alias="p",
+    )
+
+    query = f"""
+    SELECT
+        COUNT(*) AS total_articles,
+        SUM(CASE WHEN p.is_open_data_best = true THEN 1 ELSE 0 END) AS open_data_articles
+    FROM pmids p
+    WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){extra_sql}
+    """
+    row = con.execute(query, params).fetchone()
+    total = row[0]
+    od = row[1]
+    pct = round(100.0 * od / total, 1) if total > 0 else 0.0
+    return {"total_articles": total, "open_data_articles": od, "baseline_pct": pct}
+
+
 def aggregate_by_group(df: pd.DataFrame,
                       group_col: str,
                       agg_dict: dict,

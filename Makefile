@@ -1,6 +1,6 @@
 # Makefile for OSM Preprint 2026
 
-.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw pdf-priority compare-iterations compile preview-table load-budgets help
+.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 pdf-priority compare-iterations compile preview-table load-budgets help
 
 DUCKDB_PATH ?= /data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb
 
@@ -8,7 +8,7 @@ DUCKDB_PATH ?= /data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb
 all: tables compile
 
 # Regenerate all LaTeX tables and figures
-tables: funder-table funder-table-2024
+tables: funder-table funder-table-2024 journal-table-2024
 
 # Funder table, figure, and CSV
 funder-table:
@@ -32,6 +32,20 @@ funder-table-2024:
 		--research-only \
 		--table-survival 0.05 --figure-survival 0.03 \
 		--min-works-figure 100000 --min-works-table 50000 \
+		--output-suffix _2024_2025 \
+		--verbose
+
+# Journal table filtered to 2024-2025 research articles
+journal-table-2024:
+	@echo "Generating journal table (2024-01 to 2025-06, research only)..."
+	python scripts/table_journals.py \
+		--duckdb-path $(DUCKDB_PATH) \
+		--output-dir latex/tables/ \
+		--figures-dir latex/figures/ \
+		--results-dir results/ \
+		--date-from 2024-01-01 --date-to 2025-06-30 \
+		--research-only \
+		--table-survival 0.05 --figure-survival 0.03 \
 		--output-suffix _2024_2025 \
 		--verbose
 
@@ -108,6 +122,7 @@ help:
 	@echo "  make tables       - Regenerate all tables (currently: funder-table)"
 	@echo "  make funder-table - Generate funder table, figure, CSV, and markdown (all years)"
 	@echo "  make funder-table-2024 - Same but filtered to 2024-2025 publications (with correction)"
+	@echo "  make journal-table-2024 - Generate journal table, figure, CSV (2024-2025)"
 	@echo "  make funder-table-2024-raw - 2024-2025 without correction factors (comparison)"
 	@echo "  make pdf-priority - Generate prioritized PDF download list"
 	@echo "  make compare-iterations - Cross-iteration funder comparison (CSV, markdown, chart)"

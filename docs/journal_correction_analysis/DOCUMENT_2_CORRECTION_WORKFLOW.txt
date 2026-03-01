@@ -1,0 +1,240 @@
+================================================================================
+CORRECTION MACHINERY WORKFLOW
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PART 1: COMPUTE JOURNAL CORRECTION FACTORS (from head-to-head articles)    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  DuckDB Query: query_journal_correction_factors()
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  
+  Input:   pmids table with columns:
+           - journal
+           - has_oddpub_xml_v7 (bool)
+           - has_oddpub_pdf_v7 (bool)
+           - is_open_data_xml_v7 (bool)
+           - is_open_data_pdf_v7 (bool)
+           - is_open_data_best (bool) = PDF OR XML
+           
+  Filter:  WHERE has_oddpub_xml_v7 = true AND has_oddpub_pdf_v7 = true
+           (only articles with BOTH XML and PDF coverage)
+           
+  Output: DataFrame with:
+  ┌──────────────────┬──────────┬─────────────┬──────────────┬──────────────┐
+  │ journal          │ h2h_n    │ xml_od_rate │ pdf_od_rate  │ best_od_rate │
+  ├──────────────────┼──────────┼─────────────┼──────────────┼──────────────┤
+  │ Nature           │ 5,234    │ 0.78        │ 0.82         │ 0.85         │
+  │ Science          │ 3,891    │ 0.71        │ 0.79         │ 0.83         │
+  │ Cell             │ 2,456    │ 0.65        │ 0.68         │ 0.71         │
+  │ ...              │ ...      │ ...         │ ...          │ ...          │
+  └──────────────────┴──────────┴─────────────┴──────────────┴──────────────┘
+  
+  Plus global stats:
+  {
+    'n': 456,789,        # Total h2h articles
+    'rate': 0.62,        # Global PDF-only OD rate
+    'best_rate': 0.68    # Global best (PDF∪XML) OD rate
+  }
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PART 2: ADD WILSON CONFIDENCE INTERVALS (uncertainty quantification)        │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  Python Function: build_journal_correction_table()
+  ═════════════════════════════════════════════════
+  
+  For each journal:
+    n = h2h_n
+    successes = round(best_od_rate × n)
+    
+    Wilson score CI (z=1.96, 95% confidence):
+    ┌─────────────────────────────────────────────────┐
+    │ p = successes / n                               │
+    │ center = p + z²/(2n)                            │
+    │ margin = z√(p(1-p)/n + z²/(4n²))               │
+    │ ci_lo = max(0, (center - margin) / (1 + z²/n)) │
+    │ ci_hi = min(1, (center + margin) / (1 + z²/n)) │
+    └─────────────────────────────────────────────────┘
+    
+  Output: DataFrame with confidence intervals
+  ┌──────────────────┬──────────────┬────────┬────────┐
+  │ journal          │ best_od_rate │ ci_lo  │ ci_hi  │
+  ├──────────────────┼──────────────┼────────┼────────┤
+  │ Nature           │ 0.85         │ 0.835  │ 0.865  │
+  │ Science          │ 0.83         │ 0.808  │ 0.852  │
+  │ Cell             │ 0.71         │ 0.682  │ 0.738  │
+  │ ...              │ ...          │ ...    │ ...    │
+  └──────────────────┴──────────────┴────────┴────────┘
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PART 3: APPLY CORRECTION TO XML-ONLY ARTICLES (per funder/journal)         │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  Python Function: apply_funder_correction()
+  ═════════════════════════════════════════════
+  
+  Input for each funder/journal:
+  
+  funder_journal_xml:
+  ┌──────────────────┬─────────────┐
+  │ journal          │ n_xml_only  │
+  ├──────────────────┼─────────────┤
+  │ Nature           │ 2,345       │  ← XML-only articles for this funder
+  │ Science          │ 1,234       │  ← in each journal
+  │ Cell             │ 567         │
+  │ Small Journal    │ 123         │     (may not have h2h data)
+  └──────────────────┴─────────────┘
+  
+  + journal_corrections (from Part 2)
+  + global_fallback (from Part 1): best_rate = 0.68, ci_lo = 0.675, ci_hi = 0.685
+  + pdf_covered_od = 4,567    ← Known OD articles from PDF analysis
+  + observed_od = 5,000       ← Total observed OD (floor for result)
+  
+  
+  Algorithm:
+  ──────────
+  
+  corrected_od = pdf_covered_od  = 4,567
+  ci_lo_est = 0
+  ci_hi_est = 0
+  n_corrected = 0
+  n_fallback = 0
+  
+  FOR EACH journal WITH xml_only articles:
+    IF journal IN journal_corrections (has h2h data):
+      rate = journal_corrections[journal]['best_od_rate']
+      ci_lo = journal_corrections[journal]['ci_lo']
+      ci_hi = journal_corrections[journal]['ci_hi']
+      n_corrected += n_xml_only
+    ELSE:
+      rate = global_fallback['best_rate']
+      ci_lo = global_fallback['ci_lo']
+      ci_hi = global_fallback['ci_hi']
+      n_fallback += n_xml_only
+      
+    est = n_xml_only × rate
+    est_lo = n_xml_only × ci_lo
+    est_hi = n_xml_only × ci_hi
+    
+    corrected_od += est
+    ci_lo_est += est_lo
+    ci_hi_est += est_hi
+  
+  # Floor at observed
+  corrected_od = max(corrected_od, observed_od) = max(5,893, 5,000) = 5,893
+  ci_lo_est = max(ci_lo_est, observed_od)
+  ci_hi_est = max(ci_hi_est, observed_od)
+  
+  
+  Example calculation:
+  ────────────────────
+  
+  Nature (h2h data):       2,345 articles × 0.85 = 1,993 OD articles
+                                              ci: [1,958 - 2,028]
+  
+  Science (h2h data):      1,234 articles × 0.83 = 1,024 OD articles
+                                              ci: [1,000 - 1,048]
+  
+  Cell (h2h data):           567 articles × 0.71 = 403 OD articles
+                                              ci: [385 - 421]
+  
+  Small Journal (no h2h):    123 articles × 0.68 = 84 OD articles
+                                              ci: [82 - 86]
+  
+  ───────────────────────────────────────────────
+  Estimate total from XML-only:               3,504 articles
+  CI bounds:                             [3,425 - 3,583]
+  
+  Plus PDF-covered (ground truth):         + 4,567 articles
+  ───────────────────────────────────────────────
+  Corrected OD total:                       8,071 articles
+  Corrected CI:                        [7,992 - 8,150]
+  
+  Observed OD (without correction):        5,000 articles
+  CORRECTION IMPACT:                       +3,071 articles (+61.4%)
+
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PART 4: OUTPUT (e.g., in funders_summary.csv)                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+  Funder Summary CSV row:
+  ┌──────────────────────────┬─────────────────────────────────────────────┐
+  │ Column                   │ Value (example)                             │
+  ├──────────────────────────┼─────────────────────────────────────────────┤
+  │ funder_name              │ National Institutes of Health               │
+  │ total_articles           │ 28,982                                      │
+  │ open_data_articles       │ 5,940  ← Observed (best of XML and PDF)    │
+  │ pdf_covered              │ 10,523 ← PDF-covered articles              │
+  │ xml_only                 │ 18,459 ← XML-only articles                 │
+  │ corrected_od             │ 6,582  ← After correction (from Part 3)    │
+  │ corrected_pct            │ 22.7%  ← corrected_od / total_articles     │
+  │ ci_lo_pct                │ 22.3%  ← Lower CI bound as percentage      │
+  │ ci_hi_pct                │ 23.1%  ← Upper CI bound as percentage      │
+  │ n_corrected              │ 8,542  ← Articles using journal-specific  │
+  │ n_fallback               │ 9,917  ← Articles using global fallback    │
+  └──────────────────────────┴─────────────────────────────────────────────┘
+  
+  Interpretation:
+  - The funder has 5,940 articles with observed OD statements
+  - Correcting for XML-only underestimation: estimate is 6,582 (20.6% increase)
+  - 95% CI: between 22.3% and 23.1% true OD rate (uncertainty band)
+
+
+================================================================================
+KEY STATISTICS (2024-2025 Dataset, all funders with ≥100 articles & XML-only)
+================================================================================
+
+Across 816 funders:
+  
+  Total observed OD:       72,969 articles
+  Total corrected OD:      88,009 articles
+  ────────────────────────────────────
+  Total correction:        15,040 articles
+  Correction percentage:   +20.6%
+  
+  Per-funder statistics:
+  ├─ Mean correction:        +33.7%
+  ├─ Median correction:      +21.9%
+  ├─ Stdev:                  ±43.8%
+  ├─ Min:                     0%    (some funders: no XML-only articles)
+  └─ Max:                   +526%   (small funders: high uncertainty)
+
+
+================================================================================
+FOR JOURNAL-LEVEL ADAPTATION
+================================================================================
+
+Replace funder-level loop with journal-level loop:
+
+  journal_stats = query_journal_open_data_stats(con, min_articles=100)
+  journal_df, global_stats = query_journal_correction_factors(con, min_h2h=50)
+  journal_corrections = build_journal_correction_table(journal_df, global_stats)
+  
+  FOR EACH journal IN journal_stats:
+    journal_corrections_lookup = {j['journal']: j for j in journal_corrections}
+    
+    IF journal['journal'] IN journal_corrections_lookup:
+      rate = journal_corrections_lookup[journal['journal']]['best_od_rate']
+      ci_lo = journal_corrections_lookup[journal['journal']]['ci_lo']
+      ci_hi = journal_corrections_lookup[journal['journal']]['ci_hi']
+    ELSE:
+      rate = global_stats['best_rate']
+      ci_lo = global_stats['ci_lo']
+      ci_hi = global_stats['ci_hi']
+    
+    # Apply correction
+    est_od = journal['open_data_articles'] + (journal['xml_only'] × rate)
+    est_lo = journal['open_data_articles'] + (journal['xml_only'] × ci_lo)
+    est_hi = journal['open_data_articles'] + (journal['xml_only'] × ci_hi)
+    
+    # Output
+    journal['corrected_od'] = est_od
+    journal['corrected_pct'] = est_od / journal['total_articles'] × 100
+    journal['ci_lo_pct'] = est_lo / journal['total_articles'] × 100
+    journal['ci_hi_pct'] = est_hi / journal['total_articles'] × 100
+
+================================================================================

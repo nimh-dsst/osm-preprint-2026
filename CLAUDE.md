@@ -4,39 +4,40 @@
 
 LaTeX preprint manuscript analyzing open data sharing trends across ~326,000 biomedical research articles from PubMed (2024-2025). Demonstrates that major funders, journals, and institutions achieve dramatically higher open data rates (up to 82%) compared to baseline (13.5%).
 
-## Current Status (2026-01-22)
+## Current Status (2026-03-01)
 
-**✅ Skeleton Complete:**
-- LaTeX structure compiling successfully (test PDF: `latex/osm_preprint_2026.pdf`)
-- Git repository initialized with `main` (barebones) and `develop` (full skeleton) branches
-- GitHub repo: https://github.com/nimh-dsst/osm-preprint-2026 (private)
-- Overleaf integration: Synced to `develop` branch
-- Python infrastructure: Utilities ready, dependencies defined
-- Meta-repo documentation updated
+**✅ Data Pipelines Complete:**
+- Funder pipeline: table, figure, CSV, markdown with correction factors + 95% CIs
+- Journal pipeline: table, figure, CSV, markdown with correction factors + 95% CIs
+- DuckDB auto-detection works across Curium and MacBook Air
+- LaTeX compiles via tectonic (`make compile`)
 
 **🔧 Next Steps:**
-1. Create table generation scripts to query parquet data
+1. Institution and repository table pipelines
 2. Write manuscript content (abstract, intro, methods, results, discussion)
-3. When HPC returns (Jan 26): Process remaining PDFs (326k → 618k articles)
+3. Internal review and revisions
 
-**📊 Current Branch Strategy:**
-- `main` - Barebones (LICENSE + README only)
-- `develop` - Active development (default branch for Overleaf)
+**📊 Branch Strategy:**
+- `main` — Default development branch
+- `journal_fig` — Journal figure/correction factor work (active)
 
 ## Path Variables
+
+**DuckDB auto-detection** (`_find_duckdb_default()` in `scripts/utils/data_loader.py`):
+1. `OSM_DUCKDB_PATH` env var
+2. Sibling repo: `../datalad-osm/duckdbs/pmid_registry.duckdb`
+3. Curium fallback: `/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb`
 
 **Development Machine (Curium/EC2):**
 ```bash
 REPO_ROOT="/home/adamt/claude/osm/osm-preprint-2026"
 DATA_DIR="/data/adamt/osm/datafiles"
-ODDPUB_OUTPUT="$DATA_DIR/oddpub_output"
-OPENALEX_DATA="$DATA_DIR/pubmed_metadata"
 ```
 
-**HPC (Biowulf) - Currently Offline:**
+**MacBook Air:**
 ```bash
-# HPC offline for maintenance until Jan 26, 2026
-# Data processing happens on HPC, preprint work on local machine
+REPO_ROOT="/Users/adamt/proj/osm/brnch_journalFig"
+VENV="~/proj/osm/venv"  # shared venv with tectonic + biber in bin/
 ```
 
 ## Directory Structure
@@ -64,14 +65,15 @@ osm-preprint-2026/
 │       └── repositories_mentions.png
 │
 ├── scripts/
-│   ├── generate_all_tables.py      # Master script - regenerate all tables
-│   ├── table_funders.py            # Funder table (PRIMARY FINDING)
-│   ├── table_journals.py           # Journal table
-│   ├── table_institutions.py       # Institution table
-│   ├── table_repositories.py       # Repository table
+│   ├── table_funders.py            # Funder table pipeline (with correction factors)
+│   ├── table_journals.py           # Journal table pipeline (with correction factors)
+│   ├── pdf_priority_list.py        # Prioritized XML-only PMIDs for PDF download
+│   ├── load_funder_budgets.py      # Load funder budget data into DuckDB
+│   ├── compare_iterations.py       # Cross-iteration funder comparison
 │   ├── utils/
+│   │   ├── data_loader.py          # DuckDB queries + _find_duckdb_default()
 │   │   ├── latex_helpers.py        # LaTeX formatting utilities
-│   │   └── data_loader.py          # DuckDB parquet queries
+│   │   └── correction.py           # Wilson CIs, journal/funder correction factors
 │   ├── funder_aliases_v5.csv       # Funder normalization (from osm-pipeline)
 │   └── requirements.txt            # Python dependencies
 │
@@ -104,13 +106,9 @@ python scripts/generate_all_tables.py \
 ### Compile LaTeX
 
 ```bash
-cd ~/claude/osm/osm-preprint-2026
-
-# Full compilation
-make compile
-
-# Or manually
-cd latex && pdflatex main.tex && biber main && pdflatex main.tex && pdflatex main.tex
+# Requires venv activated (tectonic + biber 2.17 in ~/proj/osm/venv/bin/)
+source ~/proj/osm/venv/bin/activate
+make compile   # uses tectonic (handles biber internally)
 
 # Clean auxiliary files
 make clean
@@ -168,9 +166,8 @@ Key packages (see `scripts/requirements.txt`):
 
 Install dependencies:
 ```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r scripts/requirements.txt
+source ~/proj/osm/venv/bin/activate
+uv pip install -r scripts/requirements.txt
 ```
 
 ## LaTeX Architecture
@@ -195,26 +192,25 @@ pip install -r scripts/requirements.txt
 
 ### Table 1: Top Funders (PRIMARY FINDING)
 
-**Columns:** Funder Name, Country, Total Pubs, Open Data Pubs, % Open Data
+**Columns:** Funder Name, Country, Total Pubs, Open Data, % OD (obs.), % OD (est.)
 
 **Features:**
-- Parent-child aggregation using FunderNormalizer
-- Top 50 funders by % open data
-- Conditional formatting (blue-white-red gradient)
-- Multi-page longtable
+- Parent-child aggregation using funder_aliases_v5.csv
+- Weibull threshold + OpenAlex works-count filter
+- Journal-level correction factors with Wilson 95% CIs
+- Dual-bar chart (observed + corrected) with error whiskers
 
-**Key Finding:** Major funders like NIH, Wellcome Trust, UKRI show 30-82% open data rates vs 13.5% baseline
+**Key Finding:** Major funders like NIH, Wellcome Trust, UKRI show 30-82% open data rates vs 16.6% funded baseline
 
 ### Table 2: Top Journals
 
-**Columns:** Journal Name, Publisher, Total Pubs, Open Data Pubs, % Open Data
+**Columns:** Journal, Total Pubs, Open Data, % OD (obs.), % OD (est.)
 
 **Features:**
-- Top 50 journals by open data publications
-- Grouped by publisher
-- Conditional formatting on % column
-
-**Reference:** Preliminary results in `osm/brnch_oddpubv7minerU/results/xml_vs_mineru_journals/`
+- Journal-level correction factors with Wilson 95% CIs
+- Weibull threshold (5% table / 2% figure)
+- Dual-bar chart matching funder pattern
+- 676 journals with h2h correction data (min 50 articles)
 
 ### Table 3: Top Institutions
 
@@ -293,14 +289,14 @@ This repository has two remotes:
 
 ## Primary Findings
 
-1. **Top Funders:** Major public funders (NIH, Wellcome Trust, UKRI) show 30-82% open data rates
-2. **Top Journals:** Open access journals (Nature Communications, eLife, PLOS) lead in open data
+1. **Top Funders:** Major public funders (NIH, Wellcome Trust, UKRI) show 30-82% open data rates (16.6% funded baseline)
+2. **Top Journals:** Nature Structural & Molecular Biology (86.1% obs., 91.7% est.), Nature Genetics (70.5% obs., 92.9% est.)
 3. **Top Institutions:** Leading research institutions demonstrate higher compliance
 4. **Top Repositories:** GenBank, Zenodo, Dryad dominate data sharing statements
 
-**Baseline:** 13.5% open data rate across all recent open access PubMed articles (2024-2026)
+**Baselines:** 8.7% overall (all articles), 16.6% funded-article baseline (2024-2025 research)
 
-**Methodology:** PDF-based detection (MinerU + oddpub v7.2.3) finds ~52% more open data statements than XML-based methods
+**Methodology:** PDF-based detection (MinerU + oddpub v7.2.3) finds ~52% more open data statements than XML-based methods. Journal-level correction factors with Wilson 95% CIs adjust for differential PDF/XML coverage.
 
 ## Development Guidelines
 
@@ -320,7 +316,7 @@ This repository has two remotes:
 - Commit generated tables/figures (they're small and aid reproducibility)
 - Write descriptive commit messages
 - Push to both remotes (GitHub and Overleaf)
-- Use `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>` for AI-assisted commits
+- Use `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` for AI-assisted commits
 
 ## Cross-Repo Dependencies
 
@@ -346,9 +342,6 @@ This repository has two remotes:
 
 ## Timeline
 
-- **Week 1 (Jan 20-26):** Skeleton implementation and initial draft
-- **Week 2-3:** Content refinement, data updates (618k articles)
-- **Week 4:** Internal review and revisions
 - **Target Submission:** bioRxiv or arXiv preprint server
 
 ## Technical Notes
@@ -356,21 +349,18 @@ This repository has two remotes:
 1. **Memory Efficiency:** Use DuckDB for querying large parquet files instead of loading entire datasets into pandas
 2. **Reproducibility:** All generated tables/figures committed to git with corresponding CSV summaries in `results/`
 3. **Overleaf Sync:** Bi-directional - changes in Overleaf can be pulled with `git pull overleaf main`
-4. **LaTeX Compilation:** Requires 3 passes for references: pdflatex → biber → pdflatex → pdflatex
-5. **Font Availability:** Roboto font must be installed system-wide for local compilation
+4. **LaTeX Compilation:** Uses tectonic (handles biber internally). Both binaries in `~/proj/osm/venv/bin/`
+5. **Font Availability:** Roboto font bundled by tectonic
 
 ## Troubleshooting
 
 ### LaTeX Compilation Errors
 ```bash
-# Check log for errors
-grep -i error latex/main.log
-
 # Clean and rebuild
 make clean && make compile
 
-# Test individual components
-cd latex && pdflatex preamble.tex
+# Verbose tectonic output
+cd latex && tectonic --print main.tex
 ```
 
 ### Python Script Errors

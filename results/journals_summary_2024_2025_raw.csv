@@ -1,0 +1,1390 @@
+journal,total_articles,open_data_articles,open_code_articles,pdf_covered,pdf_covered_od,xml_only,xml_only_od,open_data_pct,open_code_pct
+Nature Structural & Molecular Biology,151,130.0,52.0,139.0,127.0,12.0,3.0,86.1,34.4
+Microbial Genomics,223,189.0,74.0,1.0,1.0,222.0,188.0,84.8,33.2
+Molecular & Cellular Proteomics,207,169.0,41.0,0.0,0.0,207.0,169.0,81.6,19.8
+Cell Genomics,182,146.0,119.0,4.0,4.0,178.0,142.0,80.2,65.4
+Genome Research,217,165.0,135.0,2.0,2.0,215.0,163.0,76.0,62.2
+Journal of Cognition,103,75.0,54.0,8.0,6.0,95.0,69.0,72.8,52.4
+Cell Reports Methods,189,134.0,92.0,2.0,1.0,187.0,133.0,70.9,48.7
+Environmental Microbiome,180,127.0,48.0,123.0,109.0,57.0,18.0,70.6,26.7
+Nature Genetics,227,160.0,135.0,165.0,152.0,62.0,8.0,70.5,59.5
+Nature Microbiology,194,135.0,87.0,158.0,126.0,36.0,9.0,69.6,44.8
+Nature Biotechnology,120,83.0,58.0,117.0,83.0,3.0,0.0,69.2,48.3
+Cancer Research,121,83.0,20.0,5.0,4.0,116.0,79.0,68.6,16.5
+Cell Reports Medicine,535,359.0,187.0,8.0,7.0,527.0,352.0,67.1,35.0
+Genome biology,459,305.0,252.0,318.0,284.0,141.0,21.0,66.4,54.9
+Scientific Data,2421,1588.0,904.0,1694.0,1031.0,727.0,557.0,65.6,37.3
+Cell Reports,645,417.0,201.0,25.0,20.0,620.0,397.0,64.7,31.2
+Attention Perception & Psychophysics,116,73.0,53.0,98.0,67.0,18.0,6.0,62.9,45.7
+Nature Immunology,113,71.0,42.0,85.0,66.0,28.0,5.0,62.8,37.2
+Psychological Research,111,69.0,38.0,92.0,59.0,19.0,10.0,62.2,34.2
+Nature Cell Biology,124,77.0,63.0,99.0,75.0,25.0,2.0,62.1,50.8
+Microbiome,380,236.0,87.0,275.0,219.0,105.0,17.0,62.1,22.9
+Animal Microbiome,140,85.0,29.0,87.0,70.0,53.0,15.0,60.7,20.7
+Cognitive Research Principles and Implications,106,64.0,42.0,80.0,55.0,26.0,9.0,60.4,39.6
+Behavior Research Methods,249,149.0,158.0,184.0,120.0,65.0,29.0,59.8,63.5
+Genome Medicine,207,123.0,75.0,157.0,114.0,50.0,9.0,59.4,36.2
+BMC Genomic Data,144,85.0,9.0,113.0,77.0,31.0,8.0,59.0,6.2
+Nature Methods,212,125.0,130.0,165.0,118.0,47.0,7.0,59.0,61.3
+PLoS Biology,648,381.0,259.0,266.0,144.0,382.0,237.0,58.8,40.0
+Microbial Ecology,202,118.0,39.0,144.0,97.0,58.0,21.0,58.4,19.3
+Stem Cell Reports,164,95.0,21.0,0.0,0.0,164.0,95.0,57.9,12.8
+Nature Ecology & Evolution,129,74.0,73.0,104.0,71.0,25.0,3.0,57.4,56.6
+Nature Metabolism,104,59.0,31.0,89.0,58.0,15.0,1.0,56.7,29.8
+Nature Chemistry,122,68.0,21.0,107.0,68.0,15.0,0.0,55.7,17.2
+Nature Neuroscience,173,96.0,83.0,136.0,94.0,37.0,2.0,55.5,48.0
+MycoKeys,242,134.0,1.0,53.0,32.0,189.0,102.0,55.4,0.4
+BMC Genomics,1747,962.0,262.0,1283.0,864.0,464.0,98.0,55.1,15.0
+Patterns,123,67.0,73.0,1.0,0.0,122.0,67.0,54.5,59.3
+Communications Psychology,185,100.0,106.0,129.0,86.0,56.0,14.0,54.1,57.3
+BMC Biology,431,228.0,112.0,313.0,205.0,118.0,23.0,52.9,26.0
+PLoS Genetics,458,234.0,100.0,216.0,121.0,242.0,113.0,51.1,21.8
+iScience,3514,1785.0,1036.0,13.0,8.0,3501.0,1777.0,50.8,29.5
+International Journal for Parasitology Parasites and Wildlife,162,81.0,1.0,0.0,0.0,162.0,81.0,50.0,0.6
+Parasite,104,52.0,0.0,0.0,0.0,104.0,52.0,50.0,0.0
+Mitochondrial DNA Part B,451,222.0,5.0,0.0,0.0,451.0,222.0,49.2,1.1
+JCI Insight,691,338.0,60.0,16.0,9.0,675.0,329.0,48.9,8.7
+npj Biofilms and Microbiomes,225,109.0,43.0,150.0,100.0,75.0,9.0,48.4,19.1
+BMC Microbiology,874,421.0,32.0,593.0,360.0,281.0,61.0,48.2,3.7
+Communications Biology,2503,1181.0,560.0,1822.0,1095.0,681.0,86.0,47.2,22.4
+Plant Communications,231,107.0,21.0,0.0,0.0,231.0,107.0,46.3,9.1
+Nature Communications,15129,6835.0,3401.0,11608.0,6486.0,3521.0,349.0,45.2,22.5
+Cell Death and Differentiation,120,54.0,7.0,113.0,53.0,7.0,1.0,45.0,5.8
+HardwareX,147,65.0,46.0,0.0,0.0,147.0,65.0,44.2,31.3
+Parasitology,159,70.0,7.0,93.0,43.0,66.0,27.0,44.0,4.4
+Data in Brief,1629,714.0,169.0,0.0,0.0,1629.0,714.0,43.8,10.4
+FEMS Microbiology Ecology,199,87.0,33.0,0.0,0.0,199.0,87.0,43.7,16.6
+Journal of Clinical Investigation,800,346.0,46.0,17.0,10.0,783.0,336.0,43.2,5.8
+Cell Discovery,112,48.0,14.0,81.0,48.0,31.0,0.0,42.9,12.5
+Oncogene,169,72.0,12.0,146.0,70.0,23.0,2.0,42.6,7.1
+Access Microbiology,214,91.0,11.0,0.0,0.0,214.0,91.0,42.5,5.1
+Human Genetics and Genomics Advances,139,57.0,38.0,3.0,1.0,136.0,56.0,41.0,27.3
+IUCrJ,115,47.0,13.0,0.0,0.0,115.0,47.0,40.9,11.3
+eLife,1459,595.0,363.0,839.0,486.0,620.0,109.0,40.8,24.9
+Cancer Research Communications,313,124.0,35.0,3.0,1.0,310.0,123.0,39.6,11.2
+PLANT PHYSIOLOGY,370,146.0,12.0,0.0,0.0,370.0,146.0,39.5,3.2
+Nature Medicine,349,137.0,152.0,270.0,129.0,79.0,8.0,39.3,43.6
+Applied Microbiology and Biotechnology,551,215.0,42.0,472.0,198.0,79.0,17.0,39.0,7.6
+Brazilian Journal of Microbiology,177,68.0,5.0,175.0,68.0,2.0,0.0,38.4,2.8
+Parasitology Research,141,54.0,12.0,96.0,44.0,45.0,10.0,38.3,8.5
+Frontiers in Microbiology,3850,1443.0,97.0,1804.0,907.0,2046.0,536.0,37.5,2.5
+BMC Ecology and Evolution,198,74.0,39.0,157.0,68.0,41.0,6.0,37.4,19.7
+Environmental Microbiology Reports,201,75.0,19.0,21.0,18.0,180.0,57.0,37.3,9.5
+Clinical Cancer Research,214,79.0,24.0,4.0,2.0,210.0,77.0,36.9,11.2
+Gut Pathogens,103,38.0,4.0,80.0,35.0,23.0,3.0,36.9,3.9
+BMC Medical Genomics,350,128.0,24.0,287.0,126.0,63.0,2.0,36.6,6.9
+Journal of Proteome Research,205,74.0,32.0,2.0,2.0,203.0,72.0,36.1,15.6
+Microbiology,115,41.0,13.0,0.0,0.0,115.0,41.0,35.7,11.3
+npj Science of Learning,107,37.0,33.0,74.0,29.0,33.0,8.0,34.6,30.8
+Virus Evolution,134,46.0,21.0,0.0,0.0,134.0,46.0,34.3,15.7
+Current Research in Microbial Sciences,135,46.0,8.0,0.0,0.0,135.0,46.0,34.1,5.9
+Journal of Biological Chemistry,1444,491.0,71.0,11.0,5.0,1433.0,486.0,34.0,4.9
+The Plant Cell,204,69.0,14.0,0.0,0.0,204.0,69.0,33.8,6.9
+BMC Plant Biology,1982,668.0,78.0,1378.0,585.0,604.0,83.0,33.7,3.9
+Molecular Therapy,123,41.0,8.0,2.0,2.0,121.0,39.0,33.3,6.5
+Nature,1722,552.0,408.0,1459.0,519.0,263.0,33.0,32.1,23.7
+PLoS Pathogens,937,298.0,72.0,400.0,196.0,537.0,102.0,31.8,7.7
+Theoretical and Applied Genetics,127,40.0,48.0,98.0,38.0,29.0,2.0,31.5,37.8
+The Plant Journal,172,54.0,26.0,40.0,16.0,132.0,38.0,31.4,15.1
+Open Research Europe,222,69.0,42.0,166.0,57.0,56.0,12.0,31.1,18.9
+EBioMedicine,681,211.0,113.0,7.0,2.0,674.0,209.0,31.0,16.6
+Nature Materials,110,33.0,13.0,98.0,33.0,12.0,0.0,30.0,11.8
+Parasites & Vectors,704,211.0,32.0,536.0,171.0,168.0,40.0,30.0,4.5
+npj Precision Oncology,441,132.0,86.0,303.0,122.0,138.0,10.0,29.9,19.5
+Oecologia,104,30.0,39.0,77.0,30.0,27.0,0.0,28.8,37.5
+Molecular Psychiatry,303,85.0,59.0,289.0,83.0,14.0,2.0,28.1,19.5
+npj Genomic Medicine,107,30.0,16.0,76.0,28.0,31.0,2.0,28.0,15.0
+STAR Protocols,1033,283.0,231.0,4.0,0.0,1029.0,283.0,27.4,22.4
+AMB Express,222,60.0,6.0,151.0,49.0,71.0,11.0,27.0,2.7
+Protein Science,310,83.0,34.0,31.0,12.0,279.0,71.0,26.8,11.0
+Transboundary and Emerging Diseases,234,62.0,2.0,2.0,1.0,232.0,61.0,26.5,0.9
+BMC Bioinformatics,526,139.0,286.0,410.0,125.0,116.0,14.0,26.4,54.4
+Virus Research,210,55.0,3.0,1.0,0.0,209.0,55.0,26.2,1.4
+Rice,115,30.0,5.0,80.0,27.0,35.0,3.0,26.1,4.3
+PhytoKeys,305,79.0,7.0,62.0,20.0,243.0,59.0,25.9,2.3
+Leukemia,233,60.0,6.0,199.0,58.0,34.0,2.0,25.8,2.6
+Clinical Epigenetics,246,63.0,36.0,180.0,58.0,66.0,5.0,25.6,14.6
+Microbial Cell Factories,439,111.0,13.0,355.0,94.0,84.0,17.0,25.3,3.0
+Bone Research,108,27.0,2.0,75.0,24.0,33.0,3.0,25.0,1.9
+Molecular Cancer,237,59.0,21.0,176.0,54.0,61.0,5.0,24.9,8.9
+Molecular Ecology,109,27.0,38.0,18.0,10.0,91.0,17.0,24.8,34.9
+Communications Medicine,467,115.0,108.0,298.0,104.0,169.0,11.0,24.6,23.1
+Acta Neuropathologica,168,41.0,12.0,126.0,40.0,42.0,1.0,24.4,7.1
+Signal Transduction and Targeted Therapy,380,92.0,15.0,278.0,86.0,102.0,6.0,24.2,3.9
+Frontiers in Bioinformatics,121,29.0,21.0,46.0,17.0,75.0,12.0,24.0,17.4
+Psychophysiology,125,30.0,30.0,22.0,8.0,103.0,22.0,24.0,24.0
+Frontiers in Cellular and Infection Microbiology,1422,340.0,44.0,604.0,207.0,818.0,133.0,23.9,3.1
+Dalton Transactions,336,80.0,0.0,316.0,69.0,20.0,11.0,23.8,0.0
+npj Systems Biology and Applications,194,46.0,89.0,151.0,45.0,43.0,1.0,23.7,45.9
+Journal of Neuroscience,173,41.0,46.0,9.0,0.0,164.0,41.0,23.7,26.6
+British Journal of Cancer,274,65.0,28.0,247.0,64.0,27.0,1.0,23.7,10.2
+European Journal of Clinical Microbiology & Infectious Diseases,139,33.0,4.0,118.0,29.0,21.0,4.0,23.7,2.9
+RSC Chemical Biology,153,36.0,3.0,62.0,14.0,91.0,22.0,23.5,2.0
+Cell Death and Disease,1170,272.0,36.0,840.0,236.0,330.0,36.0,23.2,3.1
+ZooKeys,649,150.0,14.0,151.0,49.0,498.0,101.0,23.1,2.2
+Biodiversity Data Journal,433,100.0,18.0,103.0,32.0,330.0,68.0,23.1,4.2
+Journal of Experimental & Clinical Cancer Research,406,93.0,11.0,283.0,78.0,123.0,15.0,22.9,2.7
+Frontiers in Genetics,1284,294.0,87.0,629.0,226.0,655.0,68.0,22.9,6.8
+Stem Cell Research & Therapy,606,137.0,16.0,426.0,133.0,180.0,4.0,22.6,2.6
+PLoS Computational Biology,1064,238.0,591.0,474.0,179.0,590.0,59.0,22.4,55.5
+Communications Chemistry,451,100.0,39.0,328.0,94.0,123.0,6.0,22.2,8.6
+Molecular Metabolism,255,56.0,8.0,2.0,1.0,253.0,55.0,22.0,3.1
+Journal of Racial and Ethnic Health Disparities,157,34.0,7.0,157.0,34.0,0.0,0.0,21.7,4.5
+Movement Ecology,120,26.0,35.0,85.0,26.0,35.0,0.0,21.7,29.2
+Journal of Animal Science and Biotechnology/Journal of animal science and biotechnology,232,50.0,6.0,165.0,46.0,67.0,4.0,21.6,2.6
+PLoS neglected tropical diseases,950,205.0,64.0,406.0,136.0,544.0,69.0,21.6,6.7
+Experimental & Molecular Medicine,219,47.0,7.0,162.0,39.0,57.0,8.0,21.5,3.2
+NAR Genomics and Bioinformatics,248,53.0,77.0,1.0,1.0,247.0,52.0,21.4,31.0
+Cellular and Molecular Life Sciences,617,131.0,26.0,471.0,121.0,146.0,10.0,21.2,4.2
+Global Change Biology,179,38.0,36.0,25.0,15.0,154.0,23.0,21.2,20.1
+Annals of Clinical Microbiology and Antimicrobials,133,28.0,2.0,110.0,27.0,23.0,1.0,21.1,1.5
+Open Biology,147,31.0,9.0,1.0,1.0,146.0,30.0,21.1,6.1
+Journal of Biomedical Science,114,24.0,4.0,88.0,22.0,26.0,2.0,21.1,3.5
+Journal of Cheminformatics,223,47.0,115.0,156.0,42.0,67.0,5.0,21.1,51.6
+Molecular Neurodegeneration,110,23.0,7.0,76.0,19.0,34.0,4.0,20.9,6.4
+Frontiers in Plant Science,3649,764.0,113.0,1630.0,503.0,2019.0,261.0,20.9,3.1
+GigaScience,177,37.0,64.0,2.0,2.0,175.0,35.0,20.9,36.2
+Lipids in Health and Disease,566,118.0,10.0,424.0,107.0,142.0,11.0,20.8,1.8
+Database,131,27.0,24.0,2.0,1.0,129.0,26.0,20.6,18.3
+Plant Direct,122,25.0,10.0,11.0,1.0,111.0,24.0,20.5,8.2
+BMC Veterinary Research,943,192.0,14.0,643.0,147.0,300.0,45.0,20.4,1.5
+Microbial Biotechnology,236,48.0,10.0,20.0,4.0,216.0,44.0,20.3,4.2
+Genome Biology and Evolution,333,67.0,80.0,2.0,2.0,331.0,65.0,20.1,24.0
+ISME Communications,254,51.0,31.0,0.0,0.0,254.0,51.0,20.1,12.2
+Journal of Fungi,1092,219.0,7.0,238.0,74.0,854.0,145.0,20.1,0.6
+Virology Journal,457,92.0,13.0,323.0,75.0,134.0,17.0,20.1,2.8
+mSystems,479,95.0,61.0,2.0,1.0,477.0,94.0,19.8,12.7
+PLoS Medicine,203,40.0,47.0,102.0,21.0,101.0,19.0,19.7,23.2
+Veterinary Research,265,52.0,9.0,186.0,44.0,79.0,8.0,19.6,3.4
+Veterinary Research Communications,138,27.0,3.0,105.0,21.0,33.0,6.0,19.6,2.2
+Journal of Neuroinflammation,443,87.0,27.0,331.0,74.0,112.0,13.0,19.6,6.1
+Microorganisms,3132,610.0,35.0,651.0,163.0,2481.0,447.0,19.5,1.1
+Journal of Genetic Engineering and Biotechnology,124,24.0,1.0,0.0,0.0,124.0,24.0,19.4,0.8
+Journal of Bacteriology,119,23.0,7.0,0.0,0.0,119.0,23.0,19.3,5.9
+Biotechnology for Biofuels and Bioproducts,198,38.0,8.0,151.0,33.0,47.0,5.0,19.2,4.0
+Biology of Sex Differences,125,24.0,15.0,97.0,23.0,28.0,1.0,19.2,12.0
+Horticulture Research,452,86.0,18.0,0.0,0.0,452.0,86.0,19.0,4.0
+Archives of Sexual Behavior,148,28.0,14.0,131.0,27.0,17.0,1.0,18.9,9.5
+G3 Genes Genomes Genetics,352,66.0,74.0,0.0,0.0,352.0,66.0,18.8,21.0
+Frontiers in Molecular Biosciences,543,102.0,24.0,258.0,68.0,285.0,34.0,18.8,4.4
+Animal Cognition,118,22.0,22.0,86.0,20.0,32.0,2.0,18.6,18.6
+International Journal of Molecular Medicine,102,19.0,2.0,57.0,15.0,45.0,4.0,18.6,2.0
+The ISME Journal,341,63.0,39.0,1.0,1.0,340.0,62.0,18.5,11.4
+Human Genomics,163,30.0,13.0,122.0,28.0,41.0,2.0,18.4,8.0
+Genetics Selection Evolution,104,19.0,13.0,78.0,19.0,26.0,0.0,18.3,12.5
+Emerging Microbes & Infections,378,69.0,13.0,2.0,0.0,376.0,69.0,18.3,3.4
+Emerging infectious diseases,615,112.0,25.0,2.0,0.0,613.0,112.0,18.2,4.1
+Plant Cell & Environment,110,20.0,9.0,34.0,11.0,76.0,9.0,18.2,8.2
+Journal of Translational Medicine,1409,257.0,97.0,1007.0,225.0,402.0,32.0,18.2,6.9
+Plant Biotechnology Journal,349,63.0,15.0,39.0,13.0,310.0,50.0,18.1,4.3
+Animal nutrition,182,33.0,2.0,0.0,0.0,182.0,33.0,18.1,1.1
+Frontiers in Molecular Neuroscience,250,45.0,9.0,135.0,36.0,115.0,9.0,18.0,3.6
+Antimicrobial Resistance and Infection Control,189,34.0,5.0,140.0,29.0,49.0,5.0,18.0,2.6
+BMC Biotechnology,152,27.0,0.0,124.0,24.0,28.0,3.0,17.8,0.0
+Experimental Brain Research,130,23.0,23.0,86.0,19.0,44.0,4.0,17.7,17.7
+npj Breast Cancer,148,26.0,19.0,113.0,23.0,35.0,3.0,17.6,12.8
+Molecular Biology and Evolution,354,62.0,86.0,1.0,1.0,353.0,61.0,17.5,24.3
+Neoplasia,177,31.0,8.0,0.0,0.0,177.0,31.0,17.5,4.5
+European Journal of Human Genetics,184,32.0,12.0,172.0,30.0,12.0,2.0,17.4,6.5
+Nucleic Acids Research,1610,278.0,230.0,17.0,16.0,1593.0,262.0,17.3,14.3
+Life Science Alliance,352,61.0,25.0,0.0,0.0,352.0,61.0,17.3,7.1
+Pathogens,1185,204.0,9.0,301.0,74.0,884.0,130.0,17.2,0.8
+Journal of Vision,244,42.0,37.0,1.0,0.0,243.0,42.0,17.2,15.2
+Journal of Medicinal Chemistry,296,51.0,2.0,0.0,0.0,296.0,51.0,17.2,0.7
+npj Microgravity,117,20.0,18.0,98.0,20.0,19.0,0.0,17.1,15.4
+Viruses,2076,356.0,24.0,457.0,122.0,1619.0,234.0,17.1,1.2
+Blood Cancer Journal,140,24.0,8.0,105.0,20.0,35.0,4.0,17.1,5.7
+Aging,751,128.0,49.0,564.0,97.0,187.0,31.0,17.0,6.5
+Acta Neuropathologica Communications,290,49.0,20.0,199.0,44.0,91.0,5.0,16.9,6.9
+Gut Microbes,414,70.0,31.0,1.0,1.0,413.0,69.0,16.9,7.5
+Cell Communication and Signaling,690,116.0,19.0,501.0,97.0,189.0,19.0,16.8,2.8
+JHEP Reports,240,40.0,8.0,0.0,0.0,240.0,40.0,16.7,3.3
+Synthetic and Systems Biotechnology,168,28.0,13.0,0.0,0.0,168.0,28.0,16.7,7.7
+Cellular and Molecular Gastroenterology and Hepatology,114,19.0,3.0,0.0,0.0,114.0,19.0,16.7,2.6
+Infectious Diseases of Poverty,120,20.0,7.0,77.0,17.0,43.0,3.0,16.7,5.8
+BMC Research Notes,619,102.0,24.0,450.0,90.0,169.0,12.0,16.5,3.9
+International Journal of Microbiology,109,18.0,0.0,0.0,0.0,109.0,18.0,16.5,0.0
+The EMBO Journal,403,66.0,67.0,4.0,4.0,399.0,62.0,16.4,16.6
+Journal of Insect Science,153,25.0,8.0,0.0,0.0,153.0,25.0,16.3,5.2
+eNeuro,461,75.0,116.0,2.0,0.0,459.0,75.0,16.3,25.2
+npj Parkinson s Disease,371,60.0,73.0,248.0,55.0,123.0,5.0,16.2,19.7
+Frontiers in Veterinary Science,2238,363.0,25.0,1001.0,240.0,1237.0,123.0,16.2,1.1
+Journal of Extracellular Vesicles,188,30.0,8.0,18.0,4.0,170.0,26.0,16.0,4.3
+Ecology and Evolution,2325,372.0,213.0,136.0,75.0,2189.0,297.0,16.0,9.2
+Journal of Lipid Research,257,41.0,9.0,1.0,0.0,256.0,41.0,16.0,3.5
+Cell & Bioscience,189,30.0,9.0,138.0,25.0,51.0,5.0,15.9,4.8
+npj Vaccines,339,54.0,30.0,254.0,47.0,85.0,7.0,15.9,8.8
+Molecular Therapy Oncology,183,29.0,5.0,1.0,0.0,182.0,29.0,15.8,2.7
+Biological Research,120,19.0,5.0,96.0,17.0,24.0,2.0,15.8,4.2
+International Journal of Behavioral Nutrition and Physical Activity,172,27.0,8.0,132.0,26.0,40.0,1.0,15.7,4.7
+Developmental Cognitive Neuroscience,168,26.0,23.0,0.0,0.0,168.0,26.0,15.5,13.7
+Microbiology Spectrum,1737,269.0,77.0,3.0,1.0,1734.0,268.0,15.5,4.4
+mSphere,438,68.0,21.0,0.0,0.0,438.0,68.0,15.5,4.8
+The Analyst,104,16.0,8.0,84.0,11.0,20.0,5.0,15.4,7.7
+Diabetologia,208,32.0,15.0,175.0,30.0,33.0,2.0,15.4,7.2
+Chemical Science,2486,378.0,98.0,1000.0,133.0,1486.0,245.0,15.2,3.9
+BMC Medicine,788,119.0,70.0,584.0,109.0,204.0,10.0,15.1,8.9
+Non-coding RNA Research,120,18.0,3.0,0.0,0.0,120.0,18.0,15.0,2.5
+EMBO Reports,401,60.0,28.0,1.0,1.0,400.0,59.0,15.0,7.0
+Cellular & Molecular Biology Letters,173,26.0,6.0,137.0,24.0,36.0,2.0,15.0,3.5
+mBio,965,145.0,49.0,13.0,10.0,952.0,135.0,15.0,5.1
+Molecular Therapy — Nucleic Acids,369,55.0,26.0,3.0,1.0,366.0,54.0,14.9,7.0
+Physical Chemistry Chemical Physics,539,79.0,34.0,489.0,63.0,50.0,16.0,14.7,6.3
+Applied and Environmental Microbiology,428,63.0,27.0,0.0,0.0,428.0,63.0,14.7,6.3
+Frontiers in Immunology,5876,859.0,223.0,2745.0,543.0,3131.0,316.0,14.6,3.8
+Molecular Therapy — Methods & Clinical Development,260,38.0,16.0,1.0,0.0,259.0,38.0,14.6,6.2
+Cell Death Discovery,652,95.0,14.0,479.0,83.0,173.0,12.0,14.6,2.1
+Breast Cancer Research,281,41.0,18.0,198.0,38.0,83.0,3.0,14.6,6.4
+Physiologia Plantarum,117,17.0,6.0,19.0,6.0,98.0,11.0,14.5,5.1
+Computational and Structural Biotechnology Journal,575,83.0,107.0,1.0,0.0,574.0,83.0,14.4,18.6
+Journal of Veterinary Research,105,15.0,0.0,0.0,0.0,105.0,15.0,14.3,0.0
+Frontiers in Cell and Developmental Biology,842,120.0,24.0,433.0,91.0,409.0,29.0,14.3,2.9
+ChemBioChem,119,17.0,1.0,25.0,1.0,94.0,16.0,14.3,0.8
+Vavilov Journal of Genetics and Breeding,140,20.0,2.0,30.0,4.0,110.0,16.0,14.3,1.4
+Molecular Plant Pathology,154,22.0,10.0,13.0,2.0,141.0,20.0,14.3,6.5
+PLoS ONE,24182,3427.0,1654.0,10577.0,2513.0,13605.0,914.0,14.2,6.8
+Development,212,30.0,26.0,2.0,2.0,210.0,28.0,14.2,12.3
+Redox Biology,558,79.0,9.0,0.0,0.0,558.0,79.0,14.2,1.6
+Molecular Biology of the Cell,221,31.0,14.0,1.0,1.0,220.0,30.0,14.0,6.3
+Journal of Chemical Information and Modeling,358,50.0,50.0,2.0,1.0,356.0,49.0,14.0,14.0
+Nutrition & Metabolism,150,21.0,5.0,108.0,14.0,42.0,7.0,14.0,3.3
+Diabetology & Metabolic Syndrome,456,64.0,8.0,308.0,49.0,148.0,15.0,14.0,1.8
+Nutrition Journal,218,30.0,4.0,156.0,27.0,62.0,3.0,13.8,1.8
+Virulence,195,27.0,5.0,0.0,0.0,195.0,27.0,13.8,2.6
+Fluids and Barriers of the CNS,145,20.0,10.0,111.0,19.0,34.0,1.0,13.8,6.9
+Journal of Microbiology and Biotechnology,304,42.0,3.0,0.0,0.0,304.0,42.0,13.8,1.0
+Genes & Diseases,205,28.0,5.0,0.0,0.0,205.0,28.0,13.7,2.4
+The Journal of Infection in Developing Countries,161,22.0,1.0,161.0,22.0,0.0,0.0,13.7,0.6
+Frontiers in Endocrinology,2649,361.0,75.0,1324.0,222.0,1325.0,139.0,13.6,2.8
+Biology Direct,198,27.0,12.0,148.0,23.0,50.0,4.0,13.6,6.1
+GeroScience,449,60.0,35.0,406.0,58.0,43.0,2.0,13.4,7.8
+Translational Psychiatry,611,82.0,87.0,493.0,79.0,118.0,3.0,13.4,14.2
+European Journal of Epidemiology,105,14.0,16.0,78.0,12.0,27.0,2.0,13.3,15.2
+One Health,278,37.0,7.0,0.0,0.0,278.0,37.0,13.3,2.5
+Neuropsychopharmacology,159,21.0,11.0,140.0,21.0,19.0,0.0,13.2,6.9
+The Innovation,130,17.0,11.0,0.0,0.0,130.0,17.0,13.1,8.5
+Ecology,130,17.0,15.0,18.0,12.0,112.0,5.0,13.1,11.5
+Chemistry - A European Journal,485,63.0,2.0,149.0,26.0,336.0,37.0,13.0,0.4
+Frontiers in Nutrition,2356,305.0,27.0,997.0,197.0,1359.0,108.0,12.9,1.1
+The Plant Genome,124,16.0,18.0,13.0,6.0,111.0,10.0,12.9,14.5
+Beilstein Journal of Organic Chemistry,303,39.0,4.0,90.0,12.0,213.0,27.0,12.9,1.3
+Genetics,132,17.0,16.0,0.0,0.0,132.0,17.0,12.9,12.1
+Journal of Applied Crystallography,171,22.0,29.0,0.0,0.0,171.0,22.0,12.9,17.0
+Cell Biology and Toxicology,178,23.0,3.0,122.0,21.0,56.0,2.0,12.9,1.7
+Cerebral Cortex,156,20.0,24.0,3.0,0.0,153.0,20.0,12.8,15.4
+The FASEB Journal,266,34.0,3.0,36.0,11.0,230.0,23.0,12.8,1.1
+Genes,1815,233.0,27.0,398.0,84.0,1417.0,149.0,12.8,1.5
+Veterinary Medicine International,102,13.0,2.0,1.0,0.0,101.0,13.0,12.7,2.0
+Evolutionary Applications,220,28.0,33.0,16.0,9.0,204.0,19.0,12.7,15.0
+The Journal of Cell Biology,261,33.0,21.0,1.0,0.0,260.0,33.0,12.6,8.0
+Discover Oncology,1761,220.0,77.0,960.0,160.0,801.0,60.0,12.5,4.4
+Biofilm,104,13.0,4.0,0.0,0.0,104.0,13.0,12.5,3.8
+Insects,1431,179.0,10.0,267.0,49.0,1164.0,130.0,12.5,0.7
+Biophysical Journal,113,14.0,21.0,1.0,0.0,112.0,14.0,12.4,18.6
+BMC Immunology,114,14.0,2.0,82.0,10.0,32.0,4.0,12.3,1.8
+Acta Pharmaceutica Sinica B,328,40.0,5.0,0.0,0.0,328.0,40.0,12.2,1.5
+Royal Society Open Science,916,112.0,103.0,0.0,0.0,916.0,112.0,12.2,11.2
+Environmental Science and Ecotechnology,116,14.0,2.0,0.0,0.0,116.0,14.0,12.1,1.7
+Chemical Communications,381,46.0,3.0,331.0,32.0,50.0,14.0,12.1,0.8
+Journal of Antimicrobial Chemotherapy,182,22.0,5.0,0.0,0.0,182.0,22.0,12.1,2.7
+Aging Cell,404,49.0,30.0,43.0,16.0,361.0,33.0,12.1,7.4
+Molecular Neurobiology,184,22.0,10.0,172.0,22.0,12.0,0.0,12.0,5.4
+Infection,191,23.0,8.0,184.0,23.0,7.0,0.0,12.0,4.2
+Cancer Cell International,503,60.0,17.0,379.0,49.0,124.0,11.0,11.9,3.4
+Molecular Biology Reports,151,18.0,4.0,120.0,17.0,31.0,1.0,11.9,2.6
+Journal of Behavioral Addictions,102,12.0,8.0,0.0,0.0,102.0,12.0,11.8,7.8
+RSC Medicinal Chemistry,110,13.0,4.0,45.0,6.0,65.0,7.0,11.8,3.6
+Clinical and Translational Medicine,394,46.0,10.0,31.0,10.0,363.0,36.0,11.7,2.5
+The Journal of Experimental Medicine,197,23.0,15.0,7.0,2.0,190.0,21.0,11.7,7.6
+Scientific Reports,49520,5775.0,2887.0,35796.0,5175.0,13724.0,600.0,11.7,5.8
+Infection and Immunity,120,14.0,6.0,0.0,0.0,120.0,14.0,11.7,5.0
+ACS Infectious Diseases,129,15.0,3.0,3.0,0.0,126.0,15.0,11.6,2.3
+Alzheimer s Research & Therapy,371,43.0,24.0,286.0,37.0,85.0,6.0,11.6,6.5
+ACS Synthetic Biology,146,17.0,15.0,0.0,0.0,146.0,17.0,11.6,10.3
+Molecular Medicine Reports,251,29.0,7.0,135.0,24.0,116.0,5.0,11.6,2.8
+BMC Infectious Diseases,1953,226.0,49.0,1447.0,214.0,506.0,12.0,11.6,2.5
+Poultry Science,1824,210.0,26.0,0.0,0.0,1824.0,210.0,11.5,1.4
+Crystal Growth & Design,105,12.0,1.0,0.0,0.0,105.0,12.0,11.4,1.0
+Journal of Advanced Research,167,19.0,5.0,0.0,0.0,167.0,19.0,11.4,3.0
+Journal of Medical Virology,159,18.0,1.0,28.0,6.0,131.0,12.0,11.3,0.6
+Lab on a Chip,150,17.0,11.0,110.0,11.0,40.0,6.0,11.3,7.3
+PLOS Global Public Health,1405,157.0,47.0,626.0,132.0,779.0,25.0,11.2,3.3
+npj Science of Food,188,21.0,10.0,111.0,19.0,77.0,2.0,11.2,5.3
+Biomolecules and Biomedicine,169,19.0,1.0,87.0,15.0,82.0,4.0,11.2,0.6
+Hereditas,161,18.0,7.0,69.0,12.0,92.0,6.0,11.2,4.3
+Arthritis Research & Therapy,324,36.0,16.0,242.0,31.0,82.0,5.0,11.1,4.9
+Bioinformatics Advances,310,34.0,87.0,0.0,0.0,310.0,34.0,11.0,28.1
+Frontiers in Bioscience-Landmark,263,29.0,7.0,261.0,29.0,2.0,0.0,11.0,2.7
+Journal of Health Population and Nutrition,382,42.0,6.0,242.0,39.0,140.0,3.0,11.0,1.6
+Epidemiology and Infection,209,23.0,10.0,103.0,13.0,106.0,10.0,11.0,4.8
+Frontiers in Human Neuroscience,581,63.0,23.0,302.0,47.0,279.0,16.0,10.8,4.0
+Journal of Experimental Botany,167,18.0,5.0,0.0,0.0,167.0,18.0,10.8,3.0
+Frontiers in Big Data,111,12.0,8.0,60.0,11.0,51.0,1.0,10.8,7.2
+Biochemistry and Biophysics Reports,388,42.0,4.0,1.0,0.0,387.0,42.0,10.8,1.0
+PeerJ,2512,272.0,103.0,1.0,1.0,2511.0,271.0,10.8,4.1
+Frontiers in Aging,120,13.0,4.0,47.0,9.0,73.0,4.0,10.8,3.3
+Epigenetics,103,11.0,2.0,0.0,0.0,103.0,11.0,10.7,1.9
+Cardiovascular Diabetology,621,66.0,12.0,454.0,53.0,167.0,13.0,10.6,1.9
+BMC Gastroenterology,802,83.0,14.0,480.0,63.0,322.0,20.0,10.3,1.7
+PLOS Digital Health,339,35.0,49.0,117.0,29.0,222.0,6.0,10.3,14.5
+Aging Clinical and Experimental Research,341,35.0,8.0,226.0,28.0,115.0,7.0,10.3,2.3
+Respiratory Research,572,59.0,24.0,438.0,55.0,134.0,4.0,10.3,4.2
+Journal of Cell Science,145,15.0,24.0,1.0,0.0,144.0,15.0,10.3,16.6
+Marine Drugs,623,64.0,1.0,154.0,13.0,469.0,51.0,10.3,0.2
+Translational Oncology,496,51.0,25.0,2.0,0.0,494.0,51.0,10.3,5.0
+Molecular Oncology,186,19.0,16.0,16.0,4.0,170.0,15.0,10.2,8.6
+International Journal of Biological Sciences,422,43.0,6.0,1.0,1.0,421.0,42.0,10.2,1.4
+Journal of Intelligence,157,16.0,10.0,32.0,8.0,125.0,8.0,10.2,6.4
+Journal of Clinical Immunology,108,11.0,5.0,83.0,10.0,25.0,1.0,10.2,4.6
+Journal of Virology,480,49.0,22.0,5.0,3.0,475.0,46.0,10.2,4.6
+Hepatology Communications,276,28.0,16.0,3.0,1.0,273.0,27.0,10.1,5.8
+BMC Endocrine Disorders,360,36.0,8.0,275.0,33.0,85.0,3.0,10.0,2.2
+BMC Pulmonary Medicine,822,82.0,16.0,644.0,72.0,178.0,10.0,10.0,1.9
+Human Brain Mapping,462,46.0,97.0,29.0,10.0,433.0,36.0,10.0,21.0
+Journal of Veterinary Medical Science,272,27.0,1.0,21.0,2.0,251.0,25.0,9.9,0.4
+Archives of Toxicology,151,15.0,9.0,129.0,14.0,22.0,1.0,9.9,6.0
+Theranostics,555,55.0,8.0,0.0,0.0,555.0,55.0,9.9,1.4
+Infectious Diseases and Therapy,202,20.0,1.0,165.0,20.0,37.0,0.0,9.9,0.5
+Implementation Science Communications,181,18.0,3.0,132.0,18.0,49.0,0.0,9.9,1.7
+BJC Reports,102,10.0,4.0,76.0,10.0,26.0,0.0,9.8,3.9
+Journal of Ovarian Research,316,31.0,12.0,236.0,27.0,80.0,4.0,9.8,3.8
+BMC Public Health,5185,501.0,113.0,3814.0,462.0,1371.0,39.0,9.7,2.2
+Soft Matter,308,30.0,32.0,268.0,24.0,40.0,6.0,9.7,10.4
+EMBO Molecular Medicine,196,19.0,16.0,2.0,0.0,194.0,19.0,9.7,8.2
+Environmental Health,124,12.0,2.0,95.0,12.0,29.0,0.0,9.7,1.6
+BMC Cancer,2277,222.0,103.0,1623.0,196.0,654.0,26.0,9.7,4.5
+Communications Engineering,185,18.0,29.0,104.0,18.0,81.0,0.0,9.7,15.7
+Biology Open,188,18.0,10.0,2.0,0.0,186.0,18.0,9.6,5.3
+Journal of Veterinary Science,104,10.0,0.0,77.0,9.0,27.0,1.0,9.6,0.0
+BMC Medical Research Methodology,418,40.0,111.0,323.0,36.0,95.0,4.0,9.6,26.6
+Biochemistry,125,12.0,4.0,1.0,0.0,124.0,12.0,9.6,3.2
+New Phytologist,219,21.0,13.0,37.0,4.0,182.0,17.0,9.6,5.9
+Current Developments in Nutrition,201,19.0,7.0,0.0,0.0,201.0,19.0,9.5,3.5
+Frontiers in Cellular Neuroscience,325,31.0,7.0,175.0,25.0,150.0,6.0,9.5,2.2
+Briefings in Bioinformatics,895,84.0,169.0,1.0,0.0,894.0,84.0,9.4,18.9
+FEBS Open Bio,181,17.0,6.0,16.0,5.0,165.0,12.0,9.4,3.3
+Reproductive Biology and Endocrinology,182,17.0,4.0,130.0,15.0,52.0,2.0,9.3,2.2
+BIO-PROTOCOL,396,37.0,51.0,1.0,0.0,395.0,37.0,9.3,12.9
+Frontiers in Toxicology,131,12.0,8.0,52.0,9.0,79.0,3.0,9.2,6.1
+European journal of medical research,926,85.0,24.0,614.0,75.0,312.0,10.0,9.2,2.6
+Brazilian Journal of Biology,130,12.0,1.0,130.0,12.0,0.0,0.0,9.2,0.8
+BMC Medical Informatics and Decision Making,564,52.0,75.0,444.0,51.0,120.0,1.0,9.2,13.3
+Antibiotics,1407,128.0,10.0,255.0,48.0,1152.0,80.0,9.1,0.7
+Molecular Brain,132,12.0,4.0,92.0,10.0,40.0,2.0,9.1,3.0
+Cancer Immunology Immunotherapy,456,41.0,17.0,321.0,34.0,135.0,7.0,9.0,3.7
+Schizophrenia,189,17.0,18.0,132.0,17.0,57.0,0.0,9.0,9.5
+Microbiology Resource Announcements,1162,105.0,41.0,3.0,3.0,1159.0,102.0,9.0,3.5
+Reproductive Sciences,100,9.0,1.0,85.0,9.0,15.0,0.0,9.0,1.0
+Journal of Biological Engineering,112,10.0,2.0,78.0,9.0,34.0,1.0,8.9,1.8
+Social Cognitive and Affective Neuroscience,112,10.0,12.0,0.0,0.0,112.0,10.0,8.9,10.7
+Environmental Management,102,9.0,8.0,87.0,9.0,15.0,0.0,8.8,7.8
+Eurosurveillance,331,29.0,9.0,0.0,0.0,331.0,29.0,8.8,2.7
+Faraday Discussions,114,10.0,8.0,100.0,8.0,14.0,2.0,8.8,7.0
+Global Heart,114,10.0,3.0,31.0,3.0,83.0,7.0,8.8,2.6
+Frontiers in Psychology,4285,379.0,85.0,2071.0,265.0,2214.0,114.0,8.8,2.0
+The Journal of Infectious Diseases,240,21.0,12.0,14.0,5.0,226.0,16.0,8.8,5.0
+Journal of Integrative Neuroscience,137,12.0,6.0,134.0,12.0,3.0,0.0,8.8,4.4
+Inorganic Chemistry,550,48.0,0.0,2.0,0.0,548.0,48.0,8.7,0.0
+Frontiers in Artificial Intelligence,414,36.0,30.0,163.0,27.0,251.0,9.0,8.7,7.2
+BMC Rheumatology,127,11.0,8.0,79.0,9.0,48.0,2.0,8.7,6.3
+Frontiers in Neuroscience,1316,114.0,59.0,679.0,87.0,637.0,27.0,8.7,4.5
+Journal of Materials Chemistry B,116,10.0,4.0,92.0,7.0,24.0,3.0,8.6,3.4
+International Journal of Obesity,128,11.0,8.0,118.0,11.0,10.0,0.0,8.6,6.2
+Biology,1357,117.0,11.0,223.0,36.0,1134.0,81.0,8.6,0.8
+Organic & Biomolecular Chemistry,105,9.0,0.0,89.0,4.0,16.0,5.0,8.6,0.0
+Science Advances,3594,302.0,217.0,21.0,11.0,3573.0,291.0,8.4,6.0
+Proceedings of the Royal Society B Biological Sciences,489,41.0,39.0,0.0,0.0,489.0,41.0,8.4,8.0
+Trials,950,80.0,49.0,807.0,77.0,143.0,3.0,8.4,5.2
+New Microbes and New Infections,169,14.0,2.0,0.0,0.0,169.0,14.0,8.3,1.2
+Autism,109,9.0,5.0,0.0,0.0,109.0,9.0,8.3,4.6
+Clinical and Experimental Medicine,290,24.0,15.0,203.0,23.0,87.0,1.0,8.3,5.2
+Cognitive Neurodynamics,108,9.0,10.0,97.0,9.0,11.0,0.0,8.3,9.3
+European Journal of Neuroscience,146,12.0,15.0,30.0,9.0,116.0,3.0,8.2,10.3
+World Allergy Organization Journal,182,15.0,1.0,0.0,0.0,182.0,15.0,8.2,0.5
+Infection and Drug Resistance,769,62.0,8.0,229.0,31.0,540.0,31.0,8.1,1.0
+Biology Letters,124,10.0,9.0,1.0,1.0,123.0,9.0,8.1,7.3
+International Journal of Clinical and Health Psychology,149,12.0,12.0,0.0,0.0,149.0,12.0,8.1,8.1
+EFSA Journal,594,48.0,4.0,45.0,4.0,549.0,44.0,8.1,0.7
+JACC Basic to Translational Science,100,8.0,2.0,0.0,0.0,100.0,8.0,8.0,2.0
+Plant Signaling & Behavior,113,9.0,4.0,0.0,0.0,113.0,9.0,8.0,3.5
+Experimental and Therapeutic Medicine,377,30.0,14.0,239.0,30.0,138.0,0.0,8.0,3.7
+npj Digital Medicine,585,47.0,156.0,381.0,43.0,204.0,4.0,8.0,26.7
+PeerJ Computer Science,897,71.0,92.0,0.0,0.0,897.0,71.0,7.9,10.3
+Nanoscale,340,27.0,13.0,302.0,22.0,38.0,5.0,7.9,3.8
+Frontiers in Computational Neuroscience,140,11.0,14.0,76.0,9.0,64.0,2.0,7.9,10.0
+Oncology Letters,717,57.0,20.0,387.0,48.0,330.0,9.0,7.9,2.8
+Disease Models & Mechanisms,166,13.0,7.0,0.0,0.0,166.0,13.0,7.8,4.2
+Antibodies,116,9.0,1.0,23.0,3.0,93.0,6.0,7.8,0.9
+Plant Methods,255,20.0,36.0,180.0,18.0,75.0,2.0,7.8,14.1
+Biology Methods and Protocols,116,9.0,13.0,0.0,0.0,116.0,9.0,7.8,11.2
+BMC Cardiovascular Disorders,1029,79.0,17.0,756.0,69.0,273.0,10.0,7.7,1.7
+AIDS and Behavior,209,16.0,4.0,189.0,16.0,20.0,0.0,7.7,1.9
+Journal of Epidemiology and Global Health,182,14.0,2.0,130.0,14.0,52.0,0.0,7.7,1.1
+PNAS Nexus,698,54.0,43.0,3.0,1.0,695.0,53.0,7.7,6.2
+Nature and Science of Sleep,260,20.0,6.0,78.0,5.0,182.0,15.0,7.7,2.3
+Frontiers in Aging Neuroscience,723,56.0,13.0,342.0,40.0,381.0,16.0,7.7,1.8
+International Journal of Cardiology Cardiovascular Risk and Prevention,142,11.0,2.0,0.0,0.0,142.0,11.0,7.7,1.4
+Proceedings of the National Academy of Sciences,4134,320.0,221.0,53.0,22.0,4081.0,298.0,7.7,5.3
+Neurotherapeutics,132,10.0,3.0,0.0,0.0,132.0,10.0,7.6,2.3
+European Child & Adolescent Psychiatry,144,11.0,13.0,144.0,11.0,0.0,0.0,7.6,9.0
+Frontiers in Public Health,5387,412.0,52.0,2502.0,359.0,2885.0,53.0,7.6,1.0
+Bioinformatics,946,72.0,192.0,6.0,1.0,940.0,71.0,7.6,20.3
+Journal of Enzyme Inhibition and Medicinal Chemistry,106,8.0,1.0,0.0,0.0,106.0,8.0,7.5,0.9
+Journal of Cancer Research and Clinical Oncology,588,44.0,34.0,493.0,42.0,95.0,2.0,7.5,5.8
+Journal of Autism and Developmental Disorders,213,16.0,10.0,213.0,16.0,0.0,0.0,7.5,4.7
+Frontiers in Pharmacology,3697,279.0,64.0,1646.0,210.0,2051.0,69.0,7.5,1.7
+The Journal of Headache and Pain,281,21.0,12.0,207.0,17.0,74.0,4.0,7.5,4.3
+Veterinary World,399,30.0,6.0,0.0,0.0,399.0,30.0,7.5,1.5
+Pilot and Feasibility Studies,227,17.0,6.0,165.0,16.0,62.0,1.0,7.5,2.6
+Veterinary Sciences,1047,78.0,6.0,187.0,19.0,860.0,59.0,7.4,0.6
+Heliyon,16600,1231.0,408.0,4.0,0.0,16596.0,1231.0,7.4,2.5
+iMeta,135,10.0,21.0,13.0,6.0,122.0,4.0,7.4,15.6
+Molecular Medicine,445,33.0,8.0,286.0,26.0,159.0,7.0,7.4,1.8
+Journal of Orthopaedic Translation,136,10.0,1.0,0.0,0.0,136.0,10.0,7.4,0.7
+MMWR Morbidity and Mortality Weekly Report,285,21.0,2.0,0.0,0.0,285.0,21.0,7.4,0.7
+Bioresources and Bioprocessing,149,11.0,3.0,108.0,7.0,41.0,4.0,7.4,2.0
+British Journal Of Nutrition,219,16.0,4.0,185.0,16.0,34.0,0.0,7.3,1.8
+Journal of the American Society for Mass Spectrometry,137,10.0,7.0,2.0,1.0,135.0,9.0,7.3,5.1
+Journal of Imaging Informatics in Medicine,362,26.0,42.0,360.0,26.0,2.0,0.0,7.2,11.6
+Cells,1812,130.0,15.0,381.0,57.0,1431.0,73.0,7.2,0.8
+BMC Psychiatry,1386,100.0,38.0,1013.0,85.0,373.0,15.0,7.2,2.7
+Biomedical Reports,223,16.0,2.0,115.0,15.0,108.0,1.0,7.2,0.9
+Frontiers in Physiology,1126,80.0,29.0,553.0,61.0,573.0,19.0,7.1,2.6
+International Journal of Molecular Sciences,14269,1008.0,123.0,2875.0,352.0,11394.0,656.0,7.1,0.9
+Frontiers in Behavioral Neuroscience,183,13.0,9.0,93.0,9.0,90.0,4.0,7.1,4.9
+The Lancet Regional Health - Western Pacific,309,22.0,20.0,0.0,0.0,309.0,22.0,7.1,6.5
+Magnetic Resonance in Medicine,201,14.0,34.0,44.0,8.0,157.0,6.0,7.0,16.9
+Environment & Health,114,8.0,3.0,0.0,0.0,114.0,8.0,7.0,2.6
+BioMed Research International,171,12.0,1.0,2.0,1.0,169.0,11.0,7.0,0.6
+Environmental Science & Technology,681,48.0,40.0,3.0,0.0,678.0,48.0,7.0,5.9
+European Psychiatry,115,8.0,9.0,60.0,5.0,55.0,3.0,7.0,7.8
+Toxins,600,42.0,4.0,132.0,15.0,468.0,27.0,7.0,0.7
+mAbs,130,9.0,3.0,0.0,0.0,130.0,9.0,6.9,2.3
+International Dental Journal,320,22.0,5.0,0.0,0.0,320.0,22.0,6.9,1.6
+Chinese Medicine,221,15.0,3.0,167.0,15.0,54.0,0.0,6.8,1.4
+Frontiers in Bioengineering and Biotechnology,1342,91.0,26.0,723.0,73.0,619.0,18.0,6.8,1.9
+OncoImmunology,148,10.0,4.0,2.0,0.0,146.0,10.0,6.8,2.7
+Iranian Journal of Microbiology,132,9.0,1.0,0.0,0.0,132.0,9.0,6.8,0.8
+Neurology Neuroimmunology & Neuroinflammation,162,11.0,4.0,2.0,1.0,160.0,10.0,6.8,2.5
+Angewandte Chemie International Edition,785,53.0,6.0,258.0,30.0,527.0,23.0,6.8,0.8
+Anais da Academia Brasileira de Ciências,118,8.0,3.0,118.0,8.0,0.0,0.0,6.8,2.5
+Reviews in Cardiovascular Medicine,329,22.0,6.0,160.0,10.0,169.0,12.0,6.7,1.8
+Animals,4759,320.0,34.0,884.0,92.0,3875.0,228.0,6.7,0.7
+Bioscience Reports,106,7.0,0.0,0.0,0.0,106.0,7.0,6.6,0.0
+BMC Women s Health,830,55.0,11.0,661.0,51.0,169.0,4.0,6.6,1.3
+Journal of Inflammation Research,1175,77.0,22.0,386.0,38.0,789.0,39.0,6.6,1.9
+Sports Medicine - Open,121,8.0,10.0,92.0,7.0,29.0,1.0,6.6,8.3
+BMC Geriatrics,1301,84.0,13.0,1009.0,82.0,292.0,2.0,6.5,1.0
+Journal of the Pakistan Medical Association,108,7.0,1.0,108.0,7.0,0.0,0.0,6.5,0.9
+Journal of Eating Disorders,263,17.0,10.0,198.0,16.0,65.0,1.0,6.5,3.8
+Biomolecules,1543,100.0,21.0,316.0,40.0,1227.0,60.0,6.5,1.4
+Journal of Cancer Survivorship,107,7.0,0.0,107.0,7.0,0.0,0.0,6.5,0.0
+Animal Bioscience,247,16.0,1.0,110.0,13.0,137.0,3.0,6.5,0.4
+Antimicrobial Agents and Chemotherapy,323,21.0,15.0,0.0,0.0,323.0,21.0,6.5,4.6
+Harm Reduction Journal,280,18.0,2.0,204.0,17.0,76.0,1.0,6.4,0.7
+Investigative Ophthalmology & Visual Science,895,57.0,32.0,1.0,0.0,894.0,57.0,6.4,3.6
+EClinicalMedicine,639,41.0,47.0,4.0,0.0,635.0,41.0,6.4,7.4
+Journal of Clinical Microbiology,141,9.0,7.0,1.0,0.0,140.0,9.0,6.4,5.0
+BMC Complementary Medicine and Therapies,557,35.0,9.0,412.0,30.0,145.0,5.0,6.3,1.6
+Plants,4653,294.0,26.0,876.0,91.0,3777.0,203.0,6.3,0.6
+Current Research in Food Science,384,24.0,7.0,0.0,0.0,384.0,24.0,6.2,1.8
+Environmental Health Perspectives,306,19.0,30.0,9.0,0.0,297.0,19.0,6.2,9.8
+AMBIO,129,8.0,8.0,117.0,7.0,12.0,1.0,6.2,6.2
+Infection Control and Hospital Epidemiology,176,11.0,3.0,130.0,10.0,46.0,1.0,6.2,1.7
+Addiction Biology,112,7.0,6.0,15.0,2.0,97.0,5.0,6.2,5.4
+International Journal of COPD,329,20.0,2.0,66.0,10.0,263.0,10.0,6.1,0.6
+Frontiers in Psychiatry,2334,142.0,32.0,1140.0,116.0,1194.0,26.0,6.1,1.4
+International Journal of Epidemiology,115,7.0,4.0,0.0,0.0,115.0,7.0,6.1,3.5
+Journal of NeuroEngineering and Rehabilitation,294,18.0,11.0,212.0,16.0,82.0,2.0,6.1,3.7
+Advanced Science,4305,264.0,106.0,314.0,42.0,3991.0,222.0,6.1,2.5
+Archives of Public Health,352,21.0,3.0,247.0,20.0,105.0,1.0,6.0,0.9
+Cell Proliferation,151,9.0,5.0,19.0,3.0,132.0,6.0,6.0,3.3
+JAC-Antimicrobial Resistance,232,14.0,9.0,0.0,0.0,232.0,14.0,6.0,3.9
+Journal of General Internal Medicine,268,16.0,3.0,265.0,16.0,3.0,0.0,6.0,1.1
+Frontiers in Cardiovascular Medicine,1767,106.0,27.0,781.0,68.0,986.0,38.0,6.0,1.5
+Animal Models and Experimental Medicine,117,7.0,1.0,12.0,0.0,105.0,7.0,6.0,0.9
+ACS Chemical Neuroscience,149,9.0,3.0,1.0,0.0,148.0,9.0,6.0,2.0
+Journal of Experimental Biology,200,12.0,27.0,0.0,0.0,200.0,12.0,6.0,13.5
+Journal of Agricultural and Food Chemistry,298,18.0,6.0,0.0,0.0,298.0,18.0,6.0,2.0
+Journal of the American Heart Association,1531,90.0,46.0,7.0,2.0,1524.0,88.0,5.9,3.0
+Orphanet Journal of Rare Diseases,642,38.0,10.0,456.0,35.0,186.0,3.0,5.9,1.6
+Malaria Journal,517,30.0,26.0,397.0,27.0,120.0,3.0,5.8,5.0
+BMC Chemistry,411,24.0,7.0,282.0,19.0,129.0,5.0,5.8,1.7
+Social Psychiatry and Psychiatric Epidemiology,120,7.0,8.0,114.0,7.0,6.0,0.0,5.8,6.7
+Frontiers in Robotics and AI,313,18.0,19.0,116.0,14.0,197.0,4.0,5.8,6.1
+The Lancet Regional Health - Americas,359,21.0,17.0,0.0,0.0,359.0,21.0,5.8,4.7
+Annals of Biomedical Engineering,121,7.0,7.0,106.0,7.0,15.0,0.0,5.8,5.8
+BMC Psychology,1309,74.0,41.0,860.0,69.0,449.0,5.0,5.7,3.1
+Acta Biochimica et Biophysica Sinica,192,11.0,2.0,88.0,9.0,104.0,2.0,5.7,1.0
+Journal for ImmunoTherapy of Cancer,715,41.0,22.0,6.0,0.0,709.0,41.0,5.7,3.1
+Frontiers in Chemistry,662,38.0,7.0,317.0,27.0,345.0,11.0,5.7,1.1
+The Journal of Physiology,162,9.0,9.0,48.0,7.0,114.0,2.0,5.6,5.6
+Psychological Medicine,342,19.0,44.0,194.0,15.0,148.0,4.0,5.6,12.9
+Cancer Science,364,20.0,3.0,42.0,4.0,322.0,16.0,5.5,0.8
+BMC Pediatrics,1143,63.0,14.0,861.0,61.0,282.0,2.0,5.5,1.2
+Health and Quality of Life Outcomes,146,8.0,4.0,106.0,8.0,40.0,0.0,5.5,2.7
+Frontiers in Health Services,199,11.0,2.0,74.0,10.0,125.0,1.0,5.5,1.0
+Child and Adolescent Psychiatry and Mental Health,201,11.0,7.0,153.0,11.0,48.0,0.0,5.5,3.5
+Frontiers in Reproductive Health,148,8.0,1.0,65.0,8.0,83.0,0.0,5.4,0.7
+Discover Mental Health,130,7.0,3.0,73.0,5.0,57.0,2.0,5.4,2.3
+BMC Nutrition,244,13.0,3.0,179.0,13.0,65.0,0.0,5.3,1.2
+Journal of Cellular and Molecular Medicine,913,48.0,27.0,70.0,13.0,843.0,35.0,5.3,3.0
+BMC Musculoskeletal Disorders,1424,76.0,16.0,1082.0,71.0,342.0,5.0,5.3,1.1
+MedComm,376,20.0,9.0,32.0,6.0,344.0,14.0,5.3,2.4
+Influenza and Other Respiratory Viruses,194,10.0,4.0,12.0,2.0,182.0,8.0,5.2,2.1
+Aquaculture Nutrition,155,8.0,2.0,3.0,1.0,152.0,7.0,5.2,1.3
+Open Veterinary Journal,523,27.0,0.0,0.0,0.0,523.0,27.0,5.2,0.0
+Nanoscale Advances,669,35.0,12.0,275.0,10.0,394.0,25.0,5.2,1.8
+Analytical Chemistry,558,29.0,32.0,2.0,0.0,556.0,29.0,5.2,5.7
+Environmental Health and Preventive Medicine,115,6.0,2.0,8.0,0.0,107.0,6.0,5.2,1.7
+Open Medicine,287,15.0,6.0,99.0,6.0,188.0,9.0,5.2,2.1
+Alzheimer s & Dementia,996,52.0,64.0,76.0,10.0,920.0,42.0,5.2,6.4
+BMC Urology,346,18.0,8.0,265.0,16.0,81.0,2.0,5.2,2.3
+OncoTargets and Therapy,116,6.0,2.0,38.0,4.0,78.0,2.0,5.2,1.7
+BMC Oral Health,2196,112.0,24.0,1587.0,104.0,609.0,8.0,5.1,1.1
+Journal of Cachexia Sarcopenia and Muscle,351,18.0,10.0,33.0,7.0,318.0,11.0,5.1,2.8
+Environmental Science and Pollution Research,721,37.0,40.0,658.0,36.0,63.0,1.0,5.1,5.5
+Critical Care,356,18.0,12.0,274.0,18.0,82.0,0.0,5.1,3.4
+Journal of Cancer,600,30.0,26.0,0.0,0.0,600.0,30.0,5.0,4.3
+The Journals of Gerontology Series A,100,5.0,3.0,6.0,0.0,94.0,5.0,5.0,3.0
+Translational Cancer Research,635,32.0,32.0,0.0,0.0,635.0,32.0,5.0,5.0
+Bulletin of Mathematical Biology,123,6.0,27.0,95.0,5.0,28.0,1.0,4.9,22.0
+Advances in Therapy,284,14.0,11.0,220.0,13.0,64.0,1.0,4.9,3.9
+European journal of psychotraumatology,324,16.0,11.0,0.0,0.0,324.0,16.0,4.9,3.4
+Pediatric Rheumatology,143,7.0,3.0,110.0,5.0,33.0,2.0,4.9,2.1
+Brazilian Journal of Otorhinolaryngology,164,8.0,0.0,0.0,0.0,164.0,8.0,4.9,0.0
+Frontiers in Sociology,347,17.0,2.0,135.0,16.0,212.0,1.0,4.9,0.6
+International Journal of Integrated Care,105,5.0,1.0,16.0,4.0,89.0,1.0,4.8,1.0
+Thrombosis Journal,147,7.0,2.0,101.0,6.0,46.0,1.0,4.8,1.4
+International Journal of Cancer,166,8.0,8.0,40.0,5.0,126.0,3.0,4.8,4.8
+Veterinary Medicine and Science,600,29.0,8.0,31.0,1.0,569.0,28.0,4.8,1.3
+Frontiers in Medicine,3462,167.0,33.0,1509.0,104.0,1953.0,63.0,4.8,1.0
+BMC Pregnancy and Childbirth,1345,65.0,16.0,901.0,58.0,444.0,7.0,4.8,1.2
+Internet Interventions,105,5.0,6.0,0.0,0.0,105.0,5.0,4.8,5.7
+The Journal of Physical Chemistry B,424,20.0,19.0,9.0,0.0,415.0,20.0,4.7,4.5
+Physiological Reports,617,29.0,7.0,48.0,4.0,569.0,25.0,4.7,1.1
+American Journal of Preventive Cardiology,170,8.0,1.0,1.0,1.0,169.0,7.0,4.7,0.6
+Regenerative Therapy,233,11.0,1.0,0.0,0.0,233.0,11.0,4.7,0.4
+Journal of Chemical Theory and Computation,437,20.0,40.0,11.0,1.0,426.0,19.0,4.6,9.2
+Clinical Cosmetic and Investigational Dermatology,412,19.0,3.0,116.0,8.0,296.0,11.0,4.6,0.7
+European Journal of Applied Physiology,151,7.0,9.0,145.0,7.0,6.0,0.0,4.6,6.0
+Frontiers in Oral Health,216,10.0,0.0,82.0,5.0,134.0,5.0,4.6,0.0
+Frontiers in Rehabilitation Sciences,202,9.0,0.0,98.0,8.0,104.0,1.0,4.5,0.0
+Frontiers in Oncology,4069,183.0,120.0,1865.0,129.0,2204.0,54.0,4.5,2.9
+RSC Advances,4574,208.0,52.0,1817.0,72.0,2757.0,136.0,4.5,1.1
+Endocrine Connections,157,7.0,1.0,1.0,0.0,156.0,7.0,4.5,0.6
+Food Science and Biotechnology,111,5.0,0.0,105.0,5.0,6.0,0.0,4.5,0.0
+Open Life Sciences,266,12.0,3.0,86.0,6.0,180.0,6.0,4.5,1.1
+International Breastfeeding Journal,111,5.0,0.0,88.0,5.0,23.0,0.0,4.5,0.0
+Journal of The Royal Society Interface,183,8.0,24.0,0.0,0.0,183.0,8.0,4.4,13.1
+Journal of Xenobiotics,135,6.0,0.0,20.0,1.0,115.0,5.0,4.4,0.0
+Neurology,226,10.0,12.0,5.0,0.0,221.0,10.0,4.4,5.3
+Neuro-Oncology Advances,225,10.0,12.0,1.0,0.0,224.0,10.0,4.4,5.3
+Analytical and Bioanalytical Chemistry,294,13.0,11.0,247.0,12.0,47.0,1.0,4.4,3.7
+Neurology and Therapy,137,6.0,4.0,108.0,6.0,29.0,0.0,4.4,2.9
+Tropical Medicine and Health,159,7.0,1.0,100.0,5.0,59.0,2.0,4.4,0.6
+Depression and Anxiety,160,7.0,5.0,1.0,0.0,159.0,7.0,4.4,3.1
+European Radiology Experimental,188,8.0,19.0,145.0,7.0,43.0,1.0,4.3,10.1
+IJID Regions,234,10.0,2.0,0.0,0.0,234.0,10.0,4.3,0.9
+Brain Behavior & Immunity - Health,231,10.0,4.0,0.0,0.0,231.0,10.0,4.3,1.7
+Molecular Genetics & Genomic Medicine,210,9.0,1.0,18.0,1.0,192.0,8.0,4.3,0.5
+ACS Catalysis,253,11.0,6.0,0.0,0.0,253.0,11.0,4.3,2.4
+Frontiers in Global Women s Health,258,11.0,1.0,107.0,9.0,151.0,2.0,4.3,0.4
+International Journal of Women s Health,351,15.0,4.0,89.0,9.0,262.0,6.0,4.3,1.1
+Addiction Science & Clinical Practice,140,6.0,5.0,106.0,6.0,34.0,0.0,4.3,3.6
+Biological Psychiatry Global Open Science,163,7.0,8.0,0.0,0.0,163.0,7.0,4.3,4.9
+Osteoarthritis and Cartilage Open,138,6.0,3.0,0.0,0.0,138.0,6.0,4.3,2.2
+Journal of Pharmaceutical Analysis,115,5.0,3.0,0.0,0.0,115.0,5.0,4.3,2.6
+BMC Neurology,641,27.0,15.0,483.0,23.0,158.0,4.0,4.2,2.3
+Veterinary and Animal Science,118,5.0,0.0,0.0,0.0,118.0,5.0,4.2,0.0
+JOR Spine,119,5.0,3.0,8.0,0.0,111.0,5.0,4.2,2.5
+Mediators of Inflammation,119,5.0,1.0,2.0,0.0,117.0,5.0,4.2,0.8
+Chemistry of Materials,191,8.0,2.0,0.0,0.0,191.0,8.0,4.2,1.0
+International Journal for Equity in Health,353,15.0,4.0,251.0,15.0,102.0,0.0,4.2,1.1
+Ciência & Saúde Coletiva,165,7.0,0.0,165.0,7.0,0.0,0.0,4.2,0.0
+Brain Communications,573,24.0,39.0,4.0,1.0,569.0,23.0,4.2,6.8
+BMC Sports Science Medicine and Rehabilitation,337,14.0,8.0,238.0,14.0,99.0,0.0,4.2,2.4
+Bioactive Materials,536,22.0,4.0,0.0,0.0,536.0,22.0,4.1,0.7
+BMC Primary Care,590,24.0,6.0,466.0,23.0,124.0,1.0,4.1,1.0
+Journal of Neuro-Oncology,172,7.0,6.0,138.0,7.0,34.0,0.0,4.1,3.5
+Scandinavian Journal of Trauma Resuscitation and Emergency Medicine,172,7.0,3.0,116.0,6.0,56.0,1.0,4.1,1.7
+The Italian Journal of Pediatrics/Italian journal of pediatrics,377,15.0,1.0,249.0,13.0,128.0,2.0,4.0,0.3
+JACS Au,550,22.0,10.0,1.0,0.0,549.0,22.0,4.0,1.8
+Transfusion,100,4.0,2.0,22.0,2.0,78.0,2.0,4.0,2.0
+Haematologica,352,14.0,4.0,148.0,13.0,204.0,1.0,4.0,1.1
+Tropical Animal Health and Production,126,5.0,6.0,81.0,5.0,45.0,0.0,4.0,4.8
+Journal of Clinical Laboratory Analysis,149,6.0,1.0,12.0,1.0,137.0,5.0,4.0,0.7
+Archives of Medical Science,150,6.0,3.0,51.0,4.0,99.0,2.0,4.0,2.0
+BMC Health Services Research,2205,88.0,33.0,1714.0,87.0,491.0,1.0,4.0,1.5
+Pediatric Research,321,13.0,10.0,320.0,13.0,1.0,0.0,4.0,3.1
+BMC Nephrology,609,24.0,10.0,451.0,23.0,158.0,1.0,3.9,1.6
+Neurological Sciences,152,6.0,3.0,127.0,6.0,25.0,0.0,3.9,2.0
+International Journal of Surgery,814,32.0,16.0,0.0,0.0,814.0,32.0,3.9,2.0
+HemaSphere,205,8.0,3.0,23.0,4.0,182.0,4.0,3.9,1.5
+Journal of Gastrointestinal Oncology,259,10.0,5.0,1.0,0.0,258.0,10.0,3.9,1.9
+Journal of the European Academy of Dermatology and Venereology,104,4.0,0.0,37.0,3.0,67.0,1.0,3.8,0.0
+Frontiers in Neurology,2291,86.0,32.0,1153.0,55.0,1138.0,31.0,3.8,1.4
+The Indian Journal of Medical Research,133,5.0,0.0,0.0,0.0,133.0,5.0,3.8,0.0
+European Journal of Nutrition,182,7.0,7.0,117.0,5.0,65.0,2.0,3.8,3.8
+Revista Brasileira de Enfermagem,236,9.0,3.0,60.0,9.0,176.0,0.0,3.8,1.3
+Frontiers in Pediatrics,1535,58.0,10.0,667.0,47.0,868.0,11.0,3.8,0.7
+Philosophical Transactions of the Royal Society B Biological Sciences,240,9.0,11.0,0.0,0.0,240.0,9.0,3.8,4.6
+ChemistryOpen,183,7.0,3.0,21.0,3.0,162.0,4.0,3.8,1.6
+Metabolites,844,31.0,16.0,185.0,11.0,659.0,20.0,3.7,1.9
+Brain,189,7.0,6.0,2.0,0.0,187.0,7.0,3.7,3.2
+Public Health Nutrition,298,11.0,8.0,164.0,11.0,134.0,0.0,3.7,2.7
+Small Methods,136,5.0,4.0,24.0,1.0,112.0,4.0,3.7,2.9
+Journal of Advanced Veterinary and Animal Research,140,5.0,1.0,0.0,0.0,140.0,5.0,3.6,0.7
+Cardio-Oncology,111,4.0,2.0,80.0,3.0,31.0,1.0,3.6,1.8
+Studies in health technology and informatics,1144,41.0,39.0,1142.0,41.0,2.0,0.0,3.6,3.4
+Preventing Chronic Disease,110,4.0,4.0,0.0,0.0,110.0,4.0,3.6,3.6
+Research,337,12.0,6.0,0.0,0.0,337.0,12.0,3.6,1.8
+Journal of Patient-Reported Outcomes,197,7.0,7.0,144.0,6.0,53.0,1.0,3.6,3.6
+AIDS Research and Therapy,140,5.0,1.0,104.0,5.0,36.0,0.0,3.6,0.7
+Molecules,7085,255.0,27.0,1318.0,71.0,5767.0,184.0,3.6,0.4
+Journal of Feline Medicine and Surgery,140,5.0,1.0,0.0,0.0,140.0,5.0,3.6,0.7
+Clinical Epidemiology,114,4.0,10.0,33.0,2.0,81.0,2.0,3.5,8.8
+BMC Pharmacology and Toxicology,201,7.0,2.0,117.0,5.0,84.0,2.0,3.5,1.0
+Immunity Inflammation and Disease,341,12.0,8.0,34.0,2.0,307.0,10.0,3.5,2.3
+The Clinical Respiratory Journal,144,5.0,2.0,9.0,1.0,135.0,4.0,3.5,1.4
+Brazilian Journal of Medical and Biological Research,142,5.0,3.0,50.0,2.0,92.0,3.0,3.5,2.1
+European Journal of Pediatrics,371,13.0,7.0,263.0,13.0,108.0,0.0,3.5,1.9
+Journal of Animal Science,199,7.0,5.0,0.0,0.0,199.0,7.0,3.5,2.5
+Obesity Science & Practice,113,4.0,1.0,4.0,0.0,109.0,4.0,3.5,0.9
+World Journal of Surgical Oncology,480,17.0,3.0,342.0,14.0,138.0,3.0,3.5,0.6
+Antioxidants,1667,59.0,6.0,350.0,16.0,1317.0,43.0,3.5,0.4
+Journal of the Endocrine Society,261,9.0,2.0,2.0,0.0,259.0,9.0,3.4,0.8
+ChemPhysChem,116,4.0,6.0,22.0,0.0,94.0,4.0,3.4,5.2
+Sexual Medicine,116,4.0,0.0,0.0,0.0,116.0,4.0,3.4,0.0
+Journal of Synchrotron Radiation,233,8.0,22.0,0.0,0.0,233.0,8.0,3.4,9.4
+Tropical Medicine and Infectious Disease,355,12.0,1.0,87.0,4.0,268.0,8.0,3.4,0.3
+Molecular and Clinical Oncology,117,4.0,4.0,56.0,4.0,61.0,0.0,3.4,3.4
+Archives of Dermatological Research,120,4.0,3.0,89.0,4.0,31.0,0.0,3.3,2.5
+European Journal of Public Health,214,7.0,2.0,0.0,0.0,214.0,7.0,3.3,0.9
+BMC Medical Imaging,511,17.0,33.0,370.0,17.0,141.0,0.0,3.3,6.5
+Health Economics Review,123,4.0,2.0,89.0,4.0,34.0,0.0,3.3,1.6
+Preventive Medicine Reports,457,15.0,8.0,0.0,0.0,457.0,15.0,3.3,1.8
+Frontiers in Allergy,150,5.0,1.0,58.0,5.0,92.0,0.0,3.3,0.7
+Journal of Diabetes Investigation,242,8.0,4.0,21.0,1.0,221.0,7.0,3.3,1.7
+Clinics,276,9.0,4.0,0.0,0.0,276.0,9.0,3.3,1.4
+ACS Central Science,303,10.0,5.0,0.0,0.0,303.0,10.0,3.3,1.7
+Journal of Assisted Reproduction and Genetics,181,6.0,2.0,160.0,6.0,21.0,0.0,3.3,1.1
+Journal of Nanobiotechnology,1037,33.0,6.0,737.0,29.0,300.0,4.0,3.2,0.6
+Saudi Pharmaceutical Journal,154,5.0,0.0,9.0,2.0,145.0,3.0,3.2,0.0
+Journal of Rehabilitation Medicine,156,5.0,2.0,120.0,5.0,36.0,0.0,3.2,1.3
+EJNMMI Physics,157,5.0,4.0,114.0,5.0,43.0,0.0,3.2,2.5
+Journal of Veterinary Internal Medicine,434,14.0,4.0,48.0,5.0,386.0,9.0,3.2,0.9
+NeuroImage Clinical,228,7.0,31.0,0.0,0.0,228.0,7.0,3.1,13.6
+Clinical Rheumatology,128,4.0,24.0,96.0,3.0,32.0,1.0,3.1,18.8
+Journal of Diabetes,129,4.0,2.0,6.0,1.0,123.0,3.0,3.1,1.6
+Narra J,227,7.0,2.0,33.0,6.0,194.0,1.0,3.1,0.9
+JMIR Serious Games,130,4.0,5.0,9.0,1.0,121.0,3.0,3.1,3.8
+Ophthalmology Science,287,9.0,14.0,1.0,0.0,286.0,9.0,3.1,4.9
+International Journal of Nursing Studies Advances,131,4.0,3.0,0.0,0.0,131.0,4.0,3.1,2.3
+The Journal of Clinical Endocrinology & Metabolism,227,7.0,5.0,12.0,2.0,215.0,5.0,3.1,2.2
+International Journal of Immunopathology and Pharmacology,100,3.0,2.0,0.0,0.0,100.0,3.0,3.0,2.0
+European Thyroid Journal,100,3.0,3.0,0.0,0.0,100.0,3.0,3.0,3.0
+Medicine,4702,140.0,74.0,0.0,0.0,4702.0,140.0,3.0,1.6
+ChemSusChem,265,8.0,1.0,44.0,2.0,221.0,6.0,3.0,0.4
+Renal Failure,658,20.0,12.0,0.0,0.0,658.0,20.0,3.0,1.8
+Brain and Behavior,756,23.0,20.0,36.0,3.0,720.0,20.0,3.0,2.6
+Ophthalmology and Therapy,237,7.0,6.0,190.0,7.0,47.0,0.0,3.0,2.5
+Clinical and Translational Gastroenterology,140,4.0,4.0,1.0,0.0,139.0,4.0,2.9,2.9
+Medical Science Educator,140,4.0,1.0,98.0,3.0,42.0,1.0,2.9,0.7
+Journal of Clinical and Translational Hepatology,102,3.0,1.0,0.0,0.0,102.0,3.0,2.9,1.0
+Pain and Therapy,102,3.0,1.0,86.0,3.0,16.0,0.0,2.9,1.0
+ALPHA PSYCHIATRY,102,3.0,1.0,0.0,0.0,102.0,3.0,2.9,1.0
+BMJ Open Diabetes Research & Care,139,4.0,1.0,0.0,0.0,139.0,4.0,2.9,0.7
+Skin Research and Technology,342,10.0,2.0,36.0,2.0,306.0,8.0,2.9,0.6
+Frontiers in Digital Health,341,10.0,18.0,122.0,7.0,219.0,3.0,2.9,5.3
+Blood,104,3.0,3.0,5.0,1.0,99.0,2.0,2.9,2.9
+JMIR Research Protocols,757,22.0,14.0,98.0,14.0,659.0,8.0,2.9,1.8
+MethodsX,758,22.0,52.0,1.0,0.0,757.0,22.0,2.9,6.9
+Medical Physics,206,6.0,18.0,42.0,3.0,164.0,3.0,2.9,8.7
+International Journal of Medical Sciences,411,12.0,13.0,0.0,0.0,411.0,12.0,2.9,3.2
+Journal of Clinical Hypertension,238,7.0,3.0,14.0,1.0,224.0,6.0,2.9,1.3
+Annals of Intensive Care,174,5.0,7.0,139.0,5.0,35.0,0.0,2.9,4.0
+Journal of Alzheimer s Disease Reports,174,5.0,2.0,1.0,0.0,173.0,5.0,2.9,1.1
+JMIR Medical Informatics,272,8.0,26.0,35.0,6.0,237.0,2.0,2.9,9.6
+Journal of Neurology,414,12.0,13.0,313.0,11.0,101.0,1.0,2.9,3.1
+Archiv für Pathologische Anatomie und Physiologie und für Klinische Medicin,109,3.0,2.0,106.0,3.0,3.0,0.0,2.8,1.8
+BJPsych Open,285,8.0,13.0,131.0,7.0,154.0,1.0,2.8,4.6
+Drug Delivery and Translational Research,108,3.0,0.0,104.0,3.0,4.0,0.0,2.8,0.0
+British Journal of Haematology,145,4.0,1.0,48.0,2.0,97.0,2.0,2.8,0.7
+Digestive Diseases and Sciences,145,4.0,4.0,121.0,4.0,24.0,0.0,2.8,2.8
+Interactive Journal of Medical Research,110,3.0,4.0,15.0,2.0,95.0,1.0,2.7,3.6
+Frontiers in Ophthalmology,110,3.0,4.0,41.0,2.0,69.0,1.0,2.7,3.6
+Quality of Life Research,188,5.0,12.0,157.0,5.0,31.0,0.0,2.7,6.4
+The Journal of Prevention of Alzheimer s Disease,147,4.0,4.0,2.0,0.0,145.0,4.0,2.7,2.7
+BMC Medical Ethics,183,5.0,1.0,145.0,5.0,38.0,0.0,2.7,0.5
+GeoHealth,113,3.0,6.0,8.0,2.0,105.0,1.0,2.7,5.3
+Translational Andrology and Urology,296,8.0,4.0,0.0,0.0,296.0,8.0,2.7,1.4
+ACR Open Rheumatology,186,5.0,3.0,12.0,1.0,174.0,4.0,2.7,1.6
+Vaccines,1541,42.0,10.0,353.0,18.0,1188.0,24.0,2.7,0.6
+Cancer Medicine,1318,36.0,29.0,97.0,4.0,1221.0,32.0,2.7,2.2
+Clinics in Orthopedic Surgery,154,4.0,0.0,111.0,3.0,43.0,1.0,2.6,0.0
+Discover Nano,232,6.0,0.0,189.0,6.0,43.0,0.0,2.6,0.0
+ACS Omega,5973,153.0,61.0,0.0,0.0,5973.0,153.0,2.6,1.0
+Journal of Multidisciplinary Healthcare,651,17.0,6.0,170.0,11.0,481.0,6.0,2.6,0.9
+Drug and Alcohol Dependence Reports,117,3.0,2.0,0.0,0.0,117.0,3.0,2.6,1.7
+BMC Palliative Care,389,10.0,5.0,300.0,10.0,89.0,0.0,2.6,1.3
+Development and Psychopathology,118,3.0,7.0,118.0,3.0,0.0,0.0,2.5,5.9
+Chinese Medical Journal,435,11.0,10.0,2.0,0.0,433.0,11.0,2.5,2.3
+Psychiatry Investigation,202,5.0,2.0,77.0,4.0,125.0,1.0,2.5,1.0
+Arquivos de Neuro-Psiquiatria,121,3.0,0.0,83.0,3.0,38.0,0.0,2.5,0.0
+Journal of Pain Research,523,13.0,7.0,162.0,8.0,361.0,5.0,2.5,1.3
+Behavioral Sciences,1741,44.0,17.0,308.0,16.0,1433.0,28.0,2.5,1.0
+Cancer Reports,324,8.0,5.0,31.0,1.0,293.0,7.0,2.5,1.5
+Yonsei Medical Journal,119,3.0,1.0,78.0,2.0,41.0,1.0,2.5,0.8
+Innovation in Aging,118,3.0,0.0,0.0,0.0,118.0,3.0,2.5,0.0
+Journal of Atherosclerosis and Thrombosis,119,3.0,3.0,5.0,0.0,114.0,3.0,2.5,2.5
+Diagnostic Pathology,204,5.0,5.0,157.0,3.0,47.0,2.0,2.5,2.5
+Advanced Healthcare Materials,279,7.0,5.0,43.0,1.0,236.0,6.0,2.5,1.8
+Infectious Disease Reports,120,3.0,0.0,22.0,1.0,98.0,2.0,2.5,0.0
+IBRO Neuroscience Reports,160,4.0,3.0,0.0,0.0,160.0,4.0,2.5,1.9
+JCO Precision Oncology,118,3.0,3.0,1.0,0.0,117.0,3.0,2.5,2.5
+The Lancet Regional Health - Southeast Asia,170,4.0,14.0,0.0,0.0,170.0,4.0,2.4,8.2
+Cancer Biology & Therapy,125,3.0,1.0,0.0,0.0,125.0,3.0,2.4,0.8
+Frontiers in Neurorobotics,166,4.0,4.0,86.0,3.0,80.0,1.0,2.4,2.4
+European Radiology,288,7.0,19.0,285.0,7.0,3.0,0.0,2.4,6.6
+Obesity Surgery,211,5.0,2.0,162.0,5.0,49.0,0.0,2.4,0.9
+Conservation Physiology,123,3.0,4.0,0.0,0.0,123.0,3.0,2.4,3.3
+Reproductive Health,266,6.0,1.0,194.0,5.0,72.0,1.0,2.3,0.4
+BDJ Open,131,3.0,1.0,98.0,3.0,33.0,0.0,2.3,0.8
+PubMed,5728,131.0,56.0,34.0,1.0,5694.0,130.0,2.3,1.0
+SSM - Population Health,215,5.0,6.0,0.0,0.0,215.0,5.0,2.3,2.8
+Life,1867,43.0,10.0,412.0,13.0,1455.0,30.0,2.3,0.5
+Acta Medica Philippina,173,4.0,1.0,48.0,4.0,125.0,0.0,2.3,0.6
+Naunyn-Schmiedeberg s Archives of Pharmacology,176,4.0,0.0,167.0,4.0,9.0,0.0,2.3,0.0
+APL Bioengineering,131,3.0,4.0,0.0,0.0,131.0,3.0,2.3,3.1
+Infectious Disease Modelling,130,3.0,18.0,0.0,0.0,130.0,3.0,2.3,13.8
+JDS Communications,177,4.0,9.0,0.0,0.0,177.0,4.0,2.3,5.1
+Diabetes Therapy,176,4.0,5.0,131.0,3.0,45.0,1.0,2.3,2.8
+JAMIA Open,175,4.0,28.0,1.0,0.0,174.0,4.0,2.3,16.0
+Clinical and Molecular Hepatology,176,4.0,1.0,74.0,4.0,102.0,0.0,2.3,0.6
+Dermatology and Therapy,267,6.0,7.0,201.0,6.0,66.0,0.0,2.2,2.6
+Advanced Materials,447,10.0,7.0,143.0,2.0,304.0,8.0,2.2,1.6
+The Lancet Regional Health - Europe,371,8.0,21.0,0.0,0.0,371.0,8.0,2.2,5.7
+PAIN Reports,139,3.0,5.0,0.0,0.0,139.0,3.0,2.2,3.6
+JMIR Public Health and Surveillance,407,9.0,13.0,61.0,9.0,346.0,0.0,2.2,3.2
+Public Health in Practice,137,3.0,4.0,0.0,0.0,137.0,3.0,2.2,2.9
+European Journal of Nuclear Medicine and Molecular Imaging,232,5.0,11.0,209.0,5.0,23.0,0.0,2.2,4.7
+Translational Lung Cancer Research,357,8.0,6.0,0.0,0.0,357.0,8.0,2.2,1.7
+International journal of exercise science,137,3.0,1.0,0.0,0.0,137.0,3.0,2.2,0.7
+Food Science & Nutrition,1070,22.0,5.0,72.0,2.0,998.0,20.0,2.1,0.5
+Journal of Orthopaedic Surgery and Research,1199,25.0,11.0,861.0,24.0,338.0,1.0,2.1,0.9
+Neural Regeneration Research,480,10.0,7.0,1.0,0.0,479.0,10.0,2.1,1.5
+Clinical Research in Cardiology,141,3.0,2.0,136.0,3.0,5.0,0.0,2.1,1.4
+CNS Neuroscience & Therapeutics,668,14.0,20.0,45.0,2.0,623.0,12.0,2.1,3.0
+Intensive Care Medicine Experimental,141,3.0,2.0,107.0,3.0,34.0,0.0,2.1,1.4
+JMIR Mental Health,142,3.0,7.0,16.0,1.0,126.0,2.0,2.1,4.9
+Molecular Pharmaceutics,145,3.0,1.0,0.0,0.0,145.0,3.0,2.1,0.7
+Science Progress,377,8.0,1.0,0.0,0.0,377.0,8.0,2.1,0.3
+Gastro Hep Advances,190,4.0,3.0,0.0,0.0,190.0,4.0,2.1,1.6
+Foods,5262,111.0,22.0,980.0,25.0,4282.0,86.0,2.1,0.4
+BMC Medical Education,2148,46.0,18.0,1601.0,43.0,547.0,3.0,2.1,0.8
+EJNMMI Research,193,4.0,6.0,132.0,4.0,61.0,0.0,2.1,3.1
+Pulmonary Circulation,193,4.0,5.0,21.0,1.0,172.0,3.0,2.1,2.6
+Biomacromolecules,192,4.0,3.0,1.0,0.0,191.0,4.0,2.1,1.6
+Antimicrobial Stewardship & Healthcare Epidemiology,304,6.0,4.0,93.0,4.0,211.0,2.0,2.0,1.3
+Journal of Allergy and Clinical Immunology Global,249,5.0,4.0,2.0,0.0,247.0,5.0,2.0,1.6
+European Journal of Trauma and Emergency Surgery,204,4.0,0.0,152.0,4.0,52.0,0.0,2.0,0.0
+Materials Today Bio,795,16.0,5.0,0.0,0.0,795.0,16.0,2.0,0.6
+International Journal of Legal Medicine,153,3.0,10.0,136.0,3.0,17.0,0.0,2.0,6.5
+Hypertension Research,100,2.0,3.0,88.0,2.0,12.0,0.0,2.0,3.0
+International Journal of Colorectal Disease,247,5.0,4.0,173.0,5.0,74.0,0.0,2.0,1.6
+BMC Emergency Medicine,294,6.0,5.0,232.0,6.0,62.0,0.0,2.0,1.7
+Translational Vision Science & Technology,506,10.0,15.0,1.0,0.0,505.0,10.0,2.0,3.0
+BMC Anesthesiology,657,13.0,5.0,477.0,13.0,180.0,0.0,2.0,0.8
+Statistics in Medicine,154,3.0,47.0,20.0,2.0,134.0,1.0,1.9,30.5
+Clinical Infectious Diseases,155,3.0,6.0,1.0,1.0,154.0,2.0,1.9,3.9
+International Journal of General Medicine,777,15.0,16.0,264.0,9.0,513.0,6.0,1.9,2.1
+Journal of the American Chemical Society,1291,25.0,15.0,5.0,1.0,1286.0,24.0,1.9,1.2
+BioMedical Engineering OnLine,160,3.0,8.0,114.0,3.0,46.0,0.0,1.9,5.0
+Journal of Religion and Health,104,2.0,0.0,85.0,2.0,19.0,0.0,1.9,0.0
+Nutrients,4728,92.0,28.0,921.0,34.0,3807.0,58.0,1.9,0.6
+Brain Sciences,1307,25.0,11.0,266.0,15.0,1041.0,10.0,1.9,0.8
+Clinical Pharmacology & Therapeutics,107,2.0,7.0,20.0,1.0,87.0,1.0,1.9,6.5
+Balkan Medical Journal,105,2.0,1.0,1.0,0.0,104.0,2.0,1.9,1.0
+European Journal of Sport Science,211,4.0,7.0,20.0,0.0,191.0,4.0,1.9,3.3
+Health Research Policy and Systems,209,4.0,1.0,162.0,4.0,47.0,0.0,1.9,0.5
+Cancers,4121,77.0,41.0,920.0,40.0,3201.0,37.0,1.9,1.0
+European Heart Journal - Digital Health,105,2.0,2.0,0.0,0.0,105.0,2.0,1.9,1.9
+Biomedicines,3002,58.0,29.0,678.0,18.0,2324.0,40.0,1.9,1.0
+International Journal of Reproductive BioMedicine (IJRM),103,2.0,1.0,39.0,1.0,64.0,1.0,1.9,1.0
+Pharmaceuticals,1846,35.0,7.0,384.0,16.0,1462.0,19.0,1.9,0.4
+Journal of Microbiology and Biology Education,110,2.0,2.0,0.0,0.0,110.0,2.0,1.8,1.8
+JBMR Plus,227,4.0,4.0,1.0,0.0,226.0,4.0,1.8,1.8
+Alzheimer s & Dementia Diagnosis Assessment & Disease Monitoring,223,4.0,11.0,27.0,1.0,196.0,3.0,1.8,4.9
+Eye,227,4.0,4.0,205.0,4.0,22.0,0.0,1.8,1.8
+In Vivo,225,4.0,2.0,0.0,0.0,225.0,4.0,1.8,0.9
+Cancer Research and Treatment,110,2.0,2.0,59.0,1.0,51.0,1.0,1.8,1.8
+Light Science & Applications,490,9.0,7.0,348.0,8.0,142.0,1.0,1.8,1.4
+Journal of the American Medical Informatics Association,113,2.0,13.0,4.0,0.0,109.0,2.0,1.8,11.5
+JMIR Formative Research,1045,19.0,28.0,85.0,12.0,960.0,7.0,1.8,2.7
+Molecular Genetics and Metabolism Reports,164,3.0,0.0,1.0,0.0,163.0,3.0,1.8,0.0
+China CDC Weekly,272,5.0,1.0,0.0,0.0,272.0,5.0,1.8,0.4
+Asian Spine Journal,114,2.0,1.0,28.0,2.0,86.0,0.0,1.8,0.9
+World Journal of Diabetes,272,5.0,1.0,0.0,0.0,272.0,5.0,1.8,0.4
+Frontiers in Sports and Active Living,721,13.0,6.0,311.0,13.0,410.0,0.0,1.8,0.8
+ERJ Open Research,413,7.0,12.0,1.0,0.0,412.0,7.0,1.7,2.9
+Journal of Clinical Neurology,119,2.0,0.0,98.0,2.0,21.0,0.0,1.7,0.0
+Rheumatology and Therapy,116,2.0,11.0,105.0,2.0,11.0,0.0,1.7,9.5
+Journal of Thoracic Disease,891,15.0,15.0,0.0,0.0,891.0,15.0,1.7,1.7
+Journal of International Medical Research,541,9.0,9.0,0.0,0.0,541.0,9.0,1.7,1.7
+Revista Latino-Americana de Enfermagem,118,2.0,1.0,18.0,2.0,100.0,0.0,1.7,0.8
+Toxicology Reports,348,6.0,2.0,0.0,0.0,348.0,6.0,1.7,0.6
+Endocrine,116,2.0,1.0,106.0,2.0,10.0,0.0,1.7,0.9
+Environmental Monitoring and Assessment,237,4.0,18.0,183.0,4.0,54.0,0.0,1.7,7.6
+Journal of Sleep Research,115,2.0,6.0,19.0,0.0,96.0,2.0,1.7,5.2
+Journal of Endocrinological Investigation,115,2.0,2.0,108.0,2.0,7.0,0.0,1.7,1.7
+ecancermedicalscience,229,4.0,0.0,0.0,0.0,229.0,4.0,1.7,0.0
+Clinical Cardiology,176,3.0,1.0,22.0,0.0,154.0,3.0,1.7,0.6
+JMIR Cancer,115,2.0,4.0,10.0,1.0,105.0,1.0,1.7,3.5
+International Journal of Computer Assisted Radiology and Surgery,174,3.0,28.0,147.0,3.0,27.0,0.0,1.7,16.1
+Dermatology Practical & Conceptual,175,3.0,0.0,52.0,0.0,123.0,3.0,1.7,0.0
+ESMO Open,357,6.0,13.0,0.0,0.0,357.0,6.0,1.7,3.6
+World Journal of Gastrointestinal Oncology,484,8.0,10.0,0.0,0.0,484.0,8.0,1.7,2.1
+Breast Cancer Research and Treatment,234,4.0,4.0,189.0,4.0,45.0,0.0,1.7,1.7
+The Journal of Organic Chemistry,304,5.0,0.0,0.0,0.0,304.0,5.0,1.6,0.0
+AJPM Focus,129,2.0,1.0,0.0,0.0,129.0,2.0,1.6,0.8
+Clinical Oral Investigations,369,6.0,3.0,269.0,5.0,100.0,1.0,1.6,0.8
+BMJ Public Health,449,7.0,11.0,0.0,0.0,449.0,7.0,1.6,2.4
+Radiation Oncology,258,4.0,6.0,191.0,4.0,67.0,0.0,1.6,2.3
+JMIR mhealth and uhealth,190,3.0,6.0,18.0,1.0,172.0,2.0,1.6,3.2
+Scientifica,124,2.0,0.0,4.0,0.0,120.0,2.0,1.6,0.0
+BMJ Open,4923,77.0,99.0,1.0,0.0,4922.0,77.0,1.6,2.0
+Open Forum Infectious Diseases,893,14.0,12.0,5.0,1.0,888.0,13.0,1.6,1.3
+BMJ Neurology Open,126,2.0,1.0,0.0,0.0,126.0,2.0,1.6,0.8
+The Saudi Dental Journal,125,2.0,0.0,10.0,0.0,115.0,2.0,1.6,0.0
+Digital Health,972,16.0,22.0,0.0,0.0,972.0,16.0,1.6,2.3
+American Journal of Tropical Medicine and Hygiene,253,4.0,4.0,5.0,0.0,248.0,4.0,1.6,1.6
+Journal of Clinical and Translational Science,258,4.0,3.0,98.0,2.0,160.0,2.0,1.6,1.2
+Clinical and Translational Science,368,6.0,6.0,34.0,2.0,334.0,4.0,1.6,1.6
+BMC Ophthalmology,799,12.0,1.0,568.0,12.0,231.0,0.0,1.5,0.1
+IDCases,333,5.0,1.0,0.0,0.0,333.0,5.0,1.5,0.3
+Iranian Journal of Public Health,275,4.0,2.0,0.0,0.0,275.0,4.0,1.5,0.7
+Drug Design Development and Therapy,602,9.0,7.0,147.0,4.0,455.0,5.0,1.5,1.2
+Pharmaceutics,1713,25.0,6.0,365.0,7.0,1348.0,18.0,1.5,0.4
+Annals of Hematology,328,5.0,4.0,215.0,4.0,113.0,1.0,1.5,1.2
+The Journal of Physical Chemistry Letters,463,7.0,7.0,18.0,0.0,445.0,7.0,1.5,1.5
+Annals of Medicine,675,10.0,13.0,0.0,0.0,675.0,10.0,1.5,1.9
+ACS Nano,675,10.0,16.0,17.0,0.0,658.0,10.0,1.5,2.4
+Saudi Medical Journal,202,3.0,0.0,0.0,0.0,202.0,3.0,1.5,0.0
+Journal of Ethnobiology and Ethnomedicine,134,2.0,1.0,103.0,2.0,31.0,0.0,1.5,0.7
+Acta Oncologica,202,3.0,1.0,131.0,2.0,71.0,1.0,1.5,0.5
+Indian Journal of Otolaryngology and Head & Neck Surgery,202,3.0,0.0,191.0,2.0,11.0,1.0,1.5,0.0
+Archives of Endocrinology and Metabolism,137,2.0,0.0,0.0,0.0,137.0,2.0,1.5,0.0
+Psychology Research and Behavior Management,392,6.0,2.0,102.0,3.0,290.0,3.0,1.5,0.5
+ACS Photonics,136,2.0,3.0,0.0,0.0,136.0,2.0,1.5,2.2
+European Journal of Investigation in Health Psychology and Education,260,4.0,3.0,66.0,1.0,194.0,3.0,1.5,1.2
+Vaccine X,135,2.0,2.0,0.0,0.0,135.0,2.0,1.5,1.5
+Journal of Diabetes Research,134,2.0,3.0,1.0,0.0,133.0,2.0,1.5,2.2
+Risk Management and Healthcare Policy,407,6.0,3.0,112.0,5.0,295.0,1.0,1.5,0.7
+Anais Brasileiros de Dermatologia,133,2.0,0.0,0.0,0.0,133.0,2.0,1.5,0.0
+Journal of Gynecologic Oncology,132,2.0,1.0,116.0,2.0,16.0,0.0,1.5,0.8
+Journal of Ayub Medical College Abbottabad,131,2.0,1.0,131.0,2.0,0.0,0.0,1.5,0.8
+BMC Nursing,1491,22.0,10.0,1095.0,21.0,396.0,1.0,1.5,0.7
+Journal of Medical Internet Research,1416,21.0,59.0,115.0,12.0,1301.0,9.0,1.5,4.2
+Supportive Care in Cancer,453,7.0,7.0,322.0,7.0,131.0,0.0,1.5,1.5
+IJC Heart & Vasculature,262,4.0,3.0,0.0,0.0,262.0,4.0,1.5,1.1
+Diabetes Metabolic Syndrome and Obesity,507,7.0,2.0,129.0,5.0,378.0,2.0,1.4,0.4
+Translational Animal Science,217,3.0,2.0,0.0,0.0,217.0,3.0,1.4,0.9
+Journal of Cardiothoracic Surgery,838,12.0,5.0,728.0,11.0,110.0,1.0,1.4,0.6
+Annals of Surgical Oncology,511,7.0,3.0,460.0,7.0,51.0,0.0,1.4,0.6
+Journal of Dental Sciences,346,5.0,2.0,0.0,0.0,346.0,5.0,1.4,0.6
+Kidney International Reports,434,6.0,6.0,2.0,1.0,432.0,5.0,1.4,1.4
+American Heart Journal Plus Cardiology Research and Practice,147,2.0,1.0,0.0,0.0,147.0,2.0,1.4,0.7
+Health Science Reports,1145,16.0,6.0,79.0,2.0,1066.0,14.0,1.4,0.5
+RöFo - Fortschritte auf dem Gebiet der Röntgenstrahlen und der bildgebenden Verfahren,144,2.0,1.0,142.0,2.0,2.0,0.0,1.4,0.7
+Annals of Clinical and Translational Neurology,354,5.0,9.0,39.0,2.0,315.0,3.0,1.4,2.5
+Rheumatology International,142,2.0,40.0,95.0,2.0,47.0,0.0,1.4,28.2
+Methods and Protocols,145,2.0,0.0,29.0,0.0,116.0,2.0,1.4,0.0
+Asia-Pacific Journal of Oncology Nursing,145,2.0,1.0,0.0,0.0,145.0,2.0,1.4,0.7
+Graefe s Archive for Clinical and Experimental Ophthalmology,140,2.0,5.0,136.0,2.0,4.0,0.0,1.4,3.6
+Technology in Cancer Research & Treatment,218,3.0,7.0,0.0,0.0,218.0,3.0,1.4,3.2
+International Journal of Emergency Medicine,277,4.0,1.0,205.0,4.0,72.0,0.0,1.4,0.4
+Contemporary Clinical Trials Communications,219,3.0,6.0,0.0,0.0,219.0,3.0,1.4,2.7
+Advanced Biomedical Research,144,2.0,0.0,0.0,0.0,144.0,2.0,1.4,0.0
+Acta Orthopaedica,146,2.0,2.0,31.0,2.0,115.0,0.0,1.4,1.4
+Food Chemistry X,1384,18.0,5.0,0.0,0.0,1384.0,18.0,1.3,0.4
+JTO Clinical and Research Reports,152,2.0,1.0,0.0,0.0,152.0,2.0,1.3,0.7
+BMJ Open Ophthalmology,158,2.0,1.0,0.0,0.0,158.0,2.0,1.3,0.6
+International Journal of Nanomedicine,871,11.0,2.0,239.0,4.0,632.0,7.0,1.3,0.2
+European Archives of Oto-Rhino-Laryngology,309,4.0,1.0,276.0,4.0,33.0,0.0,1.3,0.3
+Health Expectations,455,6.0,4.0,28.0,3.0,427.0,3.0,1.3,0.9
+Toxics,1125,15.0,7.0,237.0,10.0,888.0,5.0,1.3,0.6
+Cancer Imaging,225,3.0,21.0,164.0,3.0,61.0,0.0,1.3,9.3
+The Anatolian Journal of Cardiology,150,2.0,0.0,0.0,0.0,150.0,2.0,1.3,0.0
+Brazilian Oral Research,159,2.0,1.0,60.0,1.0,99.0,1.0,1.3,0.6
+Journal of Ayurveda and Integrative Medicine,167,2.0,2.0,0.0,0.0,167.0,2.0,1.2,1.2
+The Breast,168,2.0,6.0,0.0,0.0,168.0,2.0,1.2,3.6
+Beilstein Journal of Nanotechnology,164,2.0,3.0,36.0,1.0,128.0,1.0,1.2,1.8
+Health Promotion International,162,2.0,1.0,0.0,0.0,162.0,2.0,1.2,0.6
+Journal of Asthma and Allergy,169,2.0,2.0,50.0,1.0,119.0,1.0,1.2,1.2
+The Egyptian Heart Journal,163,2.0,1.0,135.0,2.0,28.0,0.0,1.2,0.6
+Blood Advances,755,9.0,7.0,6.0,0.0,749.0,9.0,1.2,0.9
+Exploratory Research in Clinical and Social Pharmacy,173,2.0,6.0,0.0,0.0,173.0,2.0,1.2,3.5
+Asian Pacific Journal of Cancer Prevention,564,7.0,1.0,0.0,0.0,564.0,7.0,1.2,0.2
+Small,607,7.0,1.0,170.0,3.0,437.0,4.0,1.2,0.2
+Clinical and Applied Thrombosis/Hemostasis,161,2.0,0.0,0.0,0.0,161.0,2.0,1.2,0.0
+Tobacco Induced Diseases,245,3.0,0.0,0.0,0.0,245.0,3.0,1.2,0.0
+Annals of Surgery Open,171,2.0,3.0,0.0,0.0,171.0,2.0,1.2,1.8
+Acta Neurochirurgica,320,4.0,5.0,225.0,4.0,95.0,0.0,1.2,1.6
+Insights into Imaging,379,4.0,28.0,296.0,4.0,83.0,0.0,1.1,7.4
+JAAD International,180,2.0,1.0,0.0,0.0,180.0,2.0,1.1,0.6
+Langenbeck s Archives of Surgery,269,3.0,0.0,171.0,3.0,98.0,0.0,1.1,0.0
+ACS Sustainable Chemistry & Engineering,177,2.0,4.0,0.0,0.0,177.0,2.0,1.1,2.3
+Neuropsychiatric Disease and Treatment,266,3.0,4.0,59.0,3.0,207.0,0.0,1.1,1.5
+Revista Panamericana de Salud Pública,183,2.0,3.0,0.0,0.0,183.0,2.0,1.1,1.6
+Bioengineering,1500,17.0,17.0,303.0,5.0,1197.0,12.0,1.1,1.1
+Frontiers in Pain Research,174,2.0,1.0,81.0,2.0,93.0,0.0,1.1,0.6
+Atención Primaria,184,2.0,0.0,0.0,0.0,184.0,2.0,1.1,0.0
+Archives of Gynecology and Obstetrics,274,3.0,2.0,224.0,3.0,50.0,0.0,1.1,0.7
+Small Science,276,3.0,6.0,4.0,0.0,272.0,3.0,1.1,2.2
+Age and Ageing,181,2.0,3.0,0.0,0.0,181.0,2.0,1.1,1.7
+European Urology Open Science,187,2.0,3.0,1.0,0.0,186.0,2.0,1.1,1.6
+Frontiers in Surgery,753,8.0,2.0,327.0,7.0,426.0,1.0,1.1,0.3
+Tomography,176,2.0,1.0,38.0,1.0,138.0,1.0,1.1,0.6
+World Journal of Hepatology,177,2.0,2.0,0.0,0.0,177.0,2.0,1.1,1.1
+Bulletin of the World Health Organization,193,2.0,3.0,0.0,0.0,193.0,2.0,1.0,1.6
+National Science Review,575,6.0,8.0,0.0,0.0,575.0,6.0,1.0,1.4
+Macromolecular Rapid Communications,105,1.0,1.0,25.0,0.0,80.0,1.0,1.0,1.0
+Cancer Management and Research,198,2.0,3.0,59.0,1.0,139.0,1.0,1.0,1.5
+Kidney Research and Clinical Practice,101,1.0,1.0,32.0,1.0,69.0,0.0,1.0,1.0
+Journal of Medical Physics,101,1.0,3.0,0.0,0.0,101.0,1.0,1.0,3.0
+British Journal of General Practice,105,1.0,3.0,0.0,0.0,105.0,1.0,1.0,2.9
+Head & Face Medicine,102,1.0,4.0,73.0,1.0,29.0,0.0,1.0,3.9
+Neurotrauma Reports,102,1.0,2.0,0.0,0.0,102.0,1.0,1.0,2.0
+Lara D. Veeken,200,2.0,1.0,1.0,0.0,199.0,2.0,1.0,0.5
+Microchimica Acta,103,1.0,0.0,76.0,1.0,27.0,0.0,1.0,0.0
+BMJ Open Gastroenterology,102,1.0,0.0,0.0,0.0,102.0,1.0,1.0,0.0
+Journal of Ophthalmic Inflammation and Infection,101,1.0,0.0,68.0,1.0,33.0,0.0,1.0,0.0
+Revista Brasileira Ginecologia e Obstetrícia,105,1.0,0.0,0.0,0.0,105.0,1.0,1.0,0.0
+British Journal of Clinical Pharmacology,101,1.0,5.0,27.0,1.0,74.0,0.0,1.0,5.0
+Internal and Emergency Medicine,102,1.0,1.0,85.0,1.0,17.0,0.0,1.0,1.0
+International Journal of Food Science,105,1.0,0.0,4.0,1.0,101.0,0.0,1.0,0.0
+ANZ Journal of Surgery,100,1.0,0.0,45.0,1.0,55.0,0.0,1.0,0.0
+ESC Heart Failure,495,5.0,8.0,63.0,2.0,432.0,3.0,1.0,1.6
+European Geriatric Medicine,102,1.0,3.0,83.0,1.0,19.0,0.0,1.0,2.9
+Advances in Dermatology and Allergology,104,1.0,0.0,39.0,0.0,65.0,1.0,1.0,0.0
+Israel Journal of Health Policy Research,100,1.0,0.0,75.0,1.0,25.0,0.0,1.0,0.0
+Journal of Korean Medical Science,313,3.0,8.0,229.0,3.0,84.0,0.0,1.0,2.6
+Revista da Sociedade Brasileira de Medicina Tropical,104,1.0,0.0,35.0,1.0,69.0,0.0,1.0,0.0
+Scandinavian Journal of Primary Health Care,100,1.0,2.0,0.0,0.0,100.0,1.0,1.0,2.0
+ACS Applied Materials & Interfaces,1231,12.0,9.0,8.0,1.0,1223.0,11.0,1.0,0.7
+Japanese Journal of Radiology,117,1.0,2.0,110.0,1.0,7.0,0.0,0.9,1.7
+Journal of Medical Education and Curricular Development,235,2.0,0.0,0.0,0.0,235.0,2.0,0.9,0.0
+BMJ,222,2.0,12.0,0.0,0.0,222.0,2.0,0.9,5.4
+Journal of Personalized Medicine,985,9.0,10.0,268.0,7.0,717.0,2.0,0.9,1.0
+Clinical Endoscopy,106,1.0,0.0,54.0,1.0,52.0,0.0,0.9,0.0
+BMJ Open Respiratory Research,214,2.0,4.0,0.0,0.0,214.0,2.0,0.9,1.9
+Nursing Open,325,3.0,0.0,21.0,1.0,304.0,2.0,0.9,0.0
+Updates in Surgery,110,1.0,0.0,106.0,1.0,4.0,0.0,0.9,0.0
+EJNMMI Radiopharmacy and Chemistry,110,1.0,0.0,91.0,1.0,19.0,0.0,0.9,0.0
+Open Heart,220,2.0,5.0,0.0,0.0,220.0,2.0,0.9,2.3
+The Journal of Physical Chemistry A,332,3.0,9.0,3.0,0.0,329.0,3.0,0.9,2.7
+Human Reproduction,111,1.0,0.0,1.0,0.0,110.0,1.0,0.9,0.0
+JMIR Pediatrics and Parenting,116,1.0,0.0,7.0,1.0,109.0,0.0,0.9,0.0
+NMC Case Report Journal,108,1.0,0.0,0.0,0.0,108.0,1.0,0.9,0.0
+Annals of Medicine and Surgery,1087,10.0,4.0,0.0,0.0,1087.0,10.0,0.9,0.4
+BJGP Open,111,1.0,5.0,0.0,0.0,111.0,1.0,0.9,4.5
+Neurology Genetics,110,1.0,0.0,1.0,0.0,109.0,1.0,0.9,0.0
+Clinical Interventions in Aging,233,2.0,2.0,59.0,0.0,174.0,2.0,0.9,0.9
+Clinical and Translational Radiation Oncology,218,2.0,3.0,0.0,0.0,218.0,2.0,0.9,1.4
+Physics and Imaging in Radiation Oncology,230,2.0,10.0,0.0,0.0,230.0,2.0,0.9,4.3
+Joint Diseases and Related Surgery,111,1.0,2.0,53.0,1.0,58.0,0.0,0.9,1.8
+Epilepsia Open,225,2.0,3.0,21.0,2.0,204.0,0.0,0.9,1.3
+Clinical and Experimental Dental Research,229,2.0,1.0,11.0,0.0,218.0,2.0,0.9,0.4
+Journal of Materials Science Materials in Medicine,116,1.0,1.0,80.0,1.0,36.0,0.0,0.9,0.9
+International Journal of Environmental Research and Public Health,2018,18.0,9.0,422.0,13.0,1596.0,5.0,0.9,0.4
+Journal of Medical Case Reports,809,7.0,0.0,629.0,5.0,180.0,2.0,0.9,0.0
+Epilepsy & Behavior Reports,117,1.0,0.0,0.0,0.0,117.0,1.0,0.9,0.0
+Acta Crystallographica Section E Crystallographic Communications,347,3.0,1.0,0.0,0.0,347.0,3.0,0.9,0.3
+Philosophical Transactions of the Royal Society A Mathematical Physical and Engineering Sciences,215,2.0,12.0,11.0,0.0,204.0,2.0,0.9,5.6
+JCEM Case Reports,350,3.0,0.0,3.0,0.0,347.0,3.0,0.9,0.0
+Journal of Radiation Research,113,1.0,1.0,0.0,0.0,113.0,1.0,0.9,0.9
+Strahlentherapie und Onkologie,113,1.0,1.0,108.0,1.0,5.0,0.0,0.9,0.9
+JGH Open,224,2.0,3.0,16.0,2.0,208.0,0.0,0.9,1.3
+Therapeutic Advances in Infectious Disease,109,1.0,1.0,0.0,0.0,109.0,1.0,0.9,0.9
+World Neurosurgery X,112,1.0,0.0,0.0,0.0,112.0,1.0,0.9,0.0
+Environmental Epidemiology,109,1.0,4.0,2.0,1.0,107.0,0.0,0.9,3.7
+Advances in Medical Education and Practice,215,2.0,0.0,71.0,2.0,144.0,0.0,0.9,0.0
+Movement Disorders Clinical Practice,112,1.0,4.0,19.0,1.0,93.0,0.0,0.9,3.6
+Journal of Pharmaceutical Health Care and Sciences,121,1.0,1.0,87.0,1.0,34.0,0.0,0.8,0.8
+Journal of Hepatocellular Carcinoma,247,2.0,11.0,71.0,1.0,176.0,1.0,0.8,4.5
+United European Gastroenterology Journal,131,1.0,1.0,20.0,0.0,111.0,1.0,0.8,0.8
+Kidney360,262,2.0,2.0,0.0,0.0,262.0,2.0,0.8,0.8
+BMJ Mental Health,121,1.0,6.0,0.0,0.0,121.0,1.0,0.8,5.0
+Neurophotonics,131,1.0,11.0,1.0,0.0,130.0,1.0,0.8,8.4
+British journal of surgery,131,1.0,0.0,0.0,0.0,131.0,1.0,0.8,0.0
+Audiology Research,130,1.0,0.0,25.0,1.0,105.0,0.0,0.8,0.0
+American Journal of Men s Health,132,1.0,0.0,0.0,0.0,132.0,1.0,0.8,0.0
+South African Family Practice,127,1.0,0.0,0.0,0.0,127.0,1.0,0.8,0.0
+Health Affairs Scholar,252,2.0,5.0,1.0,0.0,251.0,2.0,0.8,2.0
+Journal of Arrhythmia,256,2.0,2.0,21.0,2.0,235.0,0.0,0.8,0.8
+Practical Laboratory Medicine,124,1.0,0.0,0.0,0.0,124.0,1.0,0.8,0.0
+Actas Españolas de Psiquiatría,123,1.0,1.0,0.0,0.0,123.0,1.0,0.8,0.8
+Journal of Oral and Maxillofacial Pathology,126,1.0,0.0,0.0,0.0,126.0,1.0,0.8,0.0
+Science and Technology of Advanced Materials,122,1.0,0.0,0.0,0.0,122.0,1.0,0.8,0.0
+ACS Sensors,129,1.0,0.0,1.0,0.0,128.0,1.0,0.8,0.0
+Pediatric Nephrology,122,1.0,4.0,115.0,1.0,7.0,0.0,0.8,3.3
+World Journal of Urology,248,2.0,3.0,184.0,2.0,64.0,0.0,0.8,1.2
+Pediatric Reports,129,1.0,0.0,17.0,0.0,112.0,1.0,0.8,0.0
+International Ophthalmology,121,1.0,5.0,96.0,1.0,25.0,0.0,0.8,4.1
+Cancer Control,252,2.0,4.0,0.0,0.0,252.0,2.0,0.8,1.6
+Archives of Iranian Medicine,127,1.0,0.0,1.0,0.0,126.0,1.0,0.8,0.0
+Journal of Taibah University Medical Sciences,120,1.0,1.0,0.0,0.0,120.0,1.0,0.8,0.8
+Acta Dermato Venereologica,375,3.0,2.0,271.0,3.0,104.0,0.0,0.8,0.5
+Membranes,357,3.0,4.0,68.0,2.0,289.0,1.0,0.8,1.1
+Journal of Alzheimer s Disease,120,1.0,2.0,1.0,0.0,119.0,1.0,0.8,1.7
+Thoracic Cancer,368,3.0,2.0,45.0,1.0,323.0,2.0,0.8,0.5
+Journal of Human Kinetics,120,1.0,2.0,0.0,0.0,120.0,1.0,0.8,1.7
+Neurosurgical Review,137,1.0,3.0,90.0,1.0,47.0,0.0,0.7,2.2
+VideoGIE,150,1.0,0.0,0.0,0.0,150.0,1.0,0.7,0.0
+Journal of Evaluation in Clinical Practice,144,1.0,4.0,18.0,0.0,126.0,1.0,0.7,2.8
+The Journal of Physical Chemistry C,281,2.0,2.0,0.0,0.0,281.0,2.0,0.7,0.7
+Epilepsia,147,1.0,4.0,26.0,0.0,121.0,1.0,0.7,2.7
+Journal of Global Health,422,3.0,6.0,0.0,0.0,422.0,3.0,0.7,1.4
+World Journal of Psychiatry,291,2.0,3.0,0.0,0.0,291.0,2.0,0.7,1.0
+Cancer,149,1.0,3.0,38.0,0.0,111.0,1.0,0.7,2.0
+Biosensors,735,5.0,2.0,170.0,4.0,565.0,1.0,0.7,0.3
+Healthcare,3137,21.0,20.0,600.0,15.0,2537.0,6.0,0.7,0.6
+Cambridge Prisms Global Mental Health,144,1.0,0.0,36.0,1.0,108.0,0.0,0.7,0.0
+Journal of Imaging,432,3.0,18.0,87.0,2.0,345.0,1.0,0.7,4.2
+Journal of Applied Clinical Medical Physics,442,3.0,17.0,50.0,1.0,392.0,2.0,0.7,3.8
+Global Health Action,151,1.0,2.0,0.0,0.0,151.0,1.0,0.7,1.3
+Medical Science Monitor,447,3.0,1.0,0.0,0.0,447.0,3.0,0.7,0.2
+Rheumatology Advances in Practice,151,1.0,2.0,0.0,0.0,151.0,1.0,0.7,1.3
+SAGE Open Medicine,297,2.0,2.0,0.0,0.0,297.0,2.0,0.7,0.7
+Journal of Vascular Surgery Venous and Lymphatic Disorders,153,1.0,3.0,0.0,0.0,153.0,1.0,0.7,2.0
+EP Europace,303,2.0,3.0,0.0,0.0,303.0,2.0,0.7,1.0
+Perioperative Medicine,152,1.0,2.0,106.0,1.0,46.0,0.0,0.7,1.3
+International Journal of Public Health,274,2.0,2.0,0.0,0.0,274.0,2.0,0.7,0.7
+Diagnostics,3400,25.0,40.0,640.0,9.0,2760.0,16.0,0.7,1.2
+Revista da Escola de Enfermagem da USP,139,1.0,0.0,37.0,0.0,102.0,1.0,0.7,0.0
+JNCI Cancer Spectrum,138,1.0,1.0,3.0,0.0,135.0,1.0,0.7,0.7
+Therapeutics and Clinical Risk Management,143,1.0,3.0,35.0,1.0,108.0,0.0,0.7,2.1
+Journal of Robotic Surgery,142,1.0,0.0,108.0,1.0,34.0,0.0,0.7,0.0
+PEC Innovation,138,1.0,0.0,0.0,0.0,138.0,1.0,0.7,0.0
+Acta Paediatrica,139,1.0,1.0,30.0,1.0,109.0,0.0,0.7,0.7
+World Journal of Orthopedics,142,1.0,0.0,0.0,0.0,142.0,1.0,0.7,0.0
+IJTLD OPEN,135,1.0,1.0,0.0,0.0,135.0,1.0,0.7,0.7
+African Journal of Primary Health Care & Family Medicine,152,1.0,0.0,0.0,0.0,152.0,1.0,0.7,0.0
+Einstein (São Paulo),138,1.0,0.0,0.0,0.0,138.0,1.0,0.7,0.0
+Alzheimer s & Dementia Translational Research & Clinical Interventions,154,1.0,2.0,17.0,0.0,137.0,1.0,0.6,1.3
+eJHaem,311,2.0,2.0,33.0,1.0,278.0,1.0,0.6,0.6
+Diseases,361,2.0,2.0,69.0,1.0,292.0,1.0,0.6,0.6
+JACC Advances,519,3.0,3.0,1.0,0.0,518.0,3.0,0.6,0.6
+Journal of Physical Therapy Science,172,1.0,0.0,1.0,0.0,171.0,1.0,0.6,0.0
+BMJ Global Health,470,3.0,10.0,0.0,0.0,470.0,3.0,0.6,2.1
+Journal of Clinical Oncology,181,1.0,3.0,4.0,0.0,177.0,1.0,0.6,1.7
+Journal of Cosmetic Dermatology,470,3.0,1.0,53.0,1.0,417.0,2.0,0.6,0.2
+CJC Open,180,1.0,4.0,0.0,0.0,180.0,1.0,0.6,2.2
+International Journal of Dentistry,167,1.0,0.0,0.0,0.0,167.0,1.0,0.6,0.0
+Experimental Physiology,177,1.0,4.0,19.0,0.0,158.0,1.0,0.6,2.3
+Biomaterials Research,173,1.0,2.0,0.0,0.0,173.0,1.0,0.6,1.2
+Clinical ophthalmology,510,3.0,2.0,177.0,3.0,333.0,0.0,0.6,0.4
+Patient Preference and Adherence,329,2.0,1.0,84.0,2.0,245.0,0.0,0.6,0.3
+ACS Applied Bio Materials,158,1.0,2.0,0.0,0.0,158.0,1.0,0.6,1.3
+European Journal of Dentistry,158,1.0,0.0,101.0,1.0,57.0,0.0,0.6,0.0
+Case Reports in Ophthalmology,173,1.0,0.0,0.0,0.0,173.0,1.0,0.6,0.0
+Biomedical Optics Express,508,3.0,13.0,1.0,0.0,507.0,3.0,0.6,2.6
+The Scientific World JOURNAL,159,1.0,0.0,1.0,0.0,158.0,1.0,0.6,0.0
+World Journal of Clinical Cases,860,5.0,3.0,0.0,0.0,860.0,5.0,0.6,0.3
+World Journal of Gastroenterology,464,3.0,11.0,0.0,0.0,464.0,3.0,0.6,2.4
+World Journal of Clinical Oncology,163,1.0,2.0,0.0,0.0,163.0,1.0,0.6,1.2
+Research and Practice in Thrombosis and Haemostasis,352,2.0,1.0,1.0,0.0,351.0,2.0,0.6,0.3
+Journal of Investigative Medicine High Impact Case Reports,179,1.0,0.0,0.0,0.0,179.0,1.0,0.6,0.0
+BMC Surgery,576,3.0,3.0,440.0,3.0,136.0,0.0,0.5,0.5
+Entropy,1509,8.0,48.0,273.0,2.0,1236.0,6.0,0.5,3.2
+Current Oncology,645,3.0,2.0,152.0,2.0,493.0,1.0,0.5,0.3
+International Wound Journal,590,3.0,2.0,46.0,2.0,544.0,1.0,0.5,0.3
+Children,1695,8.0,1.0,339.0,6.0,1356.0,2.0,0.5,0.1
+Medicina,2321,11.0,9.0,475.0,9.0,1846.0,2.0,0.5,0.4
+TURKISH JOURNAL OF MEDICAL SCIENCES,209,1.0,0.0,0.0,0.0,209.0,1.0,0.5,0.0
+Journal of Oral Biology and Craniofacial Research,204,1.0,2.0,0.0,0.0,204.0,1.0,0.5,1.0
+JMIR Aging,184,1.0,3.0,13.0,1.0,171.0,0.0,0.5,1.6
+Maternal and Child Nutrition,183,1.0,2.0,12.0,0.0,171.0,1.0,0.5,1.1
+Surgical Case Reports,411,2.0,0.0,262.0,2.0,149.0,0.0,0.5,0.0
+Diabetes Obesity and Metabolism,185,1.0,6.0,29.0,0.0,156.0,1.0,0.5,3.2
+Revista da Associação Médica Brasileira,417,2.0,0.0,141.0,1.0,276.0,1.0,0.5,0.0
+Journal of the International AIDS Society,187,1.0,6.0,15.0,0.0,172.0,1.0,0.5,3.2
+Critical Care Explorations,202,1.0,7.0,0.0,0.0,202.0,1.0,0.5,3.5
+Pharmacology Research & Perspectives,182,1.0,2.0,11.0,0.0,171.0,1.0,0.5,1.1
+Sports,419,2.0,3.0,93.0,1.0,326.0,1.0,0.5,0.7
+International Journal of Sports Physical Therapy,206,1.0,1.0,0.0,0.0,206.0,1.0,0.5,0.5
+JAAOS Global Research and Reviews,218,1.0,0.0,0.0,0.0,218.0,1.0,0.5,0.0
+Geriatrics,188,1.0,2.0,37.0,0.0,151.0,1.0,0.5,1.1
+Pharmacy,213,1.0,0.0,36.0,1.0,177.0,0.0,0.5,0.0
+Transplant International,197,1.0,1.0,0.0,0.0,197.0,1.0,0.5,0.5
+Nursing Reports,385,2.0,1.0,91.0,2.0,294.0,0.0,0.5,0.3
+Bioinformation,377,2.0,0.0,0.0,0.0,377.0,2.0,0.5,0.0
+Transplantation Direct,222,1.0,1.0,0.0,0.0,222.0,1.0,0.5,0.5
+Arquivos Brasileiros de Cardiologia,200,1.0,2.0,0.0,0.0,200.0,1.0,0.5,1.0
+CPT Pharmacometrics & Systems Pharmacology,209,1.0,14.0,22.0,0.0,187.0,1.0,0.5,6.7
+Langmuir,413,2.0,4.0,3.0,0.0,410.0,2.0,0.5,1.0
+Journal of Clinical and Experimental Dentistry,228,1.0,0.0,1.0,0.0,227.0,1.0,0.4,0.0
+DEN Open,225,1.0,0.0,21.0,0.0,204.0,1.0,0.4,0.0
+Nano Letters,521,2.0,3.0,39.0,0.0,482.0,2.0,0.4,0.6
+Human Vaccines & Immunotherapeutics,527,2.0,7.0,0.0,0.0,527.0,2.0,0.4,1.3
+Clinics and Practice,234,1.0,1.0,46.0,1.0,188.0,0.0,0.4,0.4
+World Journal of Gastrointestinal Surgery,537,2.0,1.0,0.0,0.0,537.0,2.0,0.4,0.2
+Polymers,4477,18.0,19.0,914.0,12.0,3563.0,6.0,0.4,0.4
+Cadernos de Saúde Pública,264,1.0,7.0,76.0,0.0,188.0,1.0,0.4,2.7
+BDJ,564,2.0,0.0,548.0,2.0,16.0,0.0,0.4,0.0
+Journal of Biomedical Optics,259,1.0,7.0,0.0,0.0,259.0,1.0,0.4,2.7
+INQUIRY The Journal of Health Care Organization Provision and Financing,277,1.0,2.0,0.0,0.0,277.0,1.0,0.4,0.7
+Translational Pediatrics,254,1.0,6.0,0.0,0.0,254.0,1.0,0.4,2.4
+Therapeutic Advances in Medical Oncology,259,1.0,4.0,0.0,0.0,259.0,1.0,0.4,1.5
+Clinical Kidney Journal,452,2.0,6.0,0.0,0.0,452.0,2.0,0.4,1.3
+Indian Journal of Psychiatry,253,1.0,0.0,0.0,0.0,253.0,1.0,0.4,0.0
+Dentistry Journal,481,2.0,1.0,87.0,2.0,394.0,0.0,0.4,0.2
+Nanophotonics,483,2.0,7.0,290.0,2.0,193.0,0.0,0.4,1.4
+Indian Journal of Community Medicine,248,1.0,0.0,0.0,0.0,248.0,1.0,0.4,0.0
+Sensors,10333,39.0,233.0,1937.0,20.0,8396.0,19.0,0.4,2.3
+Archives of Orthopaedic and Trauma Surgery,240,1.0,0.0,178.0,1.0,62.0,0.0,0.4,0.0
+Case Reports in Oncology,267,1.0,0.0,0.0,0.0,267.0,1.0,0.4,0.0
+Laryngoscope Investigative Otolaryngology,256,1.0,1.0,26.0,0.0,230.0,1.0,0.4,0.4
+Gels,983,3.0,2.0,217.0,1.0,766.0,2.0,0.3,0.2
+BMJ Paediatrics Open,356,1.0,2.0,0.0,0.0,356.0,1.0,0.3,0.6
+American Journal of Ophthalmology Case Reports,358,1.0,0.0,0.0,0.0,358.0,1.0,0.3,0.0
+Biomimetics,979,3.0,15.0,210.0,2.0,769.0,1.0,0.3,1.5
+Microsystems & Nanoengineering,302,1.0,5.0,225.0,0.0,77.0,1.0,0.3,1.7
+Surgical Endoscopy,308,1.0,7.0,251.0,1.0,57.0,0.0,0.3,2.3
+Journal of Education and Health Promotion,610,2.0,0.0,0.0,0.0,610.0,2.0,0.3,0.0
+Journal of Primary Care & Community Health,286,1.0,1.0,0.0,0.0,286.0,1.0,0.3,0.3
+Journal of Conservative Dentistry and Endodontics,289,1.0,0.0,0.0,0.0,289.0,1.0,0.3,0.0
+Journal of the American College of Emergency Physicians Open,289,1.0,1.0,35.0,0.0,254.0,1.0,0.3,0.3
+Pakistan Journal of Medical Sciences,616,2.0,1.0,181.0,1.0,435.0,1.0,0.3,0.2
+SAGE Open Nursing,291,1.0,0.0,0.0,0.0,291.0,1.0,0.3,0.0
+Nano-Micro Letters,359,1.0,1.0,236.0,1.0,123.0,0.0,0.3,0.3
+Nanomaterials,2402,7.0,4.0,484.0,6.0,1918.0,1.0,0.3,0.2
+RMD Open,348,1.0,6.0,0.0,0.0,348.0,1.0,0.3,1.7
+Respirology Case Reports,399,1.0,0.0,24.0,1.0,375.0,0.0,0.3,0.0
+Journal of Clinical Medicine,8679,26.0,33.0,1715.0,16.0,6964.0,10.0,0.3,0.4
+Journal of Cardiovascular Development and Disease,419,1.0,3.0,92.0,1.0,327.0,0.0,0.2,0.7
+Canadian Medical Association Journal,465,1.0,2.0,0.0,0.0,465.0,1.0,0.2,0.4
+Plastic & Reconstructive Surgery Global Open,1245,2.0,8.0,0.0,0.0,1245.0,2.0,0.2,0.6
+Journal of Functional Biomaterials,430,1.0,1.0,79.0,1.0,351.0,0.0,0.2,0.2
+Clinical Case Reports,1787,3.0,2.0,135.0,2.0,1652.0,1.0,0.2,0.1
+Materials,8035,13.0,21.0,1471.0,9.0,6564.0,4.0,0.2,0.3
+Micromachines,1765,4.0,10.0,365.0,2.0,1400.0,2.0,0.2,0.6
+Urology Case Reports,423,1.0,0.0,0.0,0.0,423.0,1.0,0.2,0.0
+Ultrasonics Sonochemistry,599,1.0,1.0,0.0,0.0,599.0,1.0,0.2,0.2
+JAMA Network Open,2805,6.0,24.0,15.0,0.0,2790.0,6.0,0.2,0.9
+European Journal of Neurology,488,1.0,7.0,41.0,0.0,447.0,1.0,0.2,1.4
+Internal Medicine,532,1.0,0.0,42.0,1.0,490.0,0.0,0.2,0.0
+Pan African Medical Journal,560,1.0,0.0,0.0,0.0,560.0,1.0,0.2,0.0
+Orthopaedic Journal of Sports Medicine,683,1.0,4.0,0.0,0.0,683.0,1.0,0.1,0.6
+Radiology Case Reports,1875,1.0,0.0,0.0,0.0,1875.0,1.0,0.1,0.0
+Quantitative Imaging in Medicine and Surgery,988,1.0,27.0,0.0,0.0,988.0,1.0,0.1,2.7
+Journal of Pharmacy And Bioallied Sciences,1452,2.0,1.0,0.0,0.0,1452.0,2.0,0.1,0.1
+Cureus,28751,41.0,67.0,14213.0,24.0,14538.0,17.0,0.1,0.2
+International Journal of Neonatal Screening,106,0.0,0.0,16.0,0.0,90.0,0.0,0.0,0.0
+Endocrinology Diabetes and Metabolism Case Reports,106,0.0,0.0,0.0,0.0,106.0,0.0,0.0,0.0
+Kidney Medicine,180,0.0,2.0,0.0,0.0,180.0,0.0,0.0,1.1
+Arthroscopy Sports Medicine and Rehabilitation,180,0.0,2.0,0.0,0.0,180.0,0.0,0.0,1.1
+Indian Journal of Critical Care Medicine,248,0.0,0.0,1.0,0.0,247.0,0.0,0.0,0.0
+AME Case Reports,180,0.0,0.0,0.0,0.0,180.0,0.0,0.0,0.0
+Palliative Care and Social Practice,101,0.0,0.0,0.0,0.0,101.0,0.0,0.0,0.0
+JSES International,253,0.0,0.0,0.0,0.0,253.0,0.0,0.0,0.0
+JSES Reviews Reports and Techniques,108,0.0,0.0,0.0,0.0,108.0,0.0,0.0,0.0
+Annals of African Medicine,180,0.0,0.0,0.0,0.0,180.0,0.0,0.0,0.0
+International Archives of Otorhinolaryngology,107,0.0,0.0,63.0,0.0,44.0,0.0,0.0,0.0
+Acta Cirúrgica Brasileira,107,0.0,0.0,34.0,0.0,73.0,0.0,0.0,0.0
+JBJS Open Access,109,0.0,1.0,0.0,0.0,109.0,0.0,0.0,0.9
+Indian Dermatology Online Journal,252,0.0,0.0,0.0,0.0,252.0,0.0,0.0,0.0
+Revista Brasileira de Epidemiologia,100,0.0,1.0,25.0,0.0,75.0,0.0,0.0,1.0
+JHLT Open,199,0.0,0.0,0.0,0.0,199.0,0.0,0.0,0.0
+International Journal of Qualitative Studies on Health and Well-Being,177,0.0,1.0,0.0,0.0,177.0,0.0,0.0,0.6
+The Journal of International Advanced Otology,109,0.0,0.0,3.0,0.0,106.0,0.0,0.0,0.0
+Oman Journal of Ophthalmology,110,0.0,0.0,0.0,0.0,110.0,0.0,0.0,0.0
+Journal of Medicine and Life,171,0.0,1.0,0.0,0.0,171.0,0.0,0.0,0.6
+Journal of Hand Surgery Global Online,212,0.0,0.0,0.0,0.0,212.0,0.0,0.0,0.0
+Advances in Radiation Oncology,262,0.0,2.0,0.0,0.0,262.0,0.0,0.0,0.8
+Acta Obstetricia Et Gynecologica Scandinavica,261,0.0,2.0,27.0,0.0,234.0,0.0,0.0,0.8
+Endoscopy International Open,261,0.0,2.0,93.0,0.0,168.0,0.0,0.0,0.8
+Journal of Surgical Case Reports,1181,0.0,0.0,0.0,0.0,1181.0,0.0,0.0,0.0
+Case Reports in Gastroenterology,110,0.0,0.0,1.0,0.0,109.0,0.0,0.0,0.0
+Chinese Journal of Chromatography,172,0.0,0.0,41.0,0.0,131.0,0.0,0.0,0.0
+BMJ Case Reports,208,0.0,0.0,0.0,0.0,208.0,0.0,0.0,0.0
+CASE,100,0.0,0.0,0.0,0.0,100.0,0.0,0.0,0.0
+International Orthopaedics,110,0.0,2.0,78.0,0.0,32.0,0.0,0.0,1.8
+Therapeutic Advances in Gastroenterology,174,0.0,1.0,0.0,0.0,174.0,0.0,0.0,0.6
+Journal of Family Medicine and Primary Care,1228,0.0,0.0,0.0,0.0,1228.0,0.0,0.0,0.0
+Psychiatry and Clinical Neurosciences Reports,175,0.0,0.0,9.0,0.0,166.0,0.0,0.0,0.0
+JMA Journal,176,0.0,0.0,0.0,0.0,176.0,0.0,0.0,0.0
+European Journal of Orthopaedic Surgery & Traumatology,109,0.0,0.0,81.0,0.0,28.0,0.0,0.0,0.0
+Belitung Nursing Journal,109,0.0,0.0,0.0,0.0,109.0,0.0,0.0,0.0
+Reports of Practical Oncology & Radiotherapy,101,0.0,0.0,26.0,0.0,75.0,0.0,0.0,0.0
+International Medical Case Reports Journal,256,0.0,0.0,68.0,0.0,188.0,0.0,0.0,0.0
+Journal of the Pediatric Orthopaedic Society of North America,106,0.0,0.0,0.0,0.0,106.0,0.0,0.0,0.0
+Cardiovascular Diagnosis and Therapy,101,0.0,1.0,0.0,0.0,101.0,0.0,0.0,1.0
+Future Oncology,218,0.0,3.0,0.0,0.0,218.0,0.0,0.0,1.4
+National Journal of Maxillofacial Surgery,104,0.0,0.0,0.0,0.0,104.0,0.0,0.0,0.0
+JMIR Medical Education,190,0.0,3.0,18.0,0.0,172.0,0.0,0.0,1.6
+Saudi Journal of Anaesthesia,171,0.0,0.0,0.0,0.0,171.0,0.0,0.0,0.0
+Kardiologia Polska,190,0.0,0.0,190.0,0.0,0.0,0.0,0.0,0.0
+OTO Open,191,0.0,2.0,16.0,0.0,175.0,0.0,0.0,1.0
+Journal of the Society for Cardiovascular Angiography & Interventions,193,0.0,0.0,0.0,0.0,193.0,0.0,0.0,0.0
+Global Spine Journal,201,0.0,2.0,0.0,0.0,201.0,0.0,0.0,1.0
+Global Pediatric Health,104,0.0,0.0,0.0,0.0,104.0,0.0,0.0,0.0
+Trauma Case Reports,194,0.0,0.0,0.0,0.0,194.0,0.0,0.0,0.0
+Journal of the Korean Society of Radiology,103,0.0,0.0,74.0,0.0,29.0,0.0,0.0,0.0
+Respiratory Medicine Case Reports,246,0.0,0.0,0.0,0.0,246.0,0.0,0.0,0.0
+NMR in Biomedicine,103,0.0,10.0,19.0,0.0,84.0,0.0,0.0,9.7
+Journal of Patient Experience,194,0.0,0.0,0.0,0.0,194.0,0.0,0.0,0.0
+JCO Global Oncology,103,0.0,0.0,0.0,0.0,103.0,0.0,0.0,0.0
+JPRAS Open,219,0.0,1.0,0.0,0.0,219.0,0.0,0.0,0.5
+BJS Open,224,0.0,3.0,0.0,0.0,224.0,0.0,0.0,1.3
+World Journal of Gastrointestinal Endoscopy,102,0.0,0.0,0.0,0.0,102.0,0.0,0.0,0.0
+Open Respiratory Archives,102,0.0,0.0,0.0,0.0,102.0,0.0,0.0,0.0
+Journal of Indian Association of Pediatric Surgeons,199,0.0,1.0,0.0,0.0,199.0,0.0,0.0,0.5
+Annals of Indian Academy of Neurology,220,0.0,0.0,0.0,0.0,220.0,0.0,0.0,0.0
+European Journal of Radiology Open,104,0.0,5.0,1.0,0.0,103.0,0.0,0.0,4.8
+Advances in Interventional Cardiology,104,0.0,1.0,31.0,0.0,73.0,0.0,0.0,1.0
+Child s Nervous System,102,0.0,0.0,84.0,0.0,18.0,0.0,0.0,0.0
+International Journal of Surgery Case Reports,2131,1.0,0.0,0.0,0.0,2131.0,1.0,0.0,0.0
+Health Services Insights,106,0.0,0.0,0.0,0.0,106.0,0.0,0.0,0.0
+Women s Health,222,0.0,2.0,0.0,0.0,222.0,0.0,0.0,0.9
+JAMA Health Forum,242,0.0,2.0,1.0,0.0,241.0,0.0,0.0,0.8
+Bone & Joint Open,216,0.0,0.0,0.0,0.0,216.0,0.0,0.0,0.0
+Heart Rhythm O2,183,0.0,0.0,0.0,0.0,183.0,0.0,0.0,0.0
+Journal of Nutritional Science,101,0.0,1.0,23.0,0.0,78.0,0.0,0.0,1.0
+Brain and Spine,238,0.0,8.0,0.0,0.0,238.0,0.0,0.0,3.4
+Noise and Health,101,0.0,0.0,0.0,0.0,101.0,0.0,0.0,0.0
+Revista Brasileira de Ortopedia,202,0.0,1.0,95.0,0.0,107.0,0.0,0.0,0.5
+Turkish Journal of Thoracic and Cardiovascular Surgery,184,0.0,0.0,0.0,0.0,184.0,0.0,0.0,0.0
+Indian Journal of Dermatology,202,0.0,1.0,0.0,0.0,202.0,0.0,0.0,0.5
+Accounts of Chemical Research,101,0.0,0.0,0.0,0.0,101.0,0.0,0.0,0.0
+Indian Journal of Anaesthesia,237,0.0,0.0,0.0,0.0,237.0,0.0,0.0,0.0
+The Journal of Dermatology,105,0.0,1.0,13.0,0.0,92.0,0.0,0.0,1.0
+The Kaohsiung Journal of Medical Sciences,101,0.0,0.0,4.0,0.0,97.0,0.0,0.0,0.0
+Indian Journal of Endocrinology and Metabolism,102,0.0,0.0,0.0,0.0,102.0,0.0,0.0,0.0
+Journal of Nursing Management,218,0.0,2.0,5.0,0.0,213.0,0.0,0.0,0.9
+Trauma Surgery & Acute Care Open,233,0.0,2.0,0.0,0.0,233.0,0.0,0.0,0.9
+Gland Surgery,231,0.0,3.0,0.0,0.0,231.0,0.0,0.0,1.3
+International Journal of Retina and Vitreous,128,0.0,0.0,84.0,0.0,44.0,0.0,0.0,0.0
+HeartRhythm Case Reports,276,0.0,0.0,0.0,0.0,276.0,0.0,0.0,0.0
+Turkish Journal of Trauma and Emergency Surgery,169,0.0,0.0,0.0,0.0,169.0,0.0,0.0,0.0
+International Journal of Clinical Pediatric Dentistry,342,0.0,0.0,1.0,0.0,341.0,0.0,0.0,0.0
+Journal of Neurosurgery Case Lessons,544,0.0,1.0,0.0,0.0,544.0,0.0,0.0,0.2
+Medical Education Online,139,0.0,0.0,0.0,0.0,139.0,0.0,0.0,0.0
+Journal of the Belgian Society of Radiology,120,0.0,0.0,2.0,0.0,118.0,0.0,0.0,0.0
+Arthroplasty Today,361,0.0,2.0,0.0,0.0,361.0,0.0,0.0,0.6
+Knee Surgery Sports Traumatology Arthroscopy,120,0.0,1.0,39.0,0.0,81.0,0.0,0.0,0.8
+European Journal of Case Reports in Internal Medicine,359,0.0,0.0,82.0,0.0,277.0,0.0,0.0,0.0
+SAGE Open Medical Case Reports,569,0.0,0.0,0.0,0.0,569.0,0.0,0.0,0.0
+Aesthetic Plastic Surgery,120,0.0,2.0,114.0,0.0,6.0,0.0,0.0,1.7
+Photoacoustics,143,0.0,4.0,0.0,0.0,143.0,0.0,0.0,2.8
+Canadian Medical Education Journal,120,0.0,0.0,44.0,0.0,76.0,0.0,0.0,0.0
+Arthroscopy Techniques,586,0.0,0.0,0.0,0.0,586.0,0.0,0.0,0.0
+European Spine Journal,144,0.0,3.0,143.0,0.0,1.0,0.0,0.0,2.1
+American Journal of Case Reports,595,0.0,0.0,0.0,0.0,595.0,0.0,0.0,0.0
+Journal of Functional Morphology and Kinesiology,353,0.0,1.0,66.0,0.0,287.0,0.0,0.0,0.3
+Foot & Ankle Orthopaedics,144,0.0,1.0,0.0,0.0,144.0,0.0,0.0,0.7
+Surgical Neurology International,598,0.0,2.0,0.0,0.0,598.0,0.0,0.0,0.3
+CoDAS,119,0.0,1.0,40.0,0.0,79.0,0.0,0.0,0.8
+The Oncologist,352,0.0,5.0,2.0,0.0,350.0,0.0,0.0,1.4
+Annals of Surgical Treatment and Research,119,0.0,0.0,83.0,0.0,36.0,0.0,0.0,0.0
+Pediatric Surgery International,119,0.0,0.0,95.0,0.0,24.0,0.0,0.0,0.0
+Case Reports in Women s Health,118,0.0,0.0,1.0,0.0,117.0,0.0,0.0,0.0
+La Tunisie Médicale,145,0.0,0.0,0.0,0.0,145.0,0.0,0.0,0.0
+Journal of Migration and Health,118,0.0,1.0,0.0,0.0,118.0,0.0,0.0,0.8
+Interventional Pain Medicine,118,0.0,0.0,0.0,0.0,118.0,0.0,0.0,0.0
+Neurology International,146,0.0,2.0,31.0,0.0,115.0,0.0,0.0,1.4
+Macromolecules,118,0.0,3.0,1.0,0.0,117.0,0.0,0.0,2.5
+Resuscitation Plus,347,0.0,1.0,0.0,0.0,347.0,0.0,0.0,0.3
+Turkish Archives of Pediatrics,137,0.0,0.0,0.0,0.0,137.0,0.0,0.0,0.0
+Industrial Psychiatry Journal,137,0.0,0.0,0.0,0.0,137.0,0.0,0.0,0.0
+JPGN Reports,136,0.0,0.0,19.0,0.0,117.0,0.0,0.0,0.0
+Brazilian Journal of Cardiovascular Surgery,124,0.0,0.0,0.0,0.0,124.0,0.0,0.0,0.0
+European Heart Journal Open,128,0.0,1.0,0.0,0.0,128.0,0.0,0.0,0.8
+Hematology Transfusion and Cell Therapy,128,0.0,0.0,0.0,0.0,128.0,0.0,0.0,0.0
+Therapeutic Advances in Neurological Disorders,128,0.0,0.0,0.0,0.0,128.0,0.0,0.0,0.0
+Lasers in Medical Science,126,0.0,1.0,85.0,0.0,41.0,0.0,0.0,0.8
+Health Services Research,129,0.0,2.0,39.0,0.0,90.0,0.0,0.0,1.6
+Case Reports in Dentistry,126,0.0,0.0,2.0,0.0,124.0,0.0,0.0,0.0
+Neurospine,130,0.0,1.0,71.0,0.0,59.0,0.0,0.0,0.8
+Journal of Food Science,130,0.0,0.0,32.0,0.0,98.0,0.0,0.0,0.0
+ACS Biomaterials Science & Engineering,125,0.0,3.0,0.0,0.0,125.0,0.0,0.0,2.4
+CytoJournal,130,0.0,2.0,0.0,0.0,130.0,0.0,0.0,1.5
+Environmental Health Insights,125,0.0,0.0,0.0,0.0,125.0,0.0,0.0,0.0
+Indian Journal of Plastic Surgery,132,0.0,0.0,57.0,0.0,75.0,0.0,0.0,0.0
+CVIR Endovascular,132,0.0,0.0,96.0,0.0,36.0,0.0,0.0,0.0
+Clinical Practice and Cases in Emergency Medicine,121,0.0,0.0,0.0,0.0,121.0,0.0,0.0,0.0
+Aesthetic Surgery Journal Open Forum,124,0.0,0.0,0.0,0.0,124.0,0.0,0.0,0.0
+The International Journal of Cardiovascular Imaging,132,0.0,4.0,115.0,0.0,17.0,0.0,0.0,3.0
+Journal of Nepal Medical Association,132,0.0,0.0,48.0,0.0,84.0,0.0,0.0,0.0
+BMJ Open Quality,415,0.0,2.0,0.0,0.0,415.0,0.0,0.0,0.5
+The Laryngoscope,123,0.0,1.0,40.0,0.0,83.0,0.0,0.0,0.8
+Health Policy and Planning,133,0.0,0.0,0.0,0.0,133.0,0.0,0.0,0.0
+Epidemiologia e Serviços de Saúde,135,0.0,1.0,27.0,0.0,108.0,0.0,0.0,0.7
+Neuropsychopharmacology Reports,122,0.0,0.0,10.0,0.0,112.0,0.0,0.0,0.0
+Bundesgesundheitsblatt - Gesundheitsforschung - Gesundheitsschutz,135,0.0,2.0,116.0,0.0,19.0,0.0,0.0,1.5
+Qatar medical journal,135,0.0,0.0,0.0,0.0,135.0,0.0,0.0,0.0
+International Journal of Gynecology & Obstetrics,135,0.0,0.0,38.0,0.0,97.0,0.0,0.0,0.0
+Indian journal of radiology and imaging - new series/Indian journal of radiology and imaging/Indian Journal of Radiology & Imaging,135,0.0,2.0,82.0,0.0,53.0,0.0,0.0,1.5
+Future Science OA,147,0.0,0.0,1.0,0.0,146.0,0.0,0.0,0.0
+Journal of Vascular Surgery Cases and Innovative Techniques,335,0.0,0.0,0.0,0.0,335.0,0.0,0.0,0.0
+AJOG Global Reports,169,0.0,0.0,0.0,0.0,169.0,0.0,0.0,0.0
+Archivos de cardiología de México,117,0.0,0.0,1.0,0.0,116.0,0.0,0.0,0.0
+Journal of Genetic Counseling,114,0.0,0.0,17.0,0.0,97.0,0.0,0.0,0.0
+Acute Medicine & Surgery,114,0.0,0.0,13.0,0.0,101.0,0.0,0.0,0.0
+Gynecologic Oncology Reports,287,0.0,0.0,0.0,0.0,287.0,0.0,0.0,0.0
+JACC Case Reports,816,0.0,0.0,1.0,0.0,815.0,0.0,0.0,0.0
+Organic Letters,285,0.0,0.0,0.0,0.0,285.0,0.0,0.0,0.0
+Oncology Research Featuring Preclinical and Clinical Cancer Therapeutics,160,0.0,3.0,0.0,0.0,160.0,0.0,0.0,1.9
+European Heart Journal,160,0.0,4.0,0.0,0.0,160.0,0.0,0.0,2.5
+Bone and Joint Research,113,0.0,1.0,0.0,0.0,113.0,0.0,0.0,0.9
+Regenerative Biomaterials,161,0.0,1.0,0.0,0.0,161.0,0.0,0.0,0.6
+Surgery Open Science,161,0.0,1.0,0.0,0.0,161.0,0.0,0.0,0.6
+Palliative & Supportive Care,113,0.0,0.0,108.0,0.0,5.0,0.0,0.0,0.0
+Annals of Thoracic Surgery Short Reports,277,0.0,1.0,0.0,0.0,277.0,0.0,0.0,0.4
+Endoscopy,887,0.0,0.0,453.0,0.0,434.0,0.0,0.0,0.0
+ACG Case Reports Journal,456,0.0,0.0,1.0,0.0,455.0,0.0,0.0,0.0
+Oxford Medical Case Reports,275,0.0,0.0,0.0,0.0,275.0,0.0,0.0,0.0
+European Heart Journal - Imaging Methods and Practice,164,0.0,3.0,0.0,0.0,164.0,0.0,0.0,1.8
+European Heart Journal - Case Reports,909,0.0,0.0,0.0,0.0,909.0,0.0,0.0,0.0
+Integrative Cancer Therapies,112,0.0,1.0,0.0,0.0,112.0,0.0,0.0,0.9
+Journal of Community Hospital Internal Medicine Perspectives,165,0.0,0.0,0.0,0.0,165.0,0.0,0.0,0.0
+Journal of Pharmaceutical Policy and Practice,165,0.0,1.0,0.0,0.0,165.0,0.0,0.0,0.6
+Health Promotion Journal of Australia,112,0.0,1.0,16.0,0.0,96.0,0.0,0.0,0.9
+JTCVS Open,272,0.0,2.0,0.0,0.0,272.0,0.0,0.0,0.7
+IUCrData,167,0.0,0.0,0.0,0.0,167.0,0.0,0.0,0.0
+Asian Journal of Neurosurgery,167,0.0,0.0,85.0,0.0,82.0,0.0,0.0,0.0
+JACC Asia,111,0.0,2.0,0.0,0.0,111.0,0.0,0.0,1.8
+Journal of Cardiovascular Magnetic Resonance,168,0.0,7.0,1.0,0.0,167.0,0.0,0.0,4.2
+BMJ Open Sport & Exercise Medicine,268,0.0,2.0,0.0,0.0,268.0,0.0,0.0,0.7
+Journal of Advanced Nursing,159,0.0,0.0,40.0,0.0,119.0,0.0,0.0,0.0
+Future Healthcare Journal,114,0.0,1.0,0.0,0.0,114.0,0.0,0.0,0.9
+Annals of Gastroenterological Surgery,114,0.0,0.0,14.0,0.0,100.0,0.0,0.0,0.0
+Pediatric Pulmonology,153,0.0,1.0,23.0,0.0,130.0,0.0,0.0,0.7
+Journal of Experimental Orthopaedics,323,0.0,3.0,20.0,0.0,303.0,0.0,0.0,0.9
+Annals of Cardiac Anaesthesia,117,0.0,0.0,0.0,0.0,117.0,0.0,0.0,0.0
+Indian Journal of Ophthalmology,615,0.0,1.0,0.0,0.0,615.0,0.0,0.0,0.2
+Skin Health and Disease,150,0.0,1.0,16.0,0.0,134.0,0.0,0.0,0.7
+JAAD Case Reports,634,0.0,0.0,0.0,0.0,634.0,0.0,0.0,0.0
+Indian Journal of Nuclear Medicine,117,0.0,0.0,0.0,0.0,117.0,0.0,0.0,0.0
+Circulation Reports,150,0.0,2.0,12.0,0.0,138.0,0.0,0.0,1.3
+Interdisciplinary CardioVascular and Thoracic Surgery,311,0.0,2.0,0.0,0.0,311.0,0.0,0.0,0.6
+Iranian Journal of Nursing and Midwifery Research,151,0.0,0.0,0.0,0.0,151.0,0.0,0.0,0.0
+European Heart Journal Supplements,151,0.0,0.0,0.0,0.0,151.0,0.0,0.0,0.0
+Women s Health Reports,151,0.0,3.0,0.0,0.0,151.0,0.0,0.0,2.0
+JMIR Human Factors,299,0.0,3.0,27.0,0.0,272.0,0.0,0.0,1.0
+Journal of Anaesthesiology Clinical Pharmacology,153,0.0,0.0,0.0,0.0,153.0,0.0,0.0,0.0
+Video Journal of Sports Medicine,114,0.0,0.0,0.0,0.0,114.0,0.0,0.0,0.0
+IJU Case Reports,154,0.0,0.0,12.0,0.0,142.0,0.0,0.0,0.0
+MedEdPORTAL,155,0.0,0.0,0.0,0.0,155.0,0.0,0.0,0.0
+Lung India,156,0.0,0.0,0.0,0.0,156.0,0.0,0.0,0.0
+Research Involvement and Engagement,115,0.0,0.0,89.0,0.0,26.0,0.0,0.0,0.0
+Journal of Orthopaedic Case Reports,740,0.0,0.0,0.0,0.0,740.0,0.0,0.0,0.0
+Western Journal of Emergency Medicine,115,0.0,1.0,0.0,0.0,115.0,0.0,0.0,0.9
+Health SA Gesondheid,157,0.0,1.0,0.0,0.0,157.0,0.0,0.0,0.6
+JTCVS Techniques,289,0.0,0.0,0.0,0.0,289.0,0.0,0.0,0.0
+Medical Journal of the Islamic Republic of Iran,157,0.0,1.0,0.0,0.0,157.0,0.0,0.0,0.6
+BJUI Compass,158,0.0,0.0,17.0,0.0,141.0,0.0,0.0,0.0
+Lupus Science & Medicine,158,0.0,2.0,0.0,0.0,158.0,0.0,0.0,1.3
+Indian Journal of Nephrology,159,0.0,0.0,0.0,0.0,159.0,0.0,0.0,0.0
+Orthopaedic Surgery,387,0.0,2.0,33.0,0.0,354.0,0.0,0.0,0.5

@@ -2,10 +2,31 @@
 Data loading utilities using DuckDB for memory-efficient parquet queries.
 """
 
+import os
+
 import duckdb
 from pathlib import Path
 from typing import Optional, List
 import pandas as pd
+
+
+def _find_duckdb_default(db_name: str = "pmid_registry.duckdb") -> str:
+    """Auto-detect DuckDB path across hosts.
+
+    Search order:
+    1. OSM_DUCKDB_PATH environment variable
+    2. Sibling repo: ../datalad-osm/duckdbs/<db_name> (relative to repo root)
+    3. Curium fallback: /data/adamt/osm/datalad-osm/duckdbs/<db_name>
+    """
+    env = os.environ.get("OSM_DUCKDB_PATH")
+    if env and os.path.exists(env):
+        return env
+    # Relative to scripts/utils/ → repo root → sibling
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    sibling = repo_root.parent / "datalad-osm" / "duckdbs" / db_name
+    if sibling.exists():
+        return str(sibling)
+    return f"/data/adamt/osm/datalad-osm/duckdbs/{db_name}"
 
 
 def load_oddpub_results(oddpub_dir: Path, duckdb_con: Optional[duckdb.DuckDBPyConnection] = None) -> pd.DataFrame:
@@ -419,6 +440,83 @@ def query_funder_works_count_by_name(
     """
     row = con.execute(query, canonical_names).fetchone()
     return int(row[0]) if row else 0
+
+
+def query_journal_open_data_stats(
+    con: duckdb.DuckDBPyConnection,
+    min_articles: int = 0,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
+) -> pd.DataFrame:
+    """
+    Per-journal open data/code stats from the pmids table.
+
+    Returns DataFrame with columns: journal, total_articles,
+    open_data_articles, open_code_articles, pdf_covered, pdf_covered_od,
+    xml_only, xml_only_od
+    """
+    extra_sql, params = _build_filter_clause(
+        date_from, date_to, year_from, year_to, research_only,
+        table_alias="p",
+    )
+
+    query = f"""
+    SELECT
+        p.journal,
+        COUNT(*) AS total_articles,
+        SUM(CASE WHEN p.is_open_data_best = true THEN 1 ELSE 0 END) AS open_data_articles,
+        SUM(CASE WHEN p.is_open_code_best = true THEN 1 ELSE 0 END) AS open_code_articles,
+        SUM(CASE WHEN p.has_oddpub_pdf_v7 = true THEN 1 ELSE 0 END) AS pdf_covered,
+        SUM(CASE WHEN p.has_oddpub_pdf_v7 = true AND p.is_open_data_best = true
+             THEN 1 ELSE 0 END) AS pdf_covered_od,
+        SUM(CASE WHEN p.has_oddpub_xml_v7 = true
+             AND NOT COALESCE(p.has_oddpub_pdf_v7, false) THEN 1 ELSE 0 END) AS xml_only,
+        SUM(CASE WHEN p.has_oddpub_xml_v7 = true
+             AND NOT COALESCE(p.has_oddpub_pdf_v7, false)
+             AND p.is_open_data_xml_v7 = true THEN 1 ELSE 0 END) AS xml_only_od
+    FROM pmids p
+    WHERE p.journal IS NOT NULL
+      AND (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){extra_sql}
+    GROUP BY p.journal
+    HAVING COUNT(*) >= {min_articles}
+    ORDER BY COUNT(*) DESC
+    """
+    return con.execute(query, params).fetchdf()
+
+
+def query_baseline_od_rate(
+    con: duckdb.DuckDBPyConnection,
+    year_from: Optional[int] = None,
+    year_to: Optional[int] = None,
+    date_from: Optional[str] = None,
+    date_to: Optional[str] = None,
+    research_only: bool = False,
+) -> dict:
+    """
+    Compute overall open data rate across all articles matching filters.
+
+    Returns dict with keys: total_articles, open_data_articles, baseline_pct
+    """
+    extra_sql, params = _build_filter_clause(
+        date_from, date_to, year_from, year_to, research_only,
+        table_alias="p",
+    )
+
+    query = f"""
+    SELECT
+        COUNT(*) AS total_articles,
+        SUM(CASE WHEN p.is_open_data_best = true THEN 1 ELSE 0 END) AS open_data_articles
+    FROM pmids p
+    WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){extra_sql}
+    """
+    row = con.execute(query, params).fetchone()
+    total = row[0]
+    od = row[1]
+    pct = round(100.0 * od / total, 1) if total > 0 else 0.0
+    return {"total_articles": total, "open_data_articles": od, "baseline_pct": pct}
 
 
 def aggregate_by_group(df: pd.DataFrame,

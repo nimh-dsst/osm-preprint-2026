@@ -70,6 +70,58 @@ def build_journal_correction_table(
     return result
 
 
+def apply_journal_correction(
+    journal_name: str,
+    xml_only_count: int,
+    observed_od: int,
+    pdf_covered_od: int,
+    journal_corrections: pd.DataFrame,
+    global_fallback: dict,
+) -> dict:
+    """Apply correction factor for a single journal's XML-only articles.
+
+    Simpler than the funder version: each journal corrects itself using its
+    own h2h best_od_rate. Falls back to global average if the journal has
+    insufficient h2h data.
+
+    Args:
+        journal_name: Journal display name (must match correction table)
+        xml_only_count: Number of XML-only articles for this journal
+        observed_od: Total observed open data count (for flooring)
+        pdf_covered_od: Accurate OD count from PDF-covered articles
+        journal_corrections: DataFrame with columns: journal, best_od_rate, ci_lo, ci_hi
+        global_fallback: dict with keys: best_rate, ci_lo, ci_hi
+
+    Returns:
+        dict with keys: corrected_od, ci_lo, ci_hi
+    """
+    if xml_only_count == 0:
+        corrected = max(pdf_covered_od, observed_od)
+        return {"corrected_od": corrected, "ci_lo": corrected, "ci_hi": corrected}
+
+    # Look up this journal in the correction table
+    match = journal_corrections[journal_corrections["journal"] == journal_name]
+    if not match.empty:
+        rate = float(match.iloc[0]["best_od_rate"])
+        lo_rate = float(match.iloc[0]["ci_lo"])
+        hi_rate = float(match.iloc[0]["ci_hi"])
+    else:
+        rate = global_fallback["best_rate"]
+        lo_rate = global_fallback["ci_lo"]
+        hi_rate = global_fallback["ci_hi"]
+
+    est_point = pdf_covered_od + xml_only_count * rate
+    est_lo = pdf_covered_od + xml_only_count * lo_rate
+    est_hi = pdf_covered_od + xml_only_count * hi_rate
+
+    # Floor at observed
+    corrected_od = max(est_point, observed_od)
+    ci_lo = max(est_lo, observed_od)
+    ci_hi = max(est_hi, observed_od)
+
+    return {"corrected_od": corrected_od, "ci_lo": ci_lo, "ci_hi": ci_hi}
+
+
 def apply_funder_correction(
     funder_journal_xml: pd.DataFrame,
     journal_corrections: pd.DataFrame,

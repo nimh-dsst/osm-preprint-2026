@@ -19,9 +19,12 @@ from pathlib import Path
 import duckdb
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from utils.data_loader import _find_duckdb_default
+
 logger = logging.getLogger(__name__)
 
-DEFAULT_DUCKDB = "/data/adamt/osm/datalad-osm/duckdbs/funder_extract.duckdb"
+DEFAULT_DUCKDB = _find_duckdb_default("funder_extract.duckdb")
 DEFAULT_SEED = str(Path(__file__).resolve().parent / "funder_budgets_seed.csv")
 
 

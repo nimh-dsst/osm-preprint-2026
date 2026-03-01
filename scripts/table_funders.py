@@ -28,6 +28,7 @@ from scipy.stats import weibull_min
 # Allow running as `python scripts/table_funders.py` from repo root
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils.data_loader import (
+    _find_duckdb_default,
     connect_duckdb_registry,
     query_funder_open_data_stats,
     query_funder_open_data_for_group,
@@ -889,7 +890,7 @@ def parse_args(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument(
         "--duckdb-path",
-        default="/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb",
+        default=_find_duckdb_default(),
         help="Path to pmid_registry.duckdb",
     )
     p.add_argument(

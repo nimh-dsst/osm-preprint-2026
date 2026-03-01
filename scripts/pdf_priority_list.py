@@ -19,6 +19,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils.data_loader import (
+    _find_duckdb_default,
     connect_duckdb_registry,
     query_journal_correction_factors,
 )
@@ -31,7 +32,7 @@ def parse_args(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument(
         "--duckdb-path",
-        default="/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb",
+        default=_find_duckdb_default(),
     )
     p.add_argument("--date-from", default=None, help="pub_date >= (YYYY-MM-DD)")
     p.add_argument("--date-to", default=None, help="pub_date <= (YYYY-MM-DD)")

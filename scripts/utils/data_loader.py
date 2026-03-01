@@ -2,10 +2,31 @@
 Data loading utilities using DuckDB for memory-efficient parquet queries.
 """
 
+import os
+
 import duckdb
 from pathlib import Path
 from typing import Optional, List
 import pandas as pd
+
+
+def _find_duckdb_default(db_name: str = "pmid_registry.duckdb") -> str:
+    """Auto-detect DuckDB path across hosts.
+
+    Search order:
+    1. OSM_DUCKDB_PATH environment variable
+    2. Sibling repo: ../datalad-osm/duckdbs/<db_name> (relative to repo root)
+    3. Curium fallback: /data/adamt/osm/datalad-osm/duckdbs/<db_name>
+    """
+    env = os.environ.get("OSM_DUCKDB_PATH")
+    if env and os.path.exists(env):
+        return env
+    # Relative to scripts/utils/ → repo root → sibling
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    sibling = repo_root.parent / "datalad-osm" / "duckdbs" / db_name
+    if sibling.exists():
+        return str(sibling)
+    return f"/data/adamt/osm/datalad-osm/duckdbs/{db_name}"
 
 
 def load_oddpub_results(oddpub_dir: Path, duckdb_con: Optional[duckdb.DuckDBPyConnection] = None) -> pd.DataFrame:
@@ -434,7 +455,8 @@ def query_journal_open_data_stats(
     Per-journal open data/code stats from the pmids table.
 
     Returns DataFrame with columns: journal, total_articles,
-    open_data_articles, open_code_articles, pdf_covered, xml_only
+    open_data_articles, open_code_articles, pdf_covered, pdf_covered_od,
+    xml_only, xml_only_od
     """
     extra_sql, params = _build_filter_clause(
         date_from, date_to, year_from, year_to, research_only,
@@ -448,8 +470,13 @@ def query_journal_open_data_stats(
         SUM(CASE WHEN p.is_open_data_best = true THEN 1 ELSE 0 END) AS open_data_articles,
         SUM(CASE WHEN p.is_open_code_best = true THEN 1 ELSE 0 END) AS open_code_articles,
         SUM(CASE WHEN p.has_oddpub_pdf_v7 = true THEN 1 ELSE 0 END) AS pdf_covered,
+        SUM(CASE WHEN p.has_oddpub_pdf_v7 = true AND p.is_open_data_best = true
+             THEN 1 ELSE 0 END) AS pdf_covered_od,
         SUM(CASE WHEN p.has_oddpub_xml_v7 = true
-             AND NOT COALESCE(p.has_oddpub_pdf_v7, false) THEN 1 ELSE 0 END) AS xml_only
+             AND NOT COALESCE(p.has_oddpub_pdf_v7, false) THEN 1 ELSE 0 END) AS xml_only,
+        SUM(CASE WHEN p.has_oddpub_xml_v7 = true
+             AND NOT COALESCE(p.has_oddpub_pdf_v7, false)
+             AND p.is_open_data_xml_v7 = true THEN 1 ELSE 0 END) AS xml_only_od
     FROM pmids p
     WHERE p.journal IS NOT NULL
       AND (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){extra_sql}

@@ -45,7 +45,7 @@ journal-table-2024:
 		--results-dir results/ \
 		--date-from 2024-01-01 --date-to 2025-06-30 \
 		--research-only \
-		--table-survival 0.05 --figure-survival 0.03 \
+		--table-survival 0.05 --figure-survival 0.02 \
 		--output-suffix _2024_2025 \
 		--verbose
 
@@ -59,7 +59,7 @@ journal-table-2024-raw:
 		--results-dir results/ \
 		--date-from 2024-01-01 --date-to 2025-06-30 \
 		--research-only \
-		--table-survival 0.05 --figure-survival 0.03 \
+		--table-survival 0.05 --figure-survival 0.02 \
 		--no-correction \
 		--output-suffix _2024_2025_raw \
 		--verbose

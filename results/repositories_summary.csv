@@ -1,0 +1,35 @@
+repository,type,unique_articles,pct_of_od_articles
+GenBank,Domain-Specific,121742,32.89
+GEO,Domain-Specific,101993,27.56
+NCBI (other),Domain-Specific,76433,20.65
+Protein Data Bank,Domain-Specific,54153,14.63
+TCGA,Domain-Specific,52007,14.05
+GitHub,Code,49512,13.38
+SRA,Domain-Specific,47156,12.74
+EMBL-EBI,Domain-Specific,30554,8.26
+UniProt,Domain-Specific,29542,7.98
+OSF,General-Purpose,17373,4.69
+Zenodo,General-Purpose,16890,4.56
+DDBJ,Domain-Specific,14856,4.01
+figshare,General-Purpose,14620,3.95
+PRIDE,Domain-Specific,12933,3.49
+PubChem,Domain-Specific,12668,3.42
+ArrayExpress,Domain-Specific,9665,2.61
+Dryad,General-Purpose,9251,2.5
+Ensembl,Domain-Specific,6605,1.78
+RefSeq,Domain-Specific,6194,1.67
+KEGG,Domain-Specific,5754,1.55
+CCDC,Domain-Specific,5518,1.49
+Mendeley Data,General-Purpose,5311,1.43
+dbSNP,Domain-Specific,3592,0.97
+dbGaP,Domain-Specific,3538,0.96
+GDC,Domain-Specific,3015,0.81
+Dataverse,General-Purpose,2131,0.58
+ClinVar,Domain-Specific,1745,0.47
+ImmPort,Domain-Specific,1339,0.36
+MetaboLights,Domain-Specific,1147,0.31
+Kaggle,General-Purpose,784,0.21
+Bitbucket,Code,566,0.15
+GitLab,Code,531,0.14
+FlowRepository,Domain-Specific,385,0.1
+MGnify,Domain-Specific,191,0.05

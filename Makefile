@@ -1,6 +1,6 @@
 # Makefile for OSM Preprint 2026
 
-.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 journal-table-2024-raw pdf-priority compare-iterations compile preview-table load-budgets help
+.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 journal-table-2024-raw repo-table pdf-priority compare-iterations compile preview-table load-budgets help
 
 DUCKDB_PATH ?= $(or $(OSM_DUCKDB_PATH),$(wildcard ../datalad-osm/duckdbs/pmid_registry.duckdb),/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb)
 
@@ -8,7 +8,7 @@ DUCKDB_PATH ?= $(or $(OSM_DUCKDB_PATH),$(wildcard ../datalad-osm/duckdbs/pmid_re
 all: tables compile
 
 # Regenerate all LaTeX tables and figures
-tables: funder-table funder-table-2024 journal-table-2024
+tables: funder-table funder-table-2024 journal-table-2024 repo-table
 
 # Funder table, figure, and CSV
 funder-table:
@@ -79,6 +79,18 @@ funder-table-2024-raw:
 		--output-suffix _2024_2025_raw \
 		--verbose
 
+# Repository adoption table (uses oddpub_v7_registry.duckdb)
+ODDPUB_DUCKDB_PATH ?= $(or $(OSM_DUCKDB_PATH),$(wildcard ../datalad-osm/duckdbs/oddpub_v7_registry.duckdb),/data/adamt/osm/datalad-osm/duckdbs/oddpub_v7_registry.duckdb)
+
+repo-table:
+	@echo "Generating repository adoption table..."
+	python scripts/table_repositories.py \
+		--duckdb-path $(ODDPUB_DUCKDB_PATH) \
+		--output-dir latex/tables/ \
+		--figures-dir latex/figures/ \
+		--results-dir results/ \
+		--verbose
+
 # Generate prioritized PDF download list
 pdf-priority:
 	python scripts/pdf_priority_list.py \
@@ -142,6 +154,7 @@ help:
 	@echo "  make journal-table-2024 - Generate journal table, figure, CSV (2024-2025)"
 	@echo "  make journal-table-2024-raw - Journal 2024-2025 without correction factors (comparison)"
 	@echo "  make funder-table-2024-raw - Funder 2024-2025 without correction factors (comparison)"
+	@echo "  make repo-table   - Generate repository adoption table, figure, CSV, and markdown"
 	@echo "  make pdf-priority - Generate prioritized PDF download list"
 	@echo "  make compare-iterations - Cross-iteration funder comparison (CSV, markdown, chart)"
 	@echo "  make preview-table- Generate tables and render PDF locally (tectonic)"

@@ -47,3 +47,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Overleaf publish worktree (see scripts/push_overleaf.sh)
+.overleaf-publish/

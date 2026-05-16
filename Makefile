@@ -1,6 +1,6 @@
 # Makefile for OSM Preprint 2026
 
-.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 journal-table-2024-raw pdf-priority compare-iterations compile preview-table load-budgets help
+.PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 journal-table-2024-raw pdf-priority compare-iterations compile preview-table load-budgets push-overleaf push-all help
 
 DUCKDB_PATH ?= $(or $(OSM_DUCKDB_PATH),$(wildcard ../datalad-osm/duckdbs/pmid_registry.duckdb),/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb)
 
@@ -123,12 +123,16 @@ update-refs:
 	curl -o latex/references.bib https://paperpile.com/eb/ltUsHRxzRF/paperpile.bib
 	@echo "References updated: latex/references.bib"
 
-# Push to both GitHub and Overleaf
-push-all:
-	@echo "Pushing to GitHub and Overleaf..."
-	git push origin main
-	git push overleaf main
-	@echo "Pushed to both remotes"
+# Push flat LaTeX tree to Overleaf (overleaf-publish branch -> overleaf/master)
+push-overleaf:
+	@chmod +x scripts/push_overleaf.sh
+	@./scripts/push_overleaf.sh
+
+# Push current branch to GitHub, then publish LaTeX to Overleaf
+push-all: push-overleaf
+	@echo "Pushing to GitHub (current branch)..."
+	git push origin HEAD
+	@echo "Pushed to GitHub and Overleaf"
 
 # Help target
 help:
@@ -148,5 +152,6 @@ help:
 	@echo "  make compile      - Compile LaTeX to PDF (tectonic + biber 2.17 from venv)"
 	@echo "  make clean        - Remove LaTeX auxiliary files"
 	@echo "  make update-refs  - Download latest references from PaperPile"
-	@echo "  make push-all     - Push to both GitHub and Overleaf"
+	@echo "  make push-overleaf - Sync latex/ to flat overleaf-publish branch and push to Overleaf"
+	@echo "  make push-all     - Push to GitHub (HEAD) and Overleaf (via push-overleaf)"
 	@echo "  make help         - Show this help message"

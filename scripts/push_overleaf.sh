@@ -13,6 +13,8 @@ OVERLEAF_REMOTE="${OVERLEAF_REMOTE:-overleaf}"
 OVERLEAF_BRANCH="${OVERLEAF_BRANCH:-master}"
 WORKTREE_DIR="${OVERLEAF_WORKTREE:-$REPO_ROOT/.overleaf-publish}"
 LATEX_SRC="${OVERLEAF_LATEX_SRC:-$REPO_ROOT/latex}"
+PAPERPILE_URL="${PAPERPILE_URL:-https://paperpile.com/eb/ltUsHRxzRF/paperpile.bib}"
+PAPERPILE_BIB="${PAPERPILE_BIB:-$LATEX_SRC/paperpile.bib}"
 
 if [[ ! -d "$LATEX_SRC" ]]; then
   echo "error: LaTeX source directory not found: $LATEX_SRC" >&2
@@ -60,18 +62,16 @@ for f in main.tex article.tex preamble.tex metadata.tex; do
   cp "$LATEX_SRC/$f" .
 done
 
-# Bibliography: paperpile.bib is required by preamble; references.bib optional
-if [[ -f "$REPO_ROOT/paperpile.bib" ]]; then
-  cp "$REPO_ROOT/paperpile.bib" .
-elif [[ -f "$LATEX_SRC/paperpile.bib" ]]; then
-  cp "$LATEX_SRC/paperpile.bib" .
-else
-  echo "warning: paperpile.bib not found (Overleaf compile may fail until added)" >&2
+# Bibliography: paperpile.bib is required by preamble (\addbibresource{paperpile.bib})
+if [[ "${SKIP_UPDATE_REFS:-}" != "1" ]]; then
+  echo "==> Fetching PaperPile bibliography from $PAPERPILE_URL"
+  curl -fsSL -o "$PAPERPILE_BIB" "$PAPERPILE_URL"
 fi
-
-if [[ -f "$LATEX_SRC/references.bib" ]]; then
-  cp "$LATEX_SRC/references.bib" .
+if [[ ! -f "$PAPERPILE_BIB" ]]; then
+  echo "error: $PAPERPILE_BIB not found (run: make update-refs)" >&2
+  exit 1
 fi
+cp "$PAPERPILE_BIB" .
 
 # Figures and tables
 mkdir -p figures tables

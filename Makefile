@@ -3,6 +3,10 @@
 .PHONY: all clean tables funder-table funder-table-2024 funder-table-2024-raw journal-table-2024 journal-table-2024-raw pdf-priority compare-iterations compile preview-table load-budgets push-overleaf push-all help
 
 DUCKDB_PATH ?= $(or $(OSM_DUCKDB_PATH),$(wildcard ../datalad-osm/duckdbs/pmid_registry.duckdb),/data/adamt/osm/datalad-osm/duckdbs/pmid_registry.duckdb)
+PAPERPILE_URL ?= https://paperpile.com/eb/ltUsHRxzRF/paperpile.bib
+PAPERPILE_BIB ?= latex/paperpile.bib
+OSM_VENV_BIN ?= $(HOME)/proj/osm/venv/bin
+export PATH := $(OSM_VENV_BIN):$(PATH)
 
 # Default target
 all: tables compile
@@ -100,7 +104,7 @@ load-budgets:
 #   tectonic 0.15.0+20251006 (aarch64-apple-darwin) — from GitHub continuous release
 #   biber 2.17 (darwin_universal) — from SourceForge, matches tectonic's bundled biblatex 3.17
 # Brew versions of tectonic and biber have been uninstalled.
-# Requires venv activated (or venv/bin first in PATH) so tectonic finds the matching biber.
+# Uses tectonic + biber from OSM_VENV_BIN (default: ~/proj/osm/venv/bin).
 compile:
 	@echo "Compiling LaTeX to PDF (tectonic)..."
 	cd latex && tectonic main.tex
@@ -117,14 +121,14 @@ clean:
 	@echo "Cleaning LaTeX auxiliary files..."
 	cd latex && rm -f *.aux *.log *.out *.bbl *.blg *.bcf *.run.xml *.synctex.gz *.fls *.fdb_latexmk *.toc *.lof *.lot *.xdv
 
-# Update references from PaperPile
+# Fetch latest bibliography from PaperPile (dynamic export; used by preamble.tex)
 update-refs:
-	@echo "Downloading latest references from PaperPile..."
-	curl -o latex/references.bib https://paperpile.com/eb/ltUsHRxzRF/paperpile.bib
-	@echo "References updated: latex/references.bib"
+	@echo "Downloading latest bibliography from PaperPile..."
+	@curl -fsSL -o $(PAPERPILE_BIB) $(PAPERPILE_URL)
+	@echo "References updated: $(PAPERPILE_BIB)"
 
 # Push flat LaTeX tree to Overleaf (overleaf-publish branch -> overleaf/master)
-push-overleaf:
+push-overleaf: update-refs
 	@chmod +x scripts/push_overleaf.sh
 	@./scripts/push_overleaf.sh
 
@@ -151,7 +155,7 @@ help:
 	@echo "  make preview-table- Generate tables and render PDF locally (tectonic)"
 	@echo "  make compile      - Compile LaTeX to PDF (tectonic + biber 2.17 from venv)"
 	@echo "  make clean        - Remove LaTeX auxiliary files"
-	@echo "  make update-refs  - Download latest references from PaperPile"
+	@echo "  make update-refs  - Download latest paperpile.bib from PaperPile URL"
 	@echo "  make push-overleaf - Sync latex/ to flat overleaf-publish branch and push to Overleaf"
 	@echo "  make push-all     - Push to GitHub (HEAD) and Overleaf (via push-overleaf)"
 	@echo "  make help         - Show this help message"

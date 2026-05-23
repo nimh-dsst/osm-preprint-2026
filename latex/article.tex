@@ -40,7 +40,7 @@ For articles without available PDFs, we used the PMC XML full text as the input 
 
 Funder names reported in OpenAlex were normalized using a curated alias mapping covering 816 funders to aggregate related entities. For example, individual NIH institutes (e.g., NIMH, NIAID, NCI) were aggregated under their parent organization where appropriate, with child institute article counts deduplicated to avoid double-counting. This mapping was adapted from the funder normalization table used in the Open Science Metrics pipeline. OpenAlex works counts were used to filter for established funders, excluding small or niche entities with fewer than \num{100000} aggregated works from the main figures while retaining them in supplementary rankings.
 
-Journal names were taken directly from the OpenAlex \texttt{primary\_location.source.display\_name} field. Institutional affiliations were extracted from the \texttt{authorships} metadata in OpenAlex.
+Journal names were taken directly from the OpenAlex \texttt{primary\_location.source.display\_name} field.
 
 \subsection{Statistical Analysis}
 
@@ -107,18 +107,6 @@ Among the Nature portfolio, open data rates ranged from 86.1\% (Nature Structura
 
 High-volume journals provide insight into data sharing at scale. Scientific Data published \num{2421} articles in our window with a 65.6\% open data rate, consistent with its mission as a dedicated data journal. iScience (\num{3514} articles, 50.8\%), Communications Biology (\num{2503} articles, 47.2\% observed, 60.1\% estimated), and Nature Communications (\num{15129} articles, 45.2\% observed, 55.9\% estimated) demonstrate that moderately high rates are achievable even at very large publication volumes.
 
-\subsection{Variation by Institution}
-
-% TODO: Institution analysis not yet complete. This subsection will be populated
-% when the institution pipeline (scripts/table_institutions.py) is finalized.
-Institutional analysis is in progress and will be reported in a subsequent version of this manuscript. Preliminary results suggest that leading research universities and institutes achieve open data rates substantially above the baseline, consistent with patterns observed in the funder analysis (Table~\ref{tab:institutions}).
-
-\subsection{Repository Adoption Patterns}
-
-% TODO: Repository analysis not yet complete. This subsection will be populated
-% when the repository pipeline is finalized.
-Repository analysis is in progress and will be reported in a subsequent version of this manuscript. Preliminary examination of data sharing statements indicates that domain-specific repositories (e.g., GenBank, Protein Data Bank) and general-purpose repositories (e.g., Zenodo, Dryad, Figshare) both feature prominently (Table~\ref{tab:repositories}).
-
 \subsection{Interactive Data Exploration}
 
 \begin{quote}
@@ -160,7 +148,7 @@ Several limitations should be noted. First, our corpus is restricted to open acc
 
 \subsection{Future Directions}
 
-Future work will increase PDF extraction coverage for the XML-only portion of the current \num{784262}-article corpus, extend the temporal window beyond June 2025, and complete the institution and repository analyses. Longitudinal analysis will enable assessment of whether specific policy changes (e.g., the 2023 NIH Data Management and Sharing Policy) are associated with measurable increases in data sharing rates. We also plan to incorporate repository-level analysis to characterize where shared data are being deposited and whether domain-specific or general-purpose repositories predominate across different research fields. A further open question is the head-to-head performance of contemporary LLM-based detectors against the oddpub regex/keyword pipeline on the binary ``is open data'' task; no such benchmark has yet been published, and the corpus and head-to-head subset described here are well suited to serve as the evaluation substrate.
+Future work will increase PDF extraction coverage for the XML-only portion of the current \num{784262}-article corpus and extend the temporal window beyond June 2025. Longitudinal analysis will enable assessment of whether specific policy changes (e.g., the 2023 NIH Data Management and Sharing Policy) are associated with measurable increases in data sharing rates. Institution-level and data-repository-level analyses are reserved for a follow-up paper, where the substantial methodological work of name normalization (for institutions) and repository-mention extraction (for data repositories) can be treated in the depth they require. A further open question is the head-to-head performance of contemporary LLM-based detectors against the oddpub regex/keyword pipeline on the binary ``is open data'' task; no such benchmark has yet been published, and the corpus and head-to-head subset described here are well suited to serve as the evaluation substrate.
 
 \subsection{Conclusion}
 
@@ -177,7 +165,7 @@ This work utilized the computational resources of the NIH HPC Biowulf cluster (\
 
 \section*{Data Availability}
 
-Full results including all funder, journal, and institutional rankings are available as supplementary CSV files in the project repository. The interactive dashboard at \url{https://www.opensciencemetrics.org} provides dynamic exploration of all results. The oddpub detection pipeline and analysis code will be made available upon publication.
+Full results including all funder and journal rankings are available as supplementary CSV files in the project repository. The interactive dashboard at \url{https://www.opensciencemetrics.org} provides dynamic exploration of all results. The oddpub detection pipeline and analysis code will be made available upon publication.
 
 \section*{Use of Generative AI}
 

@@ -8,6 +8,11 @@ PAPERPILE_BIB ?= latex/paperpile.bib
 OSM_VENV_BIN ?= $(HOME)/proj/osm/venv/bin
 export PATH := $(OSM_VENV_BIN):$(PATH)
 
+# Descriptive name for the committed output PDF. tectonic emits latex/main.pdf
+# (named after the source); we copy it to this name. main.tex stays the source
+# so the Overleaf integration (which expects main.tex) keeps working.
+PDF_NAME ?= who-funds-open-science-2026.pdf
+
 # Default target
 all: tables compile
 
@@ -108,13 +113,15 @@ load-budgets:
 compile:
 	@echo "Compiling LaTeX to PDF (tectonic)..."
 	cd latex && tectonic main.tex
-	@echo "PDF generated: latex/main.pdf"
+	cd latex && cp -f main.pdf $(PDF_NAME)
+	@echo "PDF generated: latex/$(PDF_NAME)"
 
 # Local preview: generate tables then compile
 preview-table: funder-table
 	@echo "Rendering table preview with tectonic..."
 	cd latex && tectonic main.tex
-	@echo "Preview: latex/main.pdf"
+	cd latex && cp -f main.pdf $(PDF_NAME)
+	@echo "Preview: latex/$(PDF_NAME)"
 
 # Clean LaTeX auxiliary files
 clean:

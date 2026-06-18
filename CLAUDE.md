@@ -128,8 +128,14 @@ in `latex/tables/table_funders_2024_2025.tex` (it does **not** parse `.tex`).
   `results/sensitivity_funder_framing.png` (observed-vs-corrected scatter, colored
   by PDF coverage, with y=x identity line). Both are byte-deterministic.
 - **What it measures:** Spearman ρ between observed and corrected rates, the max
-  absolute rank delta and top movers, and the count of funders whose observed and
-  corrected CIs do not overlap, plus the literal A/B/C decision-rule readout.
+  absolute rank delta and top movers, **adjacent-pair separability** (smallest gap
+  between neighbouring corrected rates; how many adjacent pairs have overlapping
+  corrected CIs), and a **±bias-perturbation reorder check** (`--bias-pt`, default
+  1.0pt) — i.e. whether the leaderboard order is robust to the ~1pt
+  representativeness bias, which is #21's stopping-rule input. (The earlier
+  non-overlapping observed-vs-corrected CI count was removed as mechanical — it
+  measured the size of a one-sided floored correction, not ranking sensitivity;
+  see the correction comment on #9.)
 - **Decision:** the team chose **Option B** (expand the PDF corpus to reduce the
   ~1pt representativeness bias; leaderboard order is already stable). Corpus
   expansion is tracked in #21; the deferred ranking-consistency fix is #20.

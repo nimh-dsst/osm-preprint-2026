@@ -24,8 +24,18 @@ For each selected funder it emits:
 and PRINTS:
   - Spearman rho between observed and corrected rates
   - max absolute rank delta + the top movers
-  - count of funders whose observed CI and corrected CI do NOT overlap
-  - the literal decision-rule readout (A / B / C) plus caveats
+  - adjacent-pair separability: the smallest gap between neighboring corrected
+    rates, and how many adjacent leaderboard pairs have OVERLAPPING corrected CIs
+    (i.e. orderings not statistically resolved)
+  - a bias-perturbation check: whether a +/- representativeness-bias shift
+    (--bias-pt, default 1.0pt: the ~0.44pt XML-space / ~1pt best-rate gap from #21)
+    could reorder any adjacent leaderboard pair
+  - a rank-stability readout + the team's Option-B decision
+
+(The earlier "non-overlapping observed-vs-corrected CI count" was removed: it was
+mechanical — corrected is floored at observed with a tight h2h Wilson CI, so it
+measured the size/precision of a one-sided correction, not ranking sensitivity.
+See issue #9's correction comment.)
 
 Outputs (byte-deterministic, no timestamps):
   - results/sensitivity_funder_framing.csv
@@ -243,7 +253,7 @@ def build_diagnostic_table(con, args) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Diagnostics + decision rule
 # ---------------------------------------------------------------------------
-def compute_diagnostics(diag: pd.DataFrame) -> dict:
+def compute_diagnostics(diag: pd.DataFrame, bias_pt: float = 1.0) -> dict:
     rho, pval = spearmanr(diag["observed_rate"], diag["corrected_rate"])
 
     abs_delta = diag["rank_delta"].abs()
@@ -253,30 +263,50 @@ def compute_diagnostics(diag: pd.DataFrame) -> dict:
     )
     top_movers = movers[movers["rank_delta"] != 0].head(5)
 
-    # Non-overlapping CIs: NOT (obs_lo <= corr_hi AND corr_lo <= obs_hi)
-    overlap = (
-        (diag["observed_ci_low"] <= diag["corrected_ci_high"])
-        & (diag["corrected_ci_low"] <= diag["observed_ci_high"])
-    )
-    nonoverlap = diag[~overlap]
-    n_nonoverlap = int(len(nonoverlap))
+    # --- Adjacent-pair separability on the corrected leaderboard -------------
+    # `diag` is already sorted by corrected_rate desc (build_diagnostic_table),
+    # so consecutive rows are neighbouring leaderboard positions.
+    cr = diag["corrected_rate"].to_numpy()
+    clo = diag["corrected_ci_low"].to_numpy()
+    chi = diag["corrected_ci_high"].to_numpy()
+    names = diag["funder_name"].tolist()
 
-    if rho >= 0.95 and n_nonoverlap <= 3:
-        rule_option = "A"
-    elif rho < 0.85 or n_nonoverlap >= 10:
-        rule_option = "B"
+    adj_pairs = []  # (upper_name, lower_name, gap_pt, ci_overlap, within_bias)
+    for i in range(len(diag) - 1):
+        gap = float(cr[i] - cr[i + 1])               # >= 0 by sort order
+        ci_overlap = bool(clo[i] <= chi[i + 1] and clo[i + 1] <= chi[i])
+        within_bias = bool(gap < bias_pt)
+        adj_pairs.append((names[i], names[i + 1], gap, ci_overlap, within_bias))
+
+    n_pairs = len(adj_pairs)
+    min_adjacent_gap = min((p[2] for p in adj_pairs), default=float("nan"))
+    n_ambiguous = sum(1 for p in adj_pairs if p[3])          # overlapping CIs
+    n_within_bias = sum(1 for p in adj_pairs if p[4])        # gap < bias_pt
+    order_robust_to_bias = (n_within_bias == 0)
+
+    # Rank-stability lean (Spearman only; the flawed non-overlap clause is gone).
+    if rho >= 0.95:
+        stability = "STABLE (≈Option A territory: framing barely changes the order)"
+    elif rho < 0.85:
+        stability = "UNSTABLE (≈Option B territory: correction reorders the leaderboard)"
     else:
-        rule_option = "C"
+        stability = "MIXED (≈Option C territory)"
 
     return {
         "rho": float(rho),
         "pval": float(pval),
         "max_delta": max_delta,
         "top_movers": top_movers,
-        "n_nonoverlap": n_nonoverlap,
-        "nonoverlap": nonoverlap,
-        "rule_option": rule_option,
         "n_funders": int(len(diag)),
+        "n_pairs": n_pairs,
+        "min_adjacent_gap": min_adjacent_gap,
+        "n_ambiguous": n_ambiguous,
+        "ambiguous_pairs": [p for p in adj_pairs if p[3]],
+        "bias_pt": float(bias_pt),
+        "n_within_bias": n_within_bias,
+        "within_bias_pairs": [p for p in adj_pairs if p[4]],
+        "order_robust_to_bias": order_robust_to_bias,
+        "stability": stability,
     }
 
 
@@ -286,10 +316,9 @@ def print_diagnostics(d: dict) -> None:
     print(line)
     print("FUNDER FRAMING SENSITIVITY DIAGNOSTIC (2024-2025 research-only)")
     print(line)
-    print(f"Funders on leaderboard:           {d['n_funders']}")
+    print(f"Funders on leaderboard:            {d['n_funders']}")
     print(f"Spearman rho (observed~corrected): {d['rho']:.4f}  (p={d['pval']:.2e})")
-    print(f"Max absolute rank delta:          {d['max_delta']}")
-    print(f"Funders with non-overlapping CIs: {d['n_nonoverlap']}")
+    print(f"Max absolute rank delta:           {d['max_delta']}")
     print()
     print("Top movers (largest |rank_delta|):")
     if d["top_movers"].empty:
@@ -302,30 +331,38 @@ def print_diagnostics(d: dict) -> None:
                 f"(delta {int(r['rank_delta']):+d})"
             )
     print()
-    if not d["nonoverlap"].empty:
-        print("Funders with non-overlapping observed/corrected CIs:")
-        for _, r in d["nonoverlap"].iterrows():
-            print(
-                f"  {r['funder_name']:<55} "
-                f"obs {r['observed_rate']:.1f}% "
-                f"[{r['observed_ci_low']:.1f}-{r['observed_ci_high']:.1f}]  "
-                f"corr {r['corrected_rate']:.1f}% "
-                f"[{r['corrected_ci_low']:.1f}-{r['corrected_ci_high']:.1f}]"
-            )
-        print()
     print(line)
-    print("DECISION RULE READOUT")
+    print("ADJACENT-PAIR SEPARABILITY (does the leaderboard ORDER hold up?)")
     print(line)
-    print("  rho>=0.95 & nonoverlap<=3  -> A (observed-primary; framing barely matters)")
-    print("  rho<0.85  | nonoverlap>=10 -> B (correction does real work; defend it)")
-    print("  otherwise                  -> C (hybrid; narrative chooses per claim)")
-    print(f"  => mechanical rule output: OPTION {d['rule_option']}")
+    gap = d["min_adjacent_gap"]
+    gap_str = "n/a" if gap != gap else f"{gap:.2f}pt"  # NaN-safe
+    print(f"  Smallest gap between neighbouring corrected rates: {gap_str}")
+    print(f"  Adjacent pairs with OVERLAPPING corrected CIs:     {d['n_ambiguous']}/{d['n_pairs']}")
+    if d["ambiguous_pairs"]:
+        print("  Ambiguous (statistically unresolved) orderings:")
+        for up, lo, g, _ovl, _wb in d["ambiguous_pairs"][:8]:
+            print(f"    {_short_name(up, 34):<34} >? {_short_name(lo, 34):<34} (gap {g:.2f}pt)")
+    print()
     print(line)
-    print("CAVEAT: the non-overlap count is largely MECHANICAL. The corrected")
-    print("estimate is floored at the observed count and its CI is the tight h2h")
-    print("Wilson interval, so corrected CIs sit at/above observed and frequently")
-    print("fail to overlap by construction — this inflates the non-overlap count")
-    print("and should NOT be read as strong evidence on its own.")
+    print(f"BIAS-PERTURBATION CHECK (representativeness bias = +/-{d['bias_pt']:.2f}pt)")
+    print(line)
+    print(f"  Adjacent pairs a +/-{d['bias_pt']:.2f}pt shift could reorder (gap < bias): "
+          f"{d['n_within_bias']}/{d['n_pairs']}")
+    if d["within_bias_pairs"]:
+        for up, lo, g, _ovl, _wb in d["within_bias_pairs"][:8]:
+            print(f"    {_short_name(up, 34):<34} >? {_short_name(lo, 34):<34} (gap {g:.2f}pt)")
+    print(f"  => leaderboard ORDER robust to a +/-{d['bias_pt']:.2f}pt bias: "
+          f"{'YES' if d['order_robust_to_bias'] else 'NO'}")
+    print("  (This is exactly #21's stopping-rule input: stop expanding the PDF")
+    print("   corpus once the worst-case bias perturbation is below the smallest")
+    print("   claimed rank gap, i.e. order is robust.)")
+    print()
+    print(line)
+    print("RANK-STABILITY READOUT")
+    print(line)
+    print(f"  Spearman rho = {d['rho']:.4f}  =>  {d['stability']}")
+    print("  (Decision rests on rank stability only; the old non-overlapping-CI")
+    print("   criterion was removed as mechanical — see issue #9 correction.)")
     print()
     print("TEAM DECISION: Option B. The leaderboard ORDER is already stable")
     print("(high Spearman rho), so no ranking is being rescued. Option B is chosen")
@@ -382,7 +419,7 @@ def make_scatter(diag: pd.DataFrame, d: dict, output_path: Path) -> None:
     ax.set_title(
         "Funder open-data rates: observed vs corrected (2024-2025)\n"
         rf"Spearman $\rho$={d['rho']:.3f}  |  max rank $\Delta$={d['max_delta']}  |  "
-        rf"non-overlapping CIs={d['n_nonoverlap']}/{d['n_funders']}",
+        rf"ambiguous adj. pairs={d['n_ambiguous']}/{d['n_pairs']}",
         fontsize=11,
     )
     ax.legend(loc="lower right", fontsize=8, framealpha=0.9)
@@ -424,6 +461,10 @@ def parse_args(argv=None):
                    help="Min head-to-head articles for journal correction")
     p.add_argument("--min-articles", type=int, default=100,
                    help="Min funded articles to include a funder")
+    p.add_argument("--bias-pt", type=float, default=1.0,
+                   help="Representativeness-bias magnitude (pt) for the "
+                        "perturbation/reorder check; default 1.0 (the ~0.44pt "
+                        "XML-space / ~1pt best-rate gap from #21)")
     p.add_argument("--output-prefix", default="sensitivity_funder_framing",
                    help="Output filename prefix (CSV + PNG)")
     p.add_argument("--verbose", action="store_true")
@@ -465,7 +506,7 @@ def main(argv=None):
     diag[col_order].to_csv(csv_path, index=False)
     logger.info("Wrote CSV: %s (%d rows)", csv_path, len(diag))
 
-    d = compute_diagnostics(diag)
+    d = compute_diagnostics(diag, bias_pt=args.bias_pt)
     make_scatter(diag, d, png_path)
     print_diagnostics(d)
 

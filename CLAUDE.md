@@ -67,6 +67,7 @@ osm-preprint-2026/
 ├── scripts/
 │   ├── table_funders.py            # Funder table pipeline (with correction factors)
 │   ├── table_journals.py           # Journal table pipeline (with correction factors)
+│   ├── sensitivity_funder_framing.py # Observed vs corrected funder-ranking diagnostic
 │   ├── pdf_priority_list.py        # Prioritized XML-only PMIDs for PDF download
 │   ├── load_funder_budgets.py      # Load funder budget data into DuckDB
 │   ├── compare_iterations.py       # Cross-iteration funder comparison
@@ -102,6 +103,36 @@ python scripts/generate_all_tables.py \
     --results-dir results/ \
     --force
 ```
+
+### Funder Framing Sensitivity Diagnostic
+
+```bash
+# Compare observed vs correction-adjusted funder rankings (2024-2025 research-only)
+~/proj/osm/venv/bin/python scripts/sensitivity_funder_framing.py --verbose
+```
+
+`scripts/sensitivity_funder_framing.py` is a read-only diagnostic for the T5
+funder-framing decision (GitHub #9). It **reuses** the production funder pipeline
+(`FunderNormalizer`, `build_funder_summary`, the DuckDB `query_*` helpers, and
+`build_journal_correction_table`) with the same defaults as `make
+funder-table-2024`, so it reconstructs the exact ~34-funder 2024-2025 leaderboard
+in `latex/tables/table_funders_2024_2025.tex` (it does **not** parse `.tex`).
+
+- **Inputs:** the 2024-2025 funder pipeline output (DuckDB registry; date range
+  2024-01-01..2025-06-30, research-only, Weibull survival 0.05, min works 50000,
+  min h2h 50). Requires the DuckDB content — if the annex pointer is unresolved,
+  run `cd ../datalad-osm && datalad get duckdbs/pmid_registry.duckdb` first (the
+  script exits non-zero with this hint).
+- **Outputs:** `results/sensitivity_funder_framing.csv` (per-funder observed vs
+  corrected rates, Wilson CIs, dense ranks, rank delta) and
+  `results/sensitivity_funder_framing.png` (observed-vs-corrected scatter, colored
+  by PDF coverage, with y=x identity line). Both are byte-deterministic.
+- **What it measures:** Spearman ρ between observed and corrected rates, the max
+  absolute rank delta and top movers, and the count of funders whose observed and
+  corrected CIs do not overlap, plus the literal A/B/C decision-rule readout.
+- **Decision:** the team chose **Option B** (expand the PDF corpus to reduce the
+  ~1pt representativeness bias; leaderboard order is already stable). Corpus
+  expansion is tracked in #21; the deferred ranking-consistency fix is #20.
 
 ### Compile LaTeX
 

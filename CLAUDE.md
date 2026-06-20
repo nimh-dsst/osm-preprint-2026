@@ -250,7 +250,7 @@ make tables
 
 # 4. Compile and verify
 make compile
-evince latex/main.pdf
+evince latex/who-funds-open-science-2026.pdf
 
 # 5. Commit and push
 git add latex/tables/ latex/figures/ results/ latex/metadata.tex

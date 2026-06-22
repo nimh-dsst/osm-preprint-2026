@@ -364,7 +364,9 @@ def build_funder_summary(
     For unaliased funders, uses the bulk_stats DataFrame.
 
     If journal_corrections is provided, computes corrected open data rates
-    and 95% CIs for each funder based on journal-level PDF detection rates.
+    and 95% imputation intervals for each funder based on journal-level PDF
+    detection rates. The interval reflects uncertainty in the XML-only
+    correction only; observed rates are census-exact and carry no interval.
     """
     apply_correction = journal_corrections is not None
     rows = []
@@ -496,12 +498,17 @@ def build_funder_summary(
 def _correction_fields(corr: dict, total: int) -> dict:
     """Convert correction dict to row fields with percentages."""
     if total == 0:
-        return {"corrected_od": 0, "corrected_pct": 0.0, "ci_lo_pct": 0.0, "ci_hi_pct": 0.0}
+        return {"corrected_od": 0, "corrected_pct": 0.0, "ci_lo_pct": None, "ci_hi_pct": None}
+    # ci_lo/ci_hi are None when no imputation interval applies (no XML-only
+    # articles, or the band floored to a point); carry that through as None. #24
+    ci_lo, ci_hi = corr["ci_lo"], corr["ci_hi"]
+    # CI percentages kept at full precision in the CSV so real-but-narrow
+    # imputation intervals stay distinct (display rounds to 1 dp). #24
     return {
         "corrected_od": corr["corrected_od"],
         "corrected_pct": round(100.0 * corr["corrected_od"] / total, 1),
-        "ci_lo_pct": round(100.0 * corr["ci_lo"] / total, 1),
-        "ci_hi_pct": round(100.0 * corr["ci_hi"] / total, 1),
+        "ci_lo_pct": None if ci_lo is None else round(100.0 * ci_lo / total, 6),
+        "ci_hi_pct": None if ci_hi is None else round(100.0 * ci_hi / total, 6),
     }
 
 
@@ -744,11 +751,16 @@ def generate_funder_bar_chart(
         # Error whiskers
         ax.errorbar(
             corrected, range(n_funders),
-            xerr=[corrected - ci_lo, ci_hi - corrected],
+            # clamp ≥0: ci_*_pct are full precision while corrected is 1 dp, so
+            # rounding can make a difference marginally negative. NaN whiskers
+            # (no imputation interval) are skipped by matplotlib. #24
+            xerr=[np.clip(corrected - ci_lo, 0, None), np.clip(ci_hi - corrected, 0, None)],
             fmt="none", ecolor="black", elinewidth=0.8, capsize=2, capthick=0.8,
         )
 
-        max_val = ci_hi.max()
+        # ci_hi is NaN where no imputation interval applies; ignore those when
+        # sizing the axis. #24
+        max_val = np.nanmax(np.concatenate([ci_hi, corrected, observed]))
 
         # Value labels: "observed% (est. corrected%)"
         for i, (obs_v, corr_v) in enumerate(zip(observed, corrected)):
@@ -844,7 +856,7 @@ def save_summary_markdown(
 
     if has_correction:
         lines.append(
-            "| Rank | Funder | Country | Total Pubs | Open Data | % OD (obs.) | % OD (est.) | 95% CI | OpenAlex |"
+            "| Rank | Funder | Country | Total Pubs | Open Data | % OD (obs.) | % OD (est.) | 95% Imp. Interval | OpenAlex |"
         )
         lines.append(
             "|---:|---|---|---:|---:|---:|---:|---|---|"
@@ -872,7 +884,17 @@ def save_summary_markdown(
 
         if has_correction:
             corr_pct = f"{row['corrected_pct']:.1f}%"
-            ci = f"{row['ci_lo_pct']:.1f}–{row['ci_hi_pct']:.1f}%"
+            # Three display states (#24):
+            #   None            -> correction did nothing (no XML-only / floored)
+            #   width < 0.1pp    -> real interval narrower than display precision
+            #   width >= 0.1pp   -> normal interval
+            lo_p, hi_p = row["ci_lo_pct"], row["ci_hi_pct"]
+            if pd.isna(lo_p) or pd.isna(hi_p):
+                ci = "—"
+            elif round(lo_p, 1) == round(hi_p, 1):
+                ci = f"{row['corrected_pct']:.1f}%"
+            else:
+                ci = f"{lo_p:.1f}–{hi_p:.1f}%"
             lines.append(
                 f"| {rank} | {name} | {country} | {total} | {od} | {pct} | {corr_pct} | {ci} | {openalex} |"
             )

@@ -106,11 +106,15 @@ def generate_journal_bar_chart(
         # Error whiskers
         ax.errorbar(
             corrected, range(n_journals),
-            xerr=[corrected - ci_lo, ci_hi - corrected],
+            # clamp ≥0: ci_*_pct are full precision while corrected is 1 dp, so
+            # rounding can make a difference marginally negative. NaN whiskers
+            # (no imputation interval) are skipped by matplotlib. #24
+            xerr=[np.clip(corrected - ci_lo, 0, None), np.clip(ci_hi - corrected, 0, None)],
             fmt="none", ecolor="black", elinewidth=0.8, capsize=2, capthick=0.8,
         )
 
-        max_val = ci_hi.max()
+        # ci_hi is NaN where no imputation interval applies; ignore those. #24
+        max_val = np.nanmax(np.concatenate([ci_hi, corrected, observed]))
 
         # Value labels: "observed% (est. corrected%)"
         for i, (obs_v, corr_v) in enumerate(zip(observed, corrected)):
@@ -344,7 +348,7 @@ def save_summary_markdown(
 
     if has_correction:
         lines.append(
-            "| Rank | Journal | Total Pubs | Open Data | % OD (obs.) | % OD (est.) | 95% CI |"
+            "| Rank | Journal | Total Pubs | Open Data | % OD (obs.) | % OD (est.) | 95% Imp. Interval |"
         )
         lines.append(
             "|---:|---|---:|---:|---:|---:|---|"
@@ -364,7 +368,16 @@ def save_summary_markdown(
         pct = f"{row['open_data_pct']:.1f}%"
         if has_correction:
             corr_pct = f"{row['corrected_pct']:.1f}%"
-            ci = f"{row['ci_lo_pct']:.1f}–{row['ci_hi_pct']:.1f}%"
+            # Three display states (#24): None -> correction did nothing;
+            # width < 0.1pp -> real interval narrower than display precision
+            # (show point); width >= 0.1pp -> normal interval.
+            lo_p, hi_p = row["ci_lo_pct"], row["ci_hi_pct"]
+            if pd.isna(lo_p) or pd.isna(hi_p):
+                ci = "—"
+            elif round(lo_p, 1) == round(hi_p, 1):
+                ci = f"{row['corrected_pct']:.1f}%"
+            else:
+                ci = f"{lo_p:.1f}–{hi_p:.1f}%"
             lines.append(f"| {rank} | {name} | {total} | {od} | {pct} | {corr_pct} | {ci} |")
         else:
             lines.append(f"| {rank} | {name} | {total} | {od} | {pct} |")
@@ -505,12 +518,14 @@ def main(argv=None):
         journal_stats["corrected_pct"] = (
             100.0 * journal_stats["corrected_od"] / journal_stats["total_articles"]
         ).round(1)
+        # Full precision in the CSV so real-but-narrow imputation intervals
+        # stay distinct (display rounds to 1 dp). #24
         journal_stats["ci_lo_pct"] = (
             100.0 * journal_stats["ci_lo"] / journal_stats["total_articles"]
-        ).round(1)
+        ).round(6)
         journal_stats["ci_hi_pct"] = (
             100.0 * journal_stats["ci_hi"] / journal_stats["total_articles"]
-        ).round(1)
+        ).round(6)
 
         logger.info("  Correction factors applied to %d journals", len(journal_stats))
 

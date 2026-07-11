@@ -91,6 +91,11 @@ def get_color_bwr(value: float, min_val: float, max_val: float,
         normalized = 0.5
     else:
         normalized = (value - min_val) / (max_val - min_val)
+    # Clamp: callers may anchor the range on one column (e.g. observed rates)
+    # while shading values from another column (corrected) that can fall
+    # outside [min_val, max_val]. Without this, an out-of-range value produces
+    # a negative rgb channel and breaks LaTeX compilation. (#20)
+    normalized = min(1.0, max(0.0, normalized))
 
     # Map to color: 0 = blue, 0.5 = white, 1 = red
     if normalized < 0.5:

@@ -42,6 +42,21 @@ from utils.correction import (
 )
 from table_funders import compute_weibull_threshold
 
+# OpenAlex source display names that are not real journals: records lacking a
+# genuine journal source are sometimes assigned an aggregator/index name. These
+# are excluded from the journal analysis. Matched case-insensitively and exactly
+# against primary_location.source.display_name. (#33, review #7)
+NON_JOURNAL_SOURCES = {
+    "pubmed",
+    "pubmed central",
+    "europe pmc",
+    "biorxiv",
+    "medrxiv",
+    "research square",
+    "ssrn",
+    "arxiv",
+}
+
 logger = logging.getLogger(__name__)
 
 
@@ -469,6 +484,13 @@ def main(argv=None):
         con, min_articles=args.min_articles, **filter_kwargs,
     )
     logger.info("  %d journals with >= %d articles", len(journal_stats), args.min_articles)
+
+    # Drop non-journal source artifacts (e.g. the "PubMed" pseudo-journal). #33
+    _excl_mask = journal_stats["journal"].astype(str).str.strip().str.lower().isin(NON_JOURNAL_SOURCES)
+    if _excl_mask.any():
+        dropped = journal_stats.loc[_excl_mask, "journal"].tolist()
+        journal_stats = journal_stats[~_excl_mask].reset_index(drop=True)
+        logger.info("  Excluded %d non-journal source(s): %s", len(dropped), ", ".join(map(str, dropped)))
 
     # Compute baseline OD rate
     baseline = query_baseline_od_rate(con, **filter_kwargs)

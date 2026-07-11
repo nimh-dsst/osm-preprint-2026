@@ -64,7 +64,7 @@ Because this analysis is a census of all articles meeting our inclusion criteria
 
 \subsubsection{Figure Inclusion Thresholds}
 
-To focus figures on well-powered entities, we applied Weibull-derived survival thresholds to determine the minimum article count for inclusion. Funders required at least \num{2586} funded articles and \num{100000} aggregated OpenAlex works for the main figure; journals required at least \num{1832} articles. These thresholds were selected to retain entities above the inflection point of the Weibull survival distribution fitted to entity-level article counts, ensuring that displayed rates are based on sufficient sample sizes. All entities above the minimum analysis threshold (100 articles for funders) are included in the supplementary tables.
+To focus figures on well-powered entities, we applied Weibull-derived survival thresholds to determine the minimum article count for inclusion. Funders required at least \num{2586} funded articles and \num{100000} aggregated OpenAlex works for the main figure; journals required at least \num{1832} articles. These thresholds correspond to fixed survival quantiles (the article count at which the fitted Weibull survival function equals the stated percentage) of a Weibull distribution fitted to entity-level article counts, ensuring that displayed rates are based on sufficient sample sizes. All entities above the minimum analysis threshold (100 articles for funders) are included in the supplementary tables.
 
 
 \section{Results}
@@ -75,7 +75,7 @@ Across our corpus of \num{784262} open access biomedical research articles publi
 
 \subsection{Variation by Funder}
 
-Open data rates varied substantially across the 816 funders analyzed (Table~\ref{tab:funders}, Figure~\ref{fig:funders}). The top-ranked funders achieved observed rates three to six times higher than the 16.6\% funded-article baseline.
+Open data rates varied substantially across the 816 funders analyzed, and which funders lead depends on how the set is filtered. We therefore distinguish two strata. Among the \emph{major world funders} that account for the bulk of global research output---those exceeding both the Weibull article-count threshold and \num{100000} aggregated OpenAlex works, shown in Figure~\ref{fig:funders}---the leaders reached roughly 1.5 times the 16.6\% funded-article baseline. Among \emph{all} 816 funders meeting the minimum analysis threshold (Table~\ref{tab:funders}), the highest per-article rates were instead achieved by smaller, specialized research organizations, reaching more than three times the baseline. Funder size and per-article open data rate are thus largely decoupled---a point we return to in the Discussion---so we describe each stratum in turn.
 
 \begin{figure}[htbp]
 \centering
@@ -84,7 +84,9 @@ Open data rates varied substantially across the 816 funders analyzed (Table~\ref
 \label{fig:funders}
 \end{figure}
 
-Swedish research organizations led the rankings: the Uppsala Multidisciplinary Center for Advanced Computational Science (UPPMAX) achieved the highest observed rate at 52.7\% (59 of 112 articles), followed by the Science for Life Laboratory (SciLifeLab) at 49.1\% (108 of 220 articles). Both organizations are closely affiliated with Sweden's national bioinformatics infrastructure, where data sharing is deeply embedded in research workflows.
+Among the major world funders shown in Figure~\ref{fig:funders}, the Agence Nationale de la Recherche (France) led at 26.1\% observed, followed by the U.S.\ National Science Foundation (24.7\%), the Wellcome Trust (24.1\%), the Swiss National Science Foundation (23.4\%), and the Deutsche Forschungsgemeinschaft (21.6\%). The U.S.\ National Institutes of Health---by far the largest funder in the corpus (\num{28982} funded articles)---reached 20.5\%, and UK Research and Innovation 19.4\%. Every major funder in this stratum exceeded the 16.6\% funded-article baseline, but none approached the rates of the smaller, specialized organizations described next: the largest funders are not the highest per-article performers.
+
+Across the full set of 816 funders (Table~\ref{tab:funders}), the highest observed rates were concentrated among smaller, mission-focused research organizations. Swedish organizations led these rankings: the Uppsala Multidisciplinary Center for Advanced Computational Science (UPPMAX) achieved the highest observed rate at 52.7\% (59 of 112 articles), followed by the Science for Life Laboratory (SciLifeLab) at 49.1\% (108 of 220 articles). Both organizations are closely affiliated with Sweden's national bioinformatics infrastructure, where data sharing is deeply embedded in research workflows.
 
 European research organizations were prominently represented among the top performers. The European Molecular Biology Laboratory (EMBL) achieved 46.7\% (57 of 122 articles), the Francis Crick Institute 40.1\% (73 of 182), and the European Molecular Biology Organization (EMBO) 36.7\% (106 of 289). German funders including the Deutsches Krebsforschungszentrum (38.7\%), the Leibniz Association (33.8\%), and the Max Planck Society (30.6\%, 293 of 958 articles) all substantially exceeded the baseline. French funders including the Fondation ARC pour la Recherche sur le Cancer (37.9\%), the European Synchrotron Radiation Facility (37.8\%), and INRAE (35.7\%) showed a similar pattern.
 

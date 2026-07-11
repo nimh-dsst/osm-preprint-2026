@@ -50,3 +50,6 @@ Thumbs.db
 
 # Overleaf publish worktree (see scripts/push_overleaf.sh)
 .overleaf-publish/
+
+# Local Claude Code settings (not shared)
+.claude/settings.json

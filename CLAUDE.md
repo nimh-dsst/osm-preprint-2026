@@ -18,8 +18,9 @@ LaTeX preprint manuscript analyzing open data sharing trends across ~326,000 bio
 3. Internal review and revisions
 
 **📊 Branch Strategy:**
-- `main` — Default development branch
-- `journal_fig` — Journal figure/correction factor work (active)
+- `develop` — Default development branch and base for pull requests
+- `main` — Present but not the working branch (`develop` is the default)
+- Feature work happens on short-lived `claude/*` branches, merged into `develop` via PR
 
 ## Path Variables
 
@@ -36,7 +37,7 @@ DATA_DIR="/data/adamt/osm/datafiles"
 
 **MacBook Air:**
 ```bash
-REPO_ROOT="/Users/adamt/proj/osm/brnch_journalFig"
+REPO_ROOT="/Users/adamt/proj/osm/osm-preprint-2026"
 VENV="~/proj/osm/venv"  # shared venv with tectonic + biber in bin/
 ```
 

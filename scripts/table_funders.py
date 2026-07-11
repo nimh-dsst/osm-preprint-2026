@@ -554,8 +554,14 @@ def generate_funder_latex_table(
     n_total_funders: int = 0,
     survival_pct: float = 1.0,
     label_suffix: str = "",
+    min_works: int = 0,
 ) -> None:
-    """Write a longtable .tex file for funders above the threshold."""
+    """Write a longtable .tex file for funders above the threshold.
+
+    ``threshold`` and ``min_works`` describe the inclusion criteria for the
+    caption; ``df`` is expected to already be filtered to those criteria, so the
+    row filter below is idempotent. (#31)
+    """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
     top.sort_values("open_data_pct", ascending=False, inplace=True)
 
@@ -591,12 +597,19 @@ def generate_funder_latex_table(
 
     # Caption with methodology note
     surv_str = f"{survival_pct:g}"
+    # Inclusion-criteria clause (#31): article-count survival threshold plus the
+    # aggregated-works filter when one is applied. Uses the real thresholds
+    # passed in, not the hardcoded 0 that produced the earlier "≥0 articles".
+    works_clause = rf" and {min_works:,} aggregated OpenAlex works" if min_works > 0 else ""
+    incl_clause = (
+        rf"Funders exceeding {'both ' if min_works > 0 else ''}the Weibull-derived "
+        rf"{surv_str}\% survival threshold for total funded articles "
+        rf"($\geq${threshold:,} articles with oddpub v7 coverage){works_clause}"
+    )
     if has_correction:
         caption = (
             r"Open data rates among major biomedical research funders. "
-            rf"Funders exceeding the Weibull-derived {surv_str}\% survival threshold "
-            rf"for total funded articles ($\geq${threshold:,} articles with "
-            r"oddpub v7 coverage), ranked by observed open data rate. "
+            rf"{incl_clause}, ranked by observed open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
             r"with deduplicated article counts. "
             r"\textbf{\% OD (obs.)} is the headline rate: the directly measured "
@@ -615,9 +628,7 @@ def generate_funder_latex_table(
     else:
         caption = (
             r"Open data rates among major biomedical research funders. "
-            rf"Funders exceeding the Weibull-derived {surv_str}\% survival threshold "
-            rf"for total funded articles ($\geq${threshold:,} articles with "
-            r"oddpub v7 coverage), ranked by open data rate. "
+            rf"{incl_clause}, ranked by open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
             r"with deduplicated article counts. "
             r"Cell shading: Total Pubs uses a blue-to-red gradient on log scale; "
@@ -1130,10 +1141,11 @@ def main(argv=None):
 
     generate_funder_latex_table(
         tbl_df, table_path,
-        threshold=0,
+        threshold=tbl_threshold,
         n_total_funders=len(summary),
         survival_pct=args.table_survival * 100,
         label_suffix=sfx,
+        min_works=min_works_tbl,
     )
     generate_funder_bar_chart(
         fig_df, figure_path,

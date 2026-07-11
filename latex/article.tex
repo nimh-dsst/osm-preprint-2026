@@ -64,7 +64,7 @@ Because this analysis is a census of all articles meeting our inclusion criteria
 
 \subsubsection{Figure Inclusion Thresholds}
 
-To focus figures on well-powered entities, we applied Weibull-derived survival thresholds to determine the minimum article count for inclusion. Funders required at least \num{2586} funded articles and \num{100000} aggregated OpenAlex works for the main figure; journals required at least \num{1832} articles. These thresholds correspond to fixed survival quantiles (the article count at which the fitted Weibull survival function equals the stated percentage) of a Weibull distribution fitted to entity-level article counts, ensuring that displayed rates are based on sufficient sample sizes. All entities above the minimum analysis threshold (100 articles for funders) are included in the supplementary tables.
+To focus figures on well-powered entities, we applied Weibull-derived survival thresholds to entity-level article counts. A threshold is the article count at which the survival function of a Weibull distribution fitted to those counts equals a stated percentage; a lower survival percentage yields a higher article-count cutoff. For the main figures we used the 3\% survival quantile for funders (at least \num{2586} funded articles) and the 2\% survival quantile for journals (at least \num{4262} articles); funders additionally required \num{100000} aggregated OpenAlex works to exclude small or niche entities. The supplementary tables use a more permissive 5\% survival quantile---at least \num{1593} funded articles (with a \num{50000}-works minimum) for funders, and at least \num{1815} articles for journals. All entities above the minimum analysis threshold of 100 articles appear in the full supplementary rankings.
 
 
 \section{Results}
@@ -80,7 +80,7 @@ Open data rates varied substantially across the 816 funders analyzed, and which 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/funders_open_data_2024_2025.png}
-\caption{Open data rates among major biomedical research funders (2024--2025 research articles). Bar length shows the observed open data rate (full opacity) and the estimated corrected rate (lighter shade) after applying journal-level PDF vs.\ XML correction factors. Error bars indicate the 95\% imputation interval on the corrected estimate (uncertainty in the XML-only coverage correction, not sampling uncertainty of the observed rate); entities where the correction does nothing carry no interval. Bar color encodes total funded article count on a log scale (yellow = fewer, red = more). Dashed line shows the funded-article baseline. Only funders exceeding both the Weibull-derived 3\% survival article-count threshold and 100{,}000 aggregated OpenAlex works are shown.}
+\caption{Open data rates among major biomedical research funders (2024--2025 research articles). Bar length shows the observed open data rate (full opacity) and the estimated corrected rate (lighter shade) after applying journal-level PDF vs.\ XML correction factors. Error bars indicate the 95\% imputation interval on the corrected estimate (uncertainty in the XML-only coverage correction, not sampling uncertainty of the observed rate); entities where the correction does nothing carry no interval. Bar color encodes total funded article count on a log scale (yellow = fewer, red = more). Dashed line shows the funded-article baseline. Only funders exceeding both the Weibull-derived 3\% survival article-count threshold ($\geq$\num{2586} articles) and \num{100000} aggregated OpenAlex works are shown.}
 \label{fig:funders}
 \end{figure}
 
@@ -101,7 +101,7 @@ Journal-level open data rates showed even greater variation than funder rates, s
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/journals_open_data_2024_2025.png}
-\caption{Open data rates among top biomedical journals (2024--2025 research articles). Solid bars show the observed open data rate; lighter background bars show the estimated (corrected) rate after applying journal-level correction factors from head-to-head PDF vs.\ XML comparison. Error whiskers indicate the 95\% imputation interval on the corrected estimate (uncertainty in the XML-only coverage correction, not sampling uncertainty of the observed rate); journals where the correction does nothing carry no whisker. Bar color encodes total article count on a log scale (yellow = fewer, red = more). Dashed line shows the overall baseline. Only journals exceeding the Weibull-derived survival article-count threshold are shown.}
+\caption{Open data rates among top biomedical journals (2024--2025 research articles). Solid bars show the observed open data rate; lighter background bars show the estimated (corrected) rate after applying journal-level correction factors from head-to-head PDF vs.\ XML comparison. Error whiskers indicate the 95\% imputation interval on the corrected estimate (uncertainty in the XML-only coverage correction, not sampling uncertainty of the observed rate); journals where the correction does nothing carry no whisker. Bar color encodes total article count on a log scale (yellow = fewer, red = more). Dashed line shows the overall baseline. Only journals exceeding the Weibull-derived 2\% survival article-count threshold ($\geq$\num{4262} articles) are shown.}
 \label{fig:journals}
 \end{figure}
 

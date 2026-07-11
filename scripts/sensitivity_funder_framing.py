@@ -384,11 +384,16 @@ def make_scatter(diag: pd.DataFrame, d: dict, output_path: Path) -> None:
     y = diag["corrected_rate"].values
     cov = diag["pdf_coverage_pct"].values
 
-    # Thin error bars from the CIs (drawn under the points).
+    # Thin error bars from the CIs (drawn under the points). Clamp ≥0: the
+    # corrected imputation interval (ci_*_pct) is full precision while
+    # corrected_rate is 1 dp, so a difference can be marginally negative; NaN
+    # arms (no imputation interval) are skipped by matplotlib. #24
     ax.errorbar(
         x, y,
-        xerr=[x - diag["observed_ci_low"].values, diag["observed_ci_high"].values - x],
-        yerr=[y - diag["corrected_ci_low"].values, diag["corrected_ci_high"].values - y],
+        xerr=[np.clip(x - diag["observed_ci_low"].values, 0, None),
+              np.clip(diag["observed_ci_high"].values - x, 0, None)],
+        yerr=[np.clip(y - diag["corrected_ci_low"].values, 0, None),
+              np.clip(diag["corrected_ci_high"].values - y, 0, None)],
         fmt="none", ecolor="grey", elinewidth=0.5, alpha=0.5, capsize=0, zorder=1,
     )
 

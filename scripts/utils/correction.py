@@ -2,8 +2,16 @@
 Journal-level correction factors for XML-only open data underestimation.
 
 Uses head-to-head best (PDF∪XML) detection rates to estimate true open data
-rates for articles that only have XML coverage. Wilson score confidence
-intervals are propagated through the weighted correction.
+rates for articles that only have XML coverage. Wilson score intervals on the
+head-to-head best rate are propagated through the weighted correction to form a
+95% *imputation interval* on the corrected estimate.
+
+This interval captures uncertainty in the XML->PDF correction (imputing what PDF
+processing would have detected on XML-only articles) -- NOT sampling uncertainty
+of the observed rate. The manuscript is a census of the corpus, so an observed
+K/N is exact and carries no interval. Where no imputation applies (no XML-only
+articles, or the band floors to a point), ci_lo/ci_hi are returned as None
+rather than a degenerate zero-width band. See issue #24.
 """
 
 import math
@@ -96,8 +104,12 @@ def apply_journal_correction(
         dict with keys: corrected_od, ci_lo, ci_hi
     """
     if xml_only_count == 0:
+        # No XML-only articles → no imputation performed → no imputation
+        # interval. Under the paper's census framing the observed count is
+        # exact, so we return a sentinel (None) rather than a degenerate
+        # zero-width band. See issue #24.
         corrected = max(pdf_covered_od, observed_od)
-        return {"corrected_od": corrected, "ci_lo": corrected, "ci_hi": corrected}
+        return {"corrected_od": corrected, "ci_lo": None, "ci_hi": None}
 
     # Look up this journal in the correction table
     match = journal_corrections[journal_corrections["journal"] == journal_name]
@@ -118,6 +130,13 @@ def apply_journal_correction(
     corrected_od = max(est_point, observed_od)
     ci_lo = max(est_lo, observed_od)
     ci_hi = max(est_hi, observed_od)
+
+    # If flooring collapsed the band to a point, the imputation contributes no
+    # uncertainty (the journal's best-rate estimate sits at or below what was
+    # already observed). Suppress the interval rather than report a zero-width
+    # band. See issue #24.
+    if ci_lo == ci_hi:
+        ci_lo = ci_hi = None
 
     return {"corrected_od": corrected_od, "ci_lo": ci_lo, "ci_hi": ci_hi}
 
@@ -147,11 +166,13 @@ def apply_funder_correction(
         dict with keys: corrected_od, ci_lo, ci_hi, n_corrected, n_fallback
     """
     if funder_journal_xml.empty:
+        # No XML-only articles → no imputation → no imputation interval
+        # (observed count is census-exact). See issue #24.
         corrected = max(pdf_covered_od, observed_od)
         return {
             "corrected_od": corrected,
-            "ci_lo": corrected,
-            "ci_hi": corrected,
+            "ci_lo": None,
+            "ci_hi": None,
             "n_corrected": 0,
             "n_fallback": 0,
         }
@@ -188,6 +209,11 @@ def apply_funder_correction(
     corrected_od = max(corrected_od, observed_od)
     ci_lo = max(ci_lo, observed_od)
     ci_hi = max(ci_hi, observed_od)
+
+    # Flooring collapsed the band to a point → no imputation uncertainty to
+    # report; suppress the interval rather than emit a zero-width band. #24
+    if ci_lo == ci_hi:
+        ci_lo = ci_hi = None
 
     return {
         "corrected_od": corrected_od,

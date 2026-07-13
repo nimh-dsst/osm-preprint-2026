@@ -919,7 +919,7 @@ def generate_funder_bar_chart(
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
     sm.set_array([])
     cbar = fig.colorbar(sm, ax=ax, pad=0.02, aspect=30, shrink=0.8)
-    cbar.set_label("Total Funded Articles", fontsize=10)
+    cbar.set_label("Total funder-linked articles", fontsize=10)
 
     # Baseline line
     if baseline_pct is not None:

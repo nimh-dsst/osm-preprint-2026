@@ -29,6 +29,7 @@ from scipy.stats import weibull_min
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils.data_loader import (
     _find_duckdb_default,
+    _build_filter_clause,
     connect_duckdb_registry,
     query_funder_open_data_stats,
     query_funder_open_data_for_group,
@@ -925,7 +926,7 @@ def generate_funder_bar_chart(
         ax.axvline(baseline_pct, color="grey", linestyle="--", linewidth=1, alpha=0.7)
         ax.text(
             baseline_pct + 0.3, -0.8,
-            f"Funded baseline: {baseline_pct:.1f}%",
+            f"Funder-linked rate: {baseline_pct:.1f}%",
             fontsize=8, color="grey", va="top",
         )
 
@@ -968,7 +969,7 @@ def save_summary_markdown(
     lines.append("")
     lines.append(f"> Generated {date.today().isoformat()} from pmid_registry.duckdb")
     lines.append(f"> {len(df):,} funders with ≥100 funded articles and oddpub v7 coverage")
-    lines.append(f"> Funded-article baseline: {baseline_pct:.1f}% open data")
+    lines.append(f"> Funder-linked rate: {baseline_pct:.1f}% open data")
     if has_correction:
         lines.append("> Corrected rates estimated using journal-level PDF vs XML detection factors")
     lines.append("")
@@ -1129,12 +1130,32 @@ def main(argv=None):
     )
     logger.info("  %d funders in bulk stats", len(bulk_stats))
 
-    # Compute funded-article baseline
-    total_funded = int(bulk_stats["total_articles"].sum())
-    total_od_funded = int(bulk_stats["open_data_articles"].sum())
+    # Funder-linked baseline: open-data rate across UNIQUE articles with >=1 funder
+    # (each article counted once, not once per funder). The earlier Sigma/Sigma
+    # convention summed per-funder totals, over-weighting heavily co-funded
+    # articles — which share data more — and so overstated this reference. #33
+    _bl_extra, _bl_params = _build_filter_clause(
+        date_from=filter_kwargs.get("date_from"),
+        date_to=filter_kwargs.get("date_to"),
+        year_from=filter_kwargs.get("year_from"),
+        year_to=filter_kwargs.get("year_to"),
+        research_only=filter_kwargs.get("research_only", False),
+        table_alias="p",
+    )
+    _bl = con.execute(
+        f"""
+        SELECT COUNT(DISTINCT af.pmid) AS n,
+               COUNT(DISTINCT CASE WHEN p.is_open_data_best THEN af.pmid END) AS od
+        FROM article_funders af JOIN pmids p ON af.pmid = p.pmid
+        WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){_bl_extra}
+        """,
+        _bl_params,
+    ).fetchone()
+    total_funded = int(_bl[0])
+    total_od_funded = int(_bl[1])
     baseline_pct = round(100.0 * total_od_funded / total_funded, 1) if total_funded > 0 else 0.0
     logger.info(
-        "  Funded-article baseline: %d / %d = %.1f%%",
+        "  Funder-linked baseline (distinct articles): %d / %d = %.1f%%",
         total_od_funded, total_funded, baseline_pct,
     )
 

@@ -104,33 +104,58 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
         "Wellcome",
     ],
     # --- European Commission: consolidate the full EU research-funding umbrella ---
-    # OpenAlex/NER splits EU funding across ~58 programme-level entities (Horizon
-    # 2020, Horizon Europe, ERC, MSCA, FP4-7, EIT, and their sub-programmes).
-    # Without this, "Horizon 2020 Framework Programme" etc. appear as separate top
-    # funders for what is European Commission money. Consolidating them into one
-    # EC funder (surfaced by the ICSSI Dimensions benchmark). ERDF is intentionally
-    # kept separate (structural fund, not a research programme). (#33)
+    # OpenAlex/NER splits EU research funding across many programme-level entities
+    # (FP4-7, Horizon 2020, Horizon Europe, ERC, MSCA, Euratom, EIT, and their
+    # sub-programmes). Without this they appear as separate top funders for what is
+    # European Commission money.
+    #
+    # Re-derived 2026-07-12 against the refreshed OpenAlex funder attribution:
+    # the union of (a) the diagnostic's 79-ID framework-programme family
+    # (osm-funder-links/toolkit/out/ec_family_oa_ids.json, all with null country)
+    # and (b) the EIT / H2020 / HORIZON sub-programme names already listed here.
+    # 84 canonical names; 77 carry corpus articles. The 79-ID family alone rolls up
+    # to 28,766 articles (17.3%); this union adds EIT + a few sub-programmes for
+    # 28,782 articles (17.3%) — identical at reported precision, EC rank #9.
+    # ERDF (European Regional Development Fund) is intentionally kept separate
+    # (structural fund, not a research programme). (#33, refresh 2026-07-12)
     "European Commission": [
+        "Euratom Research and Training Programme",
         "European Commission",
-        "European Union",
         "European Research Council",
-        "H2020 European Research Council",
-        "HORIZON EUROPE European Research Council",
+        "European Union",
+        "FP7 Capacities",
+        "FP7 Cooperation",
+        "FP7 Coordination of Non-Community Research Programmes",
+        "FP7 Coordination of Research Activities",
+        "FP7 Energy",
+        "FP7 Environment",
+        "FP7 Euratom",
+        "FP7 Food, Agriculture and Fisheries, Biotechnology",
+        "FP7 Fusion Energy Research",
+        "FP7 Health",
+        "FP7 Ideas",
         "FP7 Ideas: European Research Council",
-        "Horizon 2020",
-        "Horizon 2020 Framework Programme",
-        "HORIZON EUROPE Framework Programme",
-        "H2020 Marie Skłodowska-Curie Actions",
-        "HORIZON EUROPE Marie Sklodowska-Curie Actions",
-        "Fourth Framework Programme",
+        "FP7 Information and Communication Technologies",
+        "FP7 International Cooperation",
+        "FP7 Joint Research Centre",
+        "FP7 Joint Technology Initiatives",
+        "FP7 Nanosciences, Nanotechnologies, Materials and new Production Technologies",
+        "FP7 Nuclear Fission, Safety and Radiation Protection",
+        "FP7 People: Marie-Curie Actions",
+        "FP7 Research Potential of Convergence Regions",
+        "FP7 Research infrastructures",
+        "FP7 Science in Society",
+        "FP7 Security",
+        "FP7 Socio-Economic Sciences and Humanities",
+        "FP7 Space",
         "Fifth Framework Programme",
-        "Sixth Framework Programme",
-        "Seventh Framework Programme",
+        "Fourth Framework Programme",
         "H2020 Access to risk finance",
         "H2020 Energy",
         "H2020 Environment",
         "H2020 Euratom",
         "H2020 European Institute of Innovation and Technology",
+        "H2020 European Research Council",
         "H2020 Excellent Science",
         "H2020 Fast Track to Innovation",
         "H2020 Food",
@@ -145,6 +170,7 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
         "H2020 LEIT Nanotechnologies",
         "H2020 LEIT Space",
         "H2020 Leadership in Enabling and Industrial Technologies",
+        "H2020 Marie Skłodowska-Curie Actions",
         "H2020 Public-public partnerships",
         "H2020 Research Infrastructures",
         "H2020 Science with and for Society",
@@ -160,16 +186,23 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
         "HORIZON EUROPE European Innovation Council",
         "HORIZON EUROPE European Innovation Ecosystems",
         "HORIZON EUROPE European Institute of Innovation and Technology",
+        "HORIZON EUROPE European Research Council",
         "HORIZON EUROPE Excellent Science",
         "HORIZON EUROPE Food, Bioeconomy, Natural Resources, Agriculture and Environment",
+        "HORIZON EUROPE Framework Programme",
         "HORIZON EUROPE Global Challenges and European Industrial Competitiveness",
         "HORIZON EUROPE Health",
         "HORIZON EUROPE Innovative Europe",
+        "HORIZON EUROPE Marie Sklodowska-Curie Actions",
         "HORIZON EUROPE Non-nuclear direct actions of the Joint Research Centre",
         "HORIZON EUROPE Reforming and enhancing the European Research and Innovation system",
         "HORIZON EUROPE Research Infrastructures",
         "HORIZON EUROPE Widening Participation and Strengthening the European Research Area",
         "HORIZON EUROPE Widening participation and spreading excellence",
+        "Horizon 2020",
+        "Horizon 2020 Framework Programme",
+        "Seventh Framework Programme",
+        "Sixth Framework Programme",
     ],
 }
 

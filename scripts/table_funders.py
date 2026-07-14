@@ -773,6 +773,13 @@ def generate_funder_latex_table(
     # Data rows
     for _, row in top.iterrows():
         name = escape_latex(str(row["funder_name"]))
+        # Hyperlink the funder name to its OpenAlex entity page so readers of
+        # the electronic PDF can verify each (often abbreviated) name. #33
+        fid = str(row.get("funder_id", "") or "").strip()
+        name_cell = (
+            rf"\href{{https://openalex.org/funders/{fid}}}{{{name}}}"
+            if fid and fid.lower() != "nan" else name
+        )
         country = escape_latex(str(row["country"]))
         total = format_number_siunitx(row["total_articles"])
         od = format_number_siunitx(row["open_data_articles"])
@@ -785,7 +792,7 @@ def generate_funder_latex_table(
             corr_pct = f"{row['corrected_pct']:.1f}"
             color_corr = get_color_bwr(row["corrected_pct"], min_pct, max_pct)
             lines.append(
-                f"{name} & {country} & "
+                f"{name_cell} & {country} & "
                 f"\\cellcolor{color_total} {total} & "
                 f"\\cellcolor{color_pct} {od} & "
                 f"\\cellcolor{color_pct} {pct} & "
@@ -793,7 +800,7 @@ def generate_funder_latex_table(
             )
         else:
             lines.append(
-                f"{name} & {country} & "
+                f"{name_cell} & {country} & "
                 f"\\cellcolor{color_total} {total} & "
                 f"\\cellcolor{color_pct} {od} & "
                 f"\\cellcolor{color_pct} {pct} \\\\"

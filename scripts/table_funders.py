@@ -208,6 +208,36 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
 }
 
 # ---------------------------------------------------------------------------
+# Sub-agency programmes to suppress from the DISPLAYED table/figure (INTERIM).
+#
+# Our design aggregates constituents into their parent agency (e.g. NIH
+# institutes -> NIH, EU framework programmes -> European Commission). OpenAlex,
+# however, still surfaces several US sub-agency programmes as separate funder
+# entities whose parent agency is ALSO in the table (NSF, DOE, USDA). Showing a
+# sub-directorate alongside its parent contradicts the aggregation design and
+# invites a "why is this one broken out?" objection, so we hide them from the
+# rendered table/figure for the co-author draft.
+#
+# This is an INTERIM measure: these programmes are *not* yet folded into their
+# parents (so NSF/DOE/USDA totals remain provisional and will rise slightly at
+# the systematic re-aggregation planned before public upload). The full CSV in
+# results/ is left complete for reproducibility -- only the display is filtered.
+_SUBAGENCY_EXCLUDE_IDS: set[str] = {
+    "F4320332167",  # Directorate for Biological Sciences  -> NSF
+    "F4320337367",  # Division of Materials Research       -> NSF
+    "F4320332359",  # Office of Science                    -> DOE
+    "F4320337480",  # Basic Energy Sciences                -> DOE
+    "F4320332299",  # National Institute of Food and Agriculture -> USDA
+}
+
+# Same OpenAlex funder_id (F4320306230) appears under two canonical_name
+# variants; keep the correct "American Heart Association" row and drop the
+# truncated "American Association" duplicate from the display.
+_DUP_NAME_EXCLUDE: set[str] = {
+    "American Association",
+}
+
+# ---------------------------------------------------------------------------
 # English display names for non-English DuckDB canonical_names
 # (for unaliased funders that appear in results)
 # ---------------------------------------------------------------------------
@@ -713,7 +743,9 @@ def generate_funder_latex_table(
             r"Open data rates among major biomedical research funders. "
             rf"{incl_clause}, ranked by observed open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
-            r"with deduplicated article counts. "
+            r"with deduplicated article counts; agency-level aggregation is being "
+            r"finalized, so a small number of sub-agency programmes are not yet "
+            r"folded into their parent and agency totals are provisional. "
             r"\textbf{\% OD (obs.)} is the headline rate: the directly measured "
             r"open data rate across all articles in each funder's portfolio. "
             r"\textit{\% OD (est.)} is a supplementary modeled estimate that "
@@ -1267,6 +1299,24 @@ def main(argv=None):
     tbl_df = summary[summary["total_articles"] >= tbl_threshold].copy()
     if min_works_tbl > 0:
         tbl_df = tbl_df[tbl_df["aggregated_works_count"] >= min_works_tbl]
+
+    # Interim display filter: suppress un-aggregated US sub-agency programmes and
+    # the duplicate-name row from the rendered table/figure (CSV stays complete).
+    def _drop_subagency(df: pd.DataFrame) -> pd.DataFrame:
+        before = len(df)
+        fid = df.get("funder_id", pd.Series("", index=df.index)).astype(str).str.strip()
+        keep = ~fid.isin(_SUBAGENCY_EXCLUDE_IDS) & ~df["funder_name"].isin(_DUP_NAME_EXCLUDE)
+        out = df[keep].copy()
+        if len(out) < before:
+            logger.info(
+                "  Sub-agency display filter: %d → %d funders (removed: %s)",
+                before, len(out),
+                ", ".join(df[~keep]["funder_name"].tolist()),
+            )
+        return out
+
+    fig_df = _drop_subagency(fig_df)
+    tbl_df = _drop_subagency(tbl_df)
 
     # Outputs
     sfx = args.output_suffix

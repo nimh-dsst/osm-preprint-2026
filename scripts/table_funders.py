@@ -29,6 +29,7 @@ from scipy.stats import weibull_min
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from utils.data_loader import (
     _find_duckdb_default,
+    _build_filter_clause,
     connect_duckdb_registry,
     query_funder_open_data_stats,
     query_funder_open_data_for_group,
@@ -103,6 +104,137 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
         "Wellcome Trust",
         "Wellcome",
     ],
+    # --- European Commission: consolidate the full EU research-funding umbrella ---
+    # OpenAlex/NER splits EU research funding across many programme-level entities
+    # (FP4-7, Horizon 2020, Horizon Europe, ERC, MSCA, Euratom, EIT, and their
+    # sub-programmes). Without this they appear as separate top funders for what is
+    # European Commission money.
+    #
+    # Re-derived 2026-07-12 against the refreshed OpenAlex funder attribution:
+    # the union of (a) the diagnostic's 79-ID framework-programme family
+    # (osm-funder-links/toolkit/out/ec_family_oa_ids.json, all with null country)
+    # and (b) the EIT / H2020 / HORIZON sub-programme names already listed here.
+    # 84 canonical names; 77 carry corpus articles. The 79-ID family alone rolls up
+    # to 28,766 articles (17.3%); this union adds EIT + a few sub-programmes for
+    # 28,782 articles (17.3%) — identical at reported precision, EC rank #9.
+    # ERDF (European Regional Development Fund) is intentionally kept separate
+    # (structural fund, not a research programme). (#33, refresh 2026-07-12)
+    "European Commission": [
+        "Euratom Research and Training Programme",
+        "European Commission",
+        "European Research Council",
+        "European Union",
+        "FP7 Capacities",
+        "FP7 Cooperation",
+        "FP7 Coordination of Non-Community Research Programmes",
+        "FP7 Coordination of Research Activities",
+        "FP7 Energy",
+        "FP7 Environment",
+        "FP7 Euratom",
+        "FP7 Food, Agriculture and Fisheries, Biotechnology",
+        "FP7 Fusion Energy Research",
+        "FP7 Health",
+        "FP7 Ideas",
+        "FP7 Ideas: European Research Council",
+        "FP7 Information and Communication Technologies",
+        "FP7 International Cooperation",
+        "FP7 Joint Research Centre",
+        "FP7 Joint Technology Initiatives",
+        "FP7 Nanosciences, Nanotechnologies, Materials and new Production Technologies",
+        "FP7 Nuclear Fission, Safety and Radiation Protection",
+        "FP7 People: Marie-Curie Actions",
+        "FP7 Research Potential of Convergence Regions",
+        "FP7 Research infrastructures",
+        "FP7 Science in Society",
+        "FP7 Security",
+        "FP7 Socio-Economic Sciences and Humanities",
+        "FP7 Space",
+        "Fifth Framework Programme",
+        "Fourth Framework Programme",
+        "H2020 Access to risk finance",
+        "H2020 Energy",
+        "H2020 Environment",
+        "H2020 Euratom",
+        "H2020 European Institute of Innovation and Technology",
+        "H2020 European Research Council",
+        "H2020 Excellent Science",
+        "H2020 Fast Track to Innovation",
+        "H2020 Food",
+        "H2020 Future and Emerging Technologies",
+        "H2020 Health",
+        "H2020 Industrial Leadership",
+        "H2020 Innovation In SMEs",
+        "H2020 LEIT Advanced Manufacturing and Processing",
+        "H2020 LEIT Advanced Materials",
+        "H2020 LEIT Biotechnology",
+        "H2020 LEIT Information and Communication Technologies",
+        "H2020 LEIT Nanotechnologies",
+        "H2020 LEIT Space",
+        "H2020 Leadership in Enabling and Industrial Technologies",
+        "H2020 Marie Skłodowska-Curie Actions",
+        "H2020 Public-public partnerships",
+        "H2020 Research Infrastructures",
+        "H2020 Science with and for Society",
+        "H2020 Security",
+        "H2020 Societal Challenges",
+        "H2020 Society",
+        "H2020 Spreading Excellence and Widening Participation",
+        "H2020 Transport",
+        "HORIZON EUROPE Civil security for society",
+        "HORIZON EUROPE Climate, Energy and Mobility",
+        "HORIZON EUROPE Culture, Creativity and Inclusive society",
+        "HORIZON EUROPE Digital, Industry and Space",
+        "HORIZON EUROPE European Innovation Council",
+        "HORIZON EUROPE European Innovation Ecosystems",
+        "HORIZON EUROPE European Institute of Innovation and Technology",
+        "HORIZON EUROPE European Research Council",
+        "HORIZON EUROPE Excellent Science",
+        "HORIZON EUROPE Food, Bioeconomy, Natural Resources, Agriculture and Environment",
+        "HORIZON EUROPE Framework Programme",
+        "HORIZON EUROPE Global Challenges and European Industrial Competitiveness",
+        "HORIZON EUROPE Health",
+        "HORIZON EUROPE Innovative Europe",
+        "HORIZON EUROPE Marie Sklodowska-Curie Actions",
+        "HORIZON EUROPE Non-nuclear direct actions of the Joint Research Centre",
+        "HORIZON EUROPE Reforming and enhancing the European Research and Innovation system",
+        "HORIZON EUROPE Research Infrastructures",
+        "HORIZON EUROPE Widening Participation and Strengthening the European Research Area",
+        "HORIZON EUROPE Widening participation and spreading excellence",
+        "Horizon 2020",
+        "Horizon 2020 Framework Programme",
+        "Seventh Framework Programme",
+        "Sixth Framework Programme",
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# Sub-agency programmes to suppress from the DISPLAYED table/figure (INTERIM).
+#
+# Our design aggregates constituents into their parent agency (e.g. NIH
+# institutes -> NIH, EU framework programmes -> European Commission). OpenAlex,
+# however, still surfaces several US sub-agency programmes as separate funder
+# entities whose parent agency is ALSO in the table (NSF, DOE, USDA). Showing a
+# sub-directorate alongside its parent contradicts the aggregation design and
+# invites a "why is this one broken out?" objection, so we hide them from the
+# rendered table/figure for the co-author draft.
+#
+# This is an INTERIM measure: these programmes are *not* yet folded into their
+# parents (so NSF/DOE/USDA totals remain provisional and will rise slightly at
+# the systematic re-aggregation planned before public upload). The full CSV in
+# results/ is left complete for reproducibility -- only the display is filtered.
+_SUBAGENCY_EXCLUDE_IDS: set[str] = {
+    "F4320332167",  # Directorate for Biological Sciences  -> NSF
+    "F4320337367",  # Division of Materials Research       -> NSF
+    "F4320332359",  # Office of Science                    -> DOE
+    "F4320337480",  # Basic Energy Sciences                -> DOE
+    "F4320332299",  # National Institute of Food and Agriculture -> USDA
+}
+
+# Same OpenAlex funder_id (F4320306230) appears under two canonical_name
+# variants; keep the correct "American Heart Association" row and drop the
+# truncated "American Association" duplicate from the display.
+_DUP_NAME_EXCLUDE: set[str] = {
+    "American Association",
 }
 
 # ---------------------------------------------------------------------------
@@ -554,8 +686,14 @@ def generate_funder_latex_table(
     n_total_funders: int = 0,
     survival_pct: float = 1.0,
     label_suffix: str = "",
+    min_works: int = 0,
 ) -> None:
-    """Write a longtable .tex file for funders above the threshold."""
+    """Write a longtable .tex file for funders above the threshold.
+
+    ``threshold`` and ``min_works`` describe the inclusion criteria for the
+    caption; ``df`` is expected to already be filtered to those criteria, so the
+    row filter below is idempotent. (#31)
+    """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
     top.sort_values("open_data_pct", ascending=False, inplace=True)
 
@@ -591,14 +729,23 @@ def generate_funder_latex_table(
 
     # Caption with methodology note
     surv_str = f"{survival_pct:g}"
+    # Inclusion-criteria clause (#31): article-count survival threshold plus the
+    # aggregated-works filter when one is applied. Uses the real thresholds
+    # passed in, not the hardcoded 0 that produced the earlier "≥0 articles".
+    works_clause = rf" and {min_works:,} aggregated OpenAlex works" if min_works > 0 else ""
+    incl_clause = (
+        rf"Funders exceeding {'both ' if min_works > 0 else ''}the Weibull-derived "
+        rf"{surv_str}\% survival threshold for total funded articles "
+        rf"($\geq${threshold:,} articles with oddpub v7 coverage){works_clause}"
+    )
     if has_correction:
         caption = (
             r"Open data rates among major biomedical research funders. "
-            rf"Funders exceeding the Weibull-derived {surv_str}\% survival threshold "
-            rf"for total funded articles ($\geq${threshold:,} articles with "
-            r"oddpub v7 coverage), ranked by observed open data rate. "
+            rf"{incl_clause}, ranked by observed open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
-            r"with deduplicated article counts. "
+            r"with deduplicated article counts; agency-level aggregation is being "
+            r"finalized, so a small number of sub-agency programmes are not yet "
+            r"folded into their parent and agency totals are provisional. "
             r"\textbf{\% OD (obs.)} is the headline rate: the directly measured "
             r"open data rate across all articles in each funder's portfolio. "
             r"\textit{\% OD (est.)} is a supplementary modeled estimate that "
@@ -615,9 +762,7 @@ def generate_funder_latex_table(
     else:
         caption = (
             r"Open data rates among major biomedical research funders. "
-            rf"Funders exceeding the Weibull-derived {surv_str}\% survival threshold "
-            rf"for total funded articles ($\geq${threshold:,} articles with "
-            r"oddpub v7 coverage), ranked by open data rate. "
+            rf"{incl_clause}, ranked by open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
             r"with deduplicated article counts. "
             r"Cell shading: Total Pubs uses a blue-to-red gradient on log scale; "
@@ -660,6 +805,13 @@ def generate_funder_latex_table(
     # Data rows
     for _, row in top.iterrows():
         name = escape_latex(str(row["funder_name"]))
+        # Hyperlink the funder name to its OpenAlex entity page so readers of
+        # the electronic PDF can verify each (often abbreviated) name. #33
+        fid = str(row.get("funder_id", "") or "").strip()
+        name_cell = (
+            rf"\href{{https://openalex.org/funders/{fid}}}{{{name}}}"
+            if fid and fid.lower() != "nan" else name
+        )
         country = escape_latex(str(row["country"]))
         total = format_number_siunitx(row["total_articles"])
         od = format_number_siunitx(row["open_data_articles"])
@@ -672,7 +824,7 @@ def generate_funder_latex_table(
             corr_pct = f"{row['corrected_pct']:.1f}"
             color_corr = get_color_bwr(row["corrected_pct"], min_pct, max_pct)
             lines.append(
-                f"{name} & {country} & "
+                f"{name_cell} & {country} & "
                 f"\\cellcolor{color_total} {total} & "
                 f"\\cellcolor{color_pct} {od} & "
                 f"\\cellcolor{color_pct} {pct} & "
@@ -680,7 +832,7 @@ def generate_funder_latex_table(
             )
         else:
             lines.append(
-                f"{name} & {country} & "
+                f"{name_cell} & {country} & "
                 f"\\cellcolor{color_total} {total} & "
                 f"\\cellcolor{color_pct} {od} & "
                 f"\\cellcolor{color_pct} {pct} \\\\"
@@ -704,6 +856,7 @@ def generate_funder_bar_chart(
     output_path: Path,
     threshold: int = 0,
     baseline_pct: float | None = None,
+    max_bars: int | None = None,
 ) -> None:
     """
     Horizontal bar chart of funders above the Weibull threshold.
@@ -712,6 +865,9 @@ def generate_funder_bar_chart(
     - Full bar (lighter shade) = corrected_pct (estimated)
     - Inner bar (full opacity) = open_data_pct (observed)
     - Error whiskers from ci_lo_pct to ci_hi_pct
+
+    max_bars caps the display to the top-N funders by observed rate so the
+    figure fits one page; the full set remains in the table/CSV. (#33)
     """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
     top.sort_values("open_data_pct", ascending=False, inplace=True)
@@ -719,6 +875,9 @@ def generate_funder_bar_chart(
     if top.empty:
         logger.warning("No funders above threshold %d for figure", threshold)
         return
+
+    if max_bars is not None and len(top) > max_bars:
+        top = top.head(max_bars)
 
     has_correction = "corrected_pct" in top.columns and top["corrected_pct"].notna().any()
 
@@ -806,14 +965,14 @@ def generate_funder_bar_chart(
     sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
     sm.set_array([])
     cbar = fig.colorbar(sm, ax=ax, pad=0.02, aspect=30, shrink=0.8)
-    cbar.set_label("Total Funded Articles", fontsize=10)
+    cbar.set_label("Total funder-linked articles", fontsize=10)
 
     # Baseline line
     if baseline_pct is not None:
         ax.axvline(baseline_pct, color="grey", linestyle="--", linewidth=1, alpha=0.7)
         ax.text(
             baseline_pct + 0.3, -0.8,
-            f"Funded baseline: {baseline_pct:.1f}%",
+            f"Funder-linked rate: {baseline_pct:.1f}%",
             fontsize=8, color="grey", va="top",
         )
 
@@ -856,7 +1015,7 @@ def save_summary_markdown(
     lines.append("")
     lines.append(f"> Generated {date.today().isoformat()} from pmid_registry.duckdb")
     lines.append(f"> {len(df):,} funders with ≥100 funded articles and oddpub v7 coverage")
-    lines.append(f"> Funded-article baseline: {baseline_pct:.1f}% open data")
+    lines.append(f"> Funder-linked rate: {baseline_pct:.1f}% open data")
     if has_correction:
         lines.append("> Corrected rates estimated using journal-level PDF vs XML detection factors")
     lines.append("")
@@ -1017,12 +1176,32 @@ def main(argv=None):
     )
     logger.info("  %d funders in bulk stats", len(bulk_stats))
 
-    # Compute funded-article baseline
-    total_funded = int(bulk_stats["total_articles"].sum())
-    total_od_funded = int(bulk_stats["open_data_articles"].sum())
+    # Funder-linked baseline: open-data rate across UNIQUE articles with >=1 funder
+    # (each article counted once, not once per funder). The earlier Sigma/Sigma
+    # convention summed per-funder totals, over-weighting heavily co-funded
+    # articles — which share data more — and so overstated this reference. #33
+    _bl_extra, _bl_params = _build_filter_clause(
+        date_from=filter_kwargs.get("date_from"),
+        date_to=filter_kwargs.get("date_to"),
+        year_from=filter_kwargs.get("year_from"),
+        year_to=filter_kwargs.get("year_to"),
+        research_only=filter_kwargs.get("research_only", False),
+        table_alias="p",
+    )
+    _bl = con.execute(
+        f"""
+        SELECT COUNT(DISTINCT af.pmid) AS n,
+               COUNT(DISTINCT CASE WHEN p.is_open_data_best THEN af.pmid END) AS od
+        FROM article_funders af JOIN pmids p ON af.pmid = p.pmid
+        WHERE (p.has_oddpub_xml_v7 = true OR p.has_oddpub_pdf_v7 = true){_bl_extra}
+        """,
+        _bl_params,
+    ).fetchone()
+    total_funded = int(_bl[0])
+    total_od_funded = int(_bl[1])
     baseline_pct = round(100.0 * total_od_funded / total_funded, 1) if total_funded > 0 else 0.0
     logger.info(
-        "  Funded-article baseline: %d / %d = %.1f%%",
+        "  Funder-linked baseline (distinct articles): %d / %d = %.1f%%",
         total_od_funded, total_funded, baseline_pct,
     )
 
@@ -1121,6 +1300,24 @@ def main(argv=None):
     if min_works_tbl > 0:
         tbl_df = tbl_df[tbl_df["aggregated_works_count"] >= min_works_tbl]
 
+    # Interim display filter: suppress un-aggregated US sub-agency programmes and
+    # the duplicate-name row from the rendered table/figure (CSV stays complete).
+    def _drop_subagency(df: pd.DataFrame) -> pd.DataFrame:
+        before = len(df)
+        fid = df.get("funder_id", pd.Series("", index=df.index)).astype(str).str.strip()
+        keep = ~fid.isin(_SUBAGENCY_EXCLUDE_IDS) & ~df["funder_name"].isin(_DUP_NAME_EXCLUDE)
+        out = df[keep].copy()
+        if len(out) < before:
+            logger.info(
+                "  Sub-agency display filter: %d → %d funders (removed: %s)",
+                before, len(out),
+                ", ".join(df[~keep]["funder_name"].tolist()),
+            )
+        return out
+
+    fig_df = _drop_subagency(fig_df)
+    tbl_df = _drop_subagency(tbl_df)
+
     # Outputs
     sfx = args.output_suffix
     table_path = Path(args.output_dir) / f"table_funders{sfx}.tex"
@@ -1130,15 +1327,17 @@ def main(argv=None):
 
     generate_funder_latex_table(
         tbl_df, table_path,
-        threshold=0,
+        threshold=tbl_threshold,
         n_total_funders=len(summary),
         survival_pct=args.table_survival * 100,
         label_suffix=sfx,
+        min_works=min_works_tbl,
     )
     generate_funder_bar_chart(
         fig_df, figure_path,
         threshold=0,
         baseline_pct=baseline_pct,
+        max_bars=20,
     )
     save_summary_csv(summary, csv_path)
     save_summary_markdown(summary, md_path, baseline_pct=baseline_pct)

@@ -42,6 +42,21 @@ from utils.correction import (
 )
 from table_funders import compute_weibull_threshold
 
+# OpenAlex source display names that are not real journals: records lacking a
+# genuine journal source are sometimes assigned an aggregator/index name. These
+# are excluded from the journal analysis. Matched case-insensitively and exactly
+# against primary_location.source.display_name. (#33, review #7)
+NON_JOURNAL_SOURCES = {
+    "pubmed",
+    "pubmed central",
+    "europe pmc",
+    "biorxiv",
+    "medrxiv",
+    "research square",
+    "ssrn",
+    "arxiv",
+}
+
 logger = logging.getLogger(__name__)
 
 
@@ -53,6 +68,7 @@ def generate_journal_bar_chart(
     output_path: Path,
     threshold: int = 0,
     baseline_pct: float | None = None,
+    max_bars: int | None = None,
 ) -> None:
     """Horizontal bar chart of journals above the Weibull threshold.
 
@@ -60,6 +76,9 @@ def generate_journal_bar_chart(
     - Full bar (lighter shade) = corrected_pct (estimated)
     - Inner bar (full opacity) = open_data_pct (observed)
     - Error whiskers from ci_lo_pct to ci_hi_pct
+
+    max_bars caps the display to the top-N journals by observed rate so the
+    figure fits one page; the full set remains in the table/CSV. (#33)
     """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
     top.sort_values("open_data_pct", ascending=False, inplace=True)
@@ -67,6 +86,9 @@ def generate_journal_bar_chart(
     if top.empty:
         logger.warning("No journals above threshold %d for figure", threshold)
         return
+
+    if max_bars is not None and len(top) > max_bars:
+        top = top.head(max_bars)
 
     has_correction = "corrected_pct" in top.columns and top["corrected_pct"].notna().any()
 
@@ -470,6 +492,13 @@ def main(argv=None):
     )
     logger.info("  %d journals with >= %d articles", len(journal_stats), args.min_articles)
 
+    # Drop non-journal source artifacts (e.g. the "PubMed" pseudo-journal). #33
+    _excl_mask = journal_stats["journal"].astype(str).str.strip().str.lower().isin(NON_JOURNAL_SOURCES)
+    if _excl_mask.any():
+        dropped = journal_stats.loc[_excl_mask, "journal"].tolist()
+        journal_stats = journal_stats[~_excl_mask].reset_index(drop=True)
+        logger.info("  Excluded %d non-journal source(s): %s", len(dropped), ", ".join(map(str, dropped)))
+
     # Compute baseline OD rate
     baseline = query_baseline_od_rate(con, **filter_kwargs)
     baseline_pct = baseline["baseline_pct"]
@@ -574,6 +603,7 @@ def main(argv=None):
         fig_df, figure_path,
         threshold=0,
         baseline_pct=baseline_pct,
+        max_bars=20,
     )
     save_summary_csv(journal_stats, csv_path)
     save_summary_markdown(journal_stats, md_path, baseline_pct=baseline_pct)

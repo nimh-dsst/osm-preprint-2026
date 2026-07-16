@@ -208,34 +208,16 @@ _DB_NAME_OVERRIDES: dict[str, list[str]] = {
 }
 
 # ---------------------------------------------------------------------------
-# Sub-agency programmes to suppress from the DISPLAYED table/figure (INTERIM).
-#
-# Our design aggregates constituents into their parent agency (e.g. NIH
-# institutes -> NIH, EU framework programmes -> European Commission). OpenAlex,
-# however, still surfaces several US sub-agency programmes as separate funder
-# entities whose parent agency is ALSO in the table (NSF, DOE, USDA). Showing a
-# sub-directorate alongside its parent contradicts the aggregation design and
-# invites a "why is this one broken out?" objection, so we hide them from the
-# rendered table/figure for the co-author draft.
-#
-# This is an INTERIM measure: these programmes are *not* yet folded into their
-# parents (so NSF/DOE/USDA totals remain provisional and will rise slightly at
-# the systematic re-aggregation planned before public upload). The full CSV in
-# results/ is left complete for reproducibility -- only the display is filtered.
-_SUBAGENCY_EXCLUDE_IDS: set[str] = {
-    "F4320332167",  # Directorate for Biological Sciences  -> NSF
-    "F4320337367",  # Division of Materials Research       -> NSF
-    "F4320332359",  # Office of Science                    -> DOE
-    "F4320337480",  # Basic Energy Sciences                -> DOE
-    "F4320332299",  # National Institute of Food and Agriculture -> USDA
-}
-
-# Same OpenAlex funder_id (F4320306230) appears under two canonical_name
-# variants; keep the correct "American Heart Association" row and drop the
-# truncated "American Association" duplicate from the display.
-_DUP_NAME_EXCLUDE: set[str] = {
-    "American Association",
-}
+# ROR-derived sub-agency rollup
+# ---------------------------------------------------------------------------
+# OpenAlex surfaces sub-agency programmes as separate funder entities whose
+# parent agency is also in our corpus (the NSF Directorate for Biological
+# Sciences, DOE's Office of Science, USDA's NIFA, ...). Ranking those alongside
+# their own parent contradicts the aggregation design and leaves the parent
+# undercounted. scripts/build_ror_rollup.py resolves them against the ROR
+# hierarchy and writes this map; see that script for the boundary rule and the
+# list of root agencies. Regenerate it when the corpus changes.
+_ROLLUP_CSV = Path(__file__).parent / "funder_ror_rollup.csv"
 
 # ---------------------------------------------------------------------------
 # English display names for non-English DuckDB canonical_names
@@ -334,13 +316,32 @@ class FunderNormalizer:
       - funder_type: government, private, etc.
     """
 
-    def __init__(self, aliases_csv: Path):
+    def __init__(self, aliases_csv: Path, rollup_csv: Path | None = None):
         self.aliases_csv = Path(aliases_csv)
         # canonical_name → {country, parent_funder, funder_type, openalex_id, openalex_name, openalex_country}
         self.funder_info: dict[str, dict] = {}
         # parent display_name → set of child canonical_names
         self.parent_children: dict[str, set[str]] = {}
+        # ROR rollup: child DuckDB canonical_name → root agency canonical_name
+        self.rollup: dict[str, str] = {}
         self._load()
+        self._load_rollup(rollup_csv if rollup_csv is not None else _ROLLUP_CSV)
+
+    def _load_rollup(self, rollup_csv: Path) -> None:
+        """Load the ROR-derived sub-agency map (absent file = no rollup)."""
+        rollup_csv = Path(rollup_csv)
+        if not rollup_csv.exists():
+            logger.warning(
+                "ROR rollup map %s not found; sub-agency programmes will rank "
+                "alongside their parent agency. Regenerate with "
+                "scripts/build_ror_rollup.py", rollup_csv,
+            )
+            return
+        with open(rollup_csv, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                self.rollup[row["child_canonical_name"]] = row["parent_canonical_name"]
+        logger.info("  ROR rollup: %d sub-agency entities → %d root agencies",
+                    len(self.rollup), len(set(self.rollup.values())))
 
     def _load(self):
         with open(self.aliases_csv, newline="", encoding="utf-8") as f:
@@ -436,6 +437,89 @@ class FunderNormalizer:
                 "is_parent": False,
             })
 
+        groups = self._dedupe_groups(groups)
+        return self._apply_rollup(groups)
+
+    def _dedupe_groups(self, groups: list[dict]) -> list[dict]:
+        """Drop alias entries that resolve to exactly the same DuckDB members.
+
+        v5 carries some funders under two canonical_names that share an
+        openalex_id, so both resolve to the same DuckDB name and would emit two
+        identical rows (e.g. "American Association" and "American Heart
+        Association", both F4320306230). Keep the entry whose name matches the
+        OpenAlex display name, else the longer (less truncated) one.
+        """
+        by_members: dict[frozenset, list[dict]] = {}
+        for g in groups:
+            by_members.setdefault(frozenset(g["db_names"]), []).append(g)
+
+        kept = []
+        for members, dupes in by_members.items():
+            if len(dupes) == 1:
+                kept.append(dupes[0])
+                continue
+
+            def preference(g: dict) -> tuple:
+                oa_name = self.funder_info.get(g["display_name"], {}).get("openalex_name", "")
+                return (g["display_name"] == oa_name, g["is_parent"], len(g["display_name"]))
+
+            winner = max(dupes, key=preference)
+            dropped = [g["display_name"] for g in dupes if g is not winner]
+            logger.info("  Duplicate alias entries %s resolve to %s; keeping %r",
+                        dropped, sorted(members), winner["display_name"])
+            kept.append(winner)
+        return kept
+
+    def _apply_rollup(self, groups: list[dict]) -> list[dict]:
+        """Fold ROR-identified sub-agency entities into their root agency group.
+
+        Members are merged by name, so de-duplication is handled downstream by
+        the group query's COUNT(DISTINCT pmid) -- an article crediting both a
+        child and its parent counts once.
+        """
+        if not self.rollup:
+            return groups
+
+        # Which group currently owns each DuckDB name?
+        owner: dict[str, dict] = {}
+        for g in groups:
+            for name in g["db_names"]:
+                owner.setdefault(name, g)
+
+        folded: list[str] = []
+        for child_name, root_name in self.rollup.items():
+            target = owner.get(root_name)
+            if target is None:
+                # Root agency has no alias entry (DoD, CDC, VA): make one.
+                target = {
+                    "display_name": _resolve_english_name(root_name),
+                    "db_names": [root_name],
+                    "country": "",
+                    "funder_type": "",
+                    "openalex_id": "",
+                    "is_parent": True,
+                }
+                groups.append(target)
+                owner[root_name] = target
+
+            source = owner.get(child_name)
+            if source is target:
+                continue
+            if source is not None:
+                # The child had its own group: merge all its members and drop it.
+                for name in source["db_names"]:
+                    if name not in target["db_names"]:
+                        target["db_names"].append(name)
+                    owner[name] = target
+                groups.remove(source)
+            else:
+                target["db_names"].append(child_name)
+                owner[child_name] = target
+            folded.append(child_name)
+
+        if folded:
+            logger.info("  ROR rollup applied: folded %d sub-agency entities into "
+                        "%d root agencies", len(folded), len(set(self.rollup.values())))
         return groups
 
 
@@ -622,7 +706,15 @@ def build_funder_summary(
         return pd.DataFrame(columns=cols)
 
     df = pd.DataFrame(rows)
-    df.sort_values("open_data_pct", ascending=False, inplace=True)
+    # Tie-break on article count then name so the row order is fully determined.
+    # The DuckDB queries carry no total ordering, so equal-rate funders otherwise
+    # come back in a different order on every run, churning the committed CSV,
+    # markdown and figure and burying real changes in reorder noise.
+    df.sort_values(
+        ["open_data_pct", "total_articles", "funder_name"],
+        ascending=[False, False, True],
+        inplace=True,
+    )
     df.reset_index(drop=True, inplace=True)
     return df
 
@@ -637,7 +729,11 @@ def _correction_fields(corr: dict, total: int) -> dict:
     # CI percentages kept at full precision in the CSV so real-but-narrow
     # imputation intervals stay distinct (display rounds to 1 dp). #24
     return {
-        "corrected_od": corr["corrected_od"],
+        # Rounded to 6 dp: this is an imputed article count summed over journals
+        # in whatever order DuckDB returns them, so the last few float digits
+        # wobble between runs and churned the committed CSV. 6 dp is far finer
+        # than the quantity is meaningful to.
+        "corrected_od": round(corr["corrected_od"], 6),
         "corrected_pct": round(100.0 * corr["corrected_od"] / total, 1),
         "ci_lo_pct": None if ci_lo is None else round(100.0 * ci_lo / total, 6),
         "ci_hi_pct": None if ci_hi is None else round(100.0 * ci_hi / total, 6),
@@ -695,7 +791,8 @@ def generate_funder_latex_table(
     row filter below is idempotent. (#31)
     """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
-    top.sort_values("open_data_pct", ascending=False, inplace=True)
+    # Stable sort: preserves build_funder_summary's deterministic tie order.
+    top.sort_values("open_data_pct", ascending=False, kind="mergesort", inplace=True)
 
     if top.empty:
         logger.warning("No funders above threshold %d for table", threshold)
@@ -743,9 +840,10 @@ def generate_funder_latex_table(
             r"Open data rates among major biomedical research funders. "
             rf"{incl_clause}, ranked by observed open data rate. "
             r"Parent funders (e.g., NIH, UKRI) aggregate all child institutes "
-            r"with deduplicated article counts; agency-level aggregation is being "
-            r"finalized, so a small number of sub-agency programmes are not yet "
-            r"folded into their parent and agency totals are provisional. "
+            r"with deduplicated article counts; sub-agency programmes (e.g., NSF "
+            r"directorates, the DOE Office of Science) are folded into their "
+            r"parent agency following the ROR organizational hierarchy, so an "
+            r"article crediting both a programme and its agency is counted once. "
             r"\textbf{\% OD (obs.)} is the headline rate: the directly measured "
             r"open data rate across all articles in each funder's portfolio. "
             r"\textit{\% OD (est.)} is a supplementary modeled estimate that "
@@ -870,7 +968,8 @@ def generate_funder_bar_chart(
     figure fits one page; the full set remains in the table/CSV. (#33)
     """
     top = df[df["total_articles"] >= threshold].copy() if threshold > 0 else df.copy()
-    top.sort_values("open_data_pct", ascending=False, inplace=True)
+    # Stable sort: preserves build_funder_summary's deterministic tie order.
+    top.sort_values("open_data_pct", ascending=False, kind="mergesort", inplace=True)
 
     if top.empty:
         logger.warning("No funders above threshold %d for figure", threshold)
@@ -1299,24 +1398,6 @@ def main(argv=None):
     tbl_df = summary[summary["total_articles"] >= tbl_threshold].copy()
     if min_works_tbl > 0:
         tbl_df = tbl_df[tbl_df["aggregated_works_count"] >= min_works_tbl]
-
-    # Interim display filter: suppress un-aggregated US sub-agency programmes and
-    # the duplicate-name row from the rendered table/figure (CSV stays complete).
-    def _drop_subagency(df: pd.DataFrame) -> pd.DataFrame:
-        before = len(df)
-        fid = df.get("funder_id", pd.Series("", index=df.index)).astype(str).str.strip()
-        keep = ~fid.isin(_SUBAGENCY_EXCLUDE_IDS) & ~df["funder_name"].isin(_DUP_NAME_EXCLUDE)
-        out = df[keep].copy()
-        if len(out) < before:
-            logger.info(
-                "  Sub-agency display filter: %d → %d funders (removed: %s)",
-                before, len(out),
-                ", ".join(df[~keep]["funder_name"].tolist()),
-            )
-        return out
-
-    fig_df = _drop_subagency(fig_df)
-    tbl_df = _drop_subagency(tbl_df)
 
     # Outputs
     sfx = args.output_suffix

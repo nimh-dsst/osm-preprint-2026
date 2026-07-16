@@ -1,35 +1,57 @@
 funder_name,n_articles_total,n_articles_pdf,pdf_coverage_pct,observed_rate,observed_ci_low,observed_ci_high,corrected_rate,corrected_ci_low,corrected_ci_high,rank_observed,rank_corrected,rank_delta
-Agence Nationale de la Recherche,2644,1076,40.7,26.1,24.4,27.8,28.8,28.1,29.5,1,1,0
-Horizon 2020 Framework Programme,2408,1071,44.5,25.1,23.4,26.9,28.6,28.0,29.3,2,2,0
-National Science Foundation,7611,3407,44.8,24.7,23.7,25.7,27.3,26.7,28.0,3,3,0
-Swiss National Science Foundation,3496,1386,39.6,23.4,22.0,24.8,26.4,25.9,27.1,5,4,1
-Wellcome Trust,4752,1541,32.4,24.1,22.9,25.4,26.1,25.6,26.7,4,5,-1
-Deutsche Forschungsgemeinschaft,9344,3514,37.6,21.6,20.8,22.5,24.5,23.9,25.3,6,6,0
-Bundesministerium fur Bildung und Forschung,2710,1142,42.1,19.4,17.9,20.9,23.6,23.0,24.3,9,7,2
-UK Research and Innovation,14781,5042,34.1,19.4,18.8,20.0,23.2,22.7,23.8,9,8,1
-Netherlands Organisation for Scientific Research,1935,614,31.7,19.7,18.0,21.5,22.9,22.5,23.4,8,9,-1
-National Institutes of Health,28982,10523,36.3,20.5,20.0,21.0,22.7,22.1,23.4,7,10,-3
-Swedish Research Council,3037,1071,35.3,18.6,17.3,20.1,22.2,21.7,22.9,12,11,1
-Natural Sciences and Engineering Research Council of Canada,2752,992,36.0,19.3,17.9,20.8,22.1,21.3,22.9,10,12,-2
-European Commission,9202,3763,40.9,18.3,17.5,19.1,21.3,20.7,22.0,13,13,0
-China Scholarship Council,1635,580,35.5,16.7,15.0,18.6,21.2,20.7,21.9,14,14,0
-National Health and Medical Research Council,2406,811,33.7,16.6,15.2,18.1,20.7,20.2,21.3,15,15,0
-State Research Agency (Spain),1985,830,41.8,19.1,17.4,20.9,20.7,20.1,21.5,11,15,-4
-European Regional Development Fund,2738,1002,36.6,15.9,14.5,17.3,19.3,18.8,20.0,17,16,1
-Canadian Institutes of Health Research,2619,1081,41.3,15.7,14.4,17.1,19.1,18.5,19.9,18,17,1
-Ministry of Science and Innovation (Spain),2555,939,36.8,16.0,14.7,17.5,18.8,18.2,19.6,16,18,-2
-Japan Society for the Promotion of Science,6680,2700,40.4,15.1,14.3,16.0,18.5,17.9,19.3,19,19,0
-Fundacao de Amparo a Pesquisa do Estado de Sao Paulo,1743,572,32.8,13.3,11.8,15.0,17.7,17.0,18.7,23,20,3
-H2020 European Research Council,2074,373,18.0,14.5,13.0,16.0,17.6,17.2,18.1,20,21,-1
-National Institute for Health Research,3882,1415,36.5,11.7,10.8,12.8,17.5,17.1,18.0,29,22,7
-China Postdoctoral Science Foundation,2930,1171,40.0,13.8,12.6,15.1,17.4,16.5,18.6,21,23,-2
-National Council for Scientific and Technological Development (CNPq),3479,1094,31.4,12.4,11.4,13.6,17.3,16.5,18.3,28,24,4
-National Key Research and Development Program,10383,3385,32.6,12.8,12.2,13.4,17.2,16.2,18.5,25,25,0
-Fundamental Research Funds for the Central Universities,3155,1174,37.2,12.6,11.4,13.8,17.0,16.1,18.2,27,26,1
-National Natural Science Foundation of China,47356,17707,37.4,12.7,12.4,13.0,16.8,15.9,18.0,26,27,-1
-Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior,3055,967,31.7,11.2,10.1,12.3,15.9,15.2,16.8,31,28,3
-National Research Foundation,3161,1733,54.8,13.0,11.9,14.2,15.8,15.1,16.6,24,29,-5
-Fundacao para a Ciencia e a Tecnologia,1965,765,38.9,13.4,12.0,15.0,15.1,14.4,16.1,22,30,-8
-Natural Science Foundation of Shandong Province,2031,830,40.9,11.6,10.3,13.0,14.9,14.0,16.0,30,31,-1
-National Research Foundation of Korea,4854,2002,41.2,9.8,9.0,10.7,13.7,13.0,14.7,32,32,0
-"Ministry of Science and ICT, South Korea",1958,1016,51.9,8.6,7.4,9.9,12.2,11.6,13.0,33,33,0
+Swiss National Science Foundation,5600,2076,37.1,22.6,21.5,23.7,26.0,25.49877,26.616174,4,1,3
+Agence Nationale de la Recherche,5997,2191,36.5,24.4,23.3,25.5,25.7,25.148111,26.365447,1,2,-1
+Chinese Academy of Sciences,3993,1510,37.8,22.7,21.4,24.0,25.4,24.586301,26.418913,3,3,0
+Centre National de la Recherche Scientifique,1998,742,37.1,24.4,22.6,26.4,24.9,24.424424,25.538312,1,4,-3
+United States Department of Agriculture,4329,1269,29.3,21.7,20.5,23.0,24.5,23.591199,25.504343,6,5,1
+Wellcome Trust,8809,2646,30.0,22.1,21.3,23.0,24.4,23.841633,24.940813,5,6,-1
+Austrian Science Fund,1918,678,35.3,22.8,21.0,24.7,23.9,23.436775,24.446023,2,7,-5
+Deutsche Forschungsgemeinschaft,14292,5164,36.1,21.3,20.7,22.0,23.4,22.84367,24.075191,7,8,-1
+"Ministry of Education, Culture, Sports, Science and Technology",3868,1510,39.0,18.6,17.4,19.9,23.4,22.893058,23.903282,13,8,5
+National Science Foundation,25256,8211,32.5,20.3,19.9,20.8,22.8,22.343648,23.441308,8,9,-1
+Research Foundation Flanders,1897,681,35.9,20.2,18.5,22.1,22.3,21.66598,23.068688,9,10,-1
+Department of Energy,5788,2092,36.1,20.1,19.1,21.2,22.2,21.904141,22.575215,10,11,-1
+Netherlands Organisation for Scientific Research,3439,1032,30.0,19.3,18.1,20.7,22.2,21.797814,22.687056,11,11,0
+Bundesministerium fur Bildung und Forschung,4579,1698,37.1,19.0,17.8,20.1,21.9,21.346781,22.585048,12,12,0
+UK Research and Innovation,21932,6868,31.3,17.6,17.1,18.1,21.4,20.909521,21.94153,18,13,5
+Australian Research Council,1800,509,28.3,18.2,16.5,20.1,21.1,20.462342,21.919158,15,14,1
+Swedish Research Council,4900,1603,32.7,16.7,15.7,17.8,20.9,20.342841,21.615695,22,15,7
+Natural Sciences and Engineering Research Council of Canada,5300,1614,30.5,17.9,16.9,18.9,20.5,19.861978,21.212314,17,16,1
+European Commission,28782,9034,31.4,17.3,16.8,17.7,20.4,19.87616,21.120282,19,17,2
+Research Council of Norway,1950,688,35.3,16.2,14.6,17.9,20.2,19.697632,20.8873,24,18,6
+China Scholarship Council,3198,1036,32.4,16.8,15.6,18.2,19.8,19.277467,20.536278,21,19,2
+State Research Agency (Spain),4933,1622,32.9,18.0,16.9,19.1,19.8,19.171621,20.510946,16,19,-3
+U.S. Department of Defense,6431,2167,33.7,17.0,16.1,17.9,19.7,19.297459,20.319328,20,20,0
+American Heart Association,1909,431,22.6,18.5,16.9,20.3,19.5,19.067372,20.001522,14,21,-7
+Centers for Disease Control and Prevention,4082,1243,30.5,14.6,13.6,15.7,19.1,18.542358,19.821189,27,22,5
+Australian Government,2397,810,33.8,14.6,13.2,16.0,18.9,18.404752,19.556037,27,23,4
+National Institutes of Health,85144,22660,26.6,16.4,16.2,16.7,18.7,18.19149,19.324573,23,24,-1
+Fundamental Research Funds for the Central Universities,7174,2540,35.4,14.0,13.2,14.8,18.6,17.871415,19.519774,30,25,5
+National Health and Medical Research Council,4410,1265,28.7,13.9,12.9,14.9,18.4,17.989269,18.991704,31,26,5
+Ministry of Science and Innovation (Spain),4817,1611,33.4,15.8,14.8,16.8,18.3,17.676215,19.044915,26,27,-1
+China Postdoctoral Science Foundation,6130,2223,36.3,14.0,13.2,14.9,18.2,17.532552,19.179751,30,28,2
+European Regional Development Fund,5962,1901,31.9,15.9,15.0,16.9,18.2,17.589366,18.911971,25,28,-3
+National Key Research and Development Program,21352,6497,30.4,13.9,13.5,14.4,17.9,17.051553,18.889852,31,29,2
+Natural Science Foundation of Guangdong Province,2771,1027,37.1,13.6,12.4,14.9,17.9,17.21183,18.838657,33,29,4
+Canadian Institutes of Health Research,6111,1753,28.7,14.2,13.3,15.1,17.7,17.202784,18.374485,28,30,-2
+National Natural Science Foundation of China,95104,33115,34.8,13.2,12.9,13.4,17.7,16.946674,18.729595,34,30,4
+Science and Technology Commission of Shanghai Municipality,2544,866,34.0,14.1,12.8,15.5,17.7,17.053606,18.592601,29,30,-1
+Zhejiang Provincial Natural Science Foundation,3349,1223,36.5,12.6,11.5,13.8,17.7,16.975768,18.619416,37,30,7
+Fundacao de Amparo a Pesquisa do Estado de Sao Paulo,3040,954,31.4,13.6,12.4,14.9,17.2,16.510968,18.124419,33,31,2
+"Ministry of Education, India",2067,749,36.2,12.3,11.0,13.8,17.1,16.440811,17.932679,39,32,7
+Natural Science Foundation of Jiangsu Province,2526,862,34.1,12.5,11.2,13.8,16.8,16.08546,17.785101,38,33,5
+National Institute for Health Research,8924,2600,29.1,10.2,9.6,10.9,16.3,15.915629,16.931071,45,34,11
+Japan Society for the Promotion of Science,20612,7199,34.9,11.4,11.0,11.9,16.2,15.700944,16.793688,43,35,8
+U.S. Department of Veterans Affairs,3279,936,28.5,13.0,11.9,14.2,16.2,15.640748,16.958718,35,35,0
+Government of Jiangsu Province,4964,1890,38.1,11.9,11.0,12.8,16.1,15.445583,17.035049,40,36,4
+Instituto de Salud Carlos III,3398,1122,33.0,12.5,11.5,13.7,16.1,15.379305,16.971762,38,36,2
+Natural Science Foundation of Shandong Province,4170,1495,35.9,11.8,10.9,12.8,16.1,15.394372,17.148503,41,36,5
+National Council for Scientific and Technological Development (CNPq),6728,2052,30.5,11.5,10.8,12.3,15.9,15.0747,16.926524,42,37,5
+National Research Foundation,11435,4498,39.3,10.7,10.2,11.3,15.3,14.734543,16.163579,44,38,6
+Fundacao para a Ciencia e a Tecnologia,3348,1107,33.1,12.7,11.6,13.8,15.1,14.393211,16.136326,36,39,-3
+Russian Science Foundation,2157,587,27.2,13.7,12.3,15.2,14.9,13.950349,16.066195,32,40,-8
+Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior,6134,1866,30.4,10.0,9.3,10.8,14.7,13.942078,15.677281,46,41,5
+Eli Lilly and Company,2699,686,25.4,7.0,6.1,8.1,14.6,14.144191,15.25849,50,42,8
+Pfizer,4381,1058,24.1,8.0,7.3,8.9,14.6,14.202212,15.165941,48,42,6
+National Research Foundation of Korea,10745,3912,36.4,9.0,8.5,9.6,14.0,13.418762,14.907657,47,43,4
+"Ministry of Science and ICT, South Korea",6574,2576,39.2,7.6,7.0,8.3,12.8,12.176047,13.639238,49,44,5

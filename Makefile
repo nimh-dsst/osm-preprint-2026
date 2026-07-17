@@ -132,6 +132,12 @@ clean:
 update-refs:
 	@echo "Downloading latest bibliography from PaperPile..."
 	@curl -fsSL -o $(PAPERPILE_BIB) $(PAPERPILE_URL)
+	@# PaperPile escapes underscores (\_) for LaTeX safety, but biblatex treats
+	@# doi/url as verbatim fields, so the backslashes land literally in the
+	@# hyperlink and break it (e.g. 10.1162/qss\_a\_00301). Unescape those two
+	@# fields only -- \_ in titles must stay escaped. perl, not sed -i, for
+	@# macOS/Linux portability.
+	@perl -pi -e 's/\\_/_/g if /^\s*(doi|url)\s*=/' $(PAPERPILE_BIB)
 	@echo "References updated: $(PAPERPILE_BIB)"
 
 # Push flat LaTeX tree to Overleaf (overleaf-publish branch -> overleaf/master)

@@ -66,6 +66,11 @@ done
 if [[ "${SKIP_UPDATE_REFS:-}" != "1" ]]; then
   echo "==> Fetching PaperPile bibliography from $PAPERPILE_URL"
   curl -fsSL -o "$PAPERPILE_BIB" "$PAPERPILE_URL"
+  # Must mirror the unescape in the Makefile's update-refs target: this curl
+  # overwrites paperpile.bib, so without it every Overleaf sync re-breaks DOIs
+  # containing underscores. biblatex treats doi/url as verbatim fields, so
+  # PaperPile's LaTeX-safe \_ ends up literally in the link.
+  perl -pi -e 's/\\_/_/g if /^\s*(doi|url)\s*=/' "$PAPERPILE_BIB"
 fi
 if [[ ! -f "$PAPERPILE_BIB" ]]; then
   echo "error: $PAPERPILE_BIB not found (run: make update-refs)" >&2

@@ -11,7 +11,7 @@ export PATH := $(OSM_VENV_BIN):$(PATH)
 # Descriptive name for the committed output PDF. tectonic emits latex/main.pdf
 # (named after the source); we copy it to this name. main.tex stays the source
 # so the Overleaf integration (which expects main.tex) keeps working.
-PDF_NAME ?= who-funds-open-science-2026.pdf
+PDF_NAME ?= who-funds-open-data-sharing-2026.pdf
 
 # Default target
 all: tables compile

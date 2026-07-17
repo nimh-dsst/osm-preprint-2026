@@ -1,0 +1,292 @@
+child_canonical_name,child_funder_id,child_ror,child_types,child_articles,parent_canonical_name,parent_funder_id,parent_ror
+National Institute for Occupational Safety and Health,F4320337382,0502a2655,facility|funder,270,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center for Chronic Disease Prevention and Health Promotion,F4320337383,021rths28,facility|funder,215,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center for Immunization and Respiratory Diseases,F4320337421,05je2tx78,facility|funder,53,Centers for Disease Control and Prevention,F4320332162,042twtr12
+Agency for Toxic Substances and Disease Registry,F4320337419,0045x2741,funder|healthcare,46,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center for Injury Prevention and Control,F4320337417,0015x1k58,funder|other,39,Centers for Disease Control and Prevention,F4320332162,042twtr12
+President's Malaria Initiative,F4320334467,012rb2c33,funder|other,37,Centers for Disease Control and Prevention,F4320332162,042twtr12
+"National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention",F4320337422,01wjn2x92,facility|funder,23,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center on Birth Defects and Developmental Disabilities,F4320337467,021asz590,facility|funder,13,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center for Health Statistics,F4320337424,03p15s250,funder|other,11,Centers for Disease Control and Prevention,F4320332162,042twtr12
+Center for Global Health,F4320337470,02e5dc168,funder|government,8,Centers for Disease Control and Prevention,F4320332162,042twtr12
+"Center for Surveillance, Epidemiology, and Laboratory Services",F4320337745,05xte6x19,facility|funder,3,Centers for Disease Control and Prevention,F4320332162,042twtr12
+National Center for Environmental Health,F4320337420,00jc2kw33,facility|funder,3,Centers for Disease Control and Prevention,F4320332162,042twtr12
+"Division of Preparedness and Emerging Infections, National Center for Emerging and Zoonotic Infectious Diseases",F4320309143,02ggwpx62,facility|funder,1,Centers for Disease Control and Prevention,F4320332162,042twtr12
+Office of Public Health Preparedness and Response,F4320337413,00sdb8f83,funder|healthcare,1,Centers for Disease Control and Prevention,F4320332162,042twtr12
+Deutsches Krebsforschungszentrum,F4320310693,04cdgtt98,facility|funder,394,Helmholtz Association,F4320325698,0281dp749
+Deutsches Elektronen-Synchrotron,F4320334759,01js2sh04,facility|funder,315,Helmholtz Association,F4320325698,0281dp749
+Deutsches Zentrum für Neurodegenerative Erkrankungen,F4320323170,043j0f473,facility|funder,153,Helmholtz Association,F4320325698,0281dp749
+Helmholtz-Gemeinschaft,F4320320876,0281dp749,funder|government,105,Helmholtz Association,F4320325698,0281dp749
+Helmholtz Zentrum München,F4320336029,00cfam450,facility|funder,103,Helmholtz Association,F4320325698,0281dp749
+Forschungszentrum Jülich,F4320321752,02nv7yv05,facility|funder,98,Helmholtz Association,F4320325698,0281dp749
+Helmholtz-Zentrum Berlin für Materialien und Energie,F4320333421,02aj13c28,facility|funder,85,Helmholtz Association,F4320325698,0281dp749
+Deutsches Zentrum für Luft- und Raumfahrt,F4320321602,04bwf3e34,facility|funder,67,Helmholtz Association,F4320325698,0281dp749
+Helmholtz-Zentrum Dresden-Rossendorf,F4320328631,01zy2cs03,facility|funder,55,Helmholtz Association,F4320325698,0281dp749
+Helmholtz-Zentrum für Umweltforschung,F4320322908,000h6jb29,facility|funder,44,Helmholtz Association,F4320325698,0281dp749
+Alfred Wegener Institute Helmholtz Centre for Polar and Marine Research,F4320321790,032e6b942,facility|funder,27,Helmholtz Association,F4320325698,0281dp749
+Helmholtz-Zentrum Potsdam - Deutsches GeoForschungsZentrum GFZ,F4320335584,04z8jg394,facility|funder,19,Helmholtz Association,F4320325698,0281dp749
+GEOMAR Helmholtz-Zentrum für Ozeanforschung Kiel,F4320321749,02h2x0161,facility|funder,18,Helmholtz Association,F4320325698,0281dp749
+GSI Helmholtzzentrum für Schwerionenforschung,F4320335585,02k8cbn47,facility|funder,12,Helmholtz Association,F4320325698,0281dp749
+Cluster of Excellence on Plant Sciences,F817998374,034waa237,facility|funder,5,Helmholtz Association,F4320325698,0281dp749
+National Cancer Institute,F4320337351,040gcmg81,funder|government,16994,National Institutes of Health,F4320332161,01cwqze88
+National Institute of General Medical Sciences,F4320337354,04q48ey07,facility|funder,15358,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Allergy and Infectious Diseases,F4320337355,043z4tv69,facility|funder,10968,National Institutes of Health,F4320332161,01cwqze88
+"National Heart, Lung, and Blood Institute",F4320337338,012pb6c26,facility|funder,9693,National Institutes of Health,F4320332161,01cwqze88
+National Institute on Aging,F4320337337,049v75w11,facility|funder,9233,National Institutes of Health,F4320332161,01cwqze88
+National Center for Advancing Translational Sciences,F4320337472,04pw6fb54,funder|government,7209,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Neurological Disorders and Stroke,F4320337359,01s5ya894,facility|funder,7057,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Diabetes and Digestive and Kidney Diseases,F4320337357,00adh9b73,facility|funder,7027,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Mental Health,F4320337346,04xeg9z08,facility|funder,6220,National Institutes of Health,F4320332161,01cwqze88
+Eunice Kennedy Shriver National Institute of Child Health and Human Development,F4320337611,04byxyr05,facility|funder,5005,National Institutes of Health,F4320332161,01cwqze88
+National Institute on Drug Abuse,F4320337347,00fq5cm18,facility|funder,3580,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Environmental Health Sciences,F4320337361,00j4k1h63,facility|funder,3128,National Institutes of Health,F4320332161,01cwqze88
+National Eye Institute,F4320337350,03wkg3b53,facility|funder,2357,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Arthritis and Musculoskeletal and Skin Diseases,F4320337362,006zn3t30,facility|funder,2232,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Biomedical Imaging and Bioengineering,F4320337363,00372qc85,facility|funder,2201,National Institutes of Health,F4320332161,01cwqze88
+National Human Genome Research Institute,F4320337348,00baak391,facility|funder,2145,National Institutes of Health,F4320332161,01cwqze88
+National Institute on Minority Health and Health Disparities,F4320337534,0493hgw16,funder|government,1971,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Child Health and Human Development,F4320337364,04byxyr05,facility|funder,1824,National Institutes of Health,F4320332161,01cwqze88
+Fogarty International Center,F4320337356,02xey9a22,funder|healthcare,1691,National Institutes of Health,F4320332161,01cwqze88
+National Institute on Alcohol Abuse and Alcoholism,F4320337330,02jzrsm59,facility|funder,1355,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Dental and Craniofacial Research,F4320337365,004a2wv92,facility|funder,1279,National Institutes of Health,F4320332161,01cwqze88
+National Institute on Deafness and Other Communication Disorders,F4320337352,04mhx6838,funder|government,1235,National Institutes of Health,F4320332161,01cwqze88
+National Center for Research Resources,F4320337375,04pw6fb54,funder|government,1137,National Institutes of Health,F4320332161,01cwqze88
+U.S. National Library of Medicine,F4320337372,0060t0j89,archive|funder,899,National Institutes of Health,F4320332161,01cwqze88
+"Division of Intramural Research, National Institute of Allergy and Infectious Diseases",F4320309123,043z4tv69,facility|funder,707,National Institutes of Health,F4320332161,01cwqze88
+National Institute of Nursing Research,F4320337353,01y3zfr79,facility|funder,634,National Institutes of Health,F4320332161,01cwqze88
+National Center for Complementary and Integrative Health,F4320337593,00190t495,facility|funder,622,National Institutes of Health,F4320332161,01cwqze88
+NIH Office of the Director,F4320337349,00fj8a872,funder|other,605,National Institutes of Health,F4320332161,01cwqze88
+NIH Clinical Center,F4320337376,04vfsmv21,funder|healthcare,548,National Institutes of Health,F4320332161,01cwqze88
+"Division of Cancer Prevention, National Cancer Institute",F4320309684,040gcmg81,funder|government,157,National Institutes of Health,F4320332161,01cwqze88
+Frederick National Laboratory for Cancer Research,F4320313762,03v6m3209,facility|funder,125,National Institutes of Health,F4320332161,01cwqze88
+"Office of Extramural Research, National Institutes of Health",F4320337544,05aq6yn88,funder|government,122,National Institutes of Health,F4320332161,01cwqze88
+Office of Research on Women's Health,F4320337381,00fj8a872,funder|other,101,National Institutes of Health,F4320332161,01cwqze88
+Center for Cancer Research,F2860323509,05bjen692,facility,95,National Institutes of Health,F4320332161,01cwqze88
+Office of Dietary Supplements,F4320306096,01wtjyf13,funder|government,89,National Institutes of Health,F4320332161,01cwqze88
+Center for Scientific Review,F4320337432,04r5s4b52,funder|government,60,National Institutes of Health,F4320332161,01cwqze88
+Office of Behavioral and Social Sciences Research,F4320337379,00fj8a872,funder|other,57,National Institutes of Health,F4320332161,01cwqze88
+Center for Information Technology,F4320337373,03jh5a977,facility|funder,56,National Institutes of Health,F4320332161,01cwqze88
+Office of AIDS Research,F4320337464,02e3wq066,funder|other,31,National Institutes of Health,F4320332161,01cwqze88
+"Center for Strategic Scientific Initiatives, National Cancer Institute",F4320310678,040gcmg81,funder|government,28,National Institutes of Health,F4320332161,01cwqze88
+National Center on Minority Health and Health Disparities,F4320337374,0493hgw16,funder|government,24,National Institutes of Health,F4320332161,01cwqze88
+National Center for Complementary and Alternative Medicine,F4320337358,00190t495,facility|funder,21,National Institutes of Health,F4320332161,01cwqze88
+National Center for Medical Rehabilitation Research,F4320338296,04byxyr05,facility|funder,21,National Institutes of Health,F4320332161,01cwqze88
+Office of Disease Prevention,F4320337465,046zezr58,funder|government,18,National Institutes of Health,F4320332161,01cwqze88
+Office of Strategic Coordination,F4320337466,02e3wq066,funder|other,18,National Institutes of Health,F4320332161,01cwqze88
+Immune Tolerance Network,F4320314903,00pjnm784,funder|nonprofit,13,National Institutes of Health,F4320332161,01cwqze88
+Framingham Heart Study,F4320316944,031grv205,facility|funder,6,National Institutes of Health,F4320332161,01cwqze88
+Office of Data Science Strategy,F766871365,04g4sf283,funder|government,4,National Institutes of Health,F4320332161,01cwqze88
+Directorate for Biological Sciences,F4320332167,001xhss06,funder|government,2351,National Science Foundation,F4320306076,021nxhr62
+Division of Materials Research,F4320337367,01pc7k308,funder|government,1890,National Science Foundation,F4320306076,021nxhr62
+Division of Chemistry,F4320337393,01ar8dr59,funder|government,1462,National Science Foundation,F4320306076,021nxhr62
+Division of Graduate Education,F4320337368,00whkrf32,funder|government,810,National Science Foundation,F4320306076,021nxhr62
+"Division of Chemical, Bioengineering, Environmental, and Transport Systems",F4320337390,0471zv972,funder|government,657,National Science Foundation,F4320306076,021nxhr62
+"Division of Electrical, Communications and Cyber Systems",F4320337392,01krpsy48,funder|government,515,National Science Foundation,F4320306076,021nxhr62
+"Division of Civil, Mechanical and Manufacturing Innovation",F4320337391,028yd4c30,funder|government,383,National Science Foundation,F4320306076,021nxhr62
+Division of Environmental Biology,F4320337400,03g87he71,funder|government,228,National Science Foundation,F4320306076,021nxhr62
+Office of Advanced Cyberinfrastructure,F4320337377,04nh1dc89,funder|government,224,National Science Foundation,F4320306076,021nxhr62
+Division of Mathematical Sciences,F4320337380,051fftw81,funder|government,213,National Science Foundation,F4320306076,021nxhr62
+Division of Molecular and Cellular Biosciences,F4320337397,002jdaq33,funder|government,194,National Science Foundation,F4320306076,021nxhr62
+Division of Integrative Organismal Systems,F4320337399,01rvays47,funder|government,180,National Science Foundation,F4320306076,021nxhr62
+Division of Human Resource Development,F4320337407,03mamvh39,funder|government,175,National Science Foundation,F4320306076,021nxhr62
+Office of Experimental Program to Stimulate Competitive Research,F4320338283,04k9mqs78,funder|government,164,National Science Foundation,F4320306076,021nxhr62
+Division of Biological Infrastructure,F4320337398,04qn9mx93,funder|government,153,National Science Foundation,F4320306076,021nxhr62
+Directorate for Mathematical and Physical Sciences,F4320332172,029b7h395,funder|government,122,National Science Foundation,F4320306076,021nxhr62
+Division of Undergraduate Education,F4320337408,02kd4km72,funder|government,111,National Science Foundation,F4320306076,021nxhr62
+National High Magnetic Field Laboratory,F4320313883,03s53g630,facility|funder,101,National Science Foundation,F4320306076,021nxhr62
+Directorate for Engineering,F4320332170,00b6sbb32,funder|government,93,National Science Foundation,F4320306076,021nxhr62
+Division of Ocean Sciences,F4320337386,05wqqhv83,funder|government,78,National Science Foundation,F4320306076,021nxhr62
+Office of International Science and Engineering,F4320337370,01k638r21,funder|government,61,National Science Foundation,F4320306076,021nxhr62
+Division of Atmospheric and Geospace Sciences,F4320337402,037gd6g64,funder|government,58,National Science Foundation,F4320306076,021nxhr62
+Office of the Director,F4320332179,04nseet23,funder|government,58,National Science Foundation,F4320306076,021nxhr62
+Division of Emerging Frontiers in Research and Innovation,F4320337395,0388pet74,funder|government,52,National Science Foundation,F4320306076,021nxhr62
+Division of Behavioral and Cognitive Sciences,F4320337405,05wgkzg12,funder|government,48,National Science Foundation,F4320306076,021nxhr62
+Directorate for Geosciences,F4320332171,05p847d66,funder|government,47,National Science Foundation,F4320306076,021nxhr62
+Division of Earth Sciences,F4320337403,05v01mk25,funder|government,47,National Science Foundation,F4320306076,021nxhr62
+Directorate for Computer and Information Science and Engineering,F4320332169,025kzpk63,funder|government,40,National Science Foundation,F4320306076,021nxhr62
+Division of Physics,F4320336454,04ap5x931,funder|government,39,National Science Foundation,F4320306076,021nxhr62
+Division of Information and Intelligent Systems,F4320337389,053a2cp42,funder|government,38,National Science Foundation,F4320306076,021nxhr62
+Office of Integrative Activities,F4320337378,04k9mqs78,funder|government,38,National Science Foundation,F4320306076,021nxhr62
+Office of Polar Programs,F4320337369,05nwjp114,funder|government,38,National Science Foundation,F4320306076,021nxhr62
+"Directorate for Social, Behavioral and Economic Sciences",F4320332173,03h7mcc28,funder|government,34,National Science Foundation,F4320306076,021nxhr62
+Division of Emerging Frontiers,F4320337401,01tnvpc68,funder|government,31,National Science Foundation,F4320306076,021nxhr62
+Division of Engineering Education and Centers,F4320337394,050rnw378,funder|government,31,National Science Foundation,F4320306076,021nxhr62
+Division of Computing and Communication Foundations,F4320337387,01mng8331,funder|government,25,National Science Foundation,F4320306076,021nxhr62
+Directorate for Education and Human Resources,F4320332168,014bj5w56,funder|government,18,National Science Foundation,F4320306076,021nxhr62
+Division of Arctic Sciences,F4320338275,02trddg58,funder|government,16,National Science Foundation,F4320306076,021nxhr62
+Division of Computer and Network Systems,F4320337388,02rdzmk74,funder|government,16,National Science Foundation,F4320306076,021nxhr62
+Division of Social and Economic Sciences,F4320337366,02dz2hb46,funder|government,12,National Science Foundation,F4320306076,021nxhr62
+National Center for Atmospheric Research,F4320308377,05cvfcr44,facility|funder,10,National Science Foundation,F4320306076,021nxhr62
+Division of Advanced Cyberinfrastructure,F4320337563,04nh1dc89,funder|government,7,National Science Foundation,F4320306076,021nxhr62
+Division of Astronomical Sciences,F4320337404,04mg8wm74,funder|government,7,National Science Foundation,F4320306076,021nxhr62
+SBE Office of Multidisciplinary Activities,F4320337457,02a65dj82,funder|government,7,National Science Foundation,F4320306076,021nxhr62
+"Center for Selective C-H Functionalization, National Science Foundation",F4320309085,02h8v7m77,facility|funder,6,National Science Foundation,F4320306076,021nxhr62
+Division of Antarctic Sciences,F4320338274,05fnzca26,funder|government,6,National Science Foundation,F4320306076,021nxhr62
+Office of Multidisciplinary Activities,F4320337471,01sharn77,funder|government,6,National Science Foundation,F4320306076,021nxhr62
+American Institute of Mathematics,F4320307521,02a0fwv66,funder|nonprofit,5,National Science Foundation,F4320306076,021nxhr62
+Division of Polar Programs,F4320337559,05nwjp114,funder|government,5,National Science Foundation,F4320306076,021nxhr62
+Division of Research on Learning in Formal and Informal Settings,F4320337409,05s7cqk18,funder|government,5,National Science Foundation,F4320306076,021nxhr62
+National Science Board,F4320332265,00apvva27,funder|government,5,National Science Foundation,F4320306076,021nxhr62
+Division of Industrial Innovation and Partnerships,F4320337396,03xyg3m20,funder|government,4,National Science Foundation,F4320306076,021nxhr62
+Center for Enabling New Technologies Through Catalysis,F4320310884,033zy4a51,facility|funder,3,National Science Foundation,F4320306076,021nxhr62
+National Center for Science and Engineering Statistics,F4320337406,0445wmv88,funder|government,2,National Science Foundation,F4320306076,021nxhr62
+National Institute for Mathematical and Biological Synthesis,F4320310889,04vj69e88,facility|funder,2,National Science Foundation,F4320306076,021nxhr62
+Division of Grants and Agreements,F4320337436,014eweh95,funder|government,1,National Science Foundation,F4320306076,021nxhr62
+Division of Human Resource Management,F4320337438,04vw0kz07,funder|government,1,National Science Foundation,F4320306076,021nxhr62
+Division of Institution and Award Support,F4320337437,025dabr11,funder|government,1,National Science Foundation,F4320306076,021nxhr62
+National Institute of Food and Agriculture,F4320332299,05qx3fv49,funder|government,2233,U.S. Department of Agriculture,F4320306114,01na82s61
+Agricultural Research Service,F4320332605,02d2m2044,funder|government,993,U.S. Department of Agriculture,F4320306114,01na82s61
+U.S. Forest Service,F4320332478,03zmjc935,funder|government,282,U.S. Department of Agriculture,F4320306114,01na82s61
+Animal and Plant Health Inspection Service,F4320332778,0599wfz09,funder|government,173,U.S. Department of Agriculture,F4320306114,01na82s61
+Agricultural Marketing Service,F4320332300,01xx4fy37,funder|government,27,U.S. Department of Agriculture,F4320306114,01na82s61
+Natural Resources Conservation Service,F4320332782,03j7rgg33,funder|government,26,U.S. Department of Agriculture,F4320306114,01na82s61
+Rocky Mountain Research Station,F4320337818,04347cr60,funder|government,22,U.S. Department of Agriculture,F4320306114,01na82s61
+"Cooperative State Research, Education, and Extension Service",F4320332483,01na82s61,funder|government,13,U.S. Department of Agriculture,F4320306114,01na82s61
+Economic Research Service,F4320332786,05ycxzd89,funder|government,13,U.S. Department of Agriculture,F4320306114,01na82s61
+Northeast SARE,F4320308935,01na82s61,funder|government,11,U.S. Department of Agriculture,F4320306114,01na82s61
+Foreign Agricultural Service,F4320332781,00t77bz53,funder|government,10,U.S. Department of Agriculture,F4320306114,01na82s61
+Joint Fire Science Program,F4320315660,03ccbtk93,funder|government,8,U.S. Department of Agriculture,F4320306114,01na82s61
+Northern Research Station,F4320337809,019jdc178,funder|government,8,U.S. Department of Agriculture,F4320306114,01na82s61
+Food Safety and Inspection Service,F4320332784,045k2ma45,funder|government,7,U.S. Department of Agriculture,F4320306114,01na82s61
+Pacific Northwest Research Station,F4320337770,02s42ys89,funder|government,7,U.S. Department of Agriculture,F4320306114,01na82s61
+USDA Rural Development,F1831208278,02qhkmh27,government,5,U.S. Department of Agriculture,F4320306114,01na82s61
+Southern SARE,F4320308936,01na82s61,funder|government,4,U.S. Department of Agriculture,F4320306114,01na82s61
+North Central SARE,F4320308934,01na82s61,funder|government,3,U.S. Department of Agriculture,F4320306114,01na82s61
+Farm Service Agency,F4320332776,050m26017,funder|government,2,U.S. Department of Agriculture,F4320306114,01na82s61
+"International Programs, US Forest Service",F4320309132,01na82s61,funder|government,2,U.S. Department of Agriculture,F4320306114,01na82s61
+Forest Products Laboratory,F4320309397,031sp1p50,facility|funder,1,U.S. Department of Agriculture,F4320306114,01na82s61
+International Institute of Tropical Forestry,F4320337935,042re3x97,funder|government,1,U.S. Department of Agriculture,F4320306114,01na82s61
+National Agricultural Statistics Service,F4320332785,04dpymk59,funder|government,1,U.S. Department of Agriculture,F4320306114,01na82s61
+Risk Management Agency,F4320332787,05222ev03,funder|government,1,U.S. Department of Agriculture,F4320306114,01na82s61
+Office of Naval Research,F4320337345,00rk2pe57,funder|government,859,U.S. Department of Defense,F4320306078,0447fe631
+Air Force Office of Scientific Research,F4320338279,011e9bt93,funder|government,731,U.S. Department of Defense,F4320306078,0447fe631
+Army Research Office,F4320338281,05epdh915,funder|government,700,U.S. Department of Defense,F4320306078,0447fe631
+Congressionally Directed Medical Research Programs,F4320338273,03g2zjp07,funder|government,483,U.S. Department of Defense,F4320306078,0447fe631
+Defense Advanced Research Projects Agency,F4320332180,02caytj08,funder|government,436,U.S. Department of Defense,F4320306078,0447fe631
+Advanced Research Projects Agency,F4320332815,02caytj08,funder|government,354,U.S. Department of Defense,F4320306078,0447fe631
+Defense Threat Reduction Agency,F4320332186,04tz64554,funder|government,198,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Air Force,F4320332467,006gmme17,funder|government,147,U.S. Department of Defense,F4320306078,0447fe631
+Defense Health Agency,F4320332925,03df8gj37,funder|government,123,U.S. Department of Defense,F4320306078,0447fe631
+Army Research Laboratory,F4320338295,011hc8f90,funder|government,119,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Navy,F4320332923,03ar0mv07,funder|government,104,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army,F4320332447,00afsp483,funder|government,102,U.S. Department of Defense,F4320306078,0447fe631
+Office of Naval Research Global,F4320338298,00rk2pe57,funder|government,100,U.S. Department of Defense,F4320306078,0447fe631
+Air Force Research Laboratory,F4320338294,02e2egq70,facility|funder,92,U.S. Department of Defense,F4320306078,0447fe631
+Medical Research and Materiel Command,F4320338280,03cd02q50,facility|funder,67,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Corps of Engineers,F4320337538,05w4e8v21,funder|government,58,U.S. Department of Defense,F4320306078,0447fe631
+"Defense Sciences Office, DARPA",F4320337531,0447fe631,funder|government,51,U.S. Department of Defense,F4320306078,0447fe631
+Walter Reed Army Institute of Research,F4320338325,0145znz58,funder|government,45,U.S. Department of Defense,F4320306078,0447fe631
+Engineer Research and Development Center,F4320338258,027mhn368,facility|funder,44,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Naval Research Laboratory,F4320337628,04d23a975,facility|funder,32,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Medical Command,F4320337656,04vrzee53,funder|government,22,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Combat Capabilities Development Command Soldier Center,F4320315784,02rdkx920,funder|other,21,U.S. Department of Defense,F4320306078,0447fe631
+Walter Reed National Military Medical Center,F4320333429,025cem651,funder|healthcare,15,U.S. Department of Defense,F4320306078,0447fe631
+Army Research Institute for the Behavioral and Social Sciences,F4320337630,03bq05s23,funder|government,13,U.S. Department of Defense,F4320306078,0447fe631
+Naval Medical Center San Diego,F4320338305,02n14ez29,funder|healthcare,11,U.S. Department of Defense,F4320306078,0447fe631
+Office of Defense Programs,F4320337003,0447fe631,funder|government,11,U.S. Department of Defense,F4320306078,0447fe631
+Naval Medical Research Center,F4320338301,05f421b09,facility|funder,10,U.S. Department of Defense,F4320306078,0447fe631
+Military Health System,F4320333431,03b7pda13,funder|healthcare,8,U.S. Department of Defense,F4320306078,0447fe631
+Office of the Secretary of Defense,F4320332201,00q4sx826,funder|government,8,U.S. Department of Defense,F4320306078,0447fe631
+"Armament Research, Development and Engineering Center",F4320311859,02rdkx920,funder|other,7,U.S. Department of Defense,F4320306078,0447fe631
+Madigan Army Medical Center,F4320338317,01sfyq865,funder|healthcare,7,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Air Force Academy,F4320337633,0055d0g64,funder|government,7,U.S. Department of Defense,F4320306078,0447fe631
+Defense Human Resources Activity,F4320332959,009heah97,funder|government,6,U.S. Department of Defense,F4320306078,0447fe631
+"Naval Air Warfare Center, Weapons Division",F4320338329,054ajk512,funder|government,6,U.S. Department of Defense,F4320306078,0447fe631
+Naval Information Warfare Center Pacific,F4320338406,01gs1cg95,facility|funder|government,6,U.S. Department of Defense,F4320306078,0447fe631
+Air Force Materiel Command,F4320337525,006gmme17,funder|government,5,U.S. Department of Defense,F4320306078,0447fe631
+Defense Technical Information Center,F4320332956,01zqyhk59,facility|funder,5,U.S. Department of Defense,F4320306078,0447fe631
+National Security Agency,F4320311089,0047bvr32,funder|government,5,U.S. Department of Defense,F4320306078,0447fe631
+Naval Air Systems Command,F4320337657,054ajk512,funder|government,5,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Research Institute of Environmental Medicine,F4320338324,00rg6zq05,funder|healthcare,5,U.S. Department of Defense,F4320306078,0447fe631
+United States Marine Corps,F4320333448,05av6m066,funder|government,5,U.S. Department of Defense,F4320306078,0447fe631
+Armed Forces Institute of Regenerative Medicine,F4320338299,0447fe631,funder|government,4,U.S. Department of Defense,F4320306078,0447fe631
+National Geospatial-Intelligence Agency,F4320332165,02k4pxv54,funder|government,4,U.S. Department of Defense,F4320306078,0447fe631
+Telemedicine and Advanced Technology Research Center,F4320338297,014pvr265,funder|other,4,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Aeromedical Research Laboratory,F4320338320,01ajqvg59,facility|funder,4,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Institute of Surgical Research,F4320338321,02gb0hd06,facility|funder,4,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Medical Research Institute of Infectious Diseases,F4320338323,01pveve47,facility|funder,4,U.S. Department of Defense,F4320306078,0447fe631
+Air Force Civil Engineer Center,F4320338249,006gmme17,funder|government,3,U.S. Department of Defense,F4320306078,0447fe631
+Cold Regions Research and Engineering Laboratory,F4320338493,05wk0m864,facility|funder,3,U.S. Department of Defense,F4320306078,0447fe631
+Naval Sea Systems Command,F4320337644,03dm1p143,funder|government,3,U.S. Department of Defense,F4320306078,0447fe631
+59th Medical Wing,F4320337790,01sq4yt06,funder|government,2,U.S. Department of Defense,F4320306078,0447fe631
+Brooke Army Medical Center,F4320338472,00m1mwc36,funder|healthcare,2,U.S. Department of Defense,F4320306078,0447fe631
+Naval Undersea Warfare Center,F4320338330,04bnxa153,funder|other,2,U.S. Department of Defense,F4320306078,0447fe631
+U.S. Army Medical Research Institute of Chemical Defense,F4320338322,03cd02q50,facility|funder,2,U.S. Department of Defense,F4320306078,0447fe631
+Carl R. Darnall Army Medical Center,F4320338312,02zda6x08,funder|healthcare,1,U.S. Department of Defense,F4320306078,0447fe631
+Edgewood Chemical Biological Center,F4320338314,02rdkx920,funder|other,1,U.S. Department of Defense,F4320306078,0447fe631
+Missile Defense Agency,F4320332264,024z17f57,funder|government,1,U.S. Department of Defense,F4320306078,0447fe631
+"Natick Soldier Research, Development and Engineering Center",F4320338318,02rdkx920,funder|other,1,U.S. Department of Defense,F4320306078,0447fe631
+"Naval Air Warfare Center, Aircraft Division",F4320338328,054ajk512,funder|government,1,U.S. Department of Defense,F4320306078,0447fe631
+San Antonio Military Medical Center,F4320338109,00m1mwc36,funder|healthcare,1,U.S. Department of Defense,F4320306078,0447fe631
+"U.S. Army Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance and Reconnaissance Center",F7411744040,02h7kd997,facility|government,1,U.S. Department of Defense,F4320306078,0447fe631
+"U.S. Army Natick Soldier Research, Development and Engineering Center",F4320338390,00qa9vw67,funder|government,1,U.S. Department of Defense,F4320306078,0447fe631
+United States Army Futures Command,F3616754045,0593xbv16,funder|government,1,U.S. Department of Defense,F4320306078,0447fe631
+Office of Science,F4320332359,00mmn6b08,funder|government,2670,U.S. Department of Energy,F4320306084,01bj3aw27
+Basic Energy Sciences,F4320337480,05mg91w61,funder|government,1869,U.S. Department of Energy,F4320306084,01bj3aw27
+Biological and Environmental Research,F4320337509,0114b2m14,funder|government,708,U.S. Department of Energy,F4320306084,01bj3aw27
+Argonne National Laboratory,F4320338284,05gvnxz63,facility|funder,567,U.S. Department of Energy,F4320306084,01bj3aw27
+Lawrence Berkeley National Laboratory,F4320338292,02jbv0t02,facility|funder,367,U.S. Department of Energy,F4320306084,01bj3aw27
+Oak Ridge National Laboratory,F4320338287,01qz5mb56,facility|funder,307,U.S. Department of Energy,F4320306084,01bj3aw27
+National Nuclear Security Administration,F4320332369,03sk1we31,funder|government,286,U.S. Department of Energy,F4320306084,01bj3aw27
+Laboratory Directed Research and Development,F4320337547,01e41cf67,facility|funder,284,U.S. Department of Energy,F4320306084,01bj3aw27
+Brookhaven National Laboratory,F4320338289,02ex6cf31,facility|funder,282,U.S. Department of Energy,F4320306084,01bj3aw27
+Los Alamos National Laboratory,F4320338304,01e41cf67,facility|funder,248,U.S. Department of Energy,F4320306084,01bj3aw27
+SLAC National Accelerator Laboratory,F4320338381,05gzmn429,facility|funder,229,U.S. Department of Energy,F4320306084,01bj3aw27
+Pacific Northwest National Laboratory,F4320338354,05h992307,facility|funder,212,U.S. Department of Energy,F4320306084,01bj3aw27
+National Energy Research Scientific Computing Center,F4320317220,05v3mvq14,facility|funder,204,U.S. Department of Energy,F4320306084,01bj3aw27
+Joint Genome Institute,F4320316170,04xm1d337,facility|funder,200,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Energy Efficiency and Renewable Energy,F4320332360,02xznz413,funder|government,181,U.S. Department of Energy,F4320306084,01bj3aw27
+Lawrence Livermore National Laboratory,F4320338286,041nk4h53,facility|funder,178,U.S. Department of Energy,F4320306084,01bj3aw27
+Sandia National Laboratories,F4320338291,01apwpt12,facility|funder,140,U.S. Department of Energy,F4320306084,01bj3aw27
+Advanced Research Projects Agency - Energy,F4320332276,03q1rgc19,funder|government,99,U.S. Department of Energy,F4320306084,01bj3aw27
+Advanced Scientific Computing Research,F4320337506,0012c7r22,funder|government,84,U.S. Department of Energy,F4320306084,01bj3aw27
+National Renewable Energy Laboratory,F4320338290,036266993,facility|funder,71,U.S. Department of Energy,F4320306084,01bj3aw27
+Great Lakes Bioenergy Research Center,F4320333880,01ca2by25,facility|funder,64,U.S. Department of Energy,F4320306084,01bj3aw27
+Center for Integrated Nanotechnologies,F4320315466,031yh0y38,facility|funder,63,U.S. Department of Energy,F4320306084,01bj3aw27
+Nuclear Physics,F4320337512,02atag894,funder|government,61,U.S. Department of Energy,F4320306084,01bj3aw27
+Workforce Development for Teachers and Scientists,F4320337513,05msy3529,funder|government,49,U.S. Department of Energy,F4320306084,01bj3aw27
+High Energy Physics,F4320337511,035m6g344,funder|government,43,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Nuclear Energy,F4320332364,05tj7dm33,funder|government,35,U.S. Department of Energy,F4320306084,01bj3aw27
+Hydrogen and Fuel Cell Technologies Office,F4320337646,05csy5p27,funder|government,30,U.S. Department of Energy,F4320306084,01bj3aw27
+National Energy Technology Laboratory,F4320333450,01x26mz03,facility|funder,30,U.S. Department of Energy,F4320306084,01bj3aw27
+Fusion Energy Sciences,F4320337510,02n3j8t12,funder|government,27,U.S. Department of Energy,F4320306084,01bj3aw27
+Nuclear Energy University Program,F4320337546,05tj7dm33,funder|government,23,U.S. Department of Energy,F4320306084,01bj3aw27
+Solar Energy Technologies Office,F4320337712,033jmdj81,funder|government,21,U.S. Department of Energy,F4320306084,01bj3aw27
+Environmental Molecular Sciences Laboratory,F4320318719,04rc0xn13,facility|funder,19,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Fossil Energy,F4320332353,03ery9d53,funder|government,17,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Environmental Management,F4320332361,00km40770,funder|government,15,U.S. Department of Energy,F4320306084,01bj3aw27
+Advanced Manufacturing Office,F4320336741,02xznz413,funder|government,13,U.S. Department of Energy,F4320306084,01bj3aw27
+Advanced Materials and Manufacturing Technologies Office,F5544845060,03esms521,funder|government,13,U.S. Department of Energy,F4320306084,01bj3aw27
+Fuel Cell Technologies Program,F4320337305,04d8cf622,funder|government,13,U.S. Department of Energy,F4320306084,01bj3aw27
+Nuclear Fuel Cycle and Supply Chain,F4320337197,05tj7dm33,funder|government,13,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Defense Nuclear Nonproliferation,F4320337501,03sk1we31,funder|government,13,U.S. Department of Energy,F4320306084,01bj3aw27
+Savannah River National Laboratory,F4320338380,05vc7qy59,facility|funder,10,U.S. Department of Energy,F4320306084,01bj3aw27
+Fermilab,F4320338288,020hgte69,facility|funder,8,U.S. Department of Energy,F4320306084,01bj3aw27
+Idaho National Laboratory,F4320338347,00ty2a548,facility|funder,6,U.S. Department of Energy,F4320306084,01bj3aw27
+Industrial Efficiency and Decarbonization Office,F7314457303,05vk3sy20,funder|government,6,U.S. Department of Energy,F4320306084,01bj3aw27
+Ames Laboratory,F4320338346,041m9xr71,facility|funder,4,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Nuclear Energy Technologies,F4320337545,05tj7dm33,funder|government,4,U.S. Department of Energy,F4320306084,01bj3aw27
+Vehicle Technologies Program,F4320336521,00f93gc02,funder|government,3,U.S. Department of Energy,F4320306084,01bj3aw27
+Building Technologies Program,F4320337483,02xznz413,funder|government,2,U.S. Department of Energy,F4320306084,01bj3aw27
+Geothermal Technologies Program,F4320337219,00heb4d89,funder|government,2,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Defense Nuclear Security,F4320337502,03sk1we31,funder|government,2,U.S. Department of Energy,F4320306084,01bj3aw27
+"Savannah River Operations Office, U.S. Department of Energy",F4320310910,05hhm9a98,funder|government,1,U.S. Department of Energy,F4320306084,01bj3aw27
+Solar Energy Technologies Program,F4320335818,02xznz413,funder|government,1,U.S. Department of Energy,F4320306084,01bj3aw27
+Office of Research and Development,F4320309037,05rsv9s98,funder|government,334,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Health Services Research and Development,F4320309610,05rsv9s98,funder|government,196,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Quality Enhancement Research Initiative,F4320332498,03cdz5d08,funder|other,105,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Rehabilitation Research and Development Service,F4320332403,008qp6e21,funder|government,78,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Geriatric Research Education and Clinical Center,F4320334047,01nh3sx96,funder|healthcare,44,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+"Biomedical Laboratory Research and Development, VA Office of Research and Development",F4320309842,05rsv9s98,funder|government,42,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+"National Center for PTSD, U.S. Department of Veterans Affairs",F4320334434,04xv0vq46,facility|funder,28,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Veterans Affairs San Diego Healthcare System,F4320332757,00znqwq11,funder|healthcare,19,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+VA Pittsburgh Healthcare System,F4320334460,02qm18h86,funder|healthcare,18,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+VA Greater Los Angeles Healthcare System,F4320334147,05xcarb80,funder|healthcare,13,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+"VISN 4 Mental Illness Research, Education, and Clinical Center",F4320333931,04fhxp168,funder|healthcare,12,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+"Center for Integrated Healthcare, U.S. Department of Veterans Affairs",F4320309346,02hd1sz82,funder|healthcare,5,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+VA Western New York Healthcare System,F4320334442,00a1c5n07,funder|healthcare,5,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+James A. Haley Veterans' Hospital,F4320332400,006xyf785,funder|healthcare,4,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Iowa City Veterans Affairs Medical Center,F4320334219,03r9k1585,funder|healthcare,3,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Office of Diversity and Inclusion,F4320337535,04s3dsz85,funder|government,3,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+VA Puget Sound Health Care System,F1561111641,00ky3az31,healthcare,3,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98
+Office of the General Counsel,F4320337410,05rsv9s98,funder|government,1,U.S. Department of Veterans Affairs,F4320306127,05rsv9s98

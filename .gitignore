@@ -53,3 +53,6 @@ Thumbs.db
 
 # Local Claude Code settings (not shared)
 .claude/settings.json
+
+# ROR API response cache for scripts/build_ror_rollup.py (regenerable)
+scripts/.ror_cache.json

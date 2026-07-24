@@ -13,10 +13,29 @@ journal-specific correction factor (min_h2h) and retires the fallback bar.
 Random (not cherry-picked) sampling is deliberate: the resulting best_od_rate
 must be an unbiased estimate of the journal's true sharing rate. See issue #40.
 
-Outputs (to --output-dir, date-stamped):
-  paperpile_hardblock_pdfs_<DATE>.ris  -- import into PaperPile, then fetch PDFs
-  paperpile_hardblock_pdfs_<DATE>.csv  -- manifest (pmid, doi, journal, year)
-                                          for re-deriving h2h counts afterward
+Outputs (to --output-dir, date-stamped; --label sets the batch name):
+  paperpile_<label>_<DATE>.ris  -- import into PaperPile, then fetch PDFs
+  paperpile_<label>_<DATE>.csv  -- manifest (pmid, doi, journal, year),
+                                   the authoritative pmid<->doi map for ingestion
+
+Emit ONE RIS per hand-off. Pass every target journal as a --journal arg in a
+single run so the user imports a single file; running with no --journal args
+uses DEFAULT_JOURNALS only (Medicine, BMJ Open) and will silently omit any other
+journal you meant to include (this is how the case-report titles were missed in
+the first round -- they were never generated, never fetched, never ingested).
+
+PaperPile round-trip (how a .ris becomes ingested PDFs):
+  1. User imports this .ris into PaperPile and runs "auto-update" -- PaperPile
+     fills full bibliographic metadata (title, authors, year) from each DOI.
+  2. User fetches PDFs (manual, solves captchas for bot-blocked publishers).
+     PaperPile names each downloaded PDF by <title>-<author>-<year>, NOT by
+     PMID/DOI -- so the filenames alone cannot be mapped back to a PMID.
+  3. User exports the UPDATED .ris (now carrying titles/authors/years that match
+     the PDF filenames) and hands it + the PDF zip to the osm-pipeline agent.
+  4. Pipeline maps each PDF filename -> updated-.ris record -> PMID, stages the
+     PDFs, and runs MinerU -> oddpub. The AN/ID (PMID) and DO (DOI) fields we
+     write survive the round-trip; the manifest CSV above is the fallback
+     pmid<->doi map if filename matching is ambiguous.
 """
 
 import argparse
@@ -53,6 +72,11 @@ def parse_args(argv=None):
     p.add_argument(
         "--output-dir",
         default=str(Path(__file__).resolve().parent.parent / "results"),
+    )
+    p.add_argument(
+        "--label", default="hardblock_pdfs",
+        help="Batch label in output filename: paperpile_<label>_<DATE>.{ris,csv}. "
+             "Use a distinct label per batch so same-day runs don't collide.",
     )
     p.add_argument("--verbose", action="store_true")
     return p.parse_args(argv)
@@ -125,8 +149,8 @@ def main(argv=None):
     stamp = date.today().isoformat()
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    ris_path = out_dir / f"paperpile_hardblock_pdfs_{stamp}.ris"
-    csv_path = out_dir / f"paperpile_hardblock_pdfs_{stamp}.csv"
+    ris_path = out_dir / f"paperpile_{args.label}_{stamp}.ris"
+    csv_path = out_dir / f"paperpile_{args.label}_{stamp}.csv"
 
     ris_path.write_text("".join(ris_records(manifest)), encoding="utf-8")
     manifest.to_csv(csv_path, index=False)

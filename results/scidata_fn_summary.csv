@@ -1,0 +1,12 @@
+metric,value
+n_negatives,533
+false_negative,476
+non_open_data,56
+unclear,1
+missing_or_error,0
+fn_rate_pct,89.31
+observed_rate_pct,77.98
+implied_true_rate_pct,97.65
+implied_true_rate_hi_pct,97.69
+sensitivity_pct,79.86
+n_total_scidata,2421

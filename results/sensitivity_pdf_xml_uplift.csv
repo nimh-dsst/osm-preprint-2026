@@ -1,0 +1,11 @@
+stratum,subset,n_headtohead,pdf_open_data,xml_open_data,pdf_rate_pct,xml_rate_pct,uplift_pct,pdf_over_xml_ratio
+headline,all_v2_headtohead,476786,74075,27262,15.5363,5.7179,171.72,2.7172
+decomposition,also_headtohead_in_v1,268512,42935,15663,15.99,5.8333,174.12,2.7412
+decomposition,newly_added_backlog,208274,31140,11599,14.9515,5.5691,168.47,2.6847
+oa_status,(null),100,32,13,32.0,13.0,146.15,2.4615
+oa_status,bronze,3119,437,182,14.0109,5.8352,140.11,2.4011
+oa_status,closed,1,0,0,0.0,0.0,,
+oa_status,diamond,35027,1592,668,4.5451,1.9071,138.32,2.3832
+oa_status,gold,384504,64061,23550,16.6607,6.1248,172.02,2.7202
+oa_status,green,1476,269,86,18.2249,5.8266,212.79,3.1279
+oa_status,hybrid,52559,7684,2763,14.6198,5.2569,178.1,2.781

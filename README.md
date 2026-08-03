@@ -1,13 +1,21 @@
-# OSM Preprint 2026
+# Who Funds Open Data Sharing?
 
-LaTeX preprint manuscript analyzing open data sharing trends across ~326,000 biomedical research articles from PubMed (2024-2025).
+LaTeX manuscript and analysis code for a population-scale study of open data sharing across **951,949 open access biomedical research articles** (PubMed Central, January 2024 – June 2025).
+
+## Preprint
+
+**Who Funds Open Data Sharing? Analysis of data availability statements in biomedical publications**
+Lawrimore J, Li C, Moraczewski D, Poline J-B, Thomas A. *bioRxiv* (2026).
+
+📄 **[https://www.biorxiv.org/content/10.64898/2026.07.17.739022v1](https://www.biorxiv.org/content/10.64898/2026.07.17.739022v1)** — doi:10.64898/2026.07.17.739022
 
 ## Key Findings
 
-- Major funders (NIH, Wellcome Trust, UKRI) achieve 30-82% open data rates vs 8.7% overall baseline
-- Top journals (Nature Structural & Molecular Biology, Nature Genetics) exceed 70% observed, 90%+ estimated after correction
-- Journal-level correction factors account for differential PDF vs XML coverage using Wilson 95% CIs
-- PDF-based detection (MinerU + oddpub v7.2.3) finds ~52% more open data statements than XML-based methods
+- Overall open data rate of **8.7%**, rising to **11.7%** among funder-linked articles.
+- Leading major funders reach observed rates of **20–24%**; smaller, mission-focused research organizations (e.g., EMBL) reach far higher.
+- Top journals reach observed rates of **70–86%** (Nature Structural & Molecular Biology, Nature Genetics).
+- Rates vary more than tenfold across funders and journals.
+- PDF-first detection (MinerU + oddpub v7.2.3) finds substantially more data sharing statements than XML-based methods; journal-level correction factors adjust for differential PDF vs XML coverage.
 
 ## Quick Start
 
@@ -34,8 +42,8 @@ make help
 
 ## Links
 
+- **Preprint (bioRxiv):** https://www.biorxiv.org/content/10.64898/2026.07.17.739022v1
 - **Interactive Dashboard:** https://www.opensciencemetrics.org
-- **Repository:** https://github.com/nimh-dsst/osm-preprint-2026 (private)
 - **Meta-Repo:** https://github.com/nimh-dsst/open-science-metrics
 
 See [CLAUDE.md](CLAUDE.md) for detailed documentation.

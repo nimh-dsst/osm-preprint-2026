@@ -1,0 +1,70 @@
+entity,total_articles,positives,observed_rate,exposure_repo_pp,exposure_nonpub_pp,rank_observed,rank_corrected_repo,rank_delta
+Scientific Data,2421,1888,77.98,17.06,20.61,1,1,0
+Communications Biology,2504,1548,61.82,5.03,10.66,2,2,0
+Nature Communications,15157,8634,56.96,5.34,9.94,3,3,0
+iScience,3518,1793,50.97,1.96,44.26,4,5,-1
+BMC Plant Biology,1983,834,42.06,0.91,20.88,5,7,-2
+Frontiers in Microbiology,3967,1665,41.97,1.13,52.16,6,6,0
+Nature,2038,685,33.61,6.33,11.33,7,8,-1
+Ecology and Evolution,2326,745,32.03,22.74,59.93,8,4,4
+PLoS ONE,24377,5832,23.92,2.49,64.27,9,12,-3
+Frontiers in Plant Science,3759,883,23.49,2.77,71.93,10,13,-3
+Microorganisms,3246,751,23.14,1.05,32.87,11,14,-3
+Viruses,2122,428,20.17,1.23,32.56,12,15,-3
+Frontiers in Veterinary Science,2315,442,19.09,1.17,76.07,13,16,-3
+Frontiers in Immunology,6042,1059,17.53,0.79,74.4,14,17,-3
+Genes,1850,313,16.92,0.92,36.27,15,18,-3
+Frontiers in Nutrition,2465,407,16.51,0.73,75.74,16,19,-3
+Science Advances,3594,570,15.86,19.28,66.78,17,9,8
+Frontiers in Endocrinology,2724,411,15.09,0.88,79.11,18,21,-3
+BMC Infectious Diseases,1953,287,14.7,0.46,24.12,19,22,-3
+Scientific Reports,49550,7168,14.47,1.9,39.54,20,20,0
+BMC Public Health,5187,680,13.11,0.71,30.06,21,23,-2
+BMC Cancer,2278,287,12.6,0.09,21.33,22,24,-2
+Chemical Science,3352,407,12.14,0.45,33.26,23,25,-2
+Poultry Science,1824,214,11.73,0.71,28.67,24,26,-2
+PeerJ,2512,286,11.39,15.84,87.26,25,10,15
+Frontiers in Pharmacology,3801,387,10.18,1.05,83.66,26,28,-2
+Frontiers in Psychology,4450,445,10.0,1.71,85.57,27,27,0
+Frontiers in Public Health,5618,549,9.77,1.28,83.07,28,29,-1
+Cells,1849,173,9.36,0.87,39.86,29,32,-3
+International Journal of Molecular Sciences,14471,1344,9.29,0.93,38.77,30,33,-3
+Animals,4855,438,9.02,1.38,40.68,31,31,0
+Plants,4728,404,8.54,1.95,39.97,32,30,2
+Proceedings of the National Academy of Sciences,4139,323,7.8,18.82,34.4,33,11,22
+Heliyon,16640,1278,7.68,1.44,60.75,34,34,0
+Advanced Science,4678,347,7.42,0.66,51.8,35,36,-1
+Frontiers in Psychiatry,2407,174,7.23,1.04,87.91,36,35,1
+Frontiers in Cardiovascular Medicine,1835,126,6.87,0.65,76.95,37,37,0
+Frontiers in Medicine,3635,237,6.52,0.74,83.08,38,38,0
+BMC Oral Health,2198,142,6.46,0.27,26.89,39,39,0
+BMC Health Services Research,2205,124,5.62,0.73,36.24,40,40,0
+Frontiers in Oncology,4207,228,5.42,0.4,86.14,41,42,-1
+Frontiers in Neurology,2367,119,5.03,0.84,85.04,42,41,1
+Molecules,7176,301,4.19,0.77,35.73,43,43,0
+RSC Advances,6033,222,3.68,0.33,31.66,44,47,-3
+BMC Medical Education,2148,75,3.49,0.65,37.57,45,46,-1
+Life,1931,67,3.47,0.88,40.03,46,44,2
+Nutrients,4780,155,3.24,0.67,41.15,47,48,-1
+ACS Omega,5973,184,3.08,1.26,85.17,48,45,3
+Cancers,4187,126,3.01,0.74,36.52,49,51,-2
+Medicine,4702,141,3.0,0.15,13.8,50,56,-6
+Biomedicines,3081,86,2.79,1.01,39.57,51,49,2
+Foods,5342,148,2.77,0.73,38.19,52,52,0
+Pharmaceuticals,1909,49,2.57,0.89,39.44,53,53,0
+PubMed,5800,131,2.26,1.12,43.69,54,55,-1
+International Journal of Environmental Research and Public Health,2078,36,1.73,2.02,44.56,55,50,5
+BMJ Open,4923,80,1.63,1.77,93.62,56,54,2
+Healthcare,3197,47,1.47,0.97,41.26,57,57,0
+Diagnostics,3460,41,1.18,0.9,39.54,58,59,-1
+Medicina,2386,18,0.75,0.29,39.65,59,62,-3
+Sensors,10611,79,0.74,1.67,35.2,60,58,2
+Polymers,4534,32,0.71,0.75,35.8,61,60,1
+Journal of Clinical Medicine,8857,50,0.56,0.54,38.52,62,61,1
+Materials,8166,29,0.36,0.51,36.87,63,63,0
+Nanomaterials,2436,8,0.33,0.25,33.0,64,65,-1
+International Journal of Surgery Case Reports,2131,6,0.28,0.14,45.57,65,68,-3
+Micromachines,1830,5,0.27,0.27,29.95,66,66,0
+JAMA Network Open,2805,6,0.21,0.43,79.96,67,64,3
+Cureus,30302,46,0.15,0.23,59.11,68,69,-1
+Radiology Case Reports,1875,2,0.11,0.37,52.75,69,67,2

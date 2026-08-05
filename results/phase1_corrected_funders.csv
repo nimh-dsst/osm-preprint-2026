@@ -1,0 +1,47 @@
+entity,total,observed_rate,neg_repo,adjudicated,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_phase0_raw,rank_phase1_corrected
+Biotechnology and Biological Sciences Research Council,7388,35.86,527,38,0.158,7.13,1.13,1,2,2
+Natural Environment Research Council,2525,32.44,584,102,0.382,23.13,8.84,2,1,1
+National Institute of General Medical Sciences,30657,31.22,1463,28,0.0,4.77,0.0,3,6,7
+Centre National de la Recherche Scientifique,2532,29.7,127,4,,5.02,5.02,4,7,3
+Agence Nationale de la Recherche,11826,29.49,855,27,0.222,7.23,1.61,5,4,8
+U.S. Department of Agriculture,5285,28.02,315,4,,5.96,5.96,6,8,5
+Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung,11196,27.76,951,30,0.533,8.49,4.53,7,5,6
+Wellcome Trust,16059,26.61,1032,26,0.269,6.43,1.73,8,10,12
+Chinese Academy of Sciences,6159,26.5,244,2,,3.96,3.96,9,15,9
+National Cancer Institute,32524,25.67,931,18,0.167,2.86,0.48,10,18,16
+Deutsche Forschungsgemeinschaft,27935,25.57,1629,80,0.263,5.83,1.53,11,13,14
+National Science Foundation,35359,25.49,2821,97,0.464,7.98,3.7,12,9,10
+U.S. Department of Energy,8615,25.41,530,19,0.368,6.15,2.27,13,12,13
+National Aeronautics and Space Administration,2292,25.0,386,82,0.537,16.84,9.04,14,3,4
+Ministerio de Economía y Competitividad,1863,24.69,69,0,,3.7,3.7,15,20,11
+Ministry of Science and Technology of the People's Republic of China,2501,23.55,59,0,,2.36,2.36,16,25,19
+"Ministry of Education, Culture, Sports, Science and Technology",6802,23.4,233,3,,3.43,3.43,17,21,15
+Australian Research Council,3513,23.2,294,71,0.338,8.37,2.83,18,11,17
+Nederlandse Organisatie voor Wetenschappelijk Onderzoek,6655,22.95,521,83,0.265,7.83,2.08,19,14,20
+Natural Sciences and Engineering Research Council of Canada,8194,22.87,509,18,0.5,6.21,3.11,20,17,18
+Bundesministerium für Bildung und Forschung,8143,22.72,538,97,0.33,6.61,2.18,21,16,21
+National Institutes of Health,100284,22.2,3808,49,0.041,3.8,0.15,22,22,25
+European Commission,39396,22.02,2533,185,0.362,6.43,2.33,23,19,22
+Medical Research Council,20110,21.65,870,27,0.222,4.33,0.96,24,24,24
+Vetenskapsrådet,8931,20.87,457,17,0.412,5.12,2.11,25,23,23
+China Scholarship Council,4774,19.35,182,8,0.25,3.81,0.95,26,27,28
+European Regional Development Fund,10358,19.3,445,31,0.355,4.3,1.52,27,26,26
+Ministerio de Ciencia e Innovación,9294,18.67,414,17,0.294,4.45,1.31,28,28,29
+Canadian Institutes of Health Research,10293,17.62,322,2,,3.13,3.13,29,30,27
+National Key Research and Development Program of China,42637,17.28,688,8,0.5,1.61,0.81,30,33,32
+National Health and Medical Research Council,8247,17.0,195,8,0.25,2.36,0.59,31,31,34
+China Postdoctoral Science Foundation,11703,16.72,146,0,,1.25,1.25,32,37,33
+Fundamental Research Funds for the Central Universities,12947,16.71,230,2,,1.78,1.78,33,35,30
+National Natural Science Foundation of China,188890,16.28,2817,52,0.385,1.49,0.57,34,38,36
+Fundação de Amparo à Pesquisa do Estado de São Paulo,5899,15.88,192,8,0.5,3.25,1.63,35,32,35
+Russian Science Foundation,4216,15.77,101,4,,2.4,2.4,36,36,31
+Engineering and Physical Sciences Research Council,10523,14.78,667,115,0.217,6.34,1.38,37,29,38
+Natural Science Foundation of Jiangsu Province,4988,14.76,47,0,,0.94,0.94,38,42,40
+"Department of Science and Technology, Ministry of Science and Technology, India",2216,14.71,42,1,,1.9,1.9,39,40,37
+Fundação para a Ciência e a Tecnologia,6553,14.68,256,87,0.356,3.91,1.39,40,34,39
+Conselho Nacional de Desenvolvimento Científico e Tecnológico,11578,13.91,357,13,0.538,3.08,1.66,41,39,41
+Japan Society for the Promotion of Science,41258,13.61,886,13,0.692,2.15,1.49,42,41,43
+National Research Foundation,14708,13.18,278,10,0.6,1.89,1.13,43,45,44
+Coordenação de Aperfeiçoamento de Pessoal de Nível Superior,9331,12.08,300,2,,3.22,3.22,44,44,42
+National Institute for Health and Care Research,14755,12.05,519,28,0.179,3.52,0.63,45,43,45
+National Research Foundation of Korea,20733,10.92,263,4,,1.27,1.27,46,46,46

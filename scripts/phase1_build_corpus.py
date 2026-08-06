@@ -1,57 +1,33 @@
 #!/usr/bin/env python3
-"""Build focused adjudication excerpts for the Phase 1 sample.
-Excerpt = title/abstract head + windows around each repo-DOI + data-availability cues.
-Keeps the deposit-vs-reuse context while fitting many articles per agent context.
+"""Build the Phase 1 adjudication text corpus ({pmid}.txt) for the sampled articles.
+
+Markdown articles (PDF-covered): read the MinerU markdown as-is.
+XML-only articles: strip ONLY the <ref-list> (bibliography = citation noise); KEEP the rest of
+JATS <back> (data-availability sections, notes, footnotes) — the Data Availability Statement
+frequently lives there. (An earlier version stripped all of <back>, which removed the DAS for
+~60% of XML articles and mislabeled genuine deposits as non_open_data/unclear — see #56.)
+
+Full text is truncated to 80k chars (head 48k + tail 32k) to keep both front-matter and the
+back-matter data statements. Usage: python phase1_build_corpus.py <meta.csv> <xml_dir> <out_dir>
 """
-import csv, re, os, sys, json
+import csv, re, sys
 from pathlib import Path
 
-SCR = sys.argv[1]
-XMLDIR = Path(SCR) / "phase1_xml"
-OUT = Path(SCR) / "phase1_texts"; OUT.mkdir(exist_ok=True)
-PREFIXES = tuple(p + "/" for p in json.load(open(f"{SCR}/repo_doi_prefixes.json")))
-
-DOI_RE = re.compile(r'10\.\d{4,9}/[^\s"\'<>)\]}]+')
-DAS_RE = re.compile(r'data availab|availability of data|data are available|data record|data citation|'
-                    r'deposited|repository|figshare|zenodo|dryad|dataverse|osf\b|dryad|accession|'
-                    r'underlying data|supporting data|openly available|publicly available|archived at|'
-                    r'available (?:at|from|in|via)|code availab', re.I)
+META, XMLDIR, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
+OUT.mkdir(parents=True, exist_ok=True)
 
 def strip_xml(raw):
-    raw = re.sub(r'<(ref-list|back)\b.*?</\1>', ' ', raw, flags=re.S | re.I)  # drop bibliography
+    raw = re.sub(r'<ref-list\b.*?</ref-list>', ' ', raw, flags=re.S | re.I)  # drop ONLY bibliography
     raw = re.sub(r'<[^>]+>', ' ', raw)
     raw = re.sub(r'&[a-z#0-9]+;', ' ', raw)
     return raw
 
-def excerpt(text):
-    text = re.sub(r'[ \t]+', ' ', text)
-    n = len(text)
-    keep = []
-    keep.append((0, min(1800, n)))  # head: title/abstract
-    for m in DOI_RE.finditer(text):
-        if m.group(0).startswith(PREFIXES):
-            keep.append((max(0, m.start() - 1500), min(n, m.end() + 800)))
-    for m in DAS_RE.finditer(text):
-        keep.append((max(0, m.start() - 500), min(n, m.start() + 1200)))
-    # merge overlapping spans, cap total ~8000 chars
-    keep.sort()
-    merged = []
-    for s, e in keep:
-        if merged and s <= merged[-1][1] + 100:
-            merged[-1] = (merged[-1][0], max(merged[-1][1], e))
-        else:
-            merged.append((s, e))
-    out = []
-    total = 0
-    for s, e in merged:
-        if total > 8000:
-            break
-        chunk = text[s:e]
-        out.append(chunk); total += len(chunk)
-    return "\n[...]\n".join(out)
+def trunc(t, cap=80000):
+    t = re.sub(r'[ \t]+', ' ', t); t = re.sub(r'\n{3,}', '\n\n', t)
+    return t if len(t) <= cap else t[:48000] + "\n\n[... middle truncated ...]\n\n" + t[-32000:]
 
-rows = list(csv.DictReader(open(f"{SCR}/phase1_meta.csv")))
-n_ok = 0
+ok = 0
+rows = list(csv.DictReader(open(META)))
 for r in rows:
     pmid, source, path = r["pmid"], r["source"], r["path"]
     try:
@@ -60,12 +36,7 @@ for r in rows:
         else:
             xp = XMLDIR / re.sub(r'.*baseline\.2025-06-26/', '', path)
             raw = strip_xml(open(xp, encoding="utf-8", errors="ignore").read())
-        ex = excerpt(raw)
-        (OUT / f"{pmid}.txt").write_text(ex, encoding="utf-8")
-        n_ok += 1
+        (OUT / f"{pmid}.txt").write_text(trunc(raw), encoding="utf-8"); ok += 1
     except Exception as e:
-        (OUT / f"{pmid}.txt").write_text(f"[ERROR reading text: {e}]", encoding="utf-8")
-print(f"excerpts written: {n_ok}/{len(rows)}")
-# sanity: avg excerpt size
-sizes = [len((OUT / f"{r['pmid']}.txt").read_text()) for r in rows]
-print(f"excerpt chars: mean={sum(sizes)//len(sizes)} max={max(sizes)}")
+        (OUT / f"{pmid}.txt").write_text(f"[ERROR: {e}]", encoding="utf-8")
+print(f"corpus written: {ok}/{len(rows)}")

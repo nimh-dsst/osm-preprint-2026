@@ -1,100 +1,84 @@
 #!/usr/bin/env python3
-"""Phase 1 aggregation: per-entity genuine-deposit fraction -> corrected exposure -> re-rank.
+"""Phase 1 aggregation (consistent-basis): per-entity genuine-deposit fraction -> corrected
+exposure -> re-rank, and the corpus manifest.
 
-The cheap Phase 0 `repo` exposure assumed every repo-DOI negative is a genuine miss.
-Phase 1 adjudicates a stratified sample: false_negative = genuine new deposit oddpub missed;
-non_open_data = legit (reuse/code/restricted). The per-entity genuine fraction rescales exposure.
-Question: do the Phase 0 rank-movers survive once reuse/code is excluded?
+Emits:
+  results/phase1_corpus_manifest.csv          pmid, entity, entity_kind (sampled article -> displayed entity)
+  results/phase1_corrected_{journals,funders}.csv   per-entity corrected exposure/ranks with a `basis` column
+
+`basis` = 'adjudicated' if the entity has >= ADJ_MIN adjudicated repo-DOI negatives (its own genuine
+fraction is used); else 'imputed' (the pooled/global genuine fraction is applied). This keeps ALL
+entities on one basis so no under-sampled entity keeps its raw (uncorrected) exposure and reads as a
+fake mover.
+
+Usage: python phase1_analyze.py <labels_dir> <phase0_scan.parquet> <sample_meta.csv> <out_results_dir>
 """
-import json, glob, csv, os, sys
+import json, glob, csv, sys
 import duckdb
-from scipy.stats import kendalltau
 
-SCR = sys.argv[1]
+LABELS_DIR, SCAN, SAMPLE_META, DEST = sys.argv[1:5]
 V2 = "/data/adamt/osm/datalad-osm/duckdbs/pmid_registry_v2.duckdb"
-SCAN = "/mnt_homes/home4T3/adamt/claude/osm/osm-preprint-2026/results/phase0_doi_scan.parquet"
 W = "p.is_research AND p.pub_date BETWEEN DATE '2024-01-01' AND DATE '2025-06-30'"
+JOURNAL_MIN, FUNDER_MIN_ARTICLES, FUNDER_MIN_WORKS = 1815, 1708, 100_000
+ADJ_MIN = 10  # >= this many adjudicated repo-DOI negatives -> 'adjudicated', else 'imputed'
 
-# 1. load labels
-labels = {}
-for f in glob.glob(f"{SCR}/phase1_labels/*.json"):
-    try:
-        d = json.load(open(f)); labels[str(d["pmid"])] = d.get("label", "unclear")
-    except Exception:
-        labels[os.path.basename(f)[:-5]] = "PARSE_ERR"
-print(f"labels loaded: {len(labels)}")
-from collections import Counter
-print("label distribution:", dict(Counter(labels.values())))
+labs = [json.load(open(f)) for f in glob.glob(f"{LABELS_DIR}/*.json")]
+sample_pmids = [r["pmid"] for r in csv.DictReader(open(SAMPLE_META))]
+G_FN = sum(1 for d in labs if d.get("label") == "false_negative")
+G_DEC = sum(1 for d in labs if d.get("label") in ("false_negative", "non_open_data"))
+GLOBAL = G_FN / G_DEC
+print(f"global genuine fraction = {G_FN}/{G_DEC} = {GLOBAL:.4f}")
 
 con = duckdb.connect()
 con.execute(f"ATTACH '{V2}' AS v2 (READ_ONLY)")
 con.execute(f"CREATE VIEW rd AS SELECT CAST(pmid AS VARCHAR) pmid FROM read_parquet('{SCAN}') WHERE TRY_CAST(has_repo_doi_anywhere AS INT)=1")
-# register labels as a temp table
 con.execute("CREATE TABLE lab(pmid VARCHAR, label VARCHAR)")
-con.executemany("INSERT INTO lab VALUES (?,?)", list(labels.items()))
+con.executemany("INSERT INTO lab VALUES (?,?)", [(str(d["pmid"]), d.get("label", "unclear")) for d in labs])
 
-def analyze(esql, join, cond, kind):
-    q = f"""
-    WITH base AS (
-      SELECT {esql} eid, CAST(p.pmid AS VARCHAR) pmid, COALESCE(p.is_open_data_best,FALSE) pos
-      FROM v2.pmids p {join} WHERE {W}
-    ),
-    ann AS (
-      SELECT b.eid, b.pmid, b.pos,
-        CASE WHEN rd.pmid IS NOT NULL THEN 1 ELSE 0 END repo,
-        l.label
-      FROM base b LEFT JOIN rd USING(pmid) LEFT JOIN lab l USING(pmid)
-    ),
-    agg AS (
-      SELECT eid,
-        COUNT(*) total,
-        SUM(CASE WHEN pos THEN 1 ELSE 0 END) positives,
-        SUM(CASE WHEN NOT pos AND repo=1 THEN 1 ELSE 0 END) neg_repo,
-        SUM(CASE WHEN NOT pos AND repo=1 AND label='false_negative' THEN 1 ELSE 0 END) samp_fn,
-        SUM(CASE WHEN NOT pos AND repo=1 AND label='non_open_data' THEN 1 ELSE 0 END) samp_non,
-        SUM(CASE WHEN NOT pos AND repo=1 AND label IN ('false_negative','non_open_data') THEN 1 ELSE 0 END) samp_dec
-      FROM ann GROUP BY eid
-    )
-    SELECT eid,total,positives,neg_repo,samp_fn,samp_non,samp_dec FROM agg WHERE {cond} AND eid IS NOT NULL
-    """
-    rows = con.execute(q).fetchall()
-    out = []
-    for eid, total, pos, neg_repo, fn, non, dec in rows:
-        obs = pos / total
-        gfrac = (fn / dec) if dec >= 5 else None  # need >=5 adjudicated to estimate
-        raw_exp = neg_repo / total
-        corr_exp = raw_exp * gfrac if gfrac is not None else raw_exp  # fallback: uncorrected
-        out.append(dict(eid=eid, total=total, obs=obs, neg_repo=neg_repo, samp_dec=dec,
-                        gfrac=gfrac, raw_exp=raw_exp, corr_exp=corr_exp))
-    return out
+# --- corpus manifest: sampled pmid -> displayed entity -> kind ---
+inlist = ",".join("'" + p + "'" for p in sample_pmids)
+man = con.execute(f"""
+  SELECT DISTINCT CAST(p.pmid AS VARCHAR) pmid, p.journal entity, 'journal' kind
+  FROM v2.pmids p WHERE CAST(p.pmid AS VARCHAR) IN ({inlist}) AND p.journal IN
+    (SELECT journal FROM v2.pmids p WHERE {W} AND journal IS NOT NULL GROUP BY journal HAVING COUNT(*)>={JOURNAL_MIN})
+  UNION ALL
+  SELECT DISTINCT CAST(p.pmid AS VARCHAR), f.display_name, 'funder'
+  FROM v2.pmids p JOIN v2.article_funders af ON af.pmid=p.pmid JOIN v2.funders f ON f.funder_id=af.funder_id
+  WHERE CAST(p.pmid AS VARCHAR) IN ({inlist}) AND f.openalex_works_count>={FUNDER_MIN_WORKS} AND f.display_name IN
+    (SELECT f2.display_name FROM v2.pmids p2 JOIN v2.article_funders af2 ON af2.pmid=p2.pmid JOIN v2.funders f2 ON f2.funder_id=af2.funder_id
+     WHERE {W} AND f2.openalex_works_count>={FUNDER_MIN_WORKS} GROUP BY f2.display_name HAVING COUNT(DISTINCT p2.pmid)>={FUNDER_MIN_ARTICLES})
+""").fetchall()
+with open(f"{DEST}/phase1_corpus_manifest.csv", "w", newline="") as f:
+    w = csv.writer(f); w.writerow(["pmid", "entity", "entity_kind"]); w.writerows(man)
+print(f"corpus manifest rows: {len(man)}")
 
-def ranks(items, key):
-    order = sorted(items, key=lambda r: -key(r))
-    return {r["eid"]: i + 1 for i, r in enumerate(order)}, [r["eid"] for r in order]
+def dump(esql, join, cond, out):
+    q = f"""WITH base AS (SELECT {esql} eid, CAST(p.pmid AS VARCHAR) pmid, COALESCE(p.is_open_data_best,FALSE) pos FROM v2.pmids p {join} WHERE {W}),
+    ann AS (SELECT b.eid,b.pmid,b.pos,CASE WHEN rd.pmid IS NOT NULL THEN 1 ELSE 0 END repo,l.label FROM base b LEFT JOIN rd USING(pmid) LEFT JOIN lab l USING(pmid)),
+    agg AS (SELECT eid,COUNT(*) total,SUM(CASE WHEN pos THEN 1 ELSE 0 END) posv,
+      SUM(CASE WHEN NOT pos AND repo=1 THEN 1 ELSE 0 END) neg_repo,
+      SUM(CASE WHEN NOT pos AND repo=1 AND label='false_negative' THEN 1 ELSE 0 END) fn,
+      SUM(CASE WHEN NOT pos AND repo=1 AND label IN ('false_negative','non_open_data') THEN 1 ELSE 0 END) ndec FROM ann GROUP BY eid)
+    SELECT eid,total,posv,neg_repo,fn,ndec FROM agg WHERE {cond} AND eid IS NOT NULL"""
+    items = []
+    for eid, total, posv, neg_repo, fn, ndec in con.execute(q).fetchall():
+        obs = posv / total; raw = neg_repo / total
+        if ndec >= ADJ_MIN:
+            basis, gf = "adjudicated", fn / ndec
+        else:
+            basis, gf = "imputed", GLOBAL
+        corr = raw * gf
+        items.append([eid, total, round(obs*100,2), neg_repo, ndec, basis, round(gf,3), round(raw*100,2), round(corr*100,2)])
+    ro = {r[0]: i+1 for i, r in enumerate(sorted(items, key=lambda r: -r[2]))}
+    rc = {r[0]: i+1 for i, r in enumerate(sorted(items, key=lambda r: -(r[2] + r[8])))}
+    with open(out, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["entity","total","observed_rate","neg_repo","adjudicated_n","basis","genuine_fraction","exposure_raw_pp","exposure_corrected_pp","rank_observed","rank_phase1_corrected","rank_delta"])
+        for r in sorted(items, key=lambda r: -r[2]):
+            w.writerow(r + [ro[r[0]], rc[r[0]], ro[r[0]] - rc[r[0]]])
+    print(f"{out}: {len(items)} entities ({sum(1 for r in items if r[5]=='adjudicated')} adjudicated)")
 
-for kind, esql, cond, join in [
-    ("JOURNAL", "p.journal", "total>=1815", ""),
-    ("FUNDER", "f.display_name", "total>=1708",
-     "JOIN v2.article_funders af ON af.pmid=p.pmid JOIN v2.funders f ON f.funder_id=af.funder_id AND f.openalex_works_count>=100000"),
-]:
-    items = analyze(esql, join, cond, kind)
-    r_obs, _ = ranks(items, lambda r: r["obs"])
-    r_raw, _ = ranks(items, lambda r: r["obs"] + r["raw_exp"])         # Phase 0 (all repo-DOI = miss)
-    r_corr, corr_order = ranks(items, lambda r: r["obs"] + r["corr_exp"])  # Phase 1 (genuine only)
-    print(f"\n{'='*76}\n{kind}S (n={len(items)})")
-    # genuine fraction spread (uniform-bias check)
-    gf = [r["gfrac"] for r in items if r["gfrac"] is not None]
-    import statistics as st
-    if gf:
-        print(f"  genuine-deposit fraction (sampled, >=5 adj): n={len(gf)} mean={st.mean(gf):.2f} min={min(gf):.2f} max={max(gf):.2f} stdev={st.pstdev(gf):.2f}")
-    # concordance: observed vs Phase0-raw-corrected vs Phase1-genuine-corrected
-    eids = [r["eid"] for r in items]
-    tau_raw, _ = kendalltau([r_obs[e] for e in eids], [r_raw[e] for e in eids])
-    tau_corr, _ = kendalltau([r_obs[e] for e in eids], [r_corr[e] for e in eids])
-    print(f"  Kendall tau vs observed:  raw(Phase0)={tau_raw:.3f}   genuine-corrected(Phase1)={tau_corr:.3f}")
-    # movers: show entities with a sampled fraction and notable rank change under corrected
-    print(f"  key entities (obs rank -> Phase0-raw rank -> Phase1-corrected rank | gfrac | raw_exp->corr_exp pp):")
-    movers = sorted([r for r in items if r["gfrac"] is not None], key=lambda r: (r_obs[r["eid"]] - r_corr[r["eid"]]), reverse=True)
-    for r in movers[:14]:
-        e = r["eid"]
-        print(f"    {str(e)[:34]:34s} {r_obs[e]:3d}->{r_raw[e]:3d}->{r_corr[e]:3d}  gf={r['gfrac']:.2f}  {r['raw_exp']*100:4.1f}->{r['corr_exp']*100:4.1f}  (adj n={r['samp_dec']})")
+dump("p.journal", "", f"total>={JOURNAL_MIN}", f"{DEST}/phase1_corrected_journals.csv")
+dump("f.display_name",
+     f"JOIN v2.article_funders af ON af.pmid=p.pmid JOIN v2.funders f ON f.funder_id=af.funder_id AND f.openalex_works_count>={FUNDER_MIN_WORKS}",
+     f"total>={FUNDER_MIN_ARTICLES}", f"{DEST}/phase1_corrected_funders.csv")

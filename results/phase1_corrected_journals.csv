@@ -1,70 +1,70 @@
-entity,total,observed_rate,neg_repo,adjudicated_n,basis,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_phase1_corrected,rank_delta
-Scientific Data,2421,77.98,413,61,adjudicated,0.951,17.06,16.22,1,1,0
-Communications Biology,2504,61.82,126,1,imputed,0.708,5.03,3.56,2,2,0
-Nature Communications,15157,56.96,810,25,adjudicated,0.44,5.34,2.35,3,3,0
-iScience,3518,50.97,69,1,imputed,0.708,1.96,1.39,4,4,0
-BMC Plant Biology,1983,42.06,18,0,imputed,0.708,0.91,0.64,5,7,-2
-Frontiers in Microbiology,3967,41.97,45,1,imputed,0.708,1.13,0.8,6,6,0
-Nature,2038,33.61,129,5,imputed,0.708,6.33,4.48,7,8,-1
-Ecology and Evolution,2326,32.03,529,59,adjudicated,0.814,22.74,18.5,8,5,3
-PLoS ONE,24377,23.92,606,6,imputed,0.708,2.49,1.76,9,10,-1
-Frontiers in Plant Science,3759,23.49,104,0,imputed,0.708,2.77,1.96,10,11,-1
-Microorganisms,3246,23.14,34,0,imputed,0.708,1.05,0.74,11,13,-2
-Viruses,2122,20.17,26,0,imputed,0.708,1.23,0.87,12,15,-3
-Frontiers in Veterinary Science,2315,19.09,27,0,imputed,0.708,1.17,0.83,13,16,-3
-Frontiers in Immunology,6042,17.53,48,0,imputed,0.708,0.79,0.56,14,17,-3
-Genes,1850,16.92,17,0,imputed,0.708,0.92,0.65,15,18,-3
-Frontiers in Nutrition,2465,16.51,18,0,imputed,0.708,0.73,0.52,16,19,-3
-Science Advances,3594,15.86,693,62,adjudicated,0.806,19.28,15.55,17,9,8
-Frontiers in Endocrinology,2724,15.09,24,0,imputed,0.708,0.88,0.62,18,20,-2
-BMC Infectious Diseases,1953,14.7,9,0,imputed,0.708,0.46,0.33,19,22,-3
-Scientific Reports,49550,14.47,939,20,adjudicated,0.35,1.9,0.66,20,21,-1
-BMC Public Health,5187,13.11,37,0,imputed,0.708,0.71,0.5,21,23,-2
-BMC Cancer,2278,12.6,2,0,imputed,0.708,0.09,0.06,22,24,-2
-Chemical Science,3352,12.14,15,0,imputed,0.708,0.45,0.32,23,25,-2
-Poultry Science,1824,11.73,13,0,imputed,0.708,0.71,0.5,24,26,-2
-PeerJ,2512,11.39,398,50,adjudicated,0.8,15.84,12.68,25,12,13
-Frontiers in Pharmacology,3801,10.18,40,1,imputed,0.708,1.05,0.74,26,28,-2
-Frontiers in Psychology,4450,10.0,76,0,imputed,0.708,1.71,1.21,27,27,0
-Frontiers in Public Health,5618,9.77,72,0,imputed,0.708,1.28,0.91,28,29,-1
-Cells,1849,9.36,16,0,imputed,0.708,0.87,0.61,29,31,-2
-International Journal of Molecular Sciences,14471,9.29,135,3,imputed,0.708,0.93,0.66,30,32,-2
-Animals,4855,9.02,67,0,imputed,0.708,1.38,0.98,31,30,1
-Plants,4728,8.54,92,0,imputed,0.708,1.95,1.38,32,33,-1
-Proceedings of the National Academy of Sciences,4139,7.8,779,68,adjudicated,0.824,18.82,15.5,33,14,19
-Heliyon,16640,7.68,239,1,imputed,0.708,1.44,1.02,34,34,0
-Advanced Science,4678,7.42,31,1,imputed,0.708,0.66,0.47,35,36,-1
-Frontiers in Psychiatry,2407,7.23,25,0,imputed,0.708,1.04,0.74,36,35,1
-Frontiers in Cardiovascular Medicine,1835,6.87,12,0,imputed,0.708,0.65,0.46,37,37,0
-Frontiers in Medicine,3635,6.52,27,0,imputed,0.708,0.74,0.53,38,38,0
-BMC Oral Health,2198,6.46,6,0,imputed,0.708,0.27,0.19,39,39,0
-BMC Health Services Research,2205,5.62,16,0,imputed,0.708,0.73,0.51,40,40,0
-Frontiers in Oncology,4207,5.42,17,0,imputed,0.708,0.4,0.29,41,41,0
-Frontiers in Neurology,2367,5.03,20,0,imputed,0.708,0.84,0.6,42,42,0
-Molecules,7176,4.19,55,1,imputed,0.708,0.77,0.54,43,43,0
-RSC Advances,6033,3.68,20,0,imputed,0.708,0.33,0.23,44,47,-3
-BMC Medical Education,2148,3.49,14,0,imputed,0.708,0.65,0.46,45,46,-1
-Life,1931,3.47,17,0,imputed,0.708,0.88,0.62,46,44,2
-Nutrients,4780,3.24,32,1,imputed,0.708,0.67,0.47,47,48,-1
-ACS Omega,5973,3.08,75,1,imputed,0.708,1.26,0.89,48,45,3
-Cancers,4187,3.01,31,0,imputed,0.708,0.74,0.52,49,49,0
-Medicine,4702,3.0,7,0,imputed,0.708,0.15,0.11,50,53,-3
-Biomedicines,3081,2.79,31,1,imputed,0.708,1.01,0.71,51,50,1
-Foods,5342,2.77,39,0,imputed,0.708,0.73,0.52,52,51,1
-Pharmaceuticals,1909,2.57,17,0,imputed,0.708,0.89,0.63,53,52,1
-PubMed,5800,2.26,65,1,imputed,0.708,1.12,0.79,54,54,0
-International Journal of Environmental Research and Public Health,2078,1.73,42,42,adjudicated,0.452,2.02,0.91,55,56,-1
-BMJ Open,4923,1.63,87,0,imputed,0.708,1.77,1.25,56,55,1
-Healthcare,3197,1.47,31,0,imputed,0.708,0.97,0.69,57,57,0
-Diagnostics,3460,1.18,31,0,imputed,0.708,0.9,0.63,58,59,-1
-Medicina,2386,0.75,7,0,imputed,0.708,0.29,0.21,59,61,-2
-Sensors,10611,0.74,177,0,imputed,0.708,1.67,1.18,60,58,2
-Polymers,4534,0.71,34,0,imputed,0.708,0.75,0.53,61,60,1
-Journal of Clinical Medicine,8857,0.56,48,0,imputed,0.708,0.54,0.38,62,62,0
-Materials,8166,0.36,42,0,imputed,0.708,0.51,0.36,63,63,0
-Nanomaterials,2436,0.33,6,0,imputed,0.708,0.25,0.17,64,65,-1
-International Journal of Surgery Case Reports,2131,0.28,3,0,imputed,0.708,0.14,0.1,65,67,-2
-Micromachines,1830,0.27,5,0,imputed,0.708,0.27,0.19,66,66,0
-JAMA Network Open,2805,0.21,12,0,imputed,0.708,0.43,0.3,67,64,3
-Cureus,30302,0.15,70,0,imputed,0.708,0.23,0.16,68,69,-1
-Radiology Case Reports,1875,0.11,7,0,imputed,0.708,0.37,0.26,69,68,1
+entity,total,observed_rate,neg_repo,adjudicated_n,basis,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_phase1_corrected,rank_delta,low_confidence_mover
+Scientific Data,2421,77.98,413,61,adjudicated,0.951,17.06,16.22,1,1,0,0
+Communications Biology,2504,61.82,126,1,imputed,0.708,5.03,3.56,2,2,0,0
+Nature Communications,15157,56.96,810,25,adjudicated,0.44,5.34,2.35,3,3,0,0
+iScience,3518,50.97,69,1,imputed,0.708,1.96,1.39,4,4,0,0
+BMC Plant Biology,1983,42.06,18,0,imputed,0.708,0.91,0.64,5,7,-2,0
+Frontiers in Microbiology,3967,41.97,45,1,imputed,0.708,1.13,0.8,6,6,0,0
+Nature,2038,33.61,129,5,imputed,0.708,6.33,4.48,7,8,-1,0
+Ecology and Evolution,2326,32.03,529,59,adjudicated,0.814,22.74,18.5,8,5,3,0
+PLoS ONE,24377,23.92,606,6,imputed,0.708,2.49,1.76,9,10,-1,0
+Frontiers in Plant Science,3759,23.49,104,0,imputed,0.708,2.77,1.96,10,11,-1,0
+Microorganisms,3246,23.14,34,0,imputed,0.708,1.05,0.74,11,13,-2,0
+Viruses,2122,20.17,26,0,imputed,0.708,1.23,0.87,12,15,-3,0
+Frontiers in Veterinary Science,2315,19.09,27,0,imputed,0.708,1.17,0.83,13,16,-3,0
+Frontiers in Immunology,6042,17.53,48,0,imputed,0.708,0.79,0.56,14,17,-3,0
+Genes,1850,16.92,17,0,imputed,0.708,0.92,0.65,15,18,-3,0
+Frontiers in Nutrition,2465,16.51,18,0,imputed,0.708,0.73,0.52,16,19,-3,0
+Science Advances,3594,15.86,693,62,adjudicated,0.806,19.28,15.55,17,9,8,0
+Frontiers in Endocrinology,2724,15.09,24,0,imputed,0.708,0.88,0.62,18,20,-2,0
+BMC Infectious Diseases,1953,14.7,9,0,imputed,0.708,0.46,0.33,19,22,-3,0
+Scientific Reports,49550,14.47,939,20,adjudicated,0.35,1.9,0.66,20,21,-1,0
+BMC Public Health,5187,13.11,37,0,imputed,0.708,0.71,0.5,21,23,-2,0
+BMC Cancer,2278,12.6,2,0,imputed,0.708,0.09,0.06,22,24,-2,0
+Chemical Science,3352,12.14,15,0,imputed,0.708,0.45,0.32,23,25,-2,0
+Poultry Science,1824,11.73,13,0,imputed,0.708,0.71,0.5,24,26,-2,0
+PeerJ,2512,11.39,398,50,adjudicated,0.8,15.84,12.68,25,12,13,0
+Frontiers in Pharmacology,3801,10.18,40,1,imputed,0.708,1.05,0.74,26,28,-2,0
+Frontiers in Psychology,4450,10.0,76,0,imputed,0.708,1.71,1.21,27,27,0,0
+Frontiers in Public Health,5618,9.77,72,0,imputed,0.708,1.28,0.91,28,29,-1,0
+Cells,1849,9.36,16,0,imputed,0.708,0.87,0.61,29,31,-2,0
+International Journal of Molecular Sciences,14471,9.29,135,3,imputed,0.708,0.93,0.66,30,32,-2,0
+Animals,4855,9.02,67,0,imputed,0.708,1.38,0.98,31,30,1,0
+Plants,4728,8.54,92,0,imputed,0.708,1.95,1.38,32,33,-1,0
+Proceedings of the National Academy of Sciences,4139,7.8,779,68,adjudicated,0.824,18.82,15.5,33,14,19,0
+Heliyon,16640,7.68,239,1,imputed,0.708,1.44,1.02,34,34,0,0
+Advanced Science,4678,7.42,31,1,imputed,0.708,0.66,0.47,35,36,-1,0
+Frontiers in Psychiatry,2407,7.23,25,0,imputed,0.708,1.04,0.74,36,35,1,0
+Frontiers in Cardiovascular Medicine,1835,6.87,12,0,imputed,0.708,0.65,0.46,37,37,0,0
+Frontiers in Medicine,3635,6.52,27,0,imputed,0.708,0.74,0.53,38,38,0,0
+BMC Oral Health,2198,6.46,6,0,imputed,0.708,0.27,0.19,39,39,0,0
+BMC Health Services Research,2205,5.62,16,0,imputed,0.708,0.73,0.51,40,40,0,0
+Frontiers in Oncology,4207,5.42,17,0,imputed,0.708,0.4,0.29,41,41,0,0
+Frontiers in Neurology,2367,5.03,20,0,imputed,0.708,0.84,0.6,42,42,0,0
+Molecules,7176,4.19,55,1,imputed,0.708,0.77,0.54,43,43,0,0
+RSC Advances,6033,3.68,20,0,imputed,0.708,0.33,0.23,44,47,-3,0
+BMC Medical Education,2148,3.49,14,0,imputed,0.708,0.65,0.46,45,46,-1,0
+Life,1931,3.47,17,0,imputed,0.708,0.88,0.62,46,44,2,0
+Nutrients,4780,3.24,32,1,imputed,0.708,0.67,0.47,47,48,-1,0
+ACS Omega,5973,3.08,75,1,imputed,0.708,1.26,0.89,48,45,3,0
+Cancers,4187,3.01,31,0,imputed,0.708,0.74,0.52,49,49,0,0
+Medicine,4702,3.0,7,0,imputed,0.708,0.15,0.11,50,53,-3,0
+Biomedicines,3081,2.79,31,1,imputed,0.708,1.01,0.71,51,50,1,0
+Foods,5342,2.77,39,0,imputed,0.708,0.73,0.52,52,51,1,0
+Pharmaceuticals,1909,2.57,17,0,imputed,0.708,0.89,0.63,53,52,1,0
+PubMed,5800,2.26,65,1,imputed,0.708,1.12,0.79,54,54,0,0
+International Journal of Environmental Research and Public Health,2078,1.73,42,42,adjudicated,0.452,2.02,0.91,55,56,-1,0
+BMJ Open,4923,1.63,87,0,imputed,0.708,1.77,1.25,56,55,1,0
+Healthcare,3197,1.47,31,0,imputed,0.708,0.97,0.69,57,57,0,0
+Diagnostics,3460,1.18,31,0,imputed,0.708,0.9,0.63,58,59,-1,0
+Medicina,2386,0.75,7,0,imputed,0.708,0.29,0.21,59,61,-2,0
+Sensors,10611,0.74,177,0,imputed,0.708,1.67,1.18,60,58,2,0
+Polymers,4534,0.71,34,0,imputed,0.708,0.75,0.53,61,60,1,0
+Journal of Clinical Medicine,8857,0.56,48,0,imputed,0.708,0.54,0.38,62,62,0,0
+Materials,8166,0.36,42,0,imputed,0.708,0.51,0.36,63,63,0,0
+Nanomaterials,2436,0.33,6,0,imputed,0.708,0.25,0.17,64,65,-1,0
+International Journal of Surgery Case Reports,2131,0.28,3,0,imputed,0.708,0.14,0.1,65,67,-2,0
+Micromachines,1830,0.27,5,0,imputed,0.708,0.27,0.19,66,66,0,0
+JAMA Network Open,2805,0.21,12,0,imputed,0.708,0.43,0.3,67,64,3,0
+Cureus,30302,0.15,70,0,imputed,0.708,0.23,0.16,68,69,-1,0
+Radiology Case Reports,1875,0.11,7,0,imputed,0.708,0.37,0.26,69,68,1,0

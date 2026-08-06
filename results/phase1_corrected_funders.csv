@@ -1,47 +1,47 @@
-entity,total,observed_rate,neg_repo,adjudicated_n,basis,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_phase1_corrected,rank_delta
-Biotechnology and Biological Sciences Research Council,7388,35.86,527,46,adjudicated,0.739,7.13,5.27,1,2,-1
-Natural Environment Research Council,2525,32.44,584,123,adjudicated,0.707,23.13,16.36,2,1,1
-National Institute of General Medical Sciences,30657,31.22,1463,28,adjudicated,0.571,4.77,2.73,3,5,-2
-Centre National de la Recherche Scientifique,2532,29.7,127,6,imputed,0.708,5.02,3.55,4,6,-2
-Agence Nationale de la Recherche,11826,29.49,855,31,adjudicated,0.516,7.23,3.73,5,7,-2
-U.S. Department of Agriculture,5285,28.02,315,5,imputed,0.708,5.96,4.22,6,8,-2
-Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung,11196,27.76,951,36,adjudicated,0.778,8.49,6.61,7,4,3
-Wellcome Trust,16059,26.61,1032,36,adjudicated,0.639,6.43,4.11,8,10,-2
-Chinese Academy of Sciences,6159,26.5,244,2,imputed,0.708,3.96,2.8,9,14,-5
-National Cancer Institute,32524,25.67,931,20,adjudicated,0.55,2.86,1.57,10,18,-8
-Deutsche Forschungsgemeinschaft,27935,25.57,1629,88,adjudicated,0.659,5.83,3.84,11,13,-2
-National Science Foundation,35359,25.49,2821,119,adjudicated,0.714,7.98,5.7,12,9,3
-U.S. Department of Energy,8615,25.41,530,21,adjudicated,0.81,6.15,4.98,13,11,2
-National Aeronautics and Space Administration,2292,25.0,386,100,adjudicated,0.7,16.84,11.79,14,3,11
-Ministerio de Economía y Competitividad,1863,24.69,69,1,imputed,0.708,3.7,2.62,15,17,-2
-Ministry of Science and Technology of the People's Republic of China,2501,23.55,59,0,imputed,0.708,2.36,1.67,16,22,-6
-"Ministry of Education, Culture, Sports, Science and Technology",6802,23.4,233,3,imputed,0.708,3.43,2.42,17,21,-4
-Australian Research Council,3513,23.2,294,91,adjudicated,0.769,8.37,6.44,18,12,6
-Nederlandse Organisatie voor Wetenschappelijk Onderzoek,6655,22.95,521,106,adjudicated,0.642,7.83,5.02,19,16,3
-Natural Sciences and Engineering Research Council of Canada,8194,22.87,509,18,adjudicated,0.889,6.21,5.52,20,15,5
-Bundesministerium für Bildung und Forschung,8143,22.72,538,104,adjudicated,0.644,6.61,4.26,21,19,2
-National Institutes of Health,100284,22.2,3808,51,adjudicated,0.431,3.8,1.64,22,25,-3
-European Commission,39396,22.02,2533,211,adjudicated,0.687,6.43,4.42,23,20,3
-Medical Research Council,20110,21.65,870,36,adjudicated,0.556,4.33,2.4,24,24,0
-Vetenskapsrådet,8931,20.87,457,19,adjudicated,0.789,5.12,4.04,25,23,2
-China Scholarship Council,4774,19.35,182,9,imputed,0.708,3.81,2.7,26,26,0
-European Regional Development Fund,10358,19.3,445,34,adjudicated,0.618,4.3,2.65,27,27,0
-Ministerio de Ciencia e Innovación,9294,18.67,414,20,adjudicated,0.7,4.45,3.12,28,28,0
-Canadian Institutes of Health Research,10293,17.62,322,3,imputed,0.708,3.13,2.21,29,29,0
-National Key Research and Development Program of China,42637,17.28,688,8,imputed,0.708,1.61,1.14,30,32,-2
-National Health and Medical Research Council,8247,17.0,195,9,imputed,0.708,2.36,1.67,31,30,1
-China Postdoctoral Science Foundation,11703,16.72,146,0,imputed,0.708,1.25,0.88,32,35,-3
-Fundamental Research Funds for the Central Universities,12947,16.71,230,2,imputed,0.708,1.78,1.26,33,34,-1
-National Natural Science Foundation of China,188890,16.28,2817,52,adjudicated,0.731,1.49,1.09,34,37,-3
-Fundação de Amparo à Pesquisa do Estado de São Paulo,5899,15.88,192,8,imputed,0.708,3.25,2.3,35,33,2
-Russian Science Foundation,4216,15.77,101,4,imputed,0.708,2.4,1.7,36,36,0
-Engineering and Physical Sciences Research Council,10523,14.78,667,115,adjudicated,0.591,6.34,3.75,37,31,6
-Natural Science Foundation of Jiangsu Province,4988,14.76,47,0,imputed,0.708,0.94,0.67,38,42,-4
-"Department of Science and Technology, Ministry of Science and Technology, India",2216,14.71,42,1,imputed,0.708,1.9,1.34,39,39,0
-Fundação para a Ciência e a Tecnologia,6553,14.68,256,91,adjudicated,0.67,3.91,2.62,40,38,2
-Conselho Nacional de Desenvolvimento Científico e Tecnológico,11578,13.91,357,13,adjudicated,0.692,3.08,2.13,41,40,1
-Japan Society for the Promotion of Science,41258,13.61,886,19,adjudicated,0.895,2.15,1.92,42,41,1
-National Research Foundation,14708,13.18,278,11,adjudicated,0.727,1.89,1.37,43,43,0
-Coordenação de Aperfeiçoamento de Pessoal de Nível Superior,9331,12.08,300,2,imputed,0.708,3.22,2.28,44,44,0
-National Institute for Health and Care Research,14755,12.05,519,30,adjudicated,0.5,3.52,1.76,45,45,0
-National Research Foundation of Korea,20733,10.92,263,6,imputed,0.708,1.27,0.9,46,46,0
+entity,total,observed_rate,neg_repo,adjudicated_n,basis,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_phase1_corrected,rank_delta,low_confidence_mover
+Biotechnology and Biological Sciences Research Council,7388,35.86,527,46,adjudicated,0.739,7.13,5.27,1,2,-1,0
+Natural Environment Research Council,2525,32.44,584,123,adjudicated,0.707,23.13,16.36,2,1,1,0
+National Institute of General Medical Sciences,30657,31.22,1463,28,adjudicated,0.571,4.77,2.73,3,5,-2,0
+Centre National de la Recherche Scientifique,2532,29.7,127,6,imputed,0.708,5.02,3.55,4,6,-2,0
+Agence Nationale de la Recherche,11826,29.49,855,31,adjudicated,0.516,7.23,3.73,5,7,-2,0
+U.S. Department of Agriculture,5285,28.02,315,5,imputed,0.708,5.96,4.22,6,8,-2,0
+Schweizerischer Nationalfonds zur Förderung der Wissenschaftlichen Forschung,11196,27.76,951,36,adjudicated,0.778,8.49,6.61,7,4,3,0
+Wellcome Trust,16059,26.61,1032,36,adjudicated,0.639,6.43,4.11,8,10,-2,0
+Chinese Academy of Sciences,6159,26.5,244,2,imputed,0.708,3.96,2.8,9,14,-5,1
+National Cancer Institute,32524,25.67,931,20,adjudicated,0.55,2.86,1.57,10,18,-8,0
+Deutsche Forschungsgemeinschaft,27935,25.57,1629,88,adjudicated,0.659,5.83,3.84,11,13,-2,0
+National Science Foundation,35359,25.49,2821,119,adjudicated,0.714,7.98,5.7,12,9,3,0
+U.S. Department of Energy,8615,25.41,530,21,adjudicated,0.81,6.15,4.98,13,11,2,0
+National Aeronautics and Space Administration,2292,25.0,386,100,adjudicated,0.7,16.84,11.79,14,3,11,0
+Ministerio de Economía y Competitividad,1863,24.69,69,1,imputed,0.708,3.7,2.62,15,17,-2,0
+Ministry of Science and Technology of the People's Republic of China,2501,23.55,59,0,imputed,0.708,2.36,1.67,16,22,-6,1
+"Ministry of Education, Culture, Sports, Science and Technology",6802,23.4,233,3,imputed,0.708,3.43,2.42,17,21,-4,1
+Australian Research Council,3513,23.2,294,91,adjudicated,0.769,8.37,6.44,18,12,6,0
+Nederlandse Organisatie voor Wetenschappelijk Onderzoek,6655,22.95,521,106,adjudicated,0.642,7.83,5.02,19,16,3,0
+Natural Sciences and Engineering Research Council of Canada,8194,22.87,509,18,adjudicated,0.889,6.21,5.52,20,15,5,0
+Bundesministerium für Bildung und Forschung,8143,22.72,538,104,adjudicated,0.644,6.61,4.26,21,19,2,0
+National Institutes of Health,100284,22.2,3808,51,adjudicated,0.431,3.8,1.64,22,25,-3,0
+European Commission,39396,22.02,2533,211,adjudicated,0.687,6.43,4.42,23,20,3,0
+Medical Research Council,20110,21.65,870,36,adjudicated,0.556,4.33,2.4,24,24,0,0
+Vetenskapsrådet,8931,20.87,457,19,adjudicated,0.789,5.12,4.04,25,23,2,0
+China Scholarship Council,4774,19.35,182,9,imputed,0.708,3.81,2.7,26,26,0,0
+European Regional Development Fund,10358,19.3,445,34,adjudicated,0.618,4.3,2.65,27,27,0,0
+Ministerio de Ciencia e Innovación,9294,18.67,414,20,adjudicated,0.7,4.45,3.12,28,28,0,0
+Canadian Institutes of Health Research,10293,17.62,322,3,imputed,0.708,3.13,2.21,29,29,0,0
+National Key Research and Development Program of China,42637,17.28,688,8,imputed,0.708,1.61,1.14,30,32,-2,0
+National Health and Medical Research Council,8247,17.0,195,9,imputed,0.708,2.36,1.67,31,30,1,0
+China Postdoctoral Science Foundation,11703,16.72,146,0,imputed,0.708,1.25,0.88,32,35,-3,0
+Fundamental Research Funds for the Central Universities,12947,16.71,230,2,imputed,0.708,1.78,1.26,33,34,-1,0
+National Natural Science Foundation of China,188890,16.28,2817,52,adjudicated,0.731,1.49,1.09,34,37,-3,0
+Fundação de Amparo à Pesquisa do Estado de São Paulo,5899,15.88,192,8,imputed,0.708,3.25,2.3,35,33,2,0
+Russian Science Foundation,4216,15.77,101,4,imputed,0.708,2.4,1.7,36,36,0,0
+Engineering and Physical Sciences Research Council,10523,14.78,667,115,adjudicated,0.591,6.34,3.75,37,31,6,0
+Natural Science Foundation of Jiangsu Province,4988,14.76,47,0,imputed,0.708,0.94,0.67,38,42,-4,1
+"Department of Science and Technology, Ministry of Science and Technology, India",2216,14.71,42,1,imputed,0.708,1.9,1.34,39,39,0,0
+Fundação para a Ciência e a Tecnologia,6553,14.68,256,91,adjudicated,0.67,3.91,2.62,40,38,2,0
+Conselho Nacional de Desenvolvimento Científico e Tecnológico,11578,13.91,357,13,adjudicated,0.692,3.08,2.13,41,40,1,0
+Japan Society for the Promotion of Science,41258,13.61,886,19,adjudicated,0.895,2.15,1.92,42,41,1,0
+National Research Foundation,14708,13.18,278,11,adjudicated,0.727,1.89,1.37,43,43,0,0
+Coordenação de Aperfeiçoamento de Pessoal de Nível Superior,9331,12.08,300,2,imputed,0.708,3.22,2.28,44,44,0,0
+National Institute for Health and Care Research,14755,12.05,519,30,adjudicated,0.5,3.52,1.76,45,45,0,0
+National Research Foundation of Korea,20733,10.92,263,6,imputed,0.708,1.27,0.9,46,46,0,0

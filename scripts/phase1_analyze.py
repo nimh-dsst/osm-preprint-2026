@@ -23,7 +23,9 @@ JOURNAL_MIN, FUNDER_MIN_ARTICLES, FUNDER_MIN_WORKS = 1815, 1708, 100_000
 ADJ_MIN = 10  # >= this many adjudicated repo-DOI negatives -> 'adjudicated', else 'imputed'
 
 labs = [json.load(open(f)) for f in glob.glob(f"{LABELS_DIR}/*.json")]
-sample_pmids = [r["pmid"] for r in csv.DictReader(open(SAMPLE_META))]
+sample_rows = list(csv.DictReader(open(SAMPLE_META)))
+sample_pmids = [r["pmid"] for r in sample_rows]
+source_of = {r["pmid"]: r["source"] for r in sample_rows}  # pmid -> text source (md|xml)
 G_FN = sum(1 for d in labs if d.get("label") == "false_negative")
 G_DEC = sum(1 for d in labs if d.get("label") in ("false_negative", "non_open_data"))
 GLOBAL = G_FN / G_DEC
@@ -49,7 +51,9 @@ man = con.execute(f"""
      WHERE {W} AND f2.openalex_works_count>={FUNDER_MIN_WORKS} GROUP BY f2.display_name HAVING COUNT(DISTINCT p2.pmid)>={FUNDER_MIN_ARTICLES})
 """).fetchall()
 with open(f"{DEST}/phase1_corpus_manifest.csv", "w", newline="") as f:
-    w = csv.writer(f); w.writerow(["pmid", "entity", "entity_kind"]); w.writerows(man)
+    w = csv.writer(f); w.writerow(["pmid", "entity", "entity_kind", "text_source"])
+    for pmid, entity, kind in man:
+        w.writerow([pmid, entity, kind, source_of.get(pmid, "")])
 print(f"corpus manifest rows: {len(man)}")
 
 def dump(esql, join, cond, out):
@@ -73,9 +77,12 @@ def dump(esql, join, cond, out):
     rc = {r[0]: i+1 for i, r in enumerate(sorted(items, key=lambda r: -(r[2] + r[8])))}
     with open(out, "w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["entity","total","observed_rate","neg_repo","adjudicated_n","basis","genuine_fraction","exposure_raw_pp","exposure_corrected_pp","rank_observed","rank_phase1_corrected","rank_delta"])
+        w.writerow(["entity","total","observed_rate","neg_repo","adjudicated_n","basis","genuine_fraction","exposure_raw_pp","exposure_corrected_pp","rank_observed","rank_phase1_corrected","rank_delta","low_confidence_mover"])
         for r in sorted(items, key=lambda r: -r[2]):
-            w.writerow(r + [ro[r[0]], rc[r[0]], ro[r[0]] - rc[r[0]]])
+            delta = ro[r[0]] - rc[r[0]]
+            # imputed (global-fraction) entities that move >=4 places are mixed-basis artifacts, NOT validated movers
+            low_conf = int(r[5] == "imputed" and abs(delta) >= 4)
+            w.writerow(r + [ro[r[0]], rc[r[0]], delta, low_conf])
     print(f"{out}: {len(items)} entities ({sum(1 for r in items if r[5]=='adjudicated')} adjudicated)")
 
 dump("p.journal", "", f"total>={JOURNAL_MIN}", f"{DEST}/phase1_corrected_journals.csv")

@@ -1,0 +1,57 @@
+funder,total,positives,obs_rate,neg_repo,adjudicated_n,subs_with_labels,basis,genuine_fraction,exposure_raw_pp,exposure_corrected_pp,rank_observed,rank_corrected,rank_delta,single_subagency,low_confidence_mover
+Agence Nationale de la Recherche,5997,1778,29.6482,440,16,1,adjudicated,0.5,7.337,3.6685,1,3,-2,1,0
+Centre National de la Recherche Scientifique,1998,587,29.3794,107,5,1,imputed,0.7079,5.3554,3.791,2,4,-2,1,0
+Swiss National Science Foundation,5600,1599,28.5536,485,18,1,adjudicated,0.7778,8.6607,6.7361,3,1,2,1,0
+United States Department of Agriculture,4329,1186,27.3966,287,11,4,adjudicated,0.9116,6.6297,6.0439,4,2,2,0,0
+Austrian Science Fund,1918,518,27.0073,133,4,1,imputed,0.7079,6.9343,4.9088,5,5,0,1,0
+Chinese Academy of Sciences,3993,1074,26.8971,153,2,1,imputed,0.7079,3.8317,2.7125,6,10,-4,1,1
+Wellcome Trust,8809,2360,26.7908,564,20,2,adjudicated,0.5955,6.4025,3.813,7,7,0,0,0
+Deutsche Forschungsgemeinschaft,14292,3731,26.1055,868,47,1,adjudicated,0.6596,6.0733,4.0058,8,9,-1,1,0
+National Science Foundation,25256,6314,25.0,1898,118,23,adjudicated,0.6993,7.515,5.2552,9,8,1,0,0
+Department of Energy,5788,1393,24.067,347,37,13,adjudicated,0.8941,5.9952,5.3604,10,11,-1,0,0
+Australian Research Council,1800,430,23.8889,172,50,1,adjudicated,0.76,9.5556,7.2622,11,6,5,1,1
+Research Foundation Flanders,1897,451,23.7744,111,2,1,imputed,0.7079,5.8513,4.1422,12,14,-2,1,0
+Netherlands Organisation for Scientific Research,3439,812,23.6115,275,55,1,adjudicated,0.6545,7.9965,5.2341,13,13,0,1,0
+Bundesministerium fur Bildung und Forschung,4579,1068,23.3239,310,60,1,adjudicated,0.65,6.77,4.4005,14,15,-1,1,0
+Natural Sciences and Engineering Research Council of Canada,5300,1227,23.1509,348,10,1,adjudicated,0.9,6.566,5.9094,15,12,3,1,0
+"Ministry of Education, Culture, Sports, Science and Technology",3868,877,22.6732,133,2,1,imputed,0.7079,3.4385,2.4341,16,20,-4,1,1
+UK Research and Innovation,21932,4741,21.6168,1357,201,6,adjudicated,0.6507,6.1873,4.0263,17,19,-2,0,0
+European Commission,28782,6159,21.3988,1915,207,15,adjudicated,0.705,6.6535,4.6906,18,16,2,0,0
+State Research Agency (Spain),4933,1053,21.346,258,14,1,adjudicated,0.8571,5.2301,4.4829,19,18,1,1,0
+American Heart Association,1909,402,21.0581,58,1,1,imputed,0.7079,3.0382,2.1508,20,24,-4,1,1
+Swedish Research Council,4900,1017,20.7551,250,10,1,adjudicated,0.8,5.102,4.0816,21,21,0,1,0
+U.S. Department of Defense,6431,1329,20.6655,342,13,7,adjudicated,0.6544,5.318,3.4799,22,22,0,0,0
+Research Council of Norway,1950,402,20.6154,150,8,1,imputed,0.7079,7.6923,5.4454,23,17,6,1,1
+China Scholarship Council,3198,656,20.5128,133,6,1,imputed,0.7079,4.1588,2.944,24,23,1,1,0
+National Institutes of Health,85144,16960,19.9192,3104,115,23,adjudicated,0.5311,3.6456,1.9362,25,26,-1,0,0
+Ministry of Science and Innovation (Spain),4817,917,19.0367,230,11,1,adjudicated,0.7273,4.7748,3.4725,26,25,1,1,0
+European Regional Development Fund,5962,1129,18.9366,253,19,1,adjudicated,0.6316,4.2435,2.6801,27,28,-1,1,0
+Australian Government,2397,434,18.106,122,9,1,imputed,0.7079,5.0897,3.603,28,27,1,1,0
+Centers for Disease Control and Prevention,4082,734,17.9814,83,0,0,imputed,0.7079,2.0333,1.4394,29,30,-1,1,0
+National Key Research and Development Program,21352,3811,17.8484,354,4,1,imputed,0.7079,1.6579,1.1736,30,31,-1,1,0
+Canadian Institutes of Health Research,6111,1062,17.3785,194,3,1,imputed,0.7079,3.1746,2.2473,31,29,2,1,0
+Fundamental Research Funds for the Central Universities,7174,1245,17.3543,132,1,1,imputed,0.7079,1.84,1.3025,32,32,0,1,0
+China Postdoctoral Science Foundation,6130,1063,17.3409,78,0,0,imputed,0.7079,1.2724,0.9008,33,35,-2,1,0
+Natural Science Foundation of Guangdong Province,2771,466,16.817,30,0,0,imputed,0.7079,1.0826,0.7664,34,39,-5,1,1
+National Health and Medical Research Council,4410,738,16.7347,104,5,1,imputed,0.7079,2.3583,1.6694,35,34,1,1,0
+National Natural Science Foundation of China,95104,15712,16.5209,1443,26,1,adjudicated,0.7308,1.5173,1.1088,36,38,-2,1,0
+Zhejiang Provincial Natural Science Foundation,3349,548,16.3631,29,2,1,imputed,0.7079,0.8659,0.613,37,41,-4,1,1
+Science and Technology Commission of Shanghai Municipality,2544,415,16.3129,31,0,0,imputed,0.7079,1.2186,0.8626,38,40,-2,1,0
+Fundacao de Amparo a Pesquisa do Estado de Sao Paulo,3040,493,16.2171,101,4,1,imputed,0.7079,3.3224,2.3519,39,33,6,1,1
+Russian Science Foundation,2157,347,16.0872,54,2,1,imputed,0.7079,2.5035,1.7722,40,36,4,1,1
+U.S. Department of Veterans Affairs,3279,505,15.401,62,0,0,imputed,0.7079,1.8908,1.3385,41,44,-3,1,0
+Instituto de Salud Carlos III,3398,518,15.2443,75,3,1,imputed,0.7079,2.2072,1.5625,42,42,0,1,0
+Natural Science Foundation of Jiangsu Province,2526,383,15.1623,24,0,0,imputed,0.7079,0.9501,0.6726,43,46,-3,1,0
+Fundacao para a Ciencia e a Tecnologia,3348,501,14.9642,137,50,1,adjudicated,0.68,4.092,2.7826,44,37,7,1,1
+"Ministry of Education, India",2067,308,14.9008,55,1,1,imputed,0.7079,2.6609,1.8836,45,43,2,1,0
+Natural Science Foundation of Shandong Province,4170,602,14.4365,40,2,1,imputed,0.7079,0.9592,0.679,46,48,-2,1,0
+Government of Jiangsu Province,4964,709,14.2828,38,0,0,imputed,0.7079,0.7655,0.5419,47,49,-2,1,0
+Japan Society for the Promotion of Science,20612,2853,13.8415,456,10,1,adjudicated,0.9,2.2123,1.9911,48,47,1,1,0
+National Council for Scientific and Technological Development (CNPq),6728,923,13.7188,212,7,1,imputed,0.7079,3.151,2.2306,49,45,4,1,1
+National Research Foundation,11435,1472,12.8728,210,9,1,imputed,0.7079,1.8365,1.3,50,51,-1,1,0
+National Institute for Health Research,8924,1121,12.5616,321,17,1,adjudicated,0.5294,3.597,1.9043,51,50,1,1,0
+Coordenacao de Aperfeicoamento de Pessoal de Nivel Superior,6134,731,11.9172,195,2,1,imputed,0.7079,3.179,2.2504,52,52,0,1,0
+National Research Foundation of Korea,10745,1179,10.9725,140,3,1,imputed,0.7079,1.3029,0.9223,53,53,0,1,0
+Pfizer,4381,429,9.7923,84,0,0,imputed,0.7079,1.9174,1.3573,54,54,0,1,0
+"Ministry of Science and ICT, South Korea",6574,614,9.3398,92,1,1,imputed,0.7079,1.3995,0.9907,55,55,0,1,0
+Eli Lilly and Company,2699,227,8.4105,51,0,0,imputed,0.7079,1.8896,1.3376,56,56,0,1,0

@@ -1,0 +1,65 @@
+journal,total,positives,obs_rate,neg_repo,exposure_raw_pp,rank_observed
+Scientific Data,2421,1888,77.9843,413,17.0591,1
+Communications Biology,2503,1548,61.8458,126,5.034,2
+Nature Communications,15129,8634,57.0692,810,5.354,3
+iScience,3514,1793,51.0245,69,1.9636,4
+Frontiers in Microbiology,3850,1665,43.2468,45,1.1688,5
+BMC Plant Biology,1982,834,42.0787,18,0.9082,6
+Ecology and Evolution,2325,745,32.043,529,22.7527,7
+Frontiers in Plant Science,3649,883,24.1984,104,2.8501,8
+PLoS ONE,24182,5832,24.1171,606,2.506,9
+Microorganisms,3132,751,23.9783,34,1.0856,10
+Viruses,2076,428,20.6166,26,1.2524,11
+Frontiers in Veterinary Science,2238,442,19.7498,27,1.2064,12
+Frontiers in Immunology,5876,1059,18.0225,48,0.8169,13
+Frontiers in Nutrition,2356,407,17.275,18,0.764,14
+Genes,1815,313,17.2452,17,0.9366,15
+Chemical Science,2486,407,16.3717,15,0.6034,16
+Science Advances,3594,570,15.8598,693,19.2821,17
+Frontiers in Endocrinology,2649,411,15.5153,24,0.906,18
+BMC Infectious Diseases,1953,287,14.6953,9,0.4608,19
+Scientific Reports,49520,7168,14.475,939,1.8962,20
+BMC Public Health,5185,680,13.1148,37,0.7136,21
+BMC Cancer,2277,287,12.6043,2,0.0878,22
+Poultry Science,1824,214,11.7325,13,0.7127,23
+PeerJ,2512,286,11.3854,398,15.8439,24
+Frontiers in Pharmacology,3697,387,10.4679,40,1.082,25
+Frontiers in Psychology,4285,445,10.3851,76,1.7736,26
+Frontiers in Public Health,5387,549,10.1912,72,1.3366,27
+International Journal of Molecular Sciences,14269,1344,9.419,135,0.9461,28
+Animals,4759,438,9.2036,67,1.4079,29
+Plants,4653,404,8.6826,92,1.9772,30
+Advanced Science,4305,347,8.0604,31,0.7201,31
+Proceedings of the National Academy of Sciences,4134,323,7.8133,779,18.8437,32
+Heliyon,16600,1278,7.6988,239,1.4398,33
+Frontiers in Psychiatry,2334,174,7.455,25,1.0711,34
+Frontiers in Medicine,3462,237,6.8458,27,0.7799,35
+BMC Oral Health,2196,142,6.4663,6,0.2732,36
+BMC Health Services Research,2205,124,5.6236,16,0.7256,37
+Frontiers in Oncology,4069,228,5.6033,17,0.4178,38
+Frontiers in Neurology,2291,119,5.1942,20,0.873,39
+RSC Advances,4574,222,4.8535,20,0.4373,40
+Molecules,7085,301,4.2484,55,0.7763,41
+Life,1867,67,3.5886,17,0.9106,42
+BMC Medical Education,2148,75,3.4916,14,0.6518,43
+Nutrients,4728,155,3.2783,32,0.6768,44
+ACS Omega,5973,184,3.0805,75,1.2557,45
+Cancers,4121,126,3.0575,31,0.7522,46
+Medicine,4702,141,2.9987,7,0.1489,47
+Biomedicines,3002,86,2.8648,31,1.0326,48
+Foods,5262,148,2.8126,39,0.7412,49
+Pharmaceuticals,1846,49,2.6544,17,0.9209,50
+International Journal of Environmental Research and Public Health,2018,36,1.7839,42,2.0813,51
+BMJ Open,4923,80,1.625,87,1.7672,52
+Healthcare,3137,47,1.4982,31,0.9882,53
+Diagnostics,3400,41,1.2059,31,0.9118,54
+Medicina,2321,18,0.7755,7,0.3016,55
+Sensors,10333,79,0.7645,177,1.713,56
+Polymers,4477,32,0.7148,34,0.7594,57
+Journal of Clinical Medicine,8679,50,0.5761,48,0.5531,58
+Materials,8035,29,0.3609,42,0.5227,59
+Nanomaterials,2402,8,0.3331,6,0.2498,60
+International Journal of Surgery Case Reports,2131,6,0.2816,3,0.1408,61
+JAMA Network Open,2805,6,0.2139,12,0.4278,62
+Cureus,28751,46,0.16,70,0.2435,63
+Radiology Case Reports,1875,2,0.1067,7,0.3733,64
